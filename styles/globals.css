@@ -359,7 +359,16 @@ html[lang="he-IL"] .cta-button {
 
 
 
-
+/* Disable blue highlight on button click */
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* You can do the same for links */
+a {
+-webkit-tap-highlight-color: transparent;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 
 
@@ -738,17 +747,16 @@ html[lang="en-US"] .filter {
   color: #fff;
   background: black;
   display: flex;
-  /* display: none; */
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-evenly; */
   justify-content: flex-start;
   border-radius: 1.5rem;
-  padding-top: 3rem;
+  padding-top: 4rem;
   border: 2px solid #fff;
   height: calc(100vh - 1.5rem);
   font-size: 1rem;
   z-index: 2;
+  gap: 1rem;
 }
 
 .side-toggle-svg-wrapper {
@@ -792,6 +800,111 @@ html[lang="en-US"] .filter {
   border-radius: 0.15rem;
 }
 
+.about-us {
+  /* webkit-filter: blur(1.5px);
+  filter: blur(2px); */
+  z-index: 1;
+}
+
+html[lang="en-US"] .about-us-title {
+  direction: ltr;
+}
+html[lang="he-IL"] .about-us-title {
+  direction: rtl;
+  font-size: 2.3rem;
+  line-height: 3rem;
+}
+
+.about-us-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.065), rgba(0, 0, 0, 0.5)) content-box;
+  z-index: 2;
+}
+
+.about-us-wrapper,
+.about-us-subtitle,
+.about-us-content,
+.about-us-pages,
+.page-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--secondary-font);
+}
+
+.about-us-wrapper {
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  font-family: var(--main-font);
+  row-gap: 1.65rem;
+  /* background: #c8bdb0; */
+}
+.about-us-title {
+  font-size: 3rem;
+  text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.35);
+}
+.about-us-subtitle {
+  text-align: center;
+  margin: 0 12.5rem;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.about-us-content {
+  margin: 0 12.5rem;
+  font-size: 1.15rem;
+  font-weight: 400;
+  text-align: left;
+  z-index: 4;
+}
+.about-us-pages {
+  /* gap: ; */
+  width: 100%;
+  padding: 0 12.5rem;
+  justify-content: space-between;
+}
+.page-tile > img {
+  border-radius: 10px;
+}
+.page-tile {
+  position: relative;
+}
+.page-label {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  color: #fff;
+  font-size: 2rem;
+}
+.page-btns-wrp {
+  transform-style: preserve-3d;
+  perspective: 1000;
+  
+}
+.page-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+  background: white;
+  color: #000;
+  /* box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15); */
+}
+/* .page-btn:hover {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.35);
+} */
+
+/* .page-btn:hover > button {
+  font-weight: 500;
+  transform: rotate(-1.5deg) scale(1.025);
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+} */
 
 
 /* LOGO ANIMATION */
@@ -971,6 +1084,15 @@ html[lang="he-IL"] .svg-logo-loader-wrapper svg {
 
 
 
+/* ABOUT US NAVBAR */
+/* .about-us > .inner-navbar > .social, a:not(.page-btn) {
+  visibility: hidden;
+}
+.about-us > .inner-navbar > .social, .navbar-ul {
+  visibility: hidden;
+} */
+
+
 
 /* MAGNETIC ICONS */
 
@@ -985,6 +1107,13 @@ html[lang="he-IL"] .svg-logo-loader-wrapper svg {
   top: 3rem;
   z-index: 1;
   min-height: 160px;
+  margin-bottom: 375px;
+}
+html[lang="he-IL"] .magnetic-main {
+  /* margin-bottom: 0px; */
+  /* height: 28rem; */
+  /* height: 35rem; */
+  /* height: 32rem; */
 }
 .social-title {
   position: absolute;
@@ -1036,11 +1165,14 @@ html[lang="he-IL"] .social-title {
   width: fit-content;
   background: #fff;
   border: 2px solid black;
+  /* flex-direction: row-reverse; */
 }
-/* html[lang="en-US"] .navbar-ul {
+html[lang="en-US"] .navbar-ul,
+html[lang="en-US"] .page-btns-wrp {
   direction: ltr;
-} */
-html[lang="he-IL"] .navbar-ul {
+}
+html[lang="he-IL"] .navbar-ul,
+html[lang="he-IL"] .page-btns-wrp {
   direction: rtl;
 }
 
@@ -1666,12 +1798,19 @@ html[lang="en-US"] .star-score {
     margin: 0 1.35rem;
   }
   html[lang="en-US"] .navbar-ul > a > li {
-    padding: 0.415em;
+    padding: 0 0.415em;
     font-size: 0.7rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   html[lang="he-IL"] .navbar-ul > a > li {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     font-size: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   .lang {
     top: 0.15rem;
@@ -1741,6 +1880,16 @@ html[lang="en-US"] .star-score {
   }
   .screen-fix-txt {
     top: 18.5rem;
+  }
+  html[lang="he-IL"] .screen-fix-txt {
+    /* height: 40rem;
+    top: -10rem; */
+    /* top: 5rem !important; */
+    /* height: 80rem !important; */
+    /* height: 42rem; */
+  }
+  html[lang="he-IL"] .screen-fix-txt > span {
+    /* bottom: -15rem; */
   }
   .magnetic-main > .screen-fix-txt {
     top: -1.5rem;

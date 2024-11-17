@@ -4,7 +4,8 @@ import Main from "./components/Main";
 import SocialsSection from "./components/SocialsSection";
 import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
-import mainData from "./public/data/data.json";
+import kohTaoData from "./public/data/kohTaoData.json";
+import mainImg from '../pages/public/images/KohTaoMainImg.jpeg';
 import { getGlobalLanguage, setGlobalLanguage, getMedia } from "./config";
 
 const he = "he";
@@ -37,8 +38,8 @@ export default function KohTao() {
     return (
       <>
         <Navbar
-          data={mainData}
-          lang={mainData['language-text'][language] || "he"}
+          data={kohTaoData}
+          lang={kohTaoData['language-text'][language] || "he"}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
           media={getMedia()}
@@ -46,15 +47,16 @@ export default function KohTao() {
         <div id="home" />
         <Main
           activateMenuIsActive={(bool) => setMenuIsActive(bool)}
-          data={mainData}
-          lang={mainData['language-text'][language] || "he"}
+          data={kohTaoData}
+          lang={kohTaoData['language-text'][language] || "he"}
           media={getMedia()}
-          title="Koh Tao" />
+          title="Koh Tao"
+          mainImg={mainImg} />
         <div id="media">
-          <SocialsSection data={mainData} lang={mainData['language-text'][language] || "he"} />
+          <SocialsSection data={kohTaoData} lang={kohTaoData['language-text'][language] || "he"} />
         </div>
-        <StickyFooter data={mainData} lang={mainData['language-text'][language] || "he"} />
-        <SectionAnimation menuIsActive={menuIsActive} title="Koh Tao" />
+        <StickyFooter data={kohTaoData} lang={kohTaoData['language-text'][language] || "he"} />
+        <SectionAnimation menuIsActive={menuIsActive} title={kohTaoData["island-name"][globalLanguage]} />
       </>
     )
 }

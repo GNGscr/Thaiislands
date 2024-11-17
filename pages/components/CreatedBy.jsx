@@ -1,12 +1,15 @@
-
 const CreatedBy = () => {
-    const handleGoToDeBrand = e => {
-        // e.preventDefault(); // Prevent default anchor behavior
-        console.log('set animation');
-        
-      }
+  
+  const handleGoToDeBrand = e => {
+      // e.preventDefault(); // Prevent default anchor behavior
+      console.log('set animation');
+    }
+    
     return (
-        <a href="https://debrand.design.com"
+        <a href="https://debrand1-debrand.ekdas8.easypanel.host/"
+        // <a href="https://debrand.design.com"
+            rel="noopener noreferrer"
+            target="_blank"
             className="relative"
             onClick={handleGoToDeBrand}>
         <div className="created-by">

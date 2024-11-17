@@ -134,7 +134,9 @@ const regionsTitleAnimation = {
 
   return (
     <div className="relative h-fit" style={{ direction: 'rtl' }} id="hotels">
-    <div className="sticky top-0 w-screen flex flex-col justify-center align-center bg-[#fff] p-[1rem] overflow-hidden " style={{ zIndex: 2 }}>
+    <div className={`sticky top-0 w-screen flex flex-col justify-center align-center
+      bg-[#fff] p-[1rem] overflow-hidden`} 
+      style={{ zIndex: 2 }}>
       <motion.div 
         initial={{ opacity: 0, letterSpacing: '10px' }}
         whileInView={{ opacity: 0.7, letterSpacing: '0px' }}

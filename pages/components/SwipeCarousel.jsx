@@ -3,15 +3,16 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import ScreenFitText from "./ScreenFitText";
+import { getGlobalLanguage } from "../config";
 
 const imgs = [
-  "https://images.unsplash.com/photo-1484600899469-230e8d1d59c0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1446776709462-d6b525c57bd3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1494022299300-899b96e49893?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1494022299300-899b96e49893?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1494022299300-899b96e49893?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://pix8.agoda.net/hotelImages/6361579/-1/ceb6fd59eeaa5ac5818fd085fb590183.jpg?ca=9&ce=1&s=1024x",
+  "https://pix8.agoda.net/hotelImages/1076675/-1/6ad3788b021595c5b7b97da30b71281e.jpg?ce=0&s=600x",
+  "https://pix8.agoda.net/hotelImages/281786/-1/91b569d25172cb7afc157ae5f01e64cf.jpg?ca=21&ce=0&s=1024x",
+  "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x",
+  "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x",
+  "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x",
+  "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x",
 ];
 
 const ONE_SECOND = 1000;
@@ -31,9 +32,11 @@ const spacingIndex = {
 };
 
 export default function SwipeCarousel({data, lang}) {
-  const [imgIndex, setImgIndex] = useState(0);
 
+  const [imgIndex, setImgIndex] = useState(0);
+  
   const dragX = useMotionValue(0);
+  let globalLanguage = getGlobalLanguage();
 
   useEffect(() => {
     const intervalRef = setInterval(() => {
@@ -65,7 +68,7 @@ export default function SwipeCarousel({data, lang}) {
   let ourVacationGalleryArray = ourVacationGallery.split("");
   return (
     <div className="flex flex-col">
-      <ScreenFitText className="relative mb-[10rem]" isOnCarousal={true}/>
+      <ScreenFitText className="relative mb-[10rem]" isOnCarousal={true} text={data["island-name"][globalLanguage]} />
       <div className="vacation-gallery-wrapper relative overflow-hidden rounded-xl mt-[5rem]" id="gallery">
         <div 
           className="vacation-gallery w-full flex align-center justify-center text-[3rem] mb-[5px]" 

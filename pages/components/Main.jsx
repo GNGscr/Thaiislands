@@ -1,18 +1,16 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import phanganMap from '../public/images/phangan-map.png';
+// import phanganMap from '../public/images/phangan-map.png';
 import SwipeCarousel from "./SwipeCarousel";
-import LogoLoader from "./LogoLoader";
+// import LogoLoader from "./LogoLoader";
 import ButtonLightningAnimation from "./ButtonLightningAnimation";
 import HotelsSection from "./HotelsSection";
 import TiltComponent from "./TiltComponent";
-import spa from '../public/images/summer-luxury-beach-resort-and-spa.webp';
-// pages/public/images/summer-luxury-beach-resort-and-spa.webp
+// import spa from '../public/images/summer-luxury-beach-resort-and-spa.webp';
 // import NextVideo from 'next-video';
 // import Video from 'next-video';
 // import getStarted from '../public/images/khoPhanganView.mp4';
-// import Image from "next/image";
 
 // import heroVid from '../public/images/khoPhanganView.mp4';
 
@@ -71,14 +69,11 @@ import spa from '../public/images/summer-luxury-beach-resort-and-spa.webp';
 // DONT FORGET TO FINISH AND UPLOAD ICE CREAM SITE ;))
 // ------------------------------------------------- //
 
-// new
-
-// fix flip card button click 
-// fix start position for nav bar open and visible
 
 
 
-export default function Main({ data, lang, media, activateMenuIsActive, title="Koh Phangan" }) {
+
+export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
   // const { filter, regions } = data;
 
   let mainParaSplitter = { en: "Everything from", he: "הכל מהכל" };
@@ -101,7 +96,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title="K
     <div className="bg-white main">
       <TextParallaxContentComponent
         isMapVisible={false}
-        imgUrl={spa.src}
+        imgUrl={mainImg.src}
         subheading={data['heroPara'][lang]}
         heading="Koh Phangan"
         isCtaButton={true}
@@ -124,7 +119,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title="K
 
       <TextParallaxContentComponent
         isMapVisible={true}
-        imgUrl={phanganMap.src}
+        imgUrl={mapDrawing}
         isCtaButton={false}
         isHeader={false}
         isHotels={false}

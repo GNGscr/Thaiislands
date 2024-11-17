@@ -4,6 +4,7 @@ const useDimensions = () => {
     const [ dimension, setDimension ] = useState({width: 0, height: 0});
     const updateDimension = () => {
         const { innerWidth, innerHeight } = window;
+        
         setDimension({width: innerWidth, height: innerHeight });
     };
     useEffect(() => {

@@ -37,6 +37,39 @@
             { "label": 2, "id": "two", "value": "2" }
         ]
     },
+    "aboutUsPage": {
+        "header": {
+            "he": "אחרי שהסתובבתי באיים בתאילנד והבנתי מה טוב ומה לא..",
+            "en": "After traveling across Thailand islands and learning what's good and what's not.."
+        },
+        "subHeader": {
+            "he": "אז הכנו לכם אוסף של מלונות וריזורטים מומלצים באיים השונים.",
+            "en": "we have compiled for you recommended hotels and resorts from different Islands."
+        },
+        "pages": [
+            {
+                "link": "/koh-phangan",
+                "label": {
+                    "en": "Koh Phangan",
+                    "he": "קופנגן"
+                }
+            },
+            {
+                "link": "/koh-samui",
+                "label": {
+                    "en": "Koh Samui",
+                    "he": "קוסמוי"
+                }
+            },
+            {
+                "link": "/koh-tao",
+                "label": {
+                    "en": "Koh Tao",
+                    "he": "קוטאו"
+                }
+            }
+        ]
+    },
     "heroPara": {
         "he": "הכנו לכם רשימה מדהימה עם מלא אופציות לינה באי פנגן, תאילנד. המלונות שתמצאו אצלנו בקבוצה נבחרו בקפידה כפי שאנחנו מחפשים את המלונות לחופשה שלנו ..",
         "en": "We have prepared an amazing list with many accommodation options on Koh Phangan, Thailand. The hotels you will find in our group were carefully selected as we look for hotels for our vacation."

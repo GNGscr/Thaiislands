@@ -4,15 +4,17 @@ import Main from "./components/Main";
 import SocialsSection from "./components/SocialsSection";
 import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
-import mainData from "./public/data/data.json";
+import kohSamuiData from "./public/data/kohSamuiData.json";
 import { getGlobalLanguage, setGlobalLanguage, getMedia } from "./config";
+import phanganMap from './public/images/phangan-map.png';
+import mainImg from '../pages/public/images/samutra-residences.webp';
 
 const he = "he";
 const en = "en";
 const HE_IL = 'he-IL';
 const EN_US = 'en-US';
 
-export default function KohPhangan() {
+export default function KohSamui() {
     let [menuIsActive, setMenuIsActive] = useState(false);
     const [ language, setLanguage ] = useState("en");
     let globalLanguage = getGlobalLanguage();
@@ -24,7 +26,7 @@ export default function KohPhangan() {
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.lang = globalLanguage === he ? EN_US : HE_IL;
-
+      
       if (globalLanguage === en) {
         setLanguage(he);
         setGlobalLanguage(he);
@@ -37,8 +39,8 @@ export default function KohPhangan() {
     return (
       <>
         <Navbar
-          data={mainData}
-          lang={mainData['language-text'][ globalLanguage] || "he"}
+          data={kohSamuiData}
+          lang={kohSamuiData['language-text'][globalLanguage]}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
           media={getMedia()}
@@ -46,15 +48,17 @@ export default function KohPhangan() {
         <div id="home" />
         <Main
           activateMenuIsActive={(bool) => setMenuIsActive(bool)}
-          data={mainData}
-          lang={mainData['language-text'][globalLanguage] || "he"}
+          data={kohSamuiData}
+          lang={kohSamuiData['language-text'][globalLanguage]}
           media={getMedia()}
-          title="Koh Phangan" />
+          title={kohSamuiData["island-name"][globalLanguage]}
+          mainImg={mainImg}
+          mapDrawing={phanganMap.src} />
         <div id="media">
-          <SocialsSection data={mainData} lang={mainData['language-text'][globalLanguage] || "he"} />
+          <SocialsSection data={kohSamuiData} lang={kohSamuiData['language-text'][globalLanguage]} />
         </div>
-        <StickyFooter data={mainData} lang={mainData['language-text'][globalLanguage] || "he"} />
-        <SectionAnimation menuIsActive={menuIsActive} title="Koh Phangan" />
+        <StickyFooter data={kohSamuiData} lang={kohSamuiData['language-text'][globalLanguage]} />
+        <SectionAnimation menuIsActive={menuIsActive} title={kohSamuiData["island-name"][globalLanguage]} />
       </>
     )
 }

@@ -1,13 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimate } from "framer-motion";
+import { usePathname } from 'next/navigation';
 import CreatedBy from "./CreatedBy";
 
 export default function Noise({ data, lang }) {
+
+  const pathname = usePathname();
+  const pages = [
+    {
+      "district": "Surathani",
+      "paths": [
+        { "label": "KohPhangan", "link": "/koh-phangan" },
+        { "label": "KohSamui", "link": "/koh-samui" },
+        { "label": "KohTao", "link": "/koh-tao" }
+      ]
+    },
+    {
+      "district": "Mueang",
+      "paths": [
+        { "label": "Phuket", "link": "/phuket" },
+        { "label": "KohChiang", "link": "/koh-chiang" },
+        { "label": "someIsland", "link": "/some-island" }
+      ]
+    },
+    {
+      "district": "North",
+      "paths": [
+        { "label": "ChianMai", "link": "/chian-mai" },
+        { "label": "Kanchianabory", "link": "/kanchianabory" },
+        { "label": "someIsland", "link": "/some-island" }
+      ]
+    },
+  ];
+
   return (
     // NOTE: An overflow of hidden will be required on a wrapping
     // element to see expected results
     <div className="relative overflow-hidden">
-      <ExampleContent />
+      <ExampleContent pages={pages} pathname={pathname} />
       <NoiseComponent />
     </div>
   );
@@ -38,17 +68,18 @@ const NoiseComponent = () => {
   );
 };
 
-const ExampleContent = () => {
+const ExampleContent = ({pages, pathname}) => {
   const [isColorRed, setIsColorRed] = useState(false);
-  const [scope, animate] = useAnimate();
+  // const [scope, animate] = useAnimate();
 
     // // Set menu main div to be y position 0 visible and toggleSvg bool value on initial load
     useEffect(() => {
-      // console.log(scope.current.children)
-      animate(scope.current.children, { color: '#ff0000', duration: 1, });
+      // console.log(scope.current.children[0].children)
+      // animate([...scope.current.children[0].children], { color: '#ff0000', duration: 0.5,  })
+      // animate(scope.current.children, { color: '#ff0000', duration: 1, });
       // Cleanup function to reset the menu main div after initial load for further animations
       return () => {
-        // animate(scope.current.children.main, { color: '#fff' });
+        // animate([...scope.current.children], { color: '#fff' });
       };
     }, [isColorRed]);
 
@@ -57,25 +88,24 @@ const ExampleContent = () => {
       <div className="relative -top-[30] text-neutral-20 w-fit px-4 py-2 font-semibold text-neutral-200 transition-colors">
         <div className="flex gap-[15rem] w-[50%]">
             {
-                [...Array(3)].map((_, i) => {
+                pages.map((page, i) => {
                     return (
                         <div key={i} className="text-[1.1rem] pt-3">
 
-                            <div className="footer-th font-bold pb-2">Networks</div>
+                            <div className="footer-th font-bold pb-2">{page.district}</div>
                             {
-                              [
-                                {net: 'Facebook', link: ''},
-                                {net: 'Instagram', link: ''},
-                                {net: 'LinkedIn', link: ''}
-                              ].map((network, i) => {
+                              page.paths.map(({label, link}, i) => {
                                 return (
-                                  <a href={network.link} key={i}>
-                                    <motion.div className="flex" whileHover={() => setIsColorRed(true)} ref={scope}>
-                                      {network.net.split('').map((letter, index) => {
-                                        return (
-                                          <div key={index}>{letter}</div>
-                                          )
-                                        })}
+                                  <a href={link} key={i}
+                                  // ref={scope}
+                                  >
+                                    <motion.div
+                                      className="footer-link flex"
+                                      style={{ color: isColorRed === false && pathname === link ? '#ff0000' : '#fff' }}
+                                      whileHover={{ color: '#ff0000' }}
+                                      onMouseEnter={() => setIsColorRed(true)}
+                                      onMouseLeave={() => setIsColorRed(false)}>
+                                        {label.split('').map((letter, index) => <div key={index}>{letter}</div>)}
                                     </motion.div>
                                   </a>
                                 )

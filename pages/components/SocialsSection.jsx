@@ -3,10 +3,12 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import ScreenFitText from './ScreenFitText';
+import { getGlobalLanguage } from "../config";
 
 export default function SocialsSection({data, lang}) {
+  let globalLanguage = getGlobalLanguage();
   return (
-    <main className="magnetic-main mb-[375px] z-4 bg-[#fff]">
+    <main className="magnetic-main z-4 bg-[#fff]">
       <div className="overflow-hidden flex justify-center bg-[#fff]">
         <motion.div
           initial={{ opacity: 0, y: "30%" }}
@@ -51,7 +53,7 @@ export default function SocialsSection({data, lang}) {
           </IconsMagnetic>
        
       </div>
-      <ScreenFitText isOnCarousal={false} />
+      <ScreenFitText isOnCarousal={false} text={data["island-name"][globalLanguage]} />
     </main>
   )
 }

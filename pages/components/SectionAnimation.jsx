@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import mainLogo from '../public/images/svg-logo-loader.svg';
+// import Image from 'next/image';
+// import mainLogo from '../public/images/svg-logo-loader.svg';
 
 const SectionAnimation = ({ menuIsActive, title }) => {
     return (
         <motion.div
             className="slide-in"
             initial={{ scaleY: 0 }}
-            animate={ menuIsActive ? { scaleY: 1 } : { scaleY: 0 } }
+            animate={{ scaleY: menuIsActive ? 1 : 0 }}
             exit={{ scaleY: 1 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
@@ -19,10 +19,3 @@ const SectionAnimation = ({ menuIsActive, title }) => {
 };
 
 export default SectionAnimation;
-
-
-// style={{
-//     // backgroundImage: 'url("https://www.hover.dev/black-noise.png")',
-//     backgroundImage: 'url("https://www.hover.dev/noise.png")',
-//   }}
-//   className="pointer-events-none absolute -inset-[100%] opacity-[15%]"
