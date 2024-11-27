@@ -156,7 +156,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
               ${lang === 'he' ? 'left-80' : 'right-60'} pl-9`}>
             😉
           </div>
-          <span className="text-7xl text-[#ccc]" style={{transform: 'rotateZ(180deg)'}}></span>
+          <span className="text-7xl text-[#ccc]" style={{transform: "rotateZ(180deg)"}}></span>
         </motion.div>
       </div>
       <HotelsSection data={data} lang={lang} media={media} />
