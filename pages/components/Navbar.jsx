@@ -199,13 +199,13 @@ export default function Navbar({
     "/": [[0, 0.0825, 0.435, 0.4350000000001, 1]]
   };
 
-  let color;
-  // Set the color to switch by toggle (ease fnc) between sections
-  color = pathname !== '/about-us' && pathname !== '/' ? useTransform(
-    scrollYProgress,
-    islandsColorProgress[pathname],
-    ["#fff", "#000", "#fff", "#000", "#000"],
-    { ease: (t) => Math.round(t) }) : '';
+  // let color;
+  // // Set the color to switch by toggle (ease fnc) between sections
+  // color = pathname !== '/about-us' && pathname !== '/' ? useTransform(
+  //   scrollYProgress,
+  //   islandsColorProgress[pathname],
+  //   ["#fff", "#000", "#fff", "#000", "#000"],
+  //   { ease: (t) => Math.round(t) }) : '';
 
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: '9' }}>
