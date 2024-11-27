@@ -9,6 +9,9 @@ export default function App({ Component, pageProps }) {
 
   
   useEffect(() => {
+    if (router.pathname === '') {
+      router.push('/about-us');
+    }
     if (router.pathname === '/') {
       router.push('/about-us');
     }

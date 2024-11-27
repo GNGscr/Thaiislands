@@ -65,14 +65,17 @@ const directionToOffset = {
   "he": "right"
 };
 
-export default function Navbar({ data, lang, toggleLanguage, activateMenuIsActive }) {
-  let media = getMedia();
-  // console.log(media);
-  
+export default function Navbar({
+    data,
+    lang,
+    toggleLanguage,
+    activateMenuIsActive
+  }) {
+  const media = getMedia();
   const pathname = usePathname();
-  
   const [position, setPosition] = useState({
-    [directionToOffset[lang]]: navButtonsPositionMedia[media][lang].home[directionToOffset[lang]],
+    [directionToOffset[lang]]: 
+      navButtonsPositionMedia[media][lang].home[directionToOffset[lang]],
     width: navButtonsPositionMedia[media][lang].home.width,
     opacity: 1,
   });
@@ -105,14 +108,16 @@ export default function Navbar({ data, lang, toggleLanguage, activateMenuIsActiv
   }, [isNavbarVisible]);
   
   useEffect(() => {
-    const intersections = document.querySelectorAll([...data["navbar"][lang].map((item) => item.intersectionId)]);
+    const intersections =
+      document.querySelectorAll([...data["navbar"][lang].map((item) => item.intersectionId)]);
     const intersectionsIterator = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const intersectingEntry = entry.target.id.replace('#', '');
           setCurrentButton(intersectingEntry); // Save the intersecting button
           setPosition({
-            [directionToOffset[lang]]: navButtonsPositionMedia[media][lang][intersectingEntry][directionToOffset[lang]],
+            [directionToOffset[lang]]:
+              navButtonsPositionMedia[media][lang][intersectingEntry][directionToOffset[lang]],
             width: navButtonsPositionMedia[media][lang][intersectingEntry].width,
             opacity: 1,
           });
@@ -143,8 +148,10 @@ export default function Navbar({ data, lang, toggleLanguage, activateMenuIsActiv
       ...prev,
       opacity: 0,
     }));
+
     // Revert to the last intersected button if the user doesn't click
-    const lastPosition = navButtonsPositionMedia[media][lang][currentButton];
+    const lastPosition =
+      navButtonsPositionMedia[media][lang][currentButton];
     if (lastPosition) {
       setPosition({
         [directionToOffset[lang]]: lastPosition[directionToOffset[lang]],
@@ -193,17 +200,12 @@ export default function Navbar({ data, lang, toggleLanguage, activateMenuIsActiv
   };
 
   let color;
-  // console.log(scrollYProgress);
-  // console.log(pathname);
-  // const homePath = pathname === '/about-us' || pathname === '/';
-  
   // Set the color to switch by toggle (ease fnc) between sections
-    color = pathname !== '/about-us' ? useTransform(
-      scrollYProgress,
-      islandsColorProgress[pathname],
-      ["#fff", "#000", "#fff", "#000", "#000"],
-      { ease: (t) => Math.round(t) }) : '';
-    
+  color = pathname !== '/about-us' && pathname !== '/' ? useTransform(
+    scrollYProgress,
+    islandsColorProgress[pathname],
+    ["#fff", "#000", "#fff", "#000", "#000"],
+    { ease: (t) => Math.round(t) }) : '';
 
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: '9' }}>
@@ -294,7 +296,8 @@ const Tab = ({ children, setPosition, lang, onClick }) => {
         if (!ref?.current) return;
         
         const { width, right, left } = ref.current.getBoundingClientRect();
-        const grandparentRect = ref.current.parentElement.parentElement.getBoundingClientRect();
+        const grandparentRect =
+          ref.current.parentElement.parentElement.getBoundingClientRect();
         const offset = lang === "he" 
           ? grandparentRect.right - right 
           : left - grandparentRect.left;
