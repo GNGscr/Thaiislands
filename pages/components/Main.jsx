@@ -74,16 +74,9 @@ import TiltComponent from "./TiltComponent";
 
 
 export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
-  // const { filter, regions } = data;
-
-  let mainParaSplitter = { en: "Everything from", he: "הכל מהכל" };
-  const [ articlePara1, articlePara2 ] = data['article-main-paragraph'][lang].split(mainParaSplitter[lang]);
-
-  let articlePara1Splitter = { en: "Koh Phangan is", he: "קופנגן הוא" };
-  const [ main1Para1, main1Para2 ] = articlePara1.split(articlePara1Splitter[lang]);
-
-  let articlePara2Splitter = { en: "But once", he: "אך פעם" };
-  const [ main2Para1, main2Para2 ] = articlePara2.split(articlePara2Splitter[lang]);
+  
+  const main1Para1 = data["article-main-paragraph"][lang].a;
+  const main1Para2 = data["article-main-paragraph"][lang].b;
 
   console.log('TODO!!!!! ::  fix but with missing words when splitting');
   console.log("בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.".length);
@@ -96,7 +89,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
     <div className="bg-white main">
       <TextParallaxContentComponent
         isMapVisible={false}
-        imgUrl={mainImg.src}
+        imgUrl={mainImg}
         subheading={data['heroPara'][lang]}
         heading="Koh Phangan"
         isCtaButton={true}
@@ -131,8 +124,8 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
         title={title}
       >
         <ExampleContent
-          para1={main2Para1}
-          para2={main2Para2}
+          para1={main1Para1}
+          para2={main1Para2}
           isLogoSection={false}
           sidePara={data.sideParagraphs.sidePara2}
           lang={lang}
@@ -141,7 +134,9 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
 
       </TextParallaxContentComponent>
 
-      <div className="relative h-[120vh]">
+      <div className={`relative h-[${
+          media === 'desktop'? '120' : '60'}vh]`
+          }>
         <div className="sticky top-0">
           <SwipeCarousel data={data} lang={lang} />
         </div>
@@ -192,7 +187,7 @@ const TextParallaxContentComponent = ({
       }}
     >
       <div className="relative h-[150vh]" id={`${isMapVisible ? 'map-img' : ''}`}>
-        <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} />
+        <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} />
         <OverlayCopy
           heading={heading}
           subheading={subheading}
@@ -209,7 +204,7 @@ const TextParallaxContentComponent = ({
   );
 };
 
-const StickyImage = ({ imgUrl, isMapVisible }) => {
+const StickyImage = ({ imgUrl, isMapVisible, data }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -218,25 +213,32 @@ const StickyImage = ({ imgUrl, isMapVisible }) => {
 
   const scale = useTransform(scrollYProgress, [0, 0.02, 1], [1, 1, 0.85]);
   const opacity = useTransform(scrollYProgress, [0, 0.02, 1], [1, 0, 0]);
-  return (
+  if (!imgUrl) return ''
+  else return (
     <motion.div
-    style={{
+      style={{
         backgroundImage: `url(${imgUrl})`,
+        // backgroundSize:  "contain",
         backgroundSize: "cover",
+        backgroundRepeat: 'no-repeat',
         backgroundPosition: "center",
         height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
-        scale,
+        scale
       }}
       ref={targetRef}
       className="sticky z-0 overflow-hidden rounded-3xl"
       >
+              <motion.div
+        className="absolute inset-0 bg-neutral-950/80"
+        style={{ opacity }}
+        />
         
         {
           isMapVisible
           ? <div id="map">
               <div className="map-responsive">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75468.17036922644!2d100.02495431595077!3d9.739631379237098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3054fd96fa0377ef%3A0xd3fd8d1a5e79affe!2sKo%20Pha%20Ngan!5e1!3m2!1sen!2sil!4v1727364051594!5m2!1sen!2sil"
+                <iframe src={data.googleMap.link}
                     width="600" 
                     height="450" 
                     allowFullScreen 
@@ -248,10 +250,10 @@ const StickyImage = ({ imgUrl, isMapVisible }) => {
           </div>
           : ''
         }
-      <motion.div
+      {/* <motion.div
         className="absolute inset-0 bg-neutral-950/70"
         style={{ opacity }}
-        />
+        /> */}
     </motion.div>
   );
 };
@@ -274,7 +276,7 @@ const OverlayCopy = ({
   
   const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
   const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
-{/* <LogoLoader style={{ fill: '#000' }} /> */}
+    // const heroOpacity = useTransform(scrollYProgress, [0, 0.08, 1], [1, 0, 0]);
   return (
     <motion.div
       style={{ y, opacity }}

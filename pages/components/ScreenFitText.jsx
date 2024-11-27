@@ -51,7 +51,12 @@ export default function ScreenFitText({text, isOnCarousal}) {
       ref={containerRef}
     >
       <span
-        style={ pathname === '/koh-samui' ? { bottom: '-50px'} : { bottom: 0} }
+        style={ pathname === '/koh-samui'
+          ? { bottom: '-50px'}
+          : pathname === '/koh-tao'
+          ? { bottom: '-105px'}
+          : { bottom: 0 }
+          }
         className="absolute bottom-0 left-0 whitespace-nowrap text-center
           font-bold uppercase text-slate-700 opacity-[0.03]"
         ref={textRef}

@@ -1,19 +1,18 @@
-import imgSrc from '../pages/public/images/samutra-residences.webp';
-import mainImg from '../pages/public/images/KohPhanganMainImg.jpeg';
 import ShuffleHero from './components/ShuffleHero';
+import data from '../pages/public/data/data.json';
 
 export default function AboutUs() {
     const pages = [
-        {label: 'Koh Phangan', link: '/koh-phangan', img: imgSrc.src},
-        {label: 'Koh Samui', link: '/koh-samui', img: imgSrc.src},
-        {label: 'Koh Tao', link: '/koh-tao', img: imgSrc.src},
+        {label: 'Koh Phangan', link: '/koh-phangan', img: ''},
+        {label: 'Koh Samui', link: '/koh-samui', img: ''},
+        {label: 'Koh Tao', link: '/koh-tao', img: ''},
     ];
     return (
         <div className="about-us flex flex-col justify-center h-[96.5vh] relative"
             style={{
                 margin: '0.75rem',
                 borderRadius: '1.85rem',
-                backgroundImage: `url(${mainImg.src})`,
+                backgroundImage: `url(${data["heroImage"]})`,
                 backgroundSize: "cover",
                 backgroundRepeat: 'no-repeat',
                 // backgroundColor: 'black'

@@ -6,23 +6,25 @@ import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
 import kohSamuiData from "./public/data/kohSamuiData.json";
 import { getGlobalLanguage, setGlobalLanguage, getMedia } from "./config";
-import phanganMap from './public/images/phangan-map.png';
-import mainImg from '../pages/public/images/samutra-residences.webp';
+import samuiMap from './public/images/KohSamuiNew.jpg';
 
 const he = "he";
 const en = "en";
 const HE_IL = 'he-IL';
 const EN_US = 'en-US';
 
+console.log(' FF: ', kohSamuiData);
+
 export default function KohSamui() {
     let [menuIsActive, setMenuIsActive] = useState(false);
-    const [ language, setLanguage ] = useState("en");
+    const [ language, setLanguage ] = useState(en);
     let globalLanguage = getGlobalLanguage();
     let mainHtml;
     useEffect(() => {
       mainHtml = document.querySelector('html');
       mainHtml.lang = mainHtml.lang === HE_IL ? HE_IL : EN_US;
     }, [language]);
+    // debugger;
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.lang = globalLanguage === he ? EN_US : HE_IL;
@@ -36,6 +38,8 @@ export default function KohSamui() {
       }
     }
 
+    
+    
     return (
       <>
         <Navbar
@@ -52,8 +56,8 @@ export default function KohSamui() {
           lang={kohSamuiData['language-text'][globalLanguage]}
           media={getMedia()}
           title={kohSamuiData["island-name"][globalLanguage]}
-          mainImg={mainImg}
-          mapDrawing={phanganMap.src} />
+          mainImg={kohSamuiData.heroImage}
+          mapDrawing={samuiMap.src} />
         <div id="media">
           <SocialsSection data={kohSamuiData} lang={kohSamuiData['language-text'][globalLanguage]} />
         </div>

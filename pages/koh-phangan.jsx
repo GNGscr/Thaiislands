@@ -7,7 +7,6 @@ import SectionAnimation from "./components/SectionAnimation";
 import kohPhanganData from "./public/data/kohPhanganData.json";
 import { getGlobalLanguage, setGlobalLanguage, getMedia } from "./config";
 import phanganMap from './public/images/phangan-map.png';
-import mainImg from '../pages/public/images/summer-luxury-beach-resort-and-spa.webp';
 
 const he = "he";
 const en = "en";
@@ -52,7 +51,7 @@ export default function KohPhangan() {
           lang={kohPhanganData['language-text'][globalLanguage]}
           media={getMedia()}
           title={kohPhanganData["island-name"][globalLanguage]}
-          mainImg={mainImg}
+          mainImg={kohPhanganData.heroImage}
           mapDrawing={phanganMap.src} />
         <div id="media">
           <SocialsSection data={kohPhanganData} lang={kohPhanganData['language-text'][globalLanguage]} />

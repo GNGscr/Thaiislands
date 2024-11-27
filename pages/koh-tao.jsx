@@ -5,8 +5,8 @@ import SocialsSection from "./components/SocialsSection";
 import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
 import kohTaoData from "./public/data/kohTaoData.json";
-import mainImg from '../pages/public/images/KohTaoMainImg.jpeg';
 import { getGlobalLanguage, setGlobalLanguage, getMedia } from "./config";
+import kohTaoMap from './public/images/kohTao.jpeg';
 
 const he = "he";
 const en = "en";
@@ -51,7 +51,8 @@ export default function KohTao() {
           lang={kohTaoData['language-text'][language] || "he"}
           media={getMedia()}
           title="Koh Tao"
-          mainImg={mainImg} />
+          mainImg={kohTaoData.heroImage}
+          mapDrawing={kohTaoMap.src} />
         <div id="media">
           <SocialsSection data={kohTaoData} lang={kohTaoData['language-text'][language] || "he"} />
         </div>

@@ -37,20 +37,54 @@
             { "label": 2, "id": "two", "value": "2" }
         ]
     },
+    "heroImage": "https://pix6.agoda.net/geo/city/17198/1098ae2e160ff31c31451530ec89c78c.jpg?ce=0&s=1920x822",
+    "aboutUsPage": {
+        "header": {
+            "he": "לאחר חוויות רבות על האי קוסמוי, מצאנו את המלונות המומלצים ביותר",
+            "en": "After many experiences on Koh Samui, we found the best recommended hotels"
+        },
+        "subHeader": {
+            "he": "הכנו עבורכם רשימה של מלונות וריזורטים מהטובים ביותר באי קוסמוי.",
+            "en": "We have compiled for you a list of the best hotels and resorts on Koh Samui."
+        },
+        "pages": [
+            {
+                "link": "/koh-phangan",
+                "label": {
+                    "en": "Koh Phangan",
+                    "he": "קופנגן"
+                }
+            },
+            {
+                "link": "/koh-samui",
+                "label": {
+                    "en": "Koh Samui",
+                    "he": "קוסמוי"
+                }
+            },
+            {
+                "link": "/koh-tao",
+                "label": {
+                    "en": "Koh Tao",
+                    "he": "קוטאו"
+                }
+            }
+        ]
+    },
     "heroPara": {
-        "he": "הכנו לכם רשימה מדהימה עם מלא אופציות לינה באי קוסמוי, תאילנד. המלונות שתמצאו אצלנו בקבוצה נבחרו בקפידה כפי שאנחנו מחפשים את המלונות לחופשה שלנו ..",
-        "en": "We have prepared an amazing list with many accommodation options on Koh Samui, Thailand. The hotels you will find in our group were carefully selected as we look for hotels for our vacation."
+        "he": "הכנו עבורכם אוסף של מלונות וריזורטים מושלמים באי קוסמוי, תאילנד, כל אחד מהם נבחר בקפידה כדי להציע את החוויה הטובה ביותר.",
+        "en": "We have put together a collection of perfect hotels and resorts on Koh Samui, Thailand, each one carefully selected to offer the best experience."
     },
     "ctaButton": {
         "he": "Linktree שלי",
         "en": "My Linktree"
     },
     "ctaText": {
-        "he": "למלונות ולריזורטים",
-        "en": "Hotels & Resotrs"
+        "he": "מלונות וריזורטים",
+        "en": "Hotels & Resorts"
     },
     "article-header": {
-        "he": " מלונות בקו סמוי",
+        "he": "מלונות בקוסמוי",
         "en": "Hotels in Koh Samui"
     },
     "island-name": {
@@ -58,18 +92,23 @@
         "en": "Koh Samui"
     },
     "article-main-paragraph": {
-        "he": "הכנו לכם רשימה מדהימה עם מלא אופציות לינה באי קוסמוי, תאילנד. המלונות שתמצאו אצלנו בקבוצה נבחרו בקפידה כפי שאנחנו מחפשים את המלונות לחופשה שלנו על ידי חיפוש מעמיק, השוואות וביקורות בשלל ערוצים. מלונות המתאימים לזוגות, לירח דבש, משפחות ותרמילאים שאוהבים לנפוש ולטייל. אם אתם מתכננים חופשה מושלמת בתאילנד, בין אם מדובר בחופשה רומנטית של בטן גב, בונגלו פשוט על החוף, ירח דבש קסום או חופשה יוקרתית, קוסמוי תמצאו מגוון אפשרויות לשהות שתתאים לצרכים שלכם. סמוי הוא אי יפהפה בתאילנד, הממוקם כחצי שעה מהאי קוסמוי. עם חופים טרופיים מרהיבים, מים צלולים ואווירה מרגיעה, קצת כמו סיני. האי מציע חוויה מגוונת לכל סוגי המטיילים: זוגות, משפחות ותרמילאים. הכל מהכל — מחופשת בטן גב ועד פעילויות מגוונות כמו טיולי טבע, שנורקלינג, צלילה, קייט, מסיבות מטורפות ותרבות מקומית עשירה. תוכלו ליהנות גם מסדנאות רבות ומגוונות: יוגה, מדיטציה, איגרוף - תאילנדי, קערות טיבטיות וטנטרה. טונג סלה היא העיירה המסחרית הגדולה באי, עם סופרים, ברים ושווקים מקומיים, שם גם נמצא המזח. באן תאי קרובה למסיבות הפול מון ומומלצת לחובבי גלישת קייט. הדרין בדרום האי, היא עיירה רגועה בדרך כלל עם חוף ים מדהים. אך פעם בחודש במסיבת הפולמון, תפגשו באלפי תיירים מכל העולם ובמלונות יבקשו מינימום הזמנה של 4 לילות. הצד המזרחי של האי, טונג נאי פאן, מציע רצועת חוף מדהימה ומושלמת לבטן גב עם מלונות מפוארים המתאימים לירח דבש, לזוגות ומשפחות. בצד המערבי של האי, באזורים כמו וואק טום, הין קונג וסריטנו, תמצאו מגוון סדנאות, בתי קפה ומסעדות, עם אופציות לינה מגוונות מבונגלוס פשוטים ועד יוקרתיים. חופים שקטים כמו הד יהאו, האד סאלאד וצ'אלוקלם-עיירת הדייגים, מציעים חווית חופשה רגועה באווירה מקסימלית של תאילנד.",
-        "en": "We have prepared an amazing list with many accommodation options on Koh Samui, Thailand. The hotels you will find in our group were selected with care, as we search for hotels for our vacation through deep searches, comparisons, and reviews across various channels. Hotels suitable for couples, honeymooners, families, and backpackers who love to relax and explore. If you are planning a perfect vacation in Thailand, whether it is a romantic getaway, a simple beachfront bungalow, a magical honeymoon, or a luxurious vacation, on Koh Samui you will find a variety of options that suit your needs. Koh Samui is a beautiful island in Thailand, located about half an hour from Koh Samui. With stunning tropical beaches, clear waters, and a relaxing atmosphere, it’s somewhat like Sinai. The island offers a diverse experience for all types of travelers: couples, families, and backpackers. Everything from a relaxing beach vacation to various activities such as nature tours, snorkeling, diving, kitesurfing, wild parties, and rich local culture. You can also enjoy numerous and diverse workshops: yoga, meditation, Muay Thai boxing, Tibetan bowls, and tantra. Thong Sala is the largest commercial town on the island, with supermarkets, bars, and local markets, and is also where the pier is located. Ban Tai is close to the Full Moon parties and is recommended for kite surfing enthusiasts. Haad Rin in the south of the island is usually a calm town with an amazing beach. But once a month, during the Full Moon party, you will encounter thousands of tourists from all over the world, and hotels will require a minimum booking of 4 nights. The eastern side of the island, Thong Nai Pan, offers a stunning beach strip perfect for relaxing with luxurious hotels suitable for honeymoons, couples, and families. On the western side of the island, in areas like Wok Tum, Hin Kong, and Srithanu, you will find a variety of workshops, cafes, and restaurants, with diverse accommodation options ranging from simple to luxurious bungalows. Quiet beaches like Had Yao, Had Salad, and Chaloklum (the fishing village) offer a serene vacation experience with the ultimate Thai atmosphere."
+        "he": {
+            "a": "קוסמוי הוא אחד האיים הפופולריים ביותר בתאילנד, עם חופים טרופיים, בתי מלון יוקרתיים, וריזורטים על החוף. האי מציע חוויה מגוונת שמתאימה לכל סוגי המטיילים - זוגות, משפחות ותרמילאים. תוכלו למצוא מלונות יוקרתיים עם בריכות אינסופיות, מסעדות מצוינות ופעילויות ספורט ימי. האי גם מציע חופים מדהימים כמו חוף צ'אוונג, חוף לאמאי וחוף בופוט, שכולם מציעים את כל מה שצריך לחופשה מושלמת.",
+            "b": "קוסמוי הוא אחד האיים הפופולריים ביותר בתאילנד, עם חופים טרופיים, בתי מלון יוקרתיים, וריזורטים על החוף. האי מציע חוויה מגוונת שמתאימה לכל סוגי המטיילים - זוגות, משפחות ותרמילאים. תוכלו למצוא מלונות יוקרתיים עם בריכות אינסופיות, מסעדות מצוינות ופעילויות ספורט ימי. האי גם מציע חופים מדהימים כמו חוף צ'אוונג, חוף לאמאי וחוף בופוט, שכולם מציעים את כל מה שצריך לחופשה מושלמת."
+        },
+        "en": {
+            "a": "Koh Samui is one of the most popular islands in Thailand, with tropical beaches, luxury hotels, and beachfront resorts. The island offers a diverse experience for all types of travelers—couples, families, and backpackers.",
+            "b":"You can find luxury hotels with infinity pools, excellent restaurants, and water sports activities. The island also boasts stunning beaches like Chaweng, Lamai, and Bophut, all of which offer everything needed for the perfect vacation. The island itself is very big and is more western than it's closest islands. It's easy to find here a normal mall with anything you need to that you can't find on other samller islands."}
     },
     "article-second-paragraph": {
-        "he": "אתר אגודה יותר מומלץ במזרח ולכן החלטתי להיות משווק שלהם, כחלק מהשירות שלי, אני משתף קישורים ישירים למלונות שלהם. כשאתם סוגרים דרך הקישור, אני מרוויח עמלה. ללא עלות נוספת מצידכם. זאת העבודה שלי. וככה אתם יכולים לפרגן לי בחזרה.",
-        "en": "Agoda's site is more recommended in the east, so I decided to become their affiliate. As part of my service, I share direct links to their hotels. When you book through the link, I earn a commission, at no extra cost to you. This is my job, and this is how you can support me in return."
+        "he": "כחלק משירותינו, אנו משתפים קישורים ישירים למלונות על מנת שתוכלו להזמין בקלות, ונתמוך בכם תוך כדי. קוטאו מציעה חוויה יותר אקסלוסיבית שכוללת צלילה ושנורקלינג.",
+        "en": "As part of our service, we share direct links to hotels so you can easily book, and support you along the way. Koh Tao offers a more exclusive experience including diving and snorkling."
     },
     "facebookLink": "https://www.facebook.com/share_channel/?link=https%3A%2F%2Flinktr.ee%2Fbagditravel%3Futm_source%3Dlinktree_profile_share&app_id=966242223397117&source_surface=external_reshare&display&hashtag",
     "instagramLink": "https://www.instagram.com/idobagdi/",
     "linktreeLink": "https://linktr.ee/bagditravel",
     "vacation-photos-title": {
-        "he": "גלריית החופשה שלנו",
+        "he": "גלריית חופשה שלנו",
         "en": "Our Vacation Gallery"
     },
     "map-title": {
@@ -82,6 +121,9 @@
             "desktop": "Hover over the map"
         }
     },
+    "googleMap": {
+        "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115265.22839980878!2d99.91901011404137!3d9.501246619718925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3054f1501c66266f%3A0xedd55abd3d7d8330!2sKo%20Samui!5e1!3m2!1sen!2sil!4v1732463848186!5m2!1sen!2sil"
+    },
     "resorts-and-hotels-title": {
         "he": "ריזורטים & מלונות",
         "en": "Resorts & Hotels"
@@ -92,17 +134,17 @@
     },
     "sideParagraphs": {
         "sidePara1": {
-            "en": "The island offers a diverse experience for all types of travelers: couples, families, and backpackers.",
-            "he": "האי מציע חוויה מגוונת לכל סוגי המטיילים: זוגות, משפחות ותרמילאים."
+            "en": "Koh Samui offers a wide variety of experiences for travelers of all kinds: couples, families, and solo explorers.",
+            "he": "קוסמוי מציע חוויות מגוונות למטיילים מכל הסוגים: זוגות, משפחות ומטיילים עצמאיים."
         },
         "sidePara2": {
-            "en": "You can also enjoy lot's of vercitial courses, like: Yoga, Meditation, Muai-Thai, Tibatian bowles and Tantra",
-            "he": "תוכלו ליהנות גם מסדנאות רבות ומגוונות: יוגה, מדיטציה, איגרוף - תאילנדי, קערות טיבטיות וטנטרה"
+            "en": "Enjoy a variety of workshops such as yoga, meditation, Muay Thai, and more.",
+            "he": "תיהנו ממגוון סדנאות כמו יוגה, מדיטציה, איגרוף תאילנדי ועוד."
         }
     },
     "footer": {
         "Socials": [
-            "Insagram",
+            "Instagram",
             "Facebook",
             "Linktree",
             "Youtube"
@@ -118,536 +160,223 @@
     "regions": [
         {
             "regionName": {
-                "he": "Thong Sala - מלונות באזור טונג סלה",
-                "en": "Thong Sala - Hotels in the Thong Sala Area"
+                "he": "חוף צ'אוונג - מלונות באזור צ'אוונג",
+                "en": "Chaweng Beach - Hotels in the Chaweng Area"
             },
             "regionAffiliates": [
                 {
-                    "affiliateName": "Samutra Residences",
+                    "affiliateName": "Ozo Chaweng Samui",
                     "affiliateNumberOfStars": 4,
                     "affiliateContent": {
-                        "he": "וילות על הים עם בריכה פרטית ובריכה משותפת, מתאים למשפחות וזוגות, בנוי בסגנון מודרני ומפנק. מקום שקט ורגוע לבטן גב.",
-                        "en": "Beachfront villas with private and shared pools, suitable for families and couples, built in a modern and luxurious style. A quiet and relaxing place to unwind."
+                        "he": "מלון יוקרתי ליד חוף צ'אוונג, עם בריכה אינסופית ופעילויות רבות לאורחים.",
+                        "en": "A luxury hotel near Chaweng Beach, with an infinity pool and a variety of activities for guests."
                     },
-                    "affiliateGoogleScore": 4.7,
+                    "affiliateGoogleScore": 4.5,
                     "affiliateLink": "https://agoda.tp.st/KPKaWglL",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/6361579/-1/ceb6fd59eeaa5ac5818fd085fb590183.jpg?ca=9&ce=1&s=1024x"
+                    "affiliateStyleImage": "https://example.com/ozo-chaweng.jpg"
                 },
                 {
-                    "affiliateName": "Summer Luxury Beach Resort & Spa",
-                    "affiliateNumberOfStars": 2,
+                    "affiliateName": "Baan Haad Ngam Boutique Resort & Villa",
+                    "affiliateNumberOfStars": 4,
+                    "affiliateContent": {
+                        "he": "חדר גדול, יפה, נקי, מאובזר היטב, עם ג׳קוזי מפנק",
+                        "en": "Beachfront villas with private and shared pools, suitable for families and couples, built in a modern and luxurious style. A quiet and relaxing place to unwind."
+                    },
+                    "affiliateGoogleScore": 4.1,
+                    "affiliateLink": "https://www.agoda.com/he-il/baan-haad-ngam-boutique-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-01-14&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=7,16,-1&los=9&searchrequestid=fba4760c-b2f8-4831-a69d-5b5065c8d1b8",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/48478/-1/811f11fbf6a31a6b30e7123003e3516a.jpg?ce=0&s=600x"
+                },
+                {
+                    "affiliateName": "The Briza Beach Resort",
+                    "affiliateNumberOfStars": 3,
                     "affiliateContent": {
                         "he": "מלון עם ספא מפנק, בר ומסעדה ברמה גבוה. יש חדרים עם בריכה פרטית ויש בריכה משותפת. הכל בנוי בסגנון מודרני וברמה גבוה. מתאים לזוגות ומשפחות שרוצות להתפנק",
                         "en": "Hotel with a luxurious spa, bar, and high-quality restaurant. Some rooms have private pools and there is a shared pool. Everything is built in a modern and high-quality style. Suitable for couples and families who want to indulge."
                     },
-                    "affiliateGoogleScore": 4.4,
+                    "affiliateGoogleScore": 4.1,
                     "affiliateLink": "https://agoda.tp.st/Zc2a5DmZ",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/1076675/-1/6ad3788b021595c5b7b97da30b71281e.jpg?ce=0&s=600x"
+                    "affiliateStyleImage": "https://pix8.agoda.net/property/56142378/0/26611d48d5e085b1a8a39add64625deb.jpeg?ce=0&s=1024x"
                 },
                 {
-                    "affiliateName": "Sabaii Bay Resort",
-                    "affiliateNumberOfStars": 2,
+                    "affiliateName": "The Stay Chaweng Beach Resort",
+                    "affiliateNumberOfStars": 4,
                     "affiliateContent": {
-                        "he": "מלון מתאים לזוגות ומשפחות עם ילדים. מקבלים בברכה חיות מחמד. יש בריכה משותפת, מסעדה ובר על הים. בריזורט יש חדר כושר עם מספר מתקנים.",
+                        "he": "מלון מעוצב מקסים, נקי, שירותי ובמיקום מצויין! צוות נחמד.",
                         "en": "Hotel suitable for couples and families with children. Pets are welcome. There is a shared pool, restaurant, and bar on the beach. The resort has a gym with several facilities."
                     },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/3D7ZBbac",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/281786/-1/91b569d25172cb7afc157ae5f01e64cf.jpg?ca=21&ce=0&s=1024x"
+                    "affiliateGoogleScore": 4.4,
+                    "affiliateLink": "https://www.agoda.com/he-il/the-stay-chaweng-beach-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-01-14&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=16,8&los=9&searchrequestid=fba4760c-b2f8-4831-a69d-5b5065c8d1b8",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/12535923/-1/9e0057b7ea6c163ef5c61197e6894e86.png?ce=0&s=600x"
                 },
                 {
-                    "affiliateName": "Lime N Soda Beachfront Resort",
+                    "affiliateName": "Chaweng Garden Beach Resort",
                     "affiliateNumberOfStars": 3,
                     "affiliateContent": {
-                        "he": "בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.",
+                        "he": "תמורה מצוינת למחיר. ארוחת בוקר טובה עם מגוון של מנות.",
                         "en": "Beachfront bungalows with a shared pool, a modern-style hotel with relatively simple rooms. Suitable for solo travelers, couples, and families. There is a restaurant with a friendly and efficient staff. Located between Thong Sala and Ban Tai, in a relaxed and quiet atmosphere."
                     },
                     "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/oggJV9I5",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x"
+                    "affiliateLink": "https://www.agoda.com/he-il/chaweng-garden-beach-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-01-14&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&los=9&searchrequestid=fba4760c-b2f8-4831-a69d-5b5065c8d1b8",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/108775/-1/afd238f06a53b24529af11857cb73989.jpg?ce=0&s=600x"
                 },
                 {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 2,
+                    "affiliateName": "Combo Beach Hotel Samui",
+                    "affiliateNumberOfStars": 3,
                     "affiliateContent": {
                         "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
                         "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
                     },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
+                    "affiliateGoogleScore": 3.1,
+                    "affiliateLink": "https://www.agoda.com/he-il/combo-beach-hotel-samui_2/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-01-14&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=2,16&los=9&searchrequestid=fba4760c-b2f8-4831-a69d-5b5065c8d1b8",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/219/2191583/2191583_17060113330053388134.png?ca=6&ce=1&s=600x"
                 },
                 {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
+                    "affiliateName": "Chaba Cabana Beach Resort",
                     "affiliateNumberOfStars": 4,
                     "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
+                        "he": "שופץ לאחרונה. המיקום מצויין שקט ורחוק מהרחוב הסואן",
+                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
+                    },
+                    "affiliateGoogleScore": 4.2,
+                    "affiliateLink": "https://www.agoda.com/he-il/chaba-cabana-beach-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-01-14&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=16&los=9&searchrequestid=fba4760c-b2f8-4831-a69d-5b5065c8d1b8",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/10789/-1/48c587586ed673fff36a1d16ec1176ef.jpg?ca=0&ce=1&s=600x"
+                },
+                {
+                    "affiliateName": "The Canale Samui Resort",
+                    "affiliateNumberOfStars": 4,
+                    "affiliateContent": {
+                        "he": "המלון עצמו חמוד מאוד, החדרים יפים ומרווחים",
                         "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
                     },
                     "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
+                    "affiliateLink": "https://www.agoda.com/he-il/the-canale-samui-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-01-14&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=1,16,8&los=9&searchrequestid=fba4760c-b2f8-4831-a69d-5b5065c8d1b8",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/189/18929851/18929851_20110409540093110933.jpg?ca=15&ce=1&s=600x"
                 },
                 {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
-                    "affiliateNumberOfStars": 4,
-                    "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
-                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Lime N Soda Beachfront Resort",
+                    "affiliateName": "Al's Resort",
                     "affiliateNumberOfStars": 3,
                     "affiliateContent": {
-                        "he": "בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.",
+                        "he": "מקום אירוח זה בעל 3.5 כוכבים מציע בריכה חיצונית כדי להבטיח שהייה בלתי נשכחת.",
                         "en": "Beachfront bungalows with a shared pool, a modern-style hotel with relatively simple rooms. Suitable for solo travelers, couples, and families. There is a restaurant with a friendly and efficient staff. Located between Thong Sala and Ban Tai, in a relaxed and quiet atmosphere."
                     },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/oggJV9I5",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
-                        "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
-                    },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
+                    "affiliateGoogleScore": 3.5,
+                    "affiliateLink": "https://www.agoda.com/he-il/al-s-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-01-14&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=16&los=9&searchrequestid=fba4760c-b2f8-4831-a69d-5b5065c8d1b8",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/68930/-1/8ef57861d1aaabe61d7f6b6672bde4bb.jpg?ca=9&ce=1&s=600x"
                 }
             ]
         },
         {
             "regionName": {
-                "he": "מלונות באזור באן תאי Ban Tai",
-                "en": "Ban Tai - Hotels in the Ban Tai Area"
+                "he": "מלונות באזור בופוט Bo Phut",
+                "en": "Bo Phut - Hotels in the Bo Phut Area"
             },
             "regionAffiliates": [
                 {
-                    "affiliateName": "Samutra Residences",
+                    "affiliateName": "The Privilege Hotel Ezra Beach Club",
                     "affiliateNumberOfStars": 3,
                     "affiliateContent": {
-                        "he": "וילות על הים עם בריכה פרטית ובריכה משותפת, מתאים למשפחות וזוגות, בנוי בסגנון מודרני ומפנק. מקום שקט ורגוע לבטן גב.",
+                        "he": "עם דירוג 4.5 כוכבים, מקום לינה איכותי זה מספק לאורחים גישה למסאז', בריכה חיצוניתו מסעדה במקום. בריכת אינפיניטי קו ראשון לים",
                         "en": "Beachfront villas with private and shared pools, suitable for families and couples, built in a modern and luxurious style. A quiet and relaxing place to unwind."
                     },
                     "affiliateGoogleScore": 4.7,
-                    "affiliateLink": "https://agoda.tp.st/KPKaWglL",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/6361579/-1/ceb6fd59eeaa5ac5818fd085fb590183.jpg?ca=9&ce=1&s=1024x"
+                    "affiliateLink": "https://www.agoda.com/he-il/chaweng-cove-beach-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2024-12-26&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=16&los=5&searchrequestid=089a5992-f7b4-4261-be60-11e1bb696892",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/1164116/-1/0a14a5accda2d44ffa42a6c603c1d4ab.jpg?ca=19&ce=1&s=600x"
                 },
                 {
-                    "affiliateName": "Summer Luxury Beach Resort & Spa",
-                    "affiliateNumberOfStars": 3,
+                    "affiliateName": "SALA Samui Chaweng Beach Resort",
+                    "affiliateNumberOfStars": 5,
                     "affiliateContent": {
-                        "he": "מלון עם ספא מפנק, בר ומסעדה ברמה גבוה. יש חדרים עם בריכה פרטית ויש בריכה משותפת. הכל בנוי בסגנון מודרני וברמה גבוה. מתאים לזוגות ומשפחות שרוצות להתפנק",
+                        "he": "חדר ברמה גבוהה מאוד, מאובזר עם מיטה נוחה. ארוחת בוקר נהדרת ועשירה עם מגוון אפשרויות.",
                         "en": "Hotel with a luxurious spa, bar, and high-quality restaurant. Some rooms have private pools and there is a shared pool. Everything is built in a modern and high-quality style. Suitable for couples and families who want to indulge."
                     },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Zc2a5DmZ",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/1076675/-1/6ad3788b021595c5b7b97da30b71281e.jpg?ce=0&s=600x"
+                    "affiliateGoogleScore": 4.8,
+                    "affiliateLink": "https://www.agoda.com/he-il/sala-samui-chaweng-beach/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2024-12-26&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=16%2C8&los=5&searchrequestid=089a5992-f7b4-4261-be60-11e1bb696892&ds=zTngnL4FZMhoJG6Z",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/1624710/-1/2383a9ca837d5376485954b13d82b53d.jpg?ca=0&ce=1"
                 },
                 {
-                    "affiliateName": "Sabaii Bay Resort",
+                    "affiliateName": "PRANA RESORT NANDANA",
                     "affiliateNumberOfStars": 3,
                     "affiliateContent": {
-                        "he": "מלון מתאים לזוגות ומשפחות עם ילדים. מקבלים בברכה חיות מחמד. יש בריכה משותפת, מסעדה ובר על הים. בריזורט יש חדר כושר עם מספר מתקנים.",
+                        "he": "החדרים עם היציאה לבריכה מדהימים מאוד. צוות אדיב ועוזר בכל. שירות, אוכל וניקיון ברמה גבוהה",
                         "en": "Hotel suitable for couples and families with children. Pets are welcome. There is a shared pool, restaurant, and bar on the beach. The resort has a gym with several facilities."
                     },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/3D7ZBbac",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/281786/-1/91b569d25172cb7afc157ae5f01e64cf.jpg?ca=21&ce=0&s=1024x"
+                    "affiliateGoogleScore": 4.0,
+                    "affiliateLink": "https://www.agoda.com/he-il/prana-resorts-samui/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2024-12-26&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=16%2C8&los=5&searchrequestid=089a5992-f7b4-4261-be60-11e1bb696892&ds=zTngnL4FZMhoJG6Z",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/711844/-1/40fe3be7479b8633315481ffce0f0773.jpg?ca=10&ce=1"
                 },
                 {
-                    "affiliateName": "Lime N Soda Beachfront Resort",
-                    "affiliateNumberOfStars": 3,
+                    "affiliateName": "Le Murraya Resort",
+                    "affiliateNumberOfStars": 4,
                     "affiliateContent": {
-                        "he": "בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.",
+                        "he": "מלון נקי, מקצועי, חדר מרווח וצוות נחמד שתמיד עוזר. חדרים גדולים ומרווחים עם מטבח",
                         "en": "Beachfront bungalows with a shared pool, a modern-style hotel with relatively simple rooms. Suitable for solo travelers, couples, and families. There is a restaurant with a friendly and efficient staff. Located between Thong Sala and Ban Tai, in a relaxed and quiet atmosphere."
                     },
                     "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/oggJV9I5",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x"
+                    "affiliateLink": "https://www.agoda.com/he-il/le-murraya-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2024-12-26&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&los=5&searchrequestid=089a5992-f7b4-4261-be60-11e1bb696892&ds=zTngnL4FZMhoJG6Z",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/109095/-1/d72596229f1907d120f503f214b4a231.jpg?ca=20&ce=0"
                 },
                 {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
-                        "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
-                    },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
-                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Samutra Residences",
+                    "affiliateName": "Weekender Resort",
                     "affiliateNumberOfStars": 4,
                     "affiliateContent": {
-                        "he": "וילות על הים עם בריכה פרטית ובריכה משותפת, מתאים למשפחות וזוגות, בנוי בסגנון מודרני ומפנק. מקום שקט ורגוע לבטן גב.",
-                        "en": "Beachfront villas with private and shared pools, suitable for families and couples, built in a modern and luxurious style. A quiet and relaxing place to unwind."
-                    },
-                    "affiliateGoogleScore": 4.7,
-                    "affiliateLink": "https://agoda.tp.st/KPKaWglL",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/6361579/-1/ceb6fd59eeaa5ac5818fd085fb590183.jpg?ca=9&ce=1&s=1024x"
-                },
-                {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
+                        "he": "מקום לינה איכותי זה מספק לאורחים גישה למרכז ספורט, מסאז'ו בריכה חיצונית במקום.",
                         "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
                     },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
+                    "affiliateGoogleScore": 4.2,
+                    "affiliateLink": "https://www.agoda.com/he-il/weekender-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2024-12-26&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=2%2C16%2C8&los=5&searchrequestid=089a5992-f7b4-4261-be60-11e1bb696892&ds=zTngnL4FZMhoJG6Z",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/10822/-1/c2b62e500b078c959b7316c371b1453e.jpg?ca=25&ce=0"
+                },
+                {
+                    "affiliateName": "The Bulin Residence",
+                    "affiliateNumberOfStars": 3,
+                    "affiliateContent": {
+                        "he": "מלא במתקנים שישפרו לכם את איכות השהייה וההנאה ממנה.",
+                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
+                    },
+                    "affiliateGoogleScore": 3.7,
+                    "affiliateLink": "https://www.agoda.com/he-il/the-bulin-residence/hotel/all/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2024-12-26&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=4%2C16&los=5&searchrequestid=089a5992-f7b4-4261-be60-11e1bb696892&ds=zTngnL4FZMhoJG6Z",
+                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max500/158843855.jpg?k=183c2cf62fcc8c88fa96395302f5ddcd1ea911418477d4847c4f796f09fd46b8"
+                },
+                {
+                    "affiliateName": "The Samui Beach Resort",
+                    "affiliateNumberOfStars": 3,
+                    "affiliateContent": {
+                        "he": "מקום אירוח זה בעל 3.5 כוכבים מציע בריכה חיצונית כדי להבטיח שהייה בלתי נשכחת.",
+                        "en": "Beachfront villas with private and shared pools, suitable for families and couples, built in a modern and luxurious style. A quiet and relaxing place to unwind."
+                    },
+                    "affiliateGoogleScore": 3.5,
+                    "affiliateLink": "https://www.agoda.com/he-il/the-samui-beach-resort/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2024-12-26&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=16&los=5&searchrequestid=089a5992-f7b4-4261-be60-11e1bb696892&ds=zTngnL4FZMhoJG6Z",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/1184542/-1/b00a577c9d4bcc115dda0a3db1d8326f.png?ca=25&ce=0"
+                },
+                {
+                    "affiliateName": "Nikki Beach Resort & Spa",
+                    "affiliateNumberOfStars": 4,
+                    "affiliateContent": {
+                        "he": "מקום לינה איכותי זה מספק לאורחים גישה למרכז ספורט, מסאז'ו בריכה חיצונית במקום.",
+                        "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
+                    },
+                    "affiliateGoogleScore": 4.4,
+                    "affiliateLink": "https://www.agoda.com/he-il/nikki-beach-resort-spa/hotel/koh-samui-th.html?finalPriceView=2&isShowMobileAppPrice=false&cid=1802322&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2024-12-26&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=ILS&isFreeOccSearch=false&tag=S.SrDsqSOWQ-TeBqFx.Gq7i7pgefvXOOuw&tspTypes=16&los=5&searchrequestid=089a5992-f7b4-4261-be60-11e1bb696892&ds=zTngnL4FZMhoJG6Z",
+                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/208512/-1/ff1617b6037caff843a0437f9c7eb60c.jpg?ce=0"
                 }
             ]
         },
         {
             "regionName": {
-                "he": "Thong Sala - מלונות באזור טונג סלה",
-                "en": "Thong Sala - Hotels in the Thong Sala Area"
+                "he": "חוף לאמאי - מלונות באזור לאמאי",
+                "en": "Lamai Beach - Hotels in the Lamai Area"
             },
             "regionAffiliates": [
                 {
-                    "affiliateName": "Samutra Residences",
-                    "affiliateNumberOfStars": 4,
+                    "affiliateName": "Pavilion Samui Villas & Resort",
+                    "affiliateNumberOfStars": 5,
                     "affiliateContent": {
-                        "he": "וילות על הים עם בריכה פרטית ובריכה משותפת, מתאים למשפחות וזוגות, בנוי בסגנון מודרני ומפנק. מקום שקט ורגוע לבטן גב.",
-                        "en": "Beachfront villas with private and shared pools, suitable for families and couples, built in a modern and luxurious style. A quiet and relaxing place to unwind."
+                        "he": "ריזורט חמישה כוכבים באזור לאמאי, עם וילות פרטיות ובריכת שחייה מפוארת.",
+                        "en": "A five-star resort in the Lamai area, with private villas and a luxurious swimming pool."
                     },
                     "affiliateGoogleScore": 4.7,
-                    "affiliateLink": "https://agoda.tp.st/KPKaWglL",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/6361579/-1/ceb6fd59eeaa5ac5818fd085fb590183.jpg?ca=9&ce=1&s=1024x"
-                },
-                {
-                    "affiliateName": "Summer Luxury Beach Resort & Spa",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "מלון עם ספא מפנק, בר ומסעדה ברמה גבוה. יש חדרים עם בריכה פרטית ויש בריכה משותפת. הכל בנוי בסגנון מודרני וברמה גבוה. מתאים לזוגות ומשפחות שרוצות להתפנק",
-                        "en": "Hotel with a luxurious spa, bar, and high-quality restaurant. Some rooms have private pools and there is a shared pool. Everything is built in a modern and high-quality style. Suitable for couples and families who want to indulge."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Zc2a5DmZ",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/1076675/-1/6ad3788b021595c5b7b97da30b71281e.jpg?ce=0&s=600x"
-                },
-                {
-                    "affiliateName": "Sabaii Bay Resort",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "מלון מתאים לזוגות ומשפחות עם ילדים. מקבלים בברכה חיות מחמד. יש בריכה משותפת, מסעדה ובר על הים. בריזורט יש חדר כושר עם מספר מתקנים.",
-                        "en": "Hotel suitable for couples and families with children. Pets are welcome. There is a shared pool, restaurant, and bar on the beach. The resort has a gym with several facilities."
-                    },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/3D7ZBbac",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/281786/-1/91b569d25172cb7afc157ae5f01e64cf.jpg?ca=21&ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "Lime N Soda Beachfront Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.",
-                        "en": "Beachfront bungalows with a shared pool, a modern-style hotel with relatively simple rooms. Suitable for solo travelers, couples, and families. There is a restaurant with a friendly and efficient staff. Located between Thong Sala and Ban Tai, in a relaxed and quiet atmosphere."
-                    },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/oggJV9I5",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
-                        "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
-                    },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
-                    "affiliateNumberOfStars": 4,
-                    "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
-                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Lime N Soda Beachfront Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.",
-                        "en": "Beachfront bungalows with a shared pool, a modern-style hotel with relatively simple rooms. Suitable for solo travelers, couples, and families. There is a restaurant with a friendly and efficient staff. Located between Thong Sala and Ban Tai, in a relaxed and quiet atmosphere."
-                    },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/oggJV9I5",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
-                        "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
-                    },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
-                    "affiliateNumberOfStars": 4,
-                    "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
-                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Lime N Soda Beachfront Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.",
-                        "en": "Beachfront bungalows with a shared pool, a modern-style hotel with relatively simple rooms. Suitable for solo travelers, couples, and families. There is a restaurant with a friendly and efficient staff. Located between Thong Sala and Ban Tai, in a relaxed and quiet atmosphere."
-                    },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/oggJV9I5",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
-                        "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
-                    },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
-                    "affiliateNumberOfStars": 4,
-                    "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
-                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
-                }
-            ]
-        },
-        {
-            "regionName": {
-                "he": "מלונות באזור באן תאי Ban Tai",
-                "en": "Ban Tai - Hotels in the Ban Tai Area"
-            },
-            "regionAffiliates": [
-                {
-                    "affiliateName": "Samutra Residences",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "וילות על הים עם בריכה פרטית ובריכה משותפת, מתאים למשפחות וזוגות, בנוי בסגנון מודרני ומפנק. מקום שקט ורגוע לבטן גב.",
-                        "en": "Beachfront villas with private and shared pools, suitable for families and couples, built in a modern and luxurious style. A quiet and relaxing place to unwind."
-                    },
-                    "affiliateGoogleScore": 4.7,
-                    "affiliateLink": "https://agoda.tp.st/KPKaWglL",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/6361579/-1/ceb6fd59eeaa5ac5818fd085fb590183.jpg?ca=9&ce=1&s=1024x"
-                },
-                {
-                    "affiliateName": "Summer Luxury Beach Resort & Spa",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "מלון עם ספא מפנק, בר ומסעדה ברמה גבוה. יש חדרים עם בריכה פרטית ויש בריכה משותפת. הכל בנוי בסגנון מודרני וברמה גבוה. מתאים לזוגות ומשפחות שרוצות להתפנק",
-                        "en": "Hotel with a luxurious spa, bar, and high-quality restaurant. Some rooms have private pools and there is a shared pool. Everything is built in a modern and high-quality style. Suitable for couples and families who want to indulge."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Zc2a5DmZ",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/1076675/-1/6ad3788b021595c5b7b97da30b71281e.jpg?ce=0&s=600x"
-                },
-                {
-                    "affiliateName": "Sabaii Bay Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "מלון מתאים לזוגות ומשפחות עם ילדים. מקבלים בברכה חיות מחמד. יש בריכה משותפת, מסעדה ובר על הים. בריזורט יש חדר כושר עם מספר מתקנים.",
-                        "en": "Hotel suitable for couples and families with children. Pets are welcome. There is a shared pool, restaurant, and bar on the beach. The resort has a gym with several facilities."
-                    },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/3D7ZBbac",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/281786/-1/91b569d25172cb7afc157ae5f01e64cf.jpg?ca=21&ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "Lime N Soda Beachfront Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.",
-                        "en": "Beachfront bungalows with a shared pool, a modern-style hotel with relatively simple rooms. Suitable for solo travelers, couples, and families. There is a restaurant with a friendly and efficient staff. Located between Thong Sala and Ban Tai, in a relaxed and quiet atmosphere."
-                    },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/oggJV9I5",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
-                        "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
-                    },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
-                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
-                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
-                }
-            ]
-        },
-        {
-            "regionName": {
-                "he": "Haadrin - מלונות באזור האאדרין",
-                "en": "Haadrin - Hotels in the Haadrin Area"
-            },
-            "regionAffiliates": [
-                {
-                    "affiliateName": "Samutra Residences",
-                    "affiliateNumberOfStars": 4,
-                    "affiliateContent": {
-                        "he": "וילות על הים עם בריכה פרטית ובריכה משותפת, מתאים למשפחות וזוגות, בנוי בסגנון מודרני ומפנק. מקום שקט ורגוע לבטן גב.",
-                        "en": "Beachfront villas with private and shared pools, suitable for families and couples, built in a modern and luxurious style. A quiet and relaxing place to unwind."
-                    },
-                    "affiliateGoogleScore": 4.7,
-                    "affiliateLink": "https://agoda.tp.st/KPKaWglL",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/6361579/-1/ceb6fd59eeaa5ac5818fd085fb590183.jpg?ca=9&ce=1&s=1024x"
-                },
-                {
-                    "affiliateName": "Summer Luxury Beach Resort & Spa",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "מלון עם ספא מפנק, בר ומסעדה ברמה גבוה. יש חדרים עם בריכה פרטית ויש בריכה משותפת. הכל בנוי בסגנון מודרני וברמה גבוה. מתאים לזוגות ומשפחות שרוצות להתפנק",
-                        "en": "Hotel with a luxurious spa, bar, and high-quality restaurant. Some rooms have private pools and there is a shared pool. Everything is built in a modern and high-quality style. Suitable for couples and families who want to indulge."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Zc2a5DmZ",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/1076675/-1/6ad3788b021595c5b7b97da30b71281e.jpg?ce=0&s=600x"
-                },
-                {
-                    "affiliateName": "Sabaii Bay Resort",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "מלון מתאים לזוגות ומשפחות עם ילדים. מקבלים בברכה חיות מחמד. יש בריכה משותפת, מסעדה ובר על הים. בריזורט יש חדר כושר עם מספר מתקנים.",
-                        "en": "Hotel suitable for couples and families with children. Pets are welcome. There is a shared pool, restaurant, and bar on the beach. The resort has a gym with several facilities."
-                    },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/3D7ZBbac",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/281786/-1/91b569d25172cb7afc157ae5f01e64cf.jpg?ca=21&ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "Lime N Soda Beachfront Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.",
-                        "en": "Beachfront bungalows with a shared pool, a modern-style hotel with relatively simple rooms. Suitable for solo travelers, couples, and families. There is a restaurant with a friendly and efficient staff. Located between Thong Sala and Ban Tai, in a relaxed and quiet atmosphere."
-                    },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/oggJV9I5",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
-                        "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
-                    },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
-                    "affiliateNumberOfStars": 4,
-                    "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
-                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Lime N Soda Beachfront Resort",
-                    "affiliateNumberOfStars": 3,
-                    "affiliateContent": {
-                        "he": "בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.",
-                        "en": "Beachfront bungalows with a shared pool, a modern-style hotel with relatively simple rooms. Suitable for solo travelers, couples, and families. There is a restaurant with a friendly and efficient staff. Located between Thong Sala and Ban Tai, in a relaxed and quiet atmosphere."
-                    },
-                    "affiliateGoogleScore": 4.1,
-                    "affiliateLink": "https://agoda.tp.st/oggJV9I5",
-                    "affiliateStyleImage": "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x"
-                },
-                {
-                    "affiliateName": "V-View Beach Resort",
-                    "affiliateNumberOfStars": 2,
-                    "affiliateContent": {
-                        "he": "בונגלוס מעץ בנוי בסגנון תאילנדי פשוט לחוויה אותטנית, במקום יש בריכה משותפת ומסעדה. ערסלים ונדנדות על חוף הים. מתאים לזוגות ומאוד ידידותיים למשפחות עם ילדים.",
-                        "en": "Wooden bungalows built in a simple Thai style for an authentic experience, with a shared pool and restaurant. Hammocks and swings on the beach. Suitable for couples and very family-friendly."
-                    },
-                    "affiliateGoogleScore": 4.5,
-                    "affiliateLink": "https://agoda.tp.st/l7yX8nfw",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x"
-                },
-                {
-                    "affiliateName": "Tropicana Khophagan Resort Hotel",
-                    "affiliateNumberOfStars": 4,
-                    "affiliateContent": {
-                        "he": "בונגלוס פשוט מעץ בנוי בסגנון תאילנדי על חוף הים, מתאים לצעירים ותרמילאים או משפחות שלא מחפשות פינוק. בחוף יש פינות ישיבה וערסלים מפוזרים במתחם.",
-                        "en": "Simple wooden bungalows built in Thai style on the beach, suitable for young people, backpackers, or families not seeking luxury. The beach has seating areas and scattered hammocks."
-                    },
-                    "affiliateGoogleScore": 4.4,
-                    "affiliateLink": "https://agoda.tp.st/Igphx4Am",
-                    "affiliateStyleImage": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x"
+                    "affiliateLink": "https://agoda.tp.st/fkUwMglL",
+                    "affiliateStyleImage": "https://example.com/pavilion-samui.jpg"
                 }
             ]
         }

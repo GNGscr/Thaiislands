@@ -1786,7 +1786,7 @@ html[lang="en-US"] .star-score {
 
   .social {
     margin-left: 0 !important;
-    gap: 0rem !important;
+    gap: 0.25rem !important;
   }
   .links-wrapper {
     top: 3rem;
@@ -1907,7 +1907,9 @@ html[lang="en-US"] .star-score {
     padding-bottom: 1.15rem;
   }
   .decleration-wrapper {
-    height: fit-content;
+    /* height: fit-content; */
+    height: 25rem;
+    display: none;
   }
   .decleration {
     font-size: 1.5rem !important;
