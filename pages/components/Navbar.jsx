@@ -105,7 +105,7 @@ export default function Navbar({
       setIsNavToggleSvgVisible(false);
       setIsNavbarVisible(false);
     };
-  }, [isNavbarVisible]);
+  }, [isNavbarVisible, animate]);
   
   useEffect(() => {
     const intersections =
