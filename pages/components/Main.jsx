@@ -325,7 +325,7 @@ const ExampleContent = ({para1, para2, isLogoSection, sidePara, lang, data}) => 
             whileInView={{ opacity: 1, x: "15%", skewX: 0 }}
             transition={{ duration: 0.4, type: "tween", }}
           >
-            "{sidePara[lang]}"
+            {sidePara[lang]}
           </motion.div>
           </div>
       }
