@@ -83,7 +83,7 @@ export default function Navbar({
     opacity: 1,
   });
 
-  const [currentButton, setCurrentButton] = useState("home");
+  const [currentButton, setCurrentButton] = useState();
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [isNavToggleSvgVisible, setIsNavToggleSvgVisible] = useState(false);
   const [scope, animate] = useAnimate();

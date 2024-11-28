@@ -8,6 +8,7 @@ import { useGlobalSettings } from './GlobalSettings';
 export default function SocialsSection({data, lang}) {
   const { language, setLanguage, currentMedia, setCurrentMedia } = useGlobalSettings();
   // let globalLanguage = language;
+  if (!data) return;
   return (
     <main className="magnetic-main z-4 bg-[#fff]">
       <div className="overflow-hidden flex justify-center bg-[#fff]">
