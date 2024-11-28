@@ -77,7 +77,6 @@ export default function ScreenFitText({text, isOnCarousal}) {
 
 // "use client";
 // import React, { useEffect, useRef, useState } from "react";
-// import { getGlobalLanguage } from "../config";
 // import { usePathname } from 'next/navigation';
 
 // export default function ScreenFitText({text, isOnCarousal}) {

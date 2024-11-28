@@ -5,8 +5,12 @@ import SocialsSection from "./components/SocialsSection";
 import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
 import mainData from "./public/data/data.json";
+import { useGlobalSettings } from './components/GlobalSettings';
 
-export default function ChangMai({ media, language, toggleLanguage }) {
+
+
+export default function ChangMai({ toggleLanguage }) {
+  const { language, currentMedia } = useGlobalSettings();
     let [menuIsActive, setMenuIsActive] = useState(false);
 
     return (
@@ -14,10 +18,10 @@ export default function ChangMai({ media, language, toggleLanguage }) {
 
         <Navbar
           data={mainData}
-          lang={mainData['language-text'][language] || "he"}
+          lang={mainData['language-text'][language || "en"] || "he"}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
-          media={media}
+          media={currentMedia}
           />
   
         <div id="home" />
@@ -25,13 +29,13 @@ export default function ChangMai({ media, language, toggleLanguage }) {
         <Main
           activateMenuIsActive={(bool) => setMenuIsActive(bool)}
           data={mainData}
-          lang={mainData['language-text'][language] || "he"}
-          media={media}
+          lang={mainData['language-text'][language || "en"] || "he"}
+          media={currentMedia}
           title="Chang Mai" />
   
-        <div id="media"><SocialsSection data={mainData} lang={mainData['language-text'][language] || "he"} /></div>
+        <div id="media"><SocialsSection data={mainData} lang={mainData['language-text'][language || "en"] || "he"} /></div>
         
-        <StickyFooter data={mainData} lang={mainData['language-text'][language] || "he"} />
+        <StickyFooter data={mainData} lang={mainData['language-text'][language || "en"] || "he"} />
   
         <SectionAnimation menuIsActive={menuIsActive} />
       </>

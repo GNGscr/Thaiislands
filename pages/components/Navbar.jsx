@@ -3,9 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent, useAnimate, useTransform, easeInOut } from "framer-motion";
 import RevealLinks from "./RevealLinks";
 import { usePathname } from 'next/navigation';
-import { getMedia } from "../config";
-
-
+import { useGlobalSettings } from './GlobalSettings';
 
 // const [hookedYPostion, setHookedYPosition] = React.useState(0);
 // useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -66,13 +64,18 @@ const directionToOffset = {
 };
 
 export default function Navbar({
-    data,
-    lang,
-    toggleLanguage,
-    activateMenuIsActive
-  }) {
-  const media = getMedia();
+  data,
+  lang = "en",
+  toggleLanguage,
+  activateMenuIsActive
+}) {
+  
+  const { language, setLanguage, currentMedia, setCurrentMedia } = useGlobalSettings();
+  const media = currentMedia;
   const pathname = usePathname();
+  // console.log(lang);
+  // debugger;
+  
   const [position, setPosition] = useState({
     [directionToOffset[lang]]: 
       navButtonsPositionMedia[media][lang].home[directionToOffset[lang]],
@@ -241,6 +244,7 @@ export default function Navbar({
             lang={lang}
             onButtonClick={handleButtonClick}
             pathname={pathname}
+            currentMedia={currentMedia}
           />
           <RevealLinks toggleLanguage={toggleLanguage} lang={lang} />
         </div>
@@ -259,7 +263,7 @@ export default function Navbar({
   );
 };
 
-const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathname }) => {
+const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathname, currentMedia }) => {
   return (
     <ul
       onMouseLeave={() => {
@@ -288,7 +292,7 @@ const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathnam
           );
         })
       }
-      <Cursor position={position} />
+      <Cursor position={position} currentMedia={currentMedia} />
     </ul>
   );
 };
@@ -324,7 +328,7 @@ const Tab = ({ children, setPosition, lang, onClick }) => {
   );
 };
 
-const Cursor = ({ position }) => {
+const Cursor = ({ position, currentMedia }) => {
   return (
     <motion.li
       animate={{
@@ -332,9 +336,9 @@ const Cursor = ({ position }) => {
       }}
       className="absolute z-0 h-7 rounded-full bg-black md:h-12"
       style={
-      getMedia() === 'mobile'
-        ? { height: '2.025rem' }
-        : { height: '3rem' }
+        currentMedia === 'mobile'
+          ? { height: '2.025rem' }
+          : { height: '3rem' }
       }
     />
   );

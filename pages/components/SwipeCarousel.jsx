@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import ScreenFitText from "./ScreenFitText";
-// import { getGlobalLanguage } from "../config";
 
 const imgs = [
   "https://pix8.agoda.net/hotelImages/6361579/-1/ceb6fd59eeaa5ac5818fd085fb590183.jpg?ca=9&ce=1&s=1024x",
@@ -36,7 +35,6 @@ export default function SwipeCarousel({data, lang}) {
   const [imgIndex, setImgIndex] = useState(0);
   
   const dragX = useMotionValue(0);
-  // let globalLanguage = getGlobalLanguage();
 
   useEffect(() => {
     const intervalRef = setInterval(() => {

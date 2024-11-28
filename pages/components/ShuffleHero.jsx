@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 // import imgSrc from '../../pages/public/images/summer-luxury-beach-resort-and-spa.webp';
 import kohPhanganData from "../public/data/kohPhanganData.json";
-import { getGlobalLanguage, setGlobalLanguage, getMedia } from "../config";
+import { useGlobalSettings } from './GlobalSettings';
 import Navbar from "./Navbar";
 // import squareDataJson from "../../pages/public/data/squareData.json";
 
@@ -12,25 +12,27 @@ const en = "en";
 const HE_IL = 'he-IL';
 const EN_US = 'en-US';
 
-export default function ShuffleHero({  }) {
+export default function ShuffleHero() {
+  const { language, setLanguage, currentMedia } = useGlobalSettings();
   let [menuIsActive, setMenuIsActive] = useState(false);
-  const [ language, setLanguage ] = useState("en");
-  let globalLanguage = getGlobalLanguage();
+  const [ stateLanguage, setStateLanguage ] = useState("en");
+  let globalLanguage = language;
+  
   let mainHtml;
   useEffect(() => {
     mainHtml = document.querySelector('html');
     mainHtml.lang = mainHtml.lang === HE_IL ? HE_IL : EN_US;
-  }, [language]);
+  }, [stateLanguage]);
 
   const toggleLanguage = () => {
     if (mainHtml) mainHtml.lang = globalLanguage === he ? EN_US : HE_IL;
 
     if (globalLanguage === en) {
+      setStateLanguage(he);
       setLanguage(he);
-      setGlobalLanguage(he);
     } else { 
-      setLanguage(en);
-      setGlobalLanguage(en); 
+      setStateLanguage(en);
+      setLanguage(en); 
     }
   }
   
@@ -43,7 +45,7 @@ export default function ShuffleHero({  }) {
         lang={kohPhanganData['language-text'][globalLanguage]}
         toggleLanguage={toggleLanguage}
         activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
-        media={getMedia()}
+        media={currentMedia}
       />
       <div className="about-us">
         <h3 className={`text-1xl md:text-[2rem] font-semibold about-us-title`}>

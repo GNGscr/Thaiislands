@@ -3,14 +3,16 @@ import React, { useRef, useState, useEffect } from "react";
 // import KohPhangan from "./KohPhangan";
 // import vid from '../public/images/khoPhanganView.mp4';
 // import ReactPlayer from 'react-player';
-import { getGlobalLanguage, setGlobalLanguage, setMedia } from "./config";
+import { useGlobalSettings } from "./components/GlobalSettings";
 import AboutUs from "./about-us";
 
 const HE_IL = 'he-IL';
 const EN_US = 'en-US';
 
 export default function Home() {
+  const { language, setLanguage, setCurrentMedia } = useGlobalSettings();
   const mainRef = useRef(null);
+  
   
   // const SPREADSHEET_ID = '10dyZecjgALnOMPj_bKV5s5XNVR0Si4USZI2dn0XYGdU';
   // const API_KEY = 'AIzaSyDXh5hbQG0D8kTEWlmvbbwqDzjDd-48lms';
@@ -20,15 +22,11 @@ export default function Home() {
     let { width } = mainRef.current.getBoundingClientRect();
     let userLang = document.querySelector('html')
       .lang === HE_IL ? HE_IL : EN_US;
-  
-    setGlobalLanguage(userLang === HE_IL ? "he" : "en");
-    
-    
-    setMedia(width < 680 ? "mobile" : "desktop");
-    
+    setLanguage(userLang === HE_IL ? "he" : "en");
+    setCurrentMedia(width < 680 ? "mobile" : "desktop");
     // fetch data
     // fetchData();
-  }, [getGlobalLanguage()]);
+  }, [language]);
 
   // const fetchData = async () => {
   //   try {

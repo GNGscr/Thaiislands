@@ -5,7 +5,7 @@ import SocialsSection from "./components/SocialsSection";
 import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
 import kohPhanganData from "./public/data/kohPhanganData.json";
-import { getGlobalLanguage, setGlobalLanguage, getMedia } from "./config";
+import { useGlobalSettings } from "./components/GlobalSettings";
 import phanganMap from './public/images/phangan-map.png';
 
 const he = "he";
@@ -14,24 +14,25 @@ const HE_IL = 'he-IL';
 const EN_US = 'en-US';
 
 export default function KohPhangan() {
+  const { language, setLanguage, currentMedia, setCurrentMedia } = useGlobalSettings();
     let [menuIsActive, setMenuIsActive] = useState(false);
-    const [ language, setLanguage ] = useState("en");
-    let globalLanguage = getGlobalLanguage();
+    const [ stateLanguage, setStateLanguage ] = useState("en");
+    let globalLanguage = language;
     let mainHtml;
     useEffect(() => {
       mainHtml = document.querySelector('html');
       mainHtml.lang = mainHtml.lang === HE_IL ? HE_IL : EN_US;
-    }, [language]);
+    }, [stateLanguage]);
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.lang = globalLanguage === he ? EN_US : HE_IL;
 
       if (globalLanguage === en) {
+        setStateLanguage(he);
         setLanguage(he);
-        setGlobalLanguage(he);
       } else { 
-        setLanguage(en);
-        setGlobalLanguage(en); 
+        setStateLanguage(en);
+        setLanguage(en); 
       }
     }
     
@@ -42,14 +43,14 @@ export default function KohPhangan() {
           lang={kohPhanganData['language-text'][globalLanguage]}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
-          media={getMedia()}
+          media={currentMedia}
           />
         <div id="home" />
         <Main
           activateMenuIsActive={(bool) => setMenuIsActive(bool)}
           data={kohPhanganData}
           lang={kohPhanganData['language-text'][globalLanguage]}
-          media={getMedia()}
+          media={currentMedia}
           title={kohPhanganData["island-name"][globalLanguage]}
           mainImg={kohPhanganData.heroImage}
           mapDrawing={phanganMap.src} />

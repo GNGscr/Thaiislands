@@ -1,19 +1,20 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { usePathname, useRouter } from 'next/navigation';
-import { getGlobalLanguage, setMedia, getMedia } from "../config";
+import { useGlobalSettings } from './GlobalSettings';
 import { motion } from "framer-motion";
 // import SectionAnimation from "./SectionAnimation";
 
 
 export default function Layout() {
+  const { language, setCurrentMedia } = useGlobalSettings();
   const scope = useRef(null);
   const [ isSideNavToggleSvgVisible,
     setIsNavToggleSvgVisible ] = useState(false);
   
   const router = useRouter()
   const pathname = usePathname();
-  let globalLanguage = getGlobalLanguage();
+  let globalLanguage = language;
 
   const links = [
     { "en": "About Us", "he": "עלינו", "link": "/about-us" },
@@ -27,7 +28,7 @@ export default function Layout() {
   ];
 
   useEffect(() => {
-    window.innerWidth < 680 ? setMedia("mobile") : setMedia("desktop");
+    window.innerWidth < 680 ? setCurrentMedia("mobile") : setCurrentMedia("desktop");
   }, []);
 
   const goToLink = e => {

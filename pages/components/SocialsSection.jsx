@@ -3,10 +3,11 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import ScreenFitText from './ScreenFitText';
-import { getGlobalLanguage } from "../config";
+import { useGlobalSettings } from './GlobalSettings';
 
 export default function SocialsSection({data, lang}) {
-  let globalLanguage = getGlobalLanguage();
+  const { language, setLanguage, currentMedia, setCurrentMedia } = useGlobalSettings();
+  // let globalLanguage = language;
   return (
     <main className="magnetic-main z-4 bg-[#fff]">
       <div className="overflow-hidden flex justify-center bg-[#fff]">

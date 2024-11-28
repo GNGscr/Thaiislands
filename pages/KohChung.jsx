@@ -5,7 +5,7 @@ import SocialsSection from "./components/SocialsSection";
 import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
 import mainData from "./public/data/data.json";
-import { getGlobalLanguage, setGlobalLanguage, getMedia } from "./config";
+import { language, setLanguage, currentMedia } from "./components/GlobalSettings";
 
 const he = "he";
 const en = "en";
@@ -14,23 +14,23 @@ const EN_US = 'en-US';
 
 export default function KohChung() {
     let [menuIsActive, setMenuIsActive] = useState(false);
-    const [ language, setLanguage ] = useState("en");
-    let globalLanguage = getGlobalLanguage();
+    const [ stateLanguage, setStateLanguage ] = useState("en");
+    let globalLanguage = language;
     let mainHtml;
     useEffect(() => {
       mainHtml = document.querySelector('html');
       mainHtml.lang = mainHtml.lang === HE_IL ? HE_IL : EN_US;
-    }, [language]);
+    }, [stateLanguage]);
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.lang = globalLanguage === he ? EN_US : HE_IL;
 
       if (globalLanguage === en) {
+        setStateLanguage(he);
         setLanguage(he);
-        setGlobalLanguage(he);
       } else { 
-        setLanguage(en);
-        setGlobalLanguage(en); 
+        setStateLanguage(en);
+        setLanguage(en); 
       }
     }
 
@@ -38,23 +38,23 @@ export default function KohChung() {
       <>
         <Navbar
           data={mainData}
-          lang={mainData['language-text'][language] || "he"}
+          lang={mainData['language-text'][stateLanguage] || "he"}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
-          media={getMedia()}
+          media={currentMedia}
           />
         <div id="home" />
         <Main
           activateMenuIsActive={(bool) => setMenuIsActive(bool)}
           data={mainData}
-          lang={mainData['language-text'][language] || "he"}
-          media={getMedia()}
+          lang={mainData['language-text'][stateLanguage] || "he"}
+          media={currentMedia}
           title="Koh Chung"
            />
         <div id="media">
-          <SocialsSection data={mainData} lang={mainData['language-text'][language] || "he"} />
+          <SocialsSection data={mainData} lang={mainData['language-text'][stateLanguage] || "he"} />
         </div>
-        <StickyFooter data={mainData} lang={mainData['language-text'][language] || "he"} />
+        <StickyFooter data={mainData} lang={mainData['language-text'][stateLanguage] || "he"} />
         <SectionAnimation menuIsActive={menuIsActive} title="Koh Chung" />
       </>
     )
