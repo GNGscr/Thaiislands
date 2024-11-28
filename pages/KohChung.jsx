@@ -5,7 +5,7 @@ import SocialsSection from "./components/SocialsSection";
 import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
 import mainData from "./public/data/data.json";
-import { language, setLanguage, currentMedia } from "./components/GlobalSettings";
+import { useGlobalSettings } from './components/GlobalSettings';
 
 const he = "he";
 const en = "en";
@@ -13,6 +13,7 @@ const HE_IL = 'he-IL';
 const EN_US = 'en-US';
 
 export default function KohChung() {
+  const { language, setLanguage, currentMedia } = useGlobalSettings();
     let [menuIsActive, setMenuIsActive] = useState(false);
     const [ stateLanguage, setStateLanguage ] = useState("en");
     let globalLanguage = language;

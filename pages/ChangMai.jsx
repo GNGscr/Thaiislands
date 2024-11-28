@@ -18,7 +18,7 @@ export default function ChangMai({ toggleLanguage }) {
 
         <Navbar
           data={mainData}
-          lang={mainData['language-text'][language || "en"] || "he"}
+          lang={mainData['language-text'][language] || "he"}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
           media={currentMedia}
@@ -29,13 +29,13 @@ export default function ChangMai({ toggleLanguage }) {
         <Main
           activateMenuIsActive={(bool) => setMenuIsActive(bool)}
           data={mainData}
-          lang={mainData['language-text'][language || "en"] || "he"}
+          lang={mainData['language-text'][language] || "he"}
           media={currentMedia}
           title="Chang Mai" />
   
-        <div id="media"><SocialsSection data={mainData} lang={mainData['language-text'][language || "en"] || "he"} /></div>
+        <div id="media"><SocialsSection data={mainData} lang={mainData['language-text'][language] || "he"} /></div>
         
-        <StickyFooter data={mainData} lang={mainData['language-text'][language || "en"] || "he"} />
+        <StickyFooter data={mainData} lang={mainData['language-text'][language] || "he"} />
   
         <SectionAnimation menuIsActive={menuIsActive} />
       </>

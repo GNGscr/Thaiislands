@@ -14,7 +14,7 @@ const HE_IL = 'he-IL';
 const EN_US = 'en-US';
 
 export default function KohSamui() {
-  const { language, setLanguage, currentMedia, setCurrentMedia } = useGlobalSettings();
+  const { language, setLanguage, currentMedia } = useGlobalSettings();
     let [menuIsActive, setMenuIsActive] = useState(false);
     const [ stateLanguage, setStateLanguage ] = useState(en);
     let globalLanguage = language;
@@ -23,7 +23,6 @@ export default function KohSamui() {
       mainHtml = document.querySelector('html');
       mainHtml.lang = mainHtml.lang === HE_IL ? HE_IL : EN_US;
     }, [stateLanguage]);
-    // debugger;
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.lang = globalLanguage === he ? EN_US : HE_IL;
@@ -56,7 +55,7 @@ export default function KohSamui() {
           media={currentMedia}
           title={kohSamuiData["island-name"][globalLanguage]}
           mainImg={kohSamuiData.heroImage}
-          mapDrawing={samuiMap.src} />
+          mapDrawing={samuiMap} />
         <div id="media">
           <SocialsSection data={kohSamuiData} lang={kohSamuiData['language-text'][globalLanguage]} />
         </div>

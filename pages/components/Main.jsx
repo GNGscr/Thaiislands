@@ -1,19 +1,10 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-// import phanganMap from '../public/images/phangan-map.png';
 import SwipeCarousel from "./SwipeCarousel";
-// import LogoLoader from "./LogoLoader";
 import ButtonLightningAnimation from "./ButtonLightningAnimation";
 import HotelsSection from "./HotelsSection";
 import TiltComponent from "./TiltComponent";
-// import spa from '../public/images/summer-luxury-beach-resort-and-spa.webp';
-// import NextVideo from 'next-video';
-// import Video from 'next-video';
-// import getStarted from '../public/images/khoPhanganView.mp4';
-
-// import heroVid from '../public/images/khoPhanganView.mp4';
-
 
 // :: TODOs :: //
 // =========== //
@@ -78,12 +69,12 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
   const main1Para1 = data["article-main-paragraph"][lang].a;
   const main1Para2 = data["article-main-paragraph"][lang].b;
 
-  console.log('TODO!!!!! ::  fix but with missing words when splitting');
-  console.log("בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.".length);
-  console.log('card limit en: ', 285);
-  console.log('card limit he: ', 225);
-  console.log('card limit en recommended: ', 255);
-  console.log('card limit he recommended: ', 205);
+  // console.log('TODO!!!!! ::  fix but with missing words when splitting');
+  // console.log("בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.".length);
+  // console.log('card limit en: ', 285);
+  // console.log('card limit he: ', 225);
+  // console.log('card limit en recommended: ', 255);
+  // console.log('card limit he recommended: ', 205);
   
   return (
     <div className="bg-white main">
@@ -218,7 +209,6 @@ const StickyImage = ({ imgUrl, isMapVisible, data }) => {
     <motion.div
       style={{
         backgroundImage: `url(${imgUrl})`,
-        // backgroundSize:  "contain",
         backgroundSize: "cover",
         backgroundRepeat: 'no-repeat',
         backgroundPosition: "center",
@@ -229,7 +219,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data }) => {
       ref={targetRef}
       className="sticky z-0 overflow-hidden rounded-3xl"
       >
-              <motion.div
+      <motion.div
         className="absolute inset-0 bg-neutral-950/80"
         style={{ opacity }}
         />
@@ -294,7 +284,6 @@ const OverlayCopy = ({
       </div>
       <motion.div
         initial={{ opacity: 0, y: "75%" }}
-        // animate={lang ? { opacity: 1, y: 0, } : { opacity: 0, y: "50%" }}
         whileInView={{ opacity: 1, y: 0, }}
         transition={{ duration: 0.5, type: "tween", }}
         className="main-header mb-2 text-center text-xl md:mb-4 md:text-4xl text-bold">
@@ -342,20 +331,3 @@ const ExampleContent = ({para1, para2, isLogoSection, sidePara, lang, data}) => 
     </div>
   </div>
 );
-
- 
-// function VideoHero() {
-//   return <Video src={getStarted} />;
-// }
-// type spring
-// damping
-// {/* <div className="relative h-[150vh]"></div> */}
-
-
-          // {/* &nbsp;  */}
-
-
-// {/* <VideoHero /> */}
-// {/* <video src={require("../../media/khoPhanganView.mp4")} autoPlay loop muted={true}></video> */}
-// {/* <NextVideo src={require(`../public/images/khoPhanganView.mp4`)}></NextVideo>
-// <NextVideo src={`url(${''})`}></NextVideo> */}

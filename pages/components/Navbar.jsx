@@ -65,7 +65,7 @@ const directionToOffset = {
 
 export default function Navbar({
   data,
-  lang = "en",
+  lang,
   toggleLanguage,
   activateMenuIsActive
 }) {

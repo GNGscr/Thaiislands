@@ -1619,6 +1619,7 @@ html[lang="he-IL"] .affiliates-row {
 .card-header {
   font-size: 1rem;
   font-weight: 700;
+  text-align: center;
   -webkit-text-stroke: 0.65px #ccc;
   text-shadow: 0.65px 0.65px 0.65px black;
 }

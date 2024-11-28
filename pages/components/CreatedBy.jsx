@@ -6,7 +6,7 @@ const CreatedBy = () => {
     }
     
     return (
-        <a href="https://debrand1-debrand.ekdas8.easypanel.host/"
+        <a href={`https://debrand-debrand.ekdas8.easypanel.host/` || `https://debrand-design-iipvd4tdx-debrand808-gmailcoms-projects.vercel.app/`}
         // <a href="https://debrand.design.com"
             rel="noopener noreferrer"
             target="_blank"
