@@ -66,8 +66,8 @@ import TiltComponent from "./TiltComponent";
 
 export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
   
-  const main1Para1 = data["article-main-paragraph"][lang].a;
-  const main1Para2 = data["article-main-paragraph"][lang].b;
+  const main1Para1 = data["article-main-paragraph"][lang].a || "";
+  const main1Para2 = data["article-main-paragraph"][lang].b || "";
 
   // console.log('TODO!!!!! ::  fix but with missing words when splitting');
   // console.log("בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.".length);

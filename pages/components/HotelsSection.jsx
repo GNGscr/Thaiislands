@@ -142,7 +142,7 @@ const regionsTitleAnimation = {
         whileInView={{ opacity: 0.7, letterSpacing: '0px' }}
         transition={{ duration: 0.5 }}
         className="hotels-title">
-        {data["resorts-and-hotels-title"][lang]}
+        {data["resorts-and-hotels-title"][lang] || ""}
       </motion.div>
     </div>
     <div className="flex flex-col">
