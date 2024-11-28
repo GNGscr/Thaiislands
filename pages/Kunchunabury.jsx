@@ -4,7 +4,7 @@ import Main from "./components/Main";
 import SocialsSection from "./components/SocialsSection";
 import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
-import mainData from "./public/data/data.json";
+import mainData from "./public/data/kohPhanganData.json";
 
 export default function Kunchunabury({ media, language, toggleLanguage }) {
     let [menuIsActive, setMenuIsActive] = useState(false);
