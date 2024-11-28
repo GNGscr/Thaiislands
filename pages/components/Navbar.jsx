@@ -22,53 +22,52 @@ import { useGlobalSettings } from './GlobalSettings';
 //   setScrollDirection(diff > 0 ? "down" : "up")
 // })
 
-
-const navButtonsPositionMedia = {
-  "desktop": {
-    "he": {
-      "home": { right: 4, width: 84 },
-      "map-img": { right: 102, width: 76 },
-      "gallery": { right: 184, width: 115 },
-      "hotels": { right: 300, width: 108 },
-      "media": { right: 416, width: 89.8125 },
-    },
-    "en": {
-      "home": { left: 4, width: 88 },
-      "map-img": { left: 102, width: 76.5 },
-      "gallery": { left: 190, width: 114 },
-      "hotels": { left: 316, width: 104 },
-      "media": { left: 432, width: 90.5 },
-    },
-  },
-  "mobile": {
-    "he": {
-      "home": { right: 40, width: 40 },
-      "map-img": { right: 44, width: 40 },
-      "gallery": { right: 80, width: 64 },
-      "hotels": { right: 140, width: 50 },
-      "media": { right: 190, width: 50 },
-    },
-    "en": {
-      "home": { left: 4, width: 44 },
-      "map-img": { left: 44, width: 40 },
-      "gallery": { left: 80, width: 62 },
-      "hotels": { left: 140, width: 56 },
-      "media": { left: 190, width: 50 },
-    },
-  },
-};
-
-const directionToOffset = {
-  "en": "left",
-  "he": "right"
-};
-
 export default function Navbar({
   data,
   lang,
   toggleLanguage,
   activateMenuIsActive
 }) {
+
+  const navButtonsPositionMedia = {
+    "desktop": {
+      "he": {
+        "home": { right: 4, width: 84 },
+        "map-img": { right: 102, width: 76 },
+        "gallery": { right: 184, width: 115 },
+        "hotels": { right: 300, width: 108 },
+        "media": { right: 416, width: 89.8125 },
+      },
+      "en": {
+        "home": { left: 4, width: 88 },
+        "map-img": { left: 102, width: 76.5 },
+        "gallery": { left: 190, width: 114 },
+        "hotels": { left: 316, width: 104 },
+        "media": { left: 432, width: 90.5 },
+      },
+    },
+    "mobile": {
+      "he": {
+        "home": { right: 40, width: 40 },
+        "map-img": { right: 44, width: 40 },
+        "gallery": { right: 80, width: 64 },
+        "hotels": { right: 140, width: 50 },
+        "media": { right: 190, width: 50 },
+      },
+      "en": {
+        "home": { left: 4, width: 44 },
+        "map-img": { left: 44, width: 40 },
+        "gallery": { left: 80, width: 62 },
+        "hotels": { left: 140, width: 56 },
+        "media": { left: 190, width: 50 },
+      },
+    },
+  };
+  
+  const directionToOffset = {
+    "en": "left",
+    "he": "right"
+  };
   
   const { language, setLanguage, currentMedia, setCurrentMedia } = useGlobalSettings();
   const media = currentMedia;
@@ -77,9 +76,9 @@ export default function Navbar({
   // debugger;
 
   const [position, setPosition] = useState({
-    [directionToOffset[lang]]: 
-      navButtonsPositionMedia[media][lang].home[directionToOffset[lang]],
-    width: navButtonsPositionMedia[media][lang].home.width,
+    [directionToOffset[language]]: 
+      navButtonsPositionMedia[media][language].home[directionToOffset[language]],
+    width: navButtonsPositionMedia[media][language].home.width,
     opacity: 1,
   });
 
@@ -112,16 +111,16 @@ export default function Navbar({
   
   useEffect(() => {
     const intersections =
-      document.querySelectorAll([...data["navbar"][lang].map((item) => item.intersectionId)]);
+      document.querySelectorAll([...data["navbar"][language].map((item) => item.intersectionId)]);
     const intersectionsIterator = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const intersectingEntry = entry.target.id.replace('#', '');
           setCurrentButton(intersectingEntry); // Save the intersecting button
           setPosition({
-            [directionToOffset[lang]]:
-              navButtonsPositionMedia[media][lang][intersectingEntry][directionToOffset[lang]],
-            width: navButtonsPositionMedia[media][lang][intersectingEntry].width,
+            [directionToOffset[language]]:
+              navButtonsPositionMedia[media][language][intersectingEntry][directionToOffset[language]],
+            width: navButtonsPositionMedia[media][language][intersectingEntry].width,
             opacity: 1,
           });
         }
@@ -132,7 +131,7 @@ export default function Navbar({
     [...intersections].forEach(intersection => observer.observe(intersection));
 
     return () => observer.disconnect(); // Cleanup observer
-  }, [data, lang, media]);
+  }, [data, language, media]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 0) {
@@ -154,10 +153,10 @@ export default function Navbar({
 
     // Revert to the last intersected button if the user doesn't click
     const lastPosition =
-      navButtonsPositionMedia[media][lang][currentButton];
+      navButtonsPositionMedia[media][language][currentButton];
     if (lastPosition) {
       setPosition({
-        [directionToOffset[lang]]: lastPosition[directionToOffset[lang]],
+        [directionToOffset[language]]: lastPosition[directionToOffset[language]],
         width: lastPosition.width,
         opacity: 1,
       });
@@ -169,10 +168,10 @@ export default function Navbar({
     activateMenuIsActive(true);
     
     setCurrentButton(button); // Set the clicked button as current
-    const buttonPosition = navButtonsPositionMedia[media][lang][button];
+    const buttonPosition = navButtonsPositionMedia[media][language][button];
     if (buttonPosition) {
       setPosition({
-        [directionToOffset[lang]]: buttonPosition[directionToOffset[lang]],
+        [directionToOffset[language]]: buttonPosition[directionToOffset[language]],
         width: buttonPosition.width,
         opacity: 1,
       });
@@ -209,7 +208,7 @@ export default function Navbar({
   //   islandsColorProgress[pathname],
   //   ["#fff", "#000", "#fff", "#000", "#000"],
   //   { ease: (t) => Math.round(t) }) : '';
-  if (!data) return;
+  if (!data || !media) return;
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: '9' }}>
       <motion.div id="main" variants={variants} className="relative w-full flex align-center top-[0.75rem]"
@@ -240,13 +239,13 @@ export default function Navbar({
           <SlideTabs
             setPosition={setPosition}
             position={position}
-            navbar={data["navbar"][lang]}
-            lang={lang}
+            navbar={data["navbar"][language]}
+            lang={language}
             onButtonClick={handleButtonClick}
             pathname={pathname}
             currentMedia={currentMedia}
           />
-          <RevealLinks toggleLanguage={toggleLanguage} lang={lang} />
+          <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
         </div>
         <div onClick={() => setIsNavbarVisible(true)}
           className="text-white absolute top-[2.85rem] flex justify-center h-[100%] w-full" style={{ rotate: "180deg" }}>
