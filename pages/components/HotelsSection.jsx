@@ -131,7 +131,7 @@ const regionsTitleAnimation = {
     viewport: { amount: 0.4 },
     transition: { type: "spring", duration: 1, bounce: 0 }
 };
-
+  if (!data) return;
   return (
     <div className="relative h-fit" style={{ direction: 'rtl' }} id="hotels">
     <div className={`sticky top-0 w-screen flex flex-col justify-center align-center
