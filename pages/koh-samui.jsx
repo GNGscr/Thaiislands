@@ -6,7 +6,7 @@ import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
 import kohSamuiData from "./public/data/kohSamuiData.json";
 import { useGlobalSettings } from './components/GlobalSettings';
-import samuiMap from './public/images/KohSamuiNew.jpg';
+import samuiMap from './public/images/KohSamui.jpeg';
 
 const he = "he";
 const en = "en";
