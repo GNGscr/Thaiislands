@@ -62,7 +62,8 @@ export default function SwipeCarousel({data, lang}) {
       setImgIndex((pv) => pv - 1);
     }
   };
-  let ourVacationGallery = data["vacation-photos-title"][lang] || "";
+  if (!data) return;
+  let ourVacationGallery = data["vacation-photos-title"][lang];
   let ourVacationGalleryArray = ourVacationGallery.split("");
   return (
     <div className="flex flex-col">
