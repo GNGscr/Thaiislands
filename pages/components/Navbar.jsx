@@ -75,7 +75,7 @@ export default function Navbar({
   const pathname = usePathname();
   // console.log(lang);
   // debugger;
-  
+
   const [position, setPosition] = useState({
     [directionToOffset[lang]]: 
       navButtonsPositionMedia[media][lang].home[directionToOffset[lang]],
@@ -132,7 +132,7 @@ export default function Navbar({
     [...intersections].forEach(intersection => observer.observe(intersection));
 
     return () => observer.disconnect(); // Cleanup observer
-  }, [data, lang]);
+  }, [data, lang, media]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 0) {
@@ -209,7 +209,7 @@ export default function Navbar({
   //   islandsColorProgress[pathname],
   //   ["#fff", "#000", "#fff", "#000", "#000"],
   //   { ease: (t) => Math.round(t) }) : '';
-
+  if (!data) return;
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: '9' }}>
       <motion.div id="main" variants={variants} className="relative w-full flex align-center top-[0.75rem]"
