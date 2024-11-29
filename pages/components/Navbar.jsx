@@ -131,6 +131,7 @@ export default function Navbar({
     [...intersections].forEach(intersection => observer.observe(intersection));
 
     return () => observer.disconnect(); // Cleanup observer
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, language, media]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -244,6 +245,7 @@ export default function Navbar({
             onButtonClick={handleButtonClick}
             pathname={pathname}
             currentMedia={currentMedia}
+            directionToOffset={directionToOffset}
           />
           <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
         </div>
@@ -262,7 +264,7 @@ export default function Navbar({
   );
 };
 
-const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathname, currentMedia }) => {
+const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathname, currentMedia, directionToOffset }) => {
   return (
     <ul
       onMouseLeave={() => {
@@ -284,6 +286,7 @@ const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathnam
               <Tab
                 lang={lang}
                 setPosition={setPosition}
+                directionToOffset={directionToOffset}
               >
                 {label}
               </Tab>
@@ -296,7 +299,7 @@ const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathnam
   );
 };
 
-const Tab = ({ children, setPosition, lang, onClick }) => {
+const Tab = ({ children, setPosition, lang, onClick, directionToOffset }) => {
   const ref = useRef(null);
   return (
     <li
