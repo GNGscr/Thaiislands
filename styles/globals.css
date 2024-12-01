@@ -1817,7 +1817,7 @@ html[lang="en-US"] .star-score {
   }
 
   .affiliates-row {
-    margin: 0 5rem;
+    margin: 0 2.5rem;
   }
 
   .button-lightning {
@@ -1832,7 +1832,7 @@ html[lang="en-US"] .star-score {
   }
 
   .section-content-para {
-    grid-column: span 5 / span 5 !important;
+    grid-auto-columns: span 5 / span 5 !important;
   }
 
   html[lang="en-US"] .section-content {
@@ -1845,6 +1845,15 @@ html[lang="en-US"] .star-score {
   }
   .blink-emoji {
     right: 7.5rem !important;
+  }
+
+  .hotels-title {
+    font-size: 1.75rem;
+  }
+  .region-title {
+    top: 4.25rem;
+    font-size: 1.15rem;
+    padding-bottom: 1rem;
   }
 }
 
