@@ -10,6 +10,7 @@ export const useGlobalSettings = () => {
 
 // GlobalSettings component that provides global state
 const GlobalSettingsProvider = ({ children }) => {
+  
   const [language, setLanguage] = useState("en");
   const [currentMedia, setCurrentMedia] = useState("desktop");
 

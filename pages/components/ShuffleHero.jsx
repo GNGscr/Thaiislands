@@ -18,14 +18,11 @@ export default function ShuffleHero() {
   const [ stateLanguage, setStateLanguage ] = useState("en");
   let globalLanguage = language;
   
-  let mainHtml;
-  useEffect(() => {
-    mainHtml = document.querySelector('html');
-    mainHtml.lang = mainHtml.lang === HE_IL ? HE_IL : EN_US;
-  }, [stateLanguage]);
+  // let mainHtml;
+  // useEffect(() => {
+  // }, [stateLanguage]);
 
   const toggleLanguage = () => {
-    if (mainHtml) mainHtml.lang = globalLanguage === he ? EN_US : HE_IL;
 
     if (globalLanguage === en) {
       setStateLanguage(he);
@@ -226,7 +223,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
+    <div className="shuffle grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
       {squares.map((sq) => sq)}
     </div>
   );

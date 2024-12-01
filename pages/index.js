@@ -17,16 +17,31 @@ export default function Home() {
   // const SPREADSHEET_ID = '10dyZecjgALnOMPj_bKV5s5XNVR0Si4USZI2dn0XYGdU';
   // const API_KEY = 'AIzaSyDXh5hbQG0D8kTEWlmvbbwqDzjDd-48lms';
   // const RANGE = 'Sheet1!A1:D25'; // Adjust the range as needed
+
+  const [ dimension, setDimension ] = useState({width: 0, height: 0});
+  const updateDimension = () => {
+      const { innerWidth, innerHeight } = window;
+      setDimension({width: innerWidth, height: innerHeight });
+  };
   
   useEffect(() => {
+    updateDimension();
+    window.addEventListener('resize', updateDimension);
     let { width } = mainRef.current.getBoundingClientRect();
-    let userLang = document.querySelector('html')
-      .lang === HE_IL ? HE_IL : EN_US;
-    setLanguage(userLang === HE_IL ? "he" : "en");
+    // let userLang = document.querySelector('html');
+    // if (userLang) document.documentElement.setAttribute('lang', userLang.lang === HE_IL ? HE_IL : EN_US);
+      // .lang === HE_IL ? HE_IL : EN_US;
+
+    // setLanguage(userLang === HE_IL ? "he" : "en");
+    
     setCurrentMedia(width < 680 ? "mobile" : "desktop");
+    // console.log('width: ', dimension);
+    
+    return () => (window.removeEventListener('resize', updateDimension));
     // fetch data
     // fetchData();
-  }, [language]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language, dimension]);
 
   // const fetchData = async () => {
   //   try {

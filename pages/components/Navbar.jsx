@@ -46,6 +46,22 @@ export default function Navbar({
         "media": { left: 432, width: 90.5 },
       },
     },
+    "midSize": {
+      "he": {
+        "home": { right: 40, width: 40 },
+        "map-img": { right: 44, width: 40 },
+        "gallery": { right: 80, width: 64 },
+        "hotels": { right: 140, width: 50 },
+        "media": { right: 190, width: 50 },
+      },
+      "en": {
+        "home": { right: 40, width: 40 },
+        "map-img": { right: 44, width: 40 },
+        "gallery": { right: 80, width: 64 },
+        "hotels": { right: 140, width: 50 },
+        "media": { right: 190, width: 50 },
+      },
+    },
     "mobile": {
       "he": {
         "home": { right: 40, width: 40 },
