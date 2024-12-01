@@ -735,7 +735,7 @@ html[lang="en-US"] .filter {
 .layout-wrapper {
   display: flex;
   height: 100vh;
-  width: 50px;
+  width: calc(50px + 225px);
   flex-direction: row-reverse;
   align-items: center;
 }
@@ -804,6 +804,11 @@ html[lang="en-US"] .filter {
   /* webkit-filter: blur(1.5px);
   filter: blur(2px); */
   z-index: 1;
+}
+
+.shuffle > div {
+  border-radius: 6px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
 html[lang="en-US"] .about-us-title {
@@ -1237,6 +1242,7 @@ html[lang="he-IL"] .main-header {
 }
 .button-lightning {
   position: relative;
+  padding-top: 10rem;
 }
 html[lang="en-US"] .button-lightning {
   top: 0.5rem;
@@ -1423,6 +1429,13 @@ html[lang="he-IL"] .affiliates-row {
   justify-content: flex-start;
   direction: rtl;
 } */
+
+html[lang="en-US"] .instagram-icon-btn {
+  direction: ltr;
+}
+html[lang="he-IL"] .instagram-icon-btn {
+  direction: ltr;
+}
 
 .affiliates-row {
   display: flex;
@@ -1784,9 +1797,64 @@ html[lang="en-US"] .star-score {
 
 
 
+@media (max-width: 1080px) {
+
+  .navbar-ul > a > li {
+    padding: 0.725rem 1.6rem;
+  }
+
+
+  .hover-the-map-txt {
+    margin-bottom: -2rem;
+  }
+
+  .hero-content {
+    padding: 0 5%;
+    padding-top: 3.5rem;
+  }
+
+  .affiliates-row {
+    margin: 0 5rem;
+  }
+
+  .button-lightning {
+    padding-top: 0.5rem;
+  }
+
+  html[lang="he-IL"] .button-lightning {
+    top: 2.5rem;
+  }
+  html[lang="en-US"] .button-lightning {
+    top: 2.5rem;
+  }
+
+  .section-content-para {
+    grid-column: span 5 / span 5 !important;
+  }
+
+  html[lang="en-US"] .section-content {
+    gap: 6.75rem;
+  }
+
+
+}
 @media (max-width: 680px) {
 
+  .section-content-para {
+    grid-auto-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+
+  html[lang="en-US"] .section-content {
+    column-gap: 0rem !important;
+    row-gap: 3rem !important;
+  }
+
+  .shuffle {
+    display: none;
+  }
+
   .social {
+    padding-top: 0.5rem;
     margin-left: 0 !important;
     gap: 0.25rem !important;
   }
@@ -1863,8 +1931,10 @@ html[lang="en-US"] .star-score {
   .button-lightning {
     font-size: 2.25rem;
   }
+  html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {
-    padding-top: 9.5rem;
+    padding-top: 5rem;
+    top: 2.5rem;
   }
   .section-content {
     gap: 2rem !important;
@@ -1929,6 +1999,10 @@ html[lang="en-US"] .star-score {
   html[lang="he-IL"] .social-title {
     font-size: 2rem;
   }
+  .social {
+    padding-top: 0.25rem;
+  }
+  
   .magnetic-container {
     gap: 2.5rem;
     padding-top: 5rem;
