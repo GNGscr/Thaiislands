@@ -2055,7 +2055,9 @@ html[lang="en-US"] .star-score {
   .social {
     padding-top: 0.25rem;
   }
-
+  .magnetic-container {
+    scale: 1;
+  }
   .magnetic-container {
     gap: 2.5rem;
     padding-top: 5rem;
@@ -2078,7 +2080,8 @@ html[lang="en-US"] .star-score {
 
   .credits {
     flex-direction: column;
-    margin-top: 3rem !important;
+    margin-top: 4.5rem !important;
+    margin-bottom: 2.5rem;
     gap: 0rem !important;
   }
   .created-by {
@@ -2089,6 +2092,7 @@ html[lang="en-US"] .star-score {
   }
   .rights-reserved {
     width: 100%;
+    line-height: 10px;
   }
 
   .inner-footer > div {
