@@ -2008,6 +2008,10 @@ html[lang="en-US"] .star-score {
   html[lang="he-IL"] .screen-fix-txt > span {
     /* bottom: -15rem; */
   }
+  .screen-fix-txt > span {
+    /* margin-top: 10rem !important; */
+    bottom: -20px !important;
+  }
   .magnetic-main > .screen-fix-txt {
     top: -1.5rem;
   }
