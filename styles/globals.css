@@ -1884,6 +1884,14 @@ html[lang="en-US"] .star-score {
 
 @media (max-width: 680px) {
 
+  html[lang="he-IL"] .navbar-ul {
+    max-width: 169.42px;
+  }
+
+  html[lang="en-US"] .navbar-ul {
+    max-width: 248.04px;
+  }
+
   .hover-the-map-txt {
     margin-bottom: 6.5rem;
     font-size: 1.85rem !important;
