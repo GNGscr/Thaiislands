@@ -21,11 +21,12 @@ export default function KohPhangan() {
     let mainHtml;
     useEffect(() => {
       mainHtml = document.querySelector('html');
-      mainHtml.lang = mainHtml.lang === HE_IL ? HE_IL : EN_US;
+      if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? HE_IL : EN_US);
+
     }, [stateLanguage]);
 
     const toggleLanguage = () => {
-      if (mainHtml) mainHtml.lang = globalLanguage === he ? EN_US : HE_IL;
+      if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
 
       if (globalLanguage === en) {
         setStateLanguage(he);

@@ -23,7 +23,7 @@ export default function ButtonLightningAnimation({text, activateMenuIsActive}) {
     // animate={text ? { opacity: 1, scale: 0, skewX: 0 } : { opacity: 0, scale: 1, skewX: -5 }}
     transition={{ duration: 0.65, type: "tween", }}
       className={`button-lightning grid place-content-center
-      p-4 text-3xl pt-[10rem] --font-space-grotesk`}>
+      p-4 text-3xl --font-space-grotesk`}>
       <a href="#hotels" onClick={handleClick}><DrawOutlineButton>{text}</DrawOutlineButton></a>
     </motion.div>
   );

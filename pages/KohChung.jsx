@@ -17,14 +17,8 @@ export default function KohChung() {
     let [menuIsActive, setMenuIsActive] = useState(false);
     const [ stateLanguage, setStateLanguage ] = useState("en");
     let globalLanguage = language;
-    let mainHtml;
-    useEffect(() => {
-      mainHtml = document.querySelector('html');
-      mainHtml.lang = mainHtml.lang === HE_IL ? HE_IL : EN_US;
-    }, [stateLanguage]);
 
     const toggleLanguage = () => {
-      if (mainHtml) mainHtml.lang = globalLanguage === he ? EN_US : HE_IL;
 
       if (globalLanguage === en) {
         setStateLanguage(he);
