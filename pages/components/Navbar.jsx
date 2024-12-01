@@ -46,20 +46,20 @@ export default function Navbar({
         "media": { left: 432, width: 90.5 },
       },
     },
-    "midSize": {
+    "tablet": {
       "he": {
-        "home": { right: 40, width: 40 },
-        "map-img": { right: 44, width: 40 },
-        "gallery": { right: 80, width: 64 },
-        "hotels": { right: 140, width: 50 },
-        "media": { right: 190, width: 50 },
+        "home": { right: 40, width: 80 },
+        "map-img": { right: 44, width: 80 },
+        "gallery": { right: 80, width: 87 },
+        "hotels": { right: 140, width: 92 },
+        "media": { right: 190, width: 83 },
       },
       "en": {
-        "home": { right: 40, width: 40 },
-        "map-img": { right: 44, width: 40 },
-        "gallery": { right: 80, width: 64 },
-        "hotels": { right: 140, width: 50 },
-        "media": { right: 190, width: 50 },
+        "home": { right: 40, width: 100 },
+        "map-img": { right: 44, width: 85 },
+        "gallery": { right: 80, width: 120 },
+        "hotels": { right: 140, width: 115 },
+        "media": { right: 190, width: 102 },
       },
     },
     "mobile": {

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 
 export default function Layout() {
-  const { language, setCurrentMedia } = useGlobalSettings();
+  const { language, setCurrentMedia, currentMedia } = useGlobalSettings();
   const scope = useRef(null);
   const [ isSideNavToggleSvgVisible,
     setIsNavToggleSvgVisible ] = useState(false);
@@ -29,7 +29,18 @@ export default function Layout() {
 
   useEffect(() => {
     window.innerWidth < 680 ? setCurrentMedia("mobile") : setCurrentMedia("desktop");
-  }, []);
+    // if (window.innerWidth < 680) {
+    //   setCurrentMedia("mobile");
+    //   console.log('currentMedia: ', currentMedia);
+    // } else if (window.innerWidth < 1080) {
+    //   setCurrentMedia("mobilefull");
+    //   console.log('currentMedia: ', currentMedia);
+    // } else {
+    //   setCurrentMedia("desktop");
+    //   console.log('currentMedia: ', currentMedia);
+    // }
+     
+  });
 
   const goToLink = e => {
     // e.preventDefault()
@@ -49,7 +60,8 @@ export default function Layout() {
     initial: { x: "-115%", width: "175px" },
     animate: { x: 0, transition: { duration: .4 } }
   };
-
+  // 245px
+  // isSomething ? variants.animate : variants.initial
   return (
     <div ref={scope}
       className="layout-wrapper fixed w-full flex align-center top-[0rem]"

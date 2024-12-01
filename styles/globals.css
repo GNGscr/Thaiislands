@@ -735,6 +735,8 @@ html[lang="en-US"] .filter {
 .layout-wrapper {
   display: flex;
   height: 100vh;
+  position: fixed;
+  left: -245px;
   width: calc(50px + 225px);
   flex-direction: row-reverse;
   align-items: center;
@@ -1837,8 +1839,16 @@ html[lang="en-US"] .star-score {
     gap: 6.75rem;
   }
 
-
+  html[lang="he-IL"] .decleration,
+  html[lang="en-US"] .decleration {
+    padding: 1rem 3rem 0 !important;
+  }
+  .blink-emoji {
+    right: 7.5rem !important;
+  }
 }
+
+
 @media (max-width: 680px) {
 
   .section-content-para {

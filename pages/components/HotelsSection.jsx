@@ -51,8 +51,8 @@ const mobileRowCardsAnimation = {
       variants: {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
-        slideStart: { x: [0, "100px"], opacity: [0, 0] },
-        slideEnd: { x: ["100px", 0], opacity: [0, 1] },
+        slideStart: { x: [0, "25px"], opacity: [0, 0] },
+        slideEnd: { x: ["25px", 0], opacity: [0, 1] },
       },
       initial: ["hidden", "slideStart"],
       whileInView: ["visible", "slideEnd"],
@@ -64,8 +64,8 @@ const mobileRowCardsAnimation = {
       variants: {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
-        slideStart: { x: [0, "-100px"], opacity: [0, 0] },
-        slideEnd: { x: ["-100px", 0], opacity: [0, 1] }
+        slideStart: { x: [0, "-25px"], opacity: [0, 0] },
+        slideEnd: { x: ["-25px", 0], opacity: [0, 1] }
       },
       initial: ["hidden", "slideStart"],
       whileInView: ["visible", "slideEnd"],
@@ -79,8 +79,8 @@ const mobileOneRowCardsAnimation = {
       variants: {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
-        slideStart: { x: [0, "100px"], opacity: [0, 0] },
-        slideEnd: { x: ["100px", 0], opacity: [0, 1] },
+        slideStart: { y: [0, "50px"], opacity: [0, 0] },
+        slideEnd: { y: ["50px", 0], opacity: [0, 1] },
       },
       initial: ["hidden", "slideStart"],
       whileInView: ["visible", "slideEnd"],
@@ -169,7 +169,7 @@ const regionsTitleAnimation = {
             let subArrayIndex = [];
             // if media is mobile row is limited into two cards for the two cards row animation
             // else limit each row into three cards per row with three the thee row animation
-            subArrayIndex = Math.floor(index / (media === "mobile" ? 2 : 3));
+            subArrayIndex = Math.floor(index / (media === "mobile" ? 1 : media === "tablet" ? 2 : 3));
             if (!regionAffiliatesArray[subArrayIndex]) regionAffiliatesArray[subArrayIndex] = [];
             regionAffiliatesArray[subArrayIndex].push(affiliate);
           });
@@ -192,6 +192,8 @@ const regionsTitleAnimation = {
                         {
                           affiliatesRow.map((affiliates, counter) => {
                             let currentMediaRowCardsAnimation = media === "mobile"
+                              ? mobileOneRowCardsAnimation[counter]
+                              : media === "tablet"
                               ? mobileRowCardsAnimation[counter]
                               : rowCardsAnimation[counter];
                             return (

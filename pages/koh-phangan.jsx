@@ -36,6 +36,7 @@ export default function KohPhangan() {
         setLanguage(en); 
       }
     }
+    console.log(currentMedia);
     
     return (
       <>
