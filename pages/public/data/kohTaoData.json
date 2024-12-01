@@ -105,12 +105,14 @@
     },
     "map-title": {
         "he": {
-            "mobile": "לחצו על המפה",
-            "desktop": "רחפו מעל המפה"
+            "mobile": "הקליקו מתחת לטקסט לצפות במפה ומתחתיו לצפות בתמונה",
+            "tablet": "הקליקו מתחת לטקסט לצפות במפה ומתחתיו לצפות בתמונה",
+            "desktop": "רחפו מתחת לטקסט לצפות במפה ומתחתיו לצפות בתמונה"
         },
         "en": {
-            "mobile": "Tap on the map",
-            "desktop": "Hover over the map"
+            "mobile": "Tap under the text to view map and above it to view image",
+            "tablet": "Tap under the text to view map and above it to view image",
+            "desktop": "Hover under the text to view map and above it to view image"
         }
     },
     "mapSkech": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fdivezone.net%2Ftravel%2Fkoh-tao&psig=AOvVaw15IWVMj2sAb4IXkyrD8bnB&ust=1732558627377000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICPwofK9YkDFQAAAAAdAAAAABAE",

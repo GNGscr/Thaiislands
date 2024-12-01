@@ -1021,6 +1021,7 @@ html[lang="he-IL"] .svg-logo-loader-wrapper svg {
 .hover-the-map-txt {
   margin-bottom: 2rem;
   font-family: var(--main-font);
+  font-size: 3.25rem !important;
 }
 
 .map-photo {
@@ -1809,6 +1810,7 @@ html[lang="en-US"] .star-score {
 
   .hover-the-map-txt {
     margin-bottom: -2rem;
+    font-size: 3.75rem !important;
   }
 
   .hero-content {
@@ -1835,8 +1837,9 @@ html[lang="en-US"] .star-score {
     grid-auto-columns: span 5 / span 5 !important;
   }
 
+  html[lang="he-IL"] .section-content,
   html[lang="en-US"] .section-content {
-    gap: 6.75rem;
+    gap: 2.75rem;
   }
 
   html[lang="he-IL"] .decleration,
@@ -1848,17 +1851,22 @@ html[lang="en-US"] .star-score {
   }
 
   .hotels-title {
-    font-size: 1.65rem;
+    font-size: 1.45rem;
   }
   .region-title {
-    top: 4rem;
+    top: 3.85rem;
     font-size: 1.15rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.75rem;
   }
 }
 
 
 @media (max-width: 680px) {
+
+  .hover-the-map-txt {
+    margin-bottom: 6.5rem;
+    font-size: 1.85rem !important;
+  }
 
   .section-content-para {
     grid-auto-columns: repeat(12, minmax(0, 1fr)) !important;

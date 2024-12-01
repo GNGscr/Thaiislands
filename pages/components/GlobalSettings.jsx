@@ -38,15 +38,12 @@ const GlobalSettingsProvider = ({ children }) => {
     if (window.innerWidth < 680) {
       setCurrentMedia("mobile");
       localStorage.setItem("media", "mobile");
-      // console.log('currentMedia: ', currentMedia);
     } else if (window.innerWidth < 1080) {
       setCurrentMedia("tablet");
       localStorage.setItem("media", "tablet");
-      // console.log('currentMedia: ', currentMedia);
     } else {
       setCurrentMedia("desktop");
       localStorage.setItem("media", "desktop");
-      // console.log('currentMedia: ', currentMedia);
     }
       // localStorage.setItem("media", currentMedia);
     }, [language, currentMedia]);

@@ -109,7 +109,21 @@ export default function Navbar({
     offset: ['start start', 'end start']
   });
   
-
+  useEffect(() => {
+    const resizeEvent = window.addEventListener('resize', () => {
+      if (window.innerWidth < 680) {
+        setCurrentMedia("mobile");
+        localStorage.setItem("media", "mobile");
+      } else if (window.innerWidth < 1080) {
+        setCurrentMedia("tablet");
+        localStorage.setItem("media", "tablet");
+      } else {
+        setCurrentMedia("desktop");
+        localStorage.setItem("media", "desktop");
+      }
+    });
+    return () => (window.removeEventListener('resize', resizeEvent));
+  });
 
   // Set menu main div to be y position 0 visible and toggleSvg bool value on initial load
   useEffect(() => {

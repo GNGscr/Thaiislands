@@ -114,12 +114,14 @@
     },
     "map-title": {
         "he": {
-            "mobile": "לחצו על המפה",
-            "desktop": "רחפו מעל המפה"
+            "mobile": "הקליקו מתחת לטקסט לצפות במפה ומתחתיו לצפות בתמונה",
+            "tablet": "הקליקו מתחת לטקסט לצפות במפה ומתחתיו לצפות בתמונה",
+            "desktop": "רחפו מתחת לטקסט לצפות במפה ומתחתיו לצפות בתמונה"
         },
         "en": {
-            "mobile": "Tap on the map",
-            "desktop": "Hover over the map"
+            "mobile": "Tap under the text to view map and above it to view image",
+            "tablet": "Tap under the text to view map and above it to view image",
+            "desktop": "Hover under the text to view map and above it to view image"
         }
     },
     
