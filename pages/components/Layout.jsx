@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 export default function Layout() {
   const { language, setCurrentMedia } = useGlobalSettings();
   const scope = useRef(null);
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [ isSideNavToggleSvgVisible,
     setIsNavToggleSvgVisible ] = useState(false);
   
@@ -30,11 +29,7 @@ export default function Layout() {
 
   useEffect(() => {
     window.innerWidth < 680 ? setCurrentMedia("mobile") : setCurrentMedia("desktop");
-    setIsSidebarVisible(true);
-    return () => {
-      setIsSidebarVisible(false);
-    };
-  }, [isSidebarVisible, setCurrentMedia]);
+  }, []);
 
   const goToLink = e => {
     // e.preventDefault()
@@ -56,9 +51,7 @@ export default function Layout() {
   };
 
   return (
-    <div
-      onClick={() => setIsSidebarVisible(true) && setIsNavToggleSvgVisible(false)}
-      ref={scope}
+    <div ref={scope}
       className="layout-wrapper fixed w-full flex align-center top-[0rem]"
       style={{ zIndex: 3 }}>
       <motion.div
@@ -67,7 +60,7 @@ export default function Layout() {
         className={`links-layout p-2 m-3 relative w-full flex align-center top-[0.75rem]`}
         initial="initial"
         whileHover="animate"
-        whileTap={isSidebarVisible ? "animate" : "initial"}
+        whileTap="animate"
         onMouseEnter={() => setIsNavToggleSvgVisible(true)}
         onMouseLeave={() => setIsNavToggleSvgVisible(false)}
       >

@@ -1221,6 +1221,7 @@ html[lang="he-IL"] .section-content h2 {
   gap: 3px;
   font-weight: bold;
   font-size: 1.1rem;
+  min-height: 28px !important;
   /* direction: rtl; */
 }
 html[lang="en-US"] .vacation-gallery {
@@ -1853,6 +1854,15 @@ html[lang="en-US"] .star-score {
     display: none;
   }
 
+  .about-us-title {
+    font-size: 1.75rem;
+    line-height: 50px;
+  }
+
+  .page-btn {
+    font-size: 0.75rem;
+  }
+
   .social {
     padding-top: 0.5rem;
     margin-left: 0 !important;
@@ -2002,7 +2012,7 @@ html[lang="en-US"] .star-score {
   .social {
     padding-top: 0.25rem;
   }
-  
+
   .magnetic-container {
     gap: 2.5rem;
     padding-top: 5rem;
