@@ -1866,6 +1866,10 @@ html[lang="en-US"] .star-score {
     bottom: 25px !important;
   }
 
+  .inner-footer > div {
+    gap: 10rem !important;
+  }
+
 }
 
 

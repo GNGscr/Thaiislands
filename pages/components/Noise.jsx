@@ -85,7 +85,7 @@ const ExampleContent = ({pages, pathname}) => {
 
   return (
     <div className="relative grid h-[350px] place-content-center space-y-6 bg-neutral-950 p-8 text-white">
-      <div className="relative -top-[30] text-neutral-20 w-fit px-4 py-2 font-semibold text-neutral-200 transition-colors">
+      <div className="inner-footer relative -top-[30] text-neutral-20 w-fit px-4 py-2 font-semibold text-neutral-200 transition-colors">
         <div className="flex gap-[15rem] w-[50%]">
             {
                 pages.map((page, i) => {
