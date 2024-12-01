@@ -1892,11 +1892,6 @@ html[lang="en-US"] .star-score {
     max-width: 248.04px;
   }
 
-  .hover-the-map-txt {
-    margin-bottom: 6.5rem;
-    font-size: 1.85rem !important;
-  }
-
   .section-content-para {
     grid-auto-columns: repeat(12, minmax(0, 1fr)) !important;
   }
@@ -1987,7 +1982,7 @@ html[lang="en-US"] .star-score {
     left: calc(50% - 130px);
   }
   .main-header {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 2.65rem;
   }
   .hero-content {
@@ -1999,8 +1994,12 @@ html[lang="en-US"] .star-score {
   }
   html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {
-    padding-top: 5rem;
+    padding-top: 2.5rem;
     top: 2.5rem;
+  }
+  .hover-the-map-txt {
+    margin-bottom: 2.5rem;
+    font-size: 1.85rem !important;
   }
   .section-content {
     gap: 2rem !important;
