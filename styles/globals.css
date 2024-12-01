@@ -2090,6 +2090,10 @@ html[lang="en-US"] .star-score {
   .rights-reserved {
     width: 100%;
   }
+
+  .inner-footer > div {
+    gap: 1rem !important;
+  }
 }
 
 @media (max-width: 420px) {
