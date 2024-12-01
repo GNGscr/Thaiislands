@@ -1806,7 +1806,12 @@ html[lang="en-US"] .star-score {
   .navbar-ul > a > li {
     padding: 0.725rem 1.6rem;
   }
-
+  .navbar-ul {
+    max-width: 586.82px;
+  }
+  .navbar-ul > a {
+    min-width: fit-content;
+  }
 
   .hover-the-map-txt {
     margin-bottom: -2rem;
