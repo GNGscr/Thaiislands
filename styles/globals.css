@@ -1224,7 +1224,7 @@ html[lang="he-IL"] .section-content h2 {
   gap: 3px;
   font-weight: bold;
   font-size: 1.1rem;
-  min-height: 28px !important;
+  max-height: 28px !important;
   /* direction: rtl; */
 }
 html[lang="en-US"] .vacation-gallery {
@@ -1858,6 +1858,14 @@ html[lang="en-US"] .star-score {
     font-size: 1.15rem;
     padding-bottom: 0.75rem;
   }
+  .magnetic-container {
+    scale: 0.75;
+  }
+  .screen-fix-txt > span {
+    /* margin-top: 10rem !important; */
+    bottom: 25px !important;
+  }
+
 }
 
 
