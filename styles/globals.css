@@ -2053,10 +2053,26 @@ html[lang="en-US"] .star-score {
   }
   .footer > div > div > div > div > div {
     gap: 1rem;
+    justify-content: flex-start;
   }
 
   .slide-in-header {
     font-size: 3rem;
+  }
+
+  .credits {
+    flex-direction: column;
+    margin-top: 3rem !important;
+    gap: 0rem !important;
+  }
+  .created-by {
+    width: fit-content;
+    justify-content: flex-start;
+    max-height: 0.5rem;
+    width: 85vw;
+  }
+  .rights-reserved {
+    width: 100%;
   }
 }
 
