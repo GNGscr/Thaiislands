@@ -28,17 +28,17 @@ export default function Layout() {
   ];
 
   useEffect(() => {
-    window.innerWidth < 680 ? setCurrentMedia("mobile") : setCurrentMedia("desktop");
-    // if (window.innerWidth < 680) {
-    //   setCurrentMedia("mobile");
-    //   console.log('currentMedia: ', currentMedia);
-    // } else if (window.innerWidth < 1080) {
-    //   setCurrentMedia("mobilefull");
-    //   console.log('currentMedia: ', currentMedia);
-    // } else {
-    //   setCurrentMedia("desktop");
-    //   console.log('currentMedia: ', currentMedia);
-    // }
+
+    if (window.innerWidth < 680) {
+      setCurrentMedia("mobile");
+      localStorage.setItem("media", "mobile");
+    } else if (window.innerWidth < 1080) {
+      setCurrentMedia("tablet");
+      localStorage.setItem("media", "tablet");
+    } else {
+      setCurrentMedia("desktop");
+      localStorage.setItem("media", "desktop");
+    }
      
   });
 

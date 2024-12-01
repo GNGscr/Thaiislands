@@ -34,7 +34,16 @@ export default function Home() {
 
     // setLanguage(userLang === HE_IL ? "he" : "en");
     
-    setCurrentMedia(width < 680 ? "mobile" : "desktop");
+    if (window.innerWidth < 680) {
+      setCurrentMedia("mobile");
+      localStorage.setItem("media", "mobile");
+    } else if (window.innerWidth < 1080) {
+      setCurrentMedia("tablet");
+      localStorage.setItem("media", "tablet");
+    } else {
+      setCurrentMedia("desktop");
+      localStorage.setItem("media", "desktop");
+    }
     // console.log('width: ', dimension);
     
     return () => (window.removeEventListener('resize', updateDimension));
