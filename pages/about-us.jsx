@@ -17,7 +17,7 @@ export default function AboutUs() {
                 backgroundRepeat: 'no-repeat',
                 // backgroundColor: 'black'
             }}>
-            <h3
+            <h3 id="thaiislands"
                 className="about-us-title font-bold mt-[1rem] mb-[1rem]"
                 style={{ textAlign: 'center', fontSize: '2.65rem', color: 'white' }}
             >
