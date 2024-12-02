@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
 export default function Layout() {
   const { language, setCurrentMedia, currentMedia } = useGlobalSettings();
   const scope = useRef(null);
-  const [ isSideNavToggleSvgVisible,
-    setIsNavToggleSvgVisible ] = useState(false);
+  const [ isSideNavToggleSvgVisible, setIsSideNavToggleSvgVisible ] = useState(false);
+  const [ isSideNavToggleVisible, setIsSideNavToggleVisible ] = useState(false);
   
   const router = useRouter()
   const pathname = usePathname();
@@ -45,11 +45,20 @@ export default function Layout() {
   const goToLink = e => {
     // e.preventDefault()
     // console.log(e.target.href);
-    // setIsNavToggleSvgVisible(true);
+    // setIsSideNavToggleSvgVisible(true);
     // setTimeout(() => {
-    //   setIsNavToggleSvgVisible(false);
+    //   setIsSideNavToggleSvgVisible(false);
     //   router.push(e.target.href);
     // }, 500);
+  }
+
+  const mouseEnter = () => {
+    setIsSideNavToggleSvgVisible(true);
+    setIsSideNavToggleVisible(true);
+  }
+  const mouseleave = () => {
+    setIsSideNavToggleSvgVisible(false);
+    setIsSideNavToggleVisible(false);
   }
 
   const setLinksLang = (en, he) => {
@@ -72,9 +81,9 @@ export default function Layout() {
         className={`links-layout p-2 m-3 relative w-full flex align-center top-[0.75rem]`}
         initial="initial"
         whileHover="animate"
-        whileTap="animate"
-        onMouseEnter={() => setIsNavToggleSvgVisible(true)}
-        onMouseLeave={() => setIsNavToggleSvgVisible(false)}
+        animate={isSideNavToggleVisible ? "animate" : "initial"}
+        onMouseEnter={mouseEnter}
+        onMouseLeave={mouseleave}
       >
         <div className="side-toggle-svg-wrapper">
 
