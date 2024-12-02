@@ -9,7 +9,7 @@ const ShineButton = ({ isLogoSection, data }) => {
   // }
   
     return (
-        <a
+        <a style={{ zIndex: 0 }}
           href={isLogoSection
           ? "https://facebook.com" 
           : "https://www.instagram.com/"}
