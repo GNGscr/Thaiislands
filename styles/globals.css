@@ -757,7 +757,7 @@ html[lang="en-US"] .filter {
   border: 2px solid #fff;
   height: calc(100vh - 1.5rem);
   font-size: 1rem;
-  z-index: 2;
+  z-index: 99;
   gap: 1rem;
 }
 
