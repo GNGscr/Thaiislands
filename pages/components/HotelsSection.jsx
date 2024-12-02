@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import FlipCard from "./FlipCard";
+import DefaultCard from "./DefaultCard";
 
 export default function HotelsSection({ data, lang, media }) {
 
@@ -162,15 +163,27 @@ const regionsTitleAnimation = {
                                 ...currentMediaRowCardsAnimation
                               }
                               >
-                              <FlipCard
-                                  hotelName={affiliates.affiliateName}
-                                  numOfStars={affiliates.affiliateNumberOfStars}
-                                  content={affiliates.affiliateContent[lang]}
-                                  googleScore={affiliates.affiliateGoogleScore}
-                                  link={affiliates.affiliateLink}
-                                  image={affiliates.affiliateStyleImage}
-                                  lang={lang}
-                                />
+                                {
+                                  media === "desktop"
+                                  ?
+                                    <FlipCard
+                                      hotelName={affiliates.affiliateName}
+                                      numOfStars={affiliates.affiliateNumberOfStars}
+                                      content={affiliates.affiliateContent[lang]}
+                                      googleScore={affiliates.affiliateGoogleScore}
+                                      link={affiliates.affiliateLink}
+                                      image={affiliates.affiliateStyleImage}
+                                      lang={lang} />
+                                  :
+                                    <DefaultCard 
+                                      hotelName={affiliates.affiliateName}
+                                      numOfStars={affiliates.affiliateNumberOfStars}
+                                      content={affiliates.affiliateContent[lang]}
+                                      googleScore={affiliates.affiliateGoogleScore}
+                                      link={affiliates.affiliateLink}
+                                      image={affiliates.affiliateStyleImage}
+                                      lang={lang} />
+                                }
                               </motion.div>
                             )
                           })
