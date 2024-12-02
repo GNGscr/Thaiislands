@@ -1832,9 +1832,9 @@ html[lang="en-US"] .star-score {
     padding: 0 5%;
     padding-top: 3.5rem;
   }
-.navbar-ul {
-  max-height: 3.4rem;
-}
+  .navbar-ul {
+    max-height: 3.4rem;
+  }
   .affiliates-row {
     margin: 0 2.5rem;
   }
@@ -1867,7 +1867,9 @@ html[lang="en-US"] .star-score {
   .blink-emoji {
     right: 7.5rem !important;
   }
-
+  .decleration {
+    display: none;
+  }
   .hotels-title {
     font-size: 1.45rem;
   }
