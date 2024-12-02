@@ -18,17 +18,17 @@ export default function Noise({ data, lang }) {
     {
       "district": "Mueang",
       "paths": [
-        { "label": "Phuket", "link": "/phuket", "isActive": false },
-        { "label": "KohChiang", "link": "/koh-chiang", "isActive": false },
-        { "label": "someIsland", "link": "/some-island", "isActive": false }
+        { "label": "Phuket", "link": "/", "isActive": false },
+        { "label": "KohChiang", "link": "/", "isActive": false },
+        { "label": "someIsland", "link": "/", "isActive": false }
       ]
     },
     {
       "district": "North",
       "paths": [
-        { "label": "ChianMai", "link": "/chian-mai", "isActive": false },
-        { "label": "Kanchianabory", "link": "/kanchianabory", "isActive": false },
-        { "label": "someIsland", "link": "/some-island", "isActive": false }
+        { "label": "ChianMai", "link": "/", "isActive": false },
+        { "label": "Kanchianabory", "link": "/", "isActive": false },
+        { "label": "someIsland", "link": "/", "isActive": false }
       ]
     },
   ];
@@ -70,7 +70,7 @@ const NoiseComponent = () => {
 
 const ExampleContent = ({pages, pathname}) => {
   const [isColorRed, setIsColorRed] = useState(false);
-  const linkClicked = (e, isActive) => !isActive ?? e.preventDefault();
+  const linkClicked = (e, isActive) => !isActive ?? e.preventDefault(); // Prevent default anchor behavior;
   return (
     <div className="relative grid h-[350px] place-content-center space-y-6 bg-neutral-950 p-8 text-white">
       <div className="inner-footer relative -top-[30] text-neutral-20 w-fit px-4 py-2 font-semibold text-neutral-200 transition-colors">
@@ -84,8 +84,8 @@ const ExampleContent = ({pages, pathname}) => {
                             {
                               page.paths.map(({label, link, isActive}, i) => {
                                 return (
-                                  <a href={link} key={i}
-                                    onClick={(e) => linkClicked(e, isActive)}
+                                  <a href={isActive ? link : pathname} key={i}
+                                    onClick={(e) => !isActive ?? e.preventDefault()}
                                     className={`${isActive ? '' : 'disabled'}`}
                                     style={isActive ? { opacity: 1 } : { opacity: 0.5}}
                                   >
