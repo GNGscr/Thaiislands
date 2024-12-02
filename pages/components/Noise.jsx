@@ -70,18 +70,6 @@ const NoiseComponent = () => {
 
 const ExampleContent = ({pages, pathname}) => {
   const [isColorRed, setIsColorRed] = useState(false);
-  // const [scope, animate] = useAnimate();
-
-    // // Set menu main div to be y position 0 visible and toggleSvg bool value on initial load
-    useEffect(() => {
-      // console.log(scope.current.children[0].children)
-      // animate([...scope.current.children[0].children], { color: '#ff0000', duration: 0.5,  })
-      // animate(scope.current.children, { color: '#ff0000', duration: 1, });
-      // Cleanup function to reset the menu main div after initial load for further animations
-      return () => {
-        // animate([...scope.current.children], { color: '#fff' });
-      };
-    }, [isColorRed]);
 
   return (
     <div className="relative grid h-[350px] place-content-center space-y-6 bg-neutral-950 p-8 text-white">
@@ -97,7 +85,6 @@ const ExampleContent = ({pages, pathname}) => {
                               page.paths.map(({label, link, isActive}, i) => {
                                 return (
                                   <a href={link} key={i}
-                                  // ref={scope}
                                     className={`${isActive ? '' : 'disabled'}`}
                                     style={isActive ? { opacity: 1 } : { opacity: 0.5}}
                                   >
