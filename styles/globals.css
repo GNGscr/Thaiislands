@@ -1966,6 +1966,9 @@ html[lang="en-US"] .star-score {
     font-size: 0.75rem;
   }
 
+  .hover-the-map-txt > h3 {
+    font-size: 2.5rem !important;
+  }
   .social {
     padding-top: 0.5rem;
     margin-left: 0 !important;
