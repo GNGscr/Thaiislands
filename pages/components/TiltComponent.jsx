@@ -55,10 +55,10 @@ const TiltCardComponent = ({ isLogoSection, data }) => {
   return (
     <motion.div
       ref={ref}
-      className="absolute h-16 w-48"
+      className="relative h-16 w-48"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ transformStyle: "preserve-3d", transform }}>
+      style={{ transformStyle: "preserve-3d", transform, zIndex: 0 }}>
       <div className="absolute inset-4 grid place-content-center"
           style={{ transform: "translateZ(75px)", transformStyle: "preserve-3d" }}>
             <p className="tilt-card text-gray-600 text-center text-2xl font-bold shadow-lg"
