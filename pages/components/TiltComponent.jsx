@@ -55,29 +55,16 @@ const TiltCardComponent = ({ isLogoSection, data }) => {
   return (
     <motion.div
       ref={ref}
+      className="absolute h-16 w-48"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{
-        transformStyle: "preserve-3d",
-        transform,
-      }}
-      className="relative h-16 w-48"
-    >
-      <div
-        style={{
-          transform: "translateZ(75px)",
-          transformStyle: "preserve-3d",
-        }}
-        className="absolute inset-4 grid place-content-center"
-      >
-        <p
-          style={{
-            transform: "translateZ(50px)",
-          }}
-        className="tilt-card text-gray-600 text-center text-2xl font-bold shadow-lg"
-        >
-          <ShineButton isLogoSection={isLogoSection} data={data} />
-        </p>
+      style={{ transformStyle: "preserve-3d", transform }}>
+      <div className="absolute inset-4 grid place-content-center"
+          style={{ transform: "translateZ(75px)", transformStyle: "preserve-3d" }}>
+            <p className="tilt-card text-gray-600 text-center text-2xl font-bold shadow-lg"
+              style={{ transform: "translateZ(50px)" }}>
+              <ShineButton isLogoSection={isLogoSection} data={data} />
+            </p>
       </div>
     </motion.div>
   );

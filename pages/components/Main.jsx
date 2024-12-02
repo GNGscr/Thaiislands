@@ -240,10 +240,6 @@ const StickyImage = ({ imgUrl, isMapVisible, data }) => {
           </div>
           : ''
         }
-      {/* <motion.div
-        className="absolute inset-0 bg-neutral-950/70"
-        style={{ opacity }}
-        /> */}
     </motion.div>
   );
 };
