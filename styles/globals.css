@@ -1281,6 +1281,7 @@ html[lang="he-IL"] .button-lightning {
 .section-content-h,
 .hover-map {
   font-family: var(--secondary-font);
+  font-size: 1.85rem !important;
 }
 .decleration-wrapper {
   position: relative;
@@ -1990,7 +1991,7 @@ html[lang="en-US"] .star-score {
     padding-right: 5%;
   }
   .button-lightning {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {
@@ -1999,7 +2000,7 @@ html[lang="en-US"] .star-score {
   }
   .hover-the-map-txt {
     margin-bottom: 2.5rem;
-    font-size: 1.85rem !important;
+    font-size: 2.25rem !important;
   }
   .section-content {
     gap: 2rem !important;
