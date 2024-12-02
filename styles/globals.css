@@ -1798,6 +1798,13 @@ html[lang="en-US"] .star-score {
   font-size: 1rem;
 }
 
+.disabled {
+  transition: .3s ease-in-out;
+}
+.disabled:hover {
+  content: '';
+  cursor: not-allowed;
+}
 
 
 

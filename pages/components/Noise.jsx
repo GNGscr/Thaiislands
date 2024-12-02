@@ -10,25 +10,25 @@ export default function Noise({ data, lang }) {
     {
       "district": "Surathani",
       "paths": [
-        { "label": "KohPhangan", "link": "/koh-phangan" },
-        { "label": "KohSamui", "link": "/koh-samui" },
-        { "label": "KohTao", "link": "/koh-tao" }
+        { "label": "KohPhangan", "link": "/koh-phangan", "isActive": true },
+        { "label": "KohSamui", "link": "/koh-samui", "isActive": true },
+        { "label": "KohTao", "link": "/koh-tao", "isActive": true }
       ]
     },
     {
       "district": "Mueang",
       "paths": [
-        { "label": "Phuket", "link": "/phuket" },
-        { "label": "KohChiang", "link": "/koh-chiang" },
-        { "label": "someIsland", "link": "/some-island" }
+        { "label": "Phuket", "link": "/phuket", "isActive": false },
+        { "label": "KohChiang", "link": "/koh-chiang", "isActive": false },
+        { "label": "someIsland", "link": "/some-island", "isActive": false }
       ]
     },
     {
       "district": "North",
       "paths": [
-        { "label": "ChianMai", "link": "/chian-mai" },
-        { "label": "Kanchianabory", "link": "/kanchianabory" },
-        { "label": "someIsland", "link": "/some-island" }
+        { "label": "ChianMai", "link": "/chian-mai", "isActive": false },
+        { "label": "Kanchianabory", "link": "/kanchianabory", "isActive": false },
+        { "label": "someIsland", "link": "/some-island", "isActive": false }
       ]
     },
   ];
@@ -94,17 +94,19 @@ const ExampleContent = ({pages, pathname}) => {
 
                             <div className="footer-th font-bold pb-2">{page.district}</div>
                             {
-                              page.paths.map(({label, link}, i) => {
+                              page.paths.map(({label, link, isActive}, i) => {
                                 return (
                                   <a href={link} key={i}
                                   // ref={scope}
+                                    className={`${isActive ? '' : 'disabled'}`}
+                                    style={isActive ? { opacity: 1 } : { opacity: 0.5}}
                                   >
                                     <motion.div
                                       className="footer-link flex"
                                       style={{ color: isColorRed === false && pathname === link ? '#ff0000' : '#fff' }}
-                                      whileHover={{ color: '#ff0000' }}
-                                      onMouseEnter={() => setIsColorRed(true)}
-                                      onMouseLeave={() => setIsColorRed(false)}>
+                                      whileHover={ isActive ? { color: '#ff0000' } : {} }
+                                      onMouseEnter={() => isActive ? setIsColorRed(true) : null}
+                                      onMouseLeave={() => isActive ? setIsColorRed(false) : null}>
                                         {label.split('').map((letter, index) => <div key={index}>{letter}</div>)}
                                     </motion.div>
                                   </a>
