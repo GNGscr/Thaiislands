@@ -39,7 +39,7 @@ const DefaultCard = ({
                 <div className="card-front-mask" />
                 <motion.div initial={{ opacity: 1 }}
                     animate={{ opacity: !isContentVisible ? 1 : 0 }}
-                    transition={{ duration: 0.25 }}
+                    transition={{ duration: 0.15, type: 'spring' }}
                     className="stars-wrapper flex gap-[0.1rem] z-2 absolute top-5 left-5">
                     {
                     [...Array(numOfStars)].map((_, i) => {
@@ -50,7 +50,7 @@ const DefaultCard = ({
 
                 <motion.div initial={{ opacity: 1, width: '100%' }}
                     animate={!isContentVisible ? { opacity: 1, width: '100%' } : { opacity: 0, width: 0  }}
-                    transition={{ duration: 0.25 }}
+                    transition={{ duration: 0.15, type: 'spring' }}
                     className="front-hotel-name-wrapper">
                   <div className="card-front-hotel-name">
                     {hotelName}
@@ -59,11 +59,11 @@ const DefaultCard = ({
                 <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isContentVisible ? 1 : 0 }}
-                transition={{ duration: 0.25 }}
+                transition={{ duration: 0.15, type: 'spring' }}
                 className={`w-[100%] h-[100%] bg-cover text-black rounded-[6px] relative flex flex-col p-[0.5rem]`}>
                     <motion.div initial={{ opacity: 0 }}
                         animate={{ opacity: isContentVisible ? 1 : 0 }}
-                        transition={{ duration: 0.25, delay: 0.25 }}
+                        transition={{ duration: 0.15, type: 'spring', delay: 0.15 }}
                         className="flip-card-back-inner">
                             <div className="card-header">{hotelName}</div>
                             <div className="card-content">{content}</div>
@@ -99,7 +99,7 @@ const DefaultCard = ({
                 <motion.div 
                     initial={{ opacity: 1 }}
                     animate={{ opacity: !isContentVisible ? 1 : 0 }}
-                    transition={{ duration: 0.25 }}
+                    transition={{ duration: 0.15, type: 'spring' }}
                     style={{ rotate: '180deg' }}
                     className="absolute bottom-[2rem]">
                       <svg xmlns="http://www.w3.org/2000/svg" width="30.002" height="15" viewBox="0 0 15.802 8.73"><path fill="#fff" data-name="angle-small-down" d="M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21A1,1,0,0,0,5.29,9.62l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z" transform="translate(19.001 16.087) rotate(180)"></path></svg>
