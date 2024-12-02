@@ -374,9 +374,9 @@ const Cursor = ({ position, currentMedia }) => {
       }}
       className="absolute z-0 h-7 rounded-full bg-black md:h-12"
       style={
-        currentMedia === 'mobile'
-          ? { height: '2.35rem' }
-          : { height: '3rem' }
+        currentMedia === 'mobile' ? { height: '2.35rem' }
+          : currentMedia === 'tablet' ? { height: '2.65rem' }
+            : { height: '3rem' }
       }
     />
   );
