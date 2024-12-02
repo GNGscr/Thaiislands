@@ -63,7 +63,7 @@ const TiltCardComponent = ({ isLogoSection, data }) => {
           style={{ transform: "translateZ(75px)", transformStyle: "preserve-3d" }}>
             <p className="tilt-card text-gray-600 text-center text-2xl font-bold shadow-lg"
               style={{ transform: "translateZ(50px)" }}>
-              <ShineButton isLogoSection={isLogoSection} data={data} />
+                <ShineButton isLogoSection={isLogoSection} data={data} />
             </p>
       </div>
     </motion.div>

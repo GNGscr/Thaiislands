@@ -247,7 +247,7 @@ export default function Navbar({
   //   } 
   if (!data || !media) return;
   return (
-    <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: '9' }}>
+    <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: 4 }}>
       <motion.div id="main" variants={variants} className="relative w-full flex align-center top-[0.75rem]"
         initial="initial"
         whileHover="animate"
@@ -286,7 +286,8 @@ export default function Navbar({
           <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
         </div>
         <div onClick={() => setIsNavbarVisible(true)}
-          className="text-white absolute top-[2.85rem] flex justify-center h-[100%] w-full" style={{ rotate: "180deg" }}>
+          className={`text-white absolute top-[2.85rem] flex justify-center
+            h-${media === 'desktop'? '[100%]' : 'fit'} w-full`} style={{ rotate: "180deg" }}>
           <svg
             id="toggle-svg"
             className="cursor-pointer"
