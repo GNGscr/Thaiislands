@@ -84,10 +84,10 @@ const ExampleContent = ({pages, pathname}) => {
                             {
                               page.paths.map(({label, link, isActive}, i) => {
                                 return (
-                                  <a href={isActive ? link : pathname} key={i}
+                                  <a key={i} href={isActive ? link : '/about-us'}
                                     onClick={(e) => !isActive ?? e.preventDefault()}
-                                    className={`${isActive ? '' : 'disabled'}`}
-                                    style={isActive ? { opacity: 1 } : { opacity: 0.5}}
+                                    className={isActive ? '' : 'disabled'}
+                                    style={isActive ? { opacity: 1 } : { opacity: 0.5} }
                                   >
                                     <motion.div
                                       className="footer-link flex"
