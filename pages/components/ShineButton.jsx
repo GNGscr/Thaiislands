@@ -16,7 +16,7 @@ const ShineButton = ({ isLogoSection, data }) => {
           target="_blank" rel="noopener noreferrer">
           <motion.button
             className={`w-full flex justify-center rounded bg-neutral-900 px-9 py-3 text-xl
-              text-white transition-colors md:w-fit mt-5 z-8 shadow-lg`}
+              text-white transition-colors md:w-fit mt-5 shadow-lg`}
             style={{ minWidth: 180 }}
             initial={{ "--x":  "100%", scale: 1}}
             animate={{ "--x":  "-100%" }}
