@@ -286,8 +286,7 @@ export default function Navbar({
           <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
         </div>
         <div onClick={() => setIsNavbarVisible(true)}
-          className={`text-white absolute top-[2.85rem] flex justify-center
-            h-${media === 'desktop'? '[100%]' : 'fit'} w-full`} style={{ rotate: "180deg" }}>
+          className={`text-white absolute top-[2.85rem] flex justify-center h-[100%] w-full`} style={{ rotate: "180deg" }}>
           <svg
             id="toggle-svg"
             className="cursor-pointer"
