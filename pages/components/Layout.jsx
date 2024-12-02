@@ -43,6 +43,8 @@ export default function Layout() {
   });
 
   const goToLink = e => {
+    setIsSideNavToggleSvgVisible(true);
+    setIsSideNavToggleVisible(false);
     // e.preventDefault()
     // console.log(e.target.href);
     // setIsSideNavToggleSvgVisible(true);
