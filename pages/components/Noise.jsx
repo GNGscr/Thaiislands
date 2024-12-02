@@ -70,7 +70,7 @@ const NoiseComponent = () => {
 
 const ExampleContent = ({pages, pathname}) => {
   const [isColorRed, setIsColorRed] = useState(false);
-
+  const linkClicked = (e, isActive) => !isActive ?? e.preventDefault();
   return (
     <div className="relative grid h-[350px] place-content-center space-y-6 bg-neutral-950 p-8 text-white">
       <div className="inner-footer relative -top-[30] text-neutral-20 w-fit px-4 py-2 font-semibold text-neutral-200 transition-colors">
@@ -85,6 +85,7 @@ const ExampleContent = ({pages, pathname}) => {
                               page.paths.map(({label, link, isActive}, i) => {
                                 return (
                                   <a href={link} key={i}
+                                    onClick={(e) => linkClicked(e, isActive)}
                                     className={`${isActive ? '' : 'disabled'}`}
                                     style={isActive ? { opacity: 1 } : { opacity: 0.5}}
                                   >
