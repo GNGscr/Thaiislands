@@ -1928,6 +1928,9 @@ html[lang="en-US"] .star-score {
 
 @media (max-width: 680px) {
 
+  .links-layout {
+    padding-top: 5rem !important;
+  }
   html[lang="he-IL"] .navbar-ul {
     max-width: 169.42px;
   }
