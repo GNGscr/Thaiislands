@@ -1917,8 +1917,11 @@ html[lang="en-US"] .star-score {
   }
 
   .about-us-title {
-    font-size: 1.75rem;
-    line-height: 50px;
+    font-size: 1.5rem;
+    line-height: 40px;
+  }
+  .page-btns-wrp {
+    width: 100% !important;
   }
 
   .page-btn {
