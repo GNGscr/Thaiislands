@@ -230,7 +230,7 @@ export default function Navbar({
     "/koh-tao": [0, 0.0825, 0.435, 0.4350000000001, 1],
     "/about-us": [[0, 0.0825, 0.435, 0.4350000000001, 1]]
   };
-
+  let color = "#fff";
   // Set the color to switch by toggle (ease fnc) between sections
   // let color = useTransform(
   //   scrollYProgress,
