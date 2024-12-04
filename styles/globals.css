@@ -2048,15 +2048,15 @@ html[lang="en-US"] .star-score {
     padding-right: 5%;
   }
   .button-lightning {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
   html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {
     padding-top: 2.5rem;
-    top: 5rem;
+    top: 7rem;
   }
   .hover-the-map-txt {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     font-size: 2.25rem !important;
   }
   .section-content {
