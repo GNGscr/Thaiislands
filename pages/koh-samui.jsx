@@ -6,7 +6,7 @@ import StickyFooter from "./components/StickyFooter";
 import SectionAnimation from "./components/SectionAnimation";
 import kohSamuiData from "./public/data/kohSamuiData.json";
 import { useGlobalSettings } from './components/GlobalSettings';
-import samuiMap from './public/images/KohSamui.jpeg';
+import samuiMap from './public/images/Beach-Map-Koh-Samui.jpg';
 
 const he = "he";
 const en = "en";
@@ -54,7 +54,7 @@ export default function KohSamui() {
           media={currentMedia}
           title={kohSamuiData["island-name"][globalLanguage]}
           mainImg={kohSamuiData.heroImage}
-          mapDrawing={samuiMap} />
+          mapDrawing={samuiMap.src} />
         <div id="media">
           <SocialsSection data={kohSamuiData} lang={kohSamuiData['language-text'][globalLanguage]} />
         </div>

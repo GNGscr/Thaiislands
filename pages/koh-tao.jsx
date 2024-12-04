@@ -36,7 +36,7 @@ export default function KohTao() {
         setLanguage(en); 
       }
     }
-
+    
     return (
       <>
         <Navbar

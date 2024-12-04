@@ -97,8 +97,9 @@
             "b": "קוסמוי הוא אחד האיים הפופולריים ביותר בתאילנד, עם חופים טרופיים, בתי מלון יוקרתיים, וריזורטים על החוף. האי מציע חוויה מגוונת שמתאימה לכל סוגי המטיילים - זוגות, משפחות ותרמילאים. תוכלו למצוא מלונות יוקרתיים עם בריכות אינסופיות, מסעדות מצוינות ופעילויות ספורט ימי. האי גם מציע חופים מדהימים כמו חוף צ'אוונג, חוף לאמאי וחוף בופוט, שכולם מציעים את כל מה שצריך לחופשה מושלמת."
         },
         "en": {
-            "a": "Koh Samui is one of the most popular islands in Thailand, with tropical beaches, luxury hotels, and beachfront resorts. The island offers a diverse experience for all types of travelers—couples, families, and backpackers.",
-            "b":"You can find luxury hotels with infinity pools, excellent restaurants, and water sports activities. The island also boasts stunning beaches like Chaweng, Lamai, and Bophut, all of which offer everything needed for the perfect vacation. The island itself is very big and is more western than it's closest islands. It's easy to find here a normal mall with anything you need to that you can't find on other samller islands."}
+            "a": "Koh Samui is one of the most popular islands in Thailand, with tropical beaches, luxury hotels, and beachfront resorts. The island offers a diverse experience for all types of travelers—couples, families, and backpackers. Koh Samui is one of the most popular islands in Thailand, with tropical beaches, luxury hotels, and beachfront resorts. The island offers a diverse experience for all types of travelers—couples, families, and backpackers.",
+            "b":"You can find luxury hotels with infinity pools, excellent restaurants, and water sports activities. The island also boasts stunning beaches like Chaweng, Lamai, and Bophut, all of which offer everything needed for the perfect vacation. The island itself is very big and is more western than it's closest islands. It's easy to find here a normal mall with anything you need to that you can't find on other samller islands."
+        }
     },
     "article-second-paragraph": {
         "he": "כחלק משירותינו, אנו משתפים קישורים ישירים למלונות על מנת שתוכלו להזמין בקלות, ונתמוך בכם תוך כדי. קוטאו מציעה חוויה יותר אקסלוסיבית שכוללת צלילה ושנורקלינג.",
@@ -123,6 +124,7 @@
             "desktop": "Hover under the text to view map and above it to view image"
         }
     },
+    "mapSkech": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.saltwater-dreaming.com%2Ftravel%2Fmaps%2Fkoh-samui.htm&psig=AOvVaw2leHpgfuSoyEyRISA7mC3L&ust=1733397006680000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDbyKD9jYoDFQAAAAAdAAAAABAE",
     "googleMap": {
         "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115265.22839980878!2d99.91901011404137!3d9.501246619718925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3054f1501c66266f%3A0xedd55abd3d7d8330!2sKo%20Samui!5e1!3m2!1sen!2sil!4v1732463848186!5m2!1sen!2sil"
     },

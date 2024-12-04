@@ -66,8 +66,6 @@ import TiltComponent from "./TiltComponent";
 
 export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
   if (!data) return;
-  const main1Para1 = data["article-main-paragraph"][lang].a;
-  const main1Para2 = data["article-main-paragraph"][lang].b;
 
   // console.log('TODO!!!!! ::  fix but with missing words when splitting');
   // console.log("בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.".length);
@@ -92,8 +90,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
         title={title}
       >
         <ExampleContent
-          para1={main1Para1}
-          para2={main1Para2}
+          currentPara={data["article-main-paragraph"][lang].a}
           isLogoSection={true}
           sidePara={data.sideParagraphs.sidePara1}
           lang={lang} 
@@ -115,8 +112,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
         title={title}
       >
         <ExampleContent
-          para1={main1Para1}
-          para2={main1Para2}
+          currentPara={data["article-main-paragraph"][lang].b}
           isLogoSection={false}
           sidePara={data.sideParagraphs.sidePara2}
           lang={lang}
@@ -195,7 +191,7 @@ const TextParallaxContentComponent = ({
   );
 };
 
-const StickyImage = ({ imgUrl, isMapVisible, data }) => {
+const StickyImage = ({ imgUrl, isMapVisible, data, lang }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -229,7 +225,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data }) => {
           ? <div id="map">
               <div className="map-responsive">
                 <iframe src={data.googleMap.link}
-                    width="600" 
+                    width={data["island-name"][lang] === "Koh Phangan" ? "600" : "100%"} 
                     height="450" 
                     allowFullScreen 
                     loading="lazy" 
@@ -290,7 +286,7 @@ const OverlayCopy = ({
   );
 };
 // bug with overflow
-const ExampleContent = ({para1, para2, isLogoSection, sidePara, lang, data}) => (
+const ExampleContent = ({currentPara,isLogoSection, sidePara, lang, data}) => (
   <div className={`section-content
     ${lang === "he"
       ? 'mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12'
@@ -317,11 +313,8 @@ const ExampleContent = ({para1, para2, isLogoSection, sidePara, lang, data}) => 
     </h2>
     <div className="section-content-para col-span-1 md:col-span-8">
       <p className="section-content-para-1 mb-4 text-xl text-neutral-600 md:text-2xl">
-        {para1}
+        {currentPara}
       </p>
-      <p className="section-content-para-2 mb-8 text-xl text-neutral-600 md:text-2xl">
-        {para2}
-      </p> 
 
       <TiltComponent isLogoSection={isLogoSection} data={data} />
     </div>

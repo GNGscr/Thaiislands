@@ -59,7 +59,7 @@ export default function ShuffleHero() {
                   className={`w-[32%] page-btn font-medium w-[100%]
                       py-3 px-4 rounded transition-all active:scale-95`}
                     initial={{ color: "#000", backgroundColor: "#fff", rotateX: 0 }}
-                    whileHover={{ fontWeight: 600, letterSpacing: "0.005rem", color: "rgb(252 165 165 / 1)", backgroundColor: "#000", rotateX: 360 }}
+                    whileHover={{ fontWeight: 600, letterSpacing: "0.005rem", color: "#fff", backgroundColor: "#000", rotateX: 360 }}
                     transition={{ duration: .1, delay: 0.065 }}>
                     {page.label[globalLanguage]}
                 </motion.a>
