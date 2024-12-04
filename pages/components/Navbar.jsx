@@ -232,12 +232,12 @@ export default function Navbar({
   };
 
   // Set the color to switch by toggle (ease fnc) between sections
-  let color = useTransform(
-    scrollYProgress,
-    islandsColorProgress[pathname],
-    ["#fff", "#000", "#fff", "#000", "#000"],
-    { ease: (t) => Math.round(t) });
-  if (!data || !media) return;
+  // let color = useTransform(
+  //   scrollYProgress,
+  //   islandsColorProgress[pathname],
+  //   ["#fff", "#000", "#fff", "#000", "#000"],
+  //   { ease: (t) => Math.round(t) });
+  // if (!data || !media) return;
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: 4 }}>
       <motion.div id="main" variants={variants} className="relative w-full flex align-center top-[0.75rem]"
