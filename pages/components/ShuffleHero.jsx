@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import kohPhanganData from "../public/data/kohPhanganData.json";
 import { useGlobalSettings } from './GlobalSettings';
 import Navbar from "./Navbar";
+import RevealLinks from "./RevealLinks";
 // import squareDataJson from "../../pages/public/data/squareData.json";
 
 const he = "he";
@@ -37,13 +38,9 @@ export default function ShuffleHero() {
     <section className={`w-full mt-[-1.25rem] px-8 py-12 grid grid-cols-1 md:grid-cols-2
         items-center gap-[7.5rem] max-w-6xl mx-auto text-white`}
         style={{ textAlign: globalLanguage === en ? 'left' : 'right'}}>
-      <Navbar
-        data={kohPhanganData}
-        lang={kohPhanganData['language-text'][globalLanguage]}
-        toggleLanguage={toggleLanguage}
-        activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
-        media={currentMedia}
-      />
+      <div className="about-nav flex justify-end w-full h-[60px] fixed top-[1rem] right-0">
+        <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
+      </div>
       <div className="about-us">
         <h3 className={`text-1xl md:text-[2rem] font-semibold about-us-title`}>
           {kohPhanganData.aboutUsPage.header[globalLanguage]}

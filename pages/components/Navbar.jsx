@@ -231,20 +231,12 @@ export default function Navbar({
     "/about-us": [[0, 0.0825, 0.435, 0.4350000000001, 1]]
   };
 
-  // let color;
-  let color = '#fff';
   // Set the color to switch by toggle (ease fnc) between sections
-
-  
-  // move to seperate component
-  // color = useTransform(
-  //   scrollYProgress,
-  //   islandsColorProgress[pathname],
-  //   ["#fff", "#000", "#fff", "#000", "#000"],
-  //   { ease: (t) => Math.round(t) });
-  //   if (pathname !== '/about-us') {
-  //     color = '#fff';
-  //   } 
+  let color = useTransform(
+    scrollYProgress,
+    islandsColorProgress[pathname],
+    ["#fff", "#000", "#fff", "#000", "#000"],
+    { ease: (t) => Math.round(t) });
   if (!data || !media) return;
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: 4 }}>
