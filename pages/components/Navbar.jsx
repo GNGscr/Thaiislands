@@ -101,8 +101,6 @@ export default function Navbar({
   const [isNavToggleSvgVisible, setIsNavToggleSvgVisible] = useState(false);
   const [scope, animate] = useAnimate();
   const { scrollY } = useScroll();
-
-  const [currentColor, setCurrentColor] = useState("#fff");
   
   useEffect(() => {
     const resizeEvent = window.addEventListener('resize', () => {
@@ -141,7 +139,7 @@ export default function Navbar({
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const intersectingEntry = entry.target.id.replace('#', '');
-          setCurrentButton(intersectingEntry); // Save the intersecting button
+          setCurrentButton(intersectingEntry); // Saves the intersecting button
           setPosition({
             [directionToOffset[language]]:
               navButtonsPositionMedia[media][language][intersectingEntry][directionToOffset[language]],
