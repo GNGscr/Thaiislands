@@ -5,6 +5,7 @@ import SwipeCarousel from "./SwipeCarousel";
 import ButtonLightningAnimation from "./ButtonLightningAnimation";
 import HotelsSection from "./HotelsSection";
 import TiltComponent from "./TiltComponent";
+import { useGlobalSettings } from './GlobalSettings';
 
 // :: TODOs :: //
 // =========== //
@@ -66,7 +67,7 @@ import TiltComponent from "./TiltComponent";
 
 export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
   if (!data) return;
-
+  const { currentMedia } = useGlobalSettings();
   // console.log('TODO!!!!! ::  fix but with missing words when splitting');
   // console.log("בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.".length);
   // console.log('card limit en: ', 285);
@@ -88,6 +89,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
         lang={lang}
         activateMenuIsActive={activateMenuIsActive}
         title={title}
+        currentMedia={currentMedia}
       >
         <ExampleContent
           currentPara={data["article-main-paragraph"][lang].a}
@@ -110,6 +112,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
         lang={lang}
         activateMenuIsActive={activateMenuIsActive}
         title={title}
+        currentMedia={currentMedia}
       >
         <ExampleContent
           currentPara={data["article-main-paragraph"][lang].b}
@@ -164,7 +167,8 @@ const TextParallaxContentComponent = ({
   data,
   lang,
   activateMenuIsActive,
-  title
+  title,
+  currentMedia
 }) => {  
   return (
     <div
@@ -174,7 +178,7 @@ const TextParallaxContentComponent = ({
       }}
     >
       <div className="relative h-[150vh]" id={`${isMapVisible ? 'map-img' : ''}`}>
-        <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} />
+        <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} currentMedia={currentMedia} />
         <OverlayCopy
           heading={heading}
           subheading={subheading}
@@ -184,6 +188,7 @@ const TextParallaxContentComponent = ({
           lang={lang}
           activateMenuIsActive={activateMenuIsActive}
           title={title}
+          currentMedia={currentMedia}
         />
       </div>
       {children}
@@ -191,7 +196,7 @@ const TextParallaxContentComponent = ({
   );
 };
 
-const StickyImage = ({ imgUrl, isMapVisible, data, lang }) => {
+const StickyImage = ({ imgUrl, isMapVisible, data, lang, currentMedia }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -200,7 +205,8 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang }) => {
 
   const scale = useTransform(scrollYProgress, [0, 0.02, 1], [1, 1, 0.85]);
   const opacity = useTransform(scrollYProgress, [0, 0.02, 1], [1, 0, 0]);
-  if (!imgUrl) return ''
+  const opacityMobile = useTransform(scrollYProgress, [0, 0.02, 1], [0.25, 0, 0]);
+  if (!imgUrl) return '';
   else return (
     <motion.div
       style={{
@@ -217,7 +223,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang }) => {
       >
       <motion.div
         className="absolute inset-0 bg-neutral-950/80"
-        style={{ opacity }}
+        style={{ opacity: currentMedia === "mobile" ? opacityMobile : opacity }}
         />
         
         {
@@ -248,7 +254,8 @@ const OverlayCopy = ({
   data,
   lang,
   activateMenuIsActive,
-  title
+  title,
+  currentMedia
 }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -258,10 +265,10 @@ const OverlayCopy = ({
   
   const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
   const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
-    // const heroOpacity = useTransform(scrollYProgress, [0, 0.08, 1], [1, 0, 0]);
+  const opacityMobile = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [1, 1, 0]);
   return (
     <motion.div
-      style={{ y, opacity }}
+      style={{ y, opacity: currentMedia === "mobile" ? opacityMobile : opacity }}
       ref={targetRef}
       className={`hero-content absolute ${isCtaButton ? 'pt-32' : ''} left-0 top-0 flex
       ${isCtaButton ? 'h-screen' : 'h-[45%]'} w-full flex-col items-center

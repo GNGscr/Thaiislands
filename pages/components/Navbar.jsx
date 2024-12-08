@@ -86,13 +86,12 @@ export default function Navbar({
   };
   
   const { language, currentMedia, setCurrentMedia } = useGlobalSettings();
-  const media = currentMedia;
   const pathname = usePathname();
 
   const [position, setPosition] = useState({
     [directionToOffset[language]]: 
-      navButtonsPositionMedia[media][language].home[directionToOffset[language]],
-    width: navButtonsPositionMedia[media][language].home.width,
+      navButtonsPositionMedia[currentMedia][language].home[directionToOffset[language]],
+    width: navButtonsPositionMedia[currentMedia][language].home.width,
     opacity: 1,
   });
 
@@ -142,8 +141,8 @@ export default function Navbar({
           setCurrentButton(intersectingEntry); // Saves the intersecting button
           setPosition({
             [directionToOffset[language]]:
-              navButtonsPositionMedia[media][language][intersectingEntry][directionToOffset[language]],
-            width: navButtonsPositionMedia[media][language][intersectingEntry].width,
+              navButtonsPositionMedia[currentMedia][language][intersectingEntry][directionToOffset[language]],
+            width: navButtonsPositionMedia[currentMedia][language][intersectingEntry].width,
             opacity: 1,
           });
         }
@@ -155,7 +154,7 @@ export default function Navbar({
 
     return () => observer.disconnect(); // Cleanup observer
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, language, media]);
+  }, [data, language, currentMedia]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 0) {
@@ -177,7 +176,7 @@ export default function Navbar({
 
     // Revert to the last intersected button if the user doesn't click
     const lastPosition =
-      navButtonsPositionMedia[media][language][currentButton];
+      navButtonsPositionMedia[currentMedia][language][currentButton];
     if (lastPosition) {
       setPosition({
         [directionToOffset[language]]: lastPosition[directionToOffset[language]],
@@ -192,7 +191,7 @@ export default function Navbar({
     activateMenuIsActive(true);
     
     setCurrentButton(button); // Set the clicked button as current
-    const buttonPosition = navButtonsPositionMedia[media][language][button];
+    const buttonPosition = navButtonsPositionMedia[currentMedia][language][button];
     if (buttonPosition) {
       setPosition({
         [directionToOffset[language]]: buttonPosition[directionToOffset[language]],
@@ -232,7 +231,7 @@ export default function Navbar({
   );
   useEffect(() => {
   }, [color]);
-  if (!data || !media) return;
+  if (!data || !currentMedia) return;
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: 4 }}>
       <motion.div id="main" variants={variants} className="relative w-full flex align-center top-[0.75rem]"
