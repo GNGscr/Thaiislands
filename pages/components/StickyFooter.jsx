@@ -13,7 +13,7 @@ export default function StickyFooter({ data, lang }) {
       // Set the color to switch by toggle (ease fnc) between sections
   const isDisplayed = useTransform(
     scrollYProgress,
-    [0, 0.15, 0.25, 0.95, 1],
+    [0, 0.15, 0.25, 0.975, 1],
     ["none", "none", "none", "flex", "flex"],
     { ease: (t) => Math.round(t) }
   );
