@@ -64,7 +64,7 @@ export default function Navbar({
     },
     "mobile": {
       "he": {
-        "home": { right: 40, width: 40 },
+        "home": { right: 4, width: 40 },
         "map-img": { right: 44, width: 40 },
         "gallery": { right: 80, width: 64 },
         "hotels": { right: 140, width: 50 },
