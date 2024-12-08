@@ -25,12 +25,7 @@ export default function KohPhangan() {
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
-
-      if (language === en) {
-        setLanguage(he);
-      } else {
-        setLanguage(en); 
-      }
+      language === en ? setLanguage(he) : setLanguage(en);
     }
     
     return (

@@ -21,7 +21,7 @@ export default function KohTao() {
       mainHtml = document.querySelector('html');
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? HE_IL : EN_US);
 
-    }, [language]);
+    }, [language].latest);
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
