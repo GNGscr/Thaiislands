@@ -14,9 +14,7 @@ const HE_IL = 'he-IL';
 const EN_US = 'en-US';
 
 export default function ShuffleHero() {
-  const { language, setLanguage, currentMedia } = useGlobalSettings();
-  // let [menuIsActive, setMenuIsActive] = useState(false);
-  let globalLanguage = language;
+  const { language, setLanguage } = useGlobalSettings();
   
 
   let mainHtml;
@@ -34,17 +32,17 @@ export default function ShuffleHero() {
   return (
     <section className={`w-full mt-[-1.25rem] px-8 py-12 grid grid-cols-1 md:grid-cols-2
         items-center gap-[7.5rem] max-w-6xl mx-auto text-white`}
-        style={{ textAlign: globalLanguage === en ? 'left' : 'right'}}>
+        style={{ textAlign: language === en ? 'left' : 'right'}}>
       <div className={`about-nav flex justify-end w-full h-[60px] fixed top-[1rem] right-0`}>
         <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
       </div>
       <div className="about-us">
         <h3 className={`text-1xl md:text-[2rem] font-semibold about-us-title`}>
-          {kohPhanganData.aboutUsPage.header[globalLanguage]}
+          {kohPhanganData.aboutUsPage.header[language]}
         {/* 😉 */}
         </h3>
         <p className={`text-base md:text-3xl text-slate-700 my-4 md:my-6 about-us-title text-white`}>
-          {kohPhanganData.aboutUsPage.subHeader[globalLanguage]}
+          {kohPhanganData.aboutUsPage.subHeader[language]}
         </p>
         <div className="flex justify-between mt-[7.5rem] w-[96%] z-5 page-btns-wrp">
           {
@@ -58,7 +56,7 @@ export default function ShuffleHero() {
                     initial={{ color: "#000", backgroundColor: "#fff", rotateX: 0 }}
                     whileHover={{ fontWeight: 600, letterSpacing: "0.005rem", color: "#fff", backgroundColor: "#000", rotateX: 360 }}
                     transition={{ duration: .1, delay: 0.065 }}>
-                    {page.label[globalLanguage]}
+                    {page.label[language]}
                 </motion.a>
               )
             })}
