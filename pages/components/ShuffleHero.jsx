@@ -15,23 +15,20 @@ const EN_US = 'en-US';
 
 export default function ShuffleHero() {
   const { language, setLanguage, currentMedia } = useGlobalSettings();
-  let [menuIsActive, setMenuIsActive] = useState(false);
-  const [ stateLanguage, setStateLanguage ] = useState("en");
+  // let [menuIsActive, setMenuIsActive] = useState(false);
   let globalLanguage = language;
   
-  // let mainHtml;
-  // useEffect(() => {
-  // }, [stateLanguage]);
+
+  let mainHtml;
+  useEffect(() => {
+    mainHtml = document.querySelector('html');
+    if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? HE_IL : EN_US);
+
+  }, [language].latest);
 
   const toggleLanguage = () => {
-
-    if (globalLanguage === en) {
-      setStateLanguage(he);
-      setLanguage(he);
-    } else { 
-      setStateLanguage(en);
-      setLanguage(en); 
-    }
+    if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
+    language === en ? setLanguage(he) : setLanguage(en);
   }
   
   return (
