@@ -6,8 +6,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { useGlobalSettings } from "./components/GlobalSettings";
 import AboutUs from "./about-us";
 
-const HE_IL = 'he-IL';
-const EN_US = 'en-US';
+// const HE_IL = 'he-IL';
+// const EN_US = 'en-US';
 
 export default function Home() {
   const { language, setLanguage, setCurrentMedia } = useGlobalSettings();
@@ -27,7 +27,7 @@ export default function Home() {
   useEffect(() => {
     updateDimension();
     window.addEventListener('resize', updateDimension);
-    let { width } = mainRef.current.getBoundingClientRect();
+    // let { width } = mainRef.current.getBoundingClientRect();
     // let userLang = document.querySelector('html');
     // if (userLang) document.documentElement.setAttribute('lang', userLang.lang === HE_IL ? HE_IL : EN_US);
       // .lang === HE_IL ? HE_IL : EN_US;
