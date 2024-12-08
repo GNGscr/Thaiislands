@@ -11,7 +11,8 @@ const DefaultCard = ({
     googleScore=0,
     link="",
     image="",
-    lang
+    lang,
+    media
 }) => {
 
     const [ isContentVisible, setIsContentVisible  ] = useState(false);
@@ -53,12 +54,15 @@ const DefaultCard = ({
                     animate={!isContentVisible ? { opacity: 1, width: '100%' } : { opacity: 0, width: 0  }}
                     transition={{ duration: 0.15, type: 'spring' }}
                     className="front-hotel-name-wrapper">
-                  <div className="card-front-hotel-name"
-                    style={!isContentVisible
+                  <motion.div className="card-front-hotel-name"
+                    initial={{ opacity: 1 }}
+                    animate={!isContentVisible ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.15, type: 'spring' }}
+                    style={media === "mobile"
                         ? { "-webkit-text-stroke": "0.15px #333" }
                         : { "-webkit-text-stroke": "0.65px #777" }}>
                     {hotelName}
-                  </div>  
+                  </motion.div>  
                 </motion.div>
                 <motion.div 
                 initial={{ opacity: 0 }}

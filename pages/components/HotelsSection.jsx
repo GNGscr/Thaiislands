@@ -182,7 +182,8 @@ const regionsTitleAnimation = {
                                       googleScore={affiliates.affiliateGoogleScore}
                                       link={affiliates.affiliateLink}
                                       image={affiliates.affiliateStyleImage}
-                                      lang={lang} />
+                                      lang={lang}
+                                      media={media} />
                                 }
                               </motion.div>
                             )
