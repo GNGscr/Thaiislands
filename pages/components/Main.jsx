@@ -5,7 +5,6 @@ import SwipeCarousel from "./SwipeCarousel";
 import ButtonLightningAnimation from "./ButtonLightningAnimation";
 import HotelsSection from "./HotelsSection";
 import TiltComponent from "./TiltComponent";
-import { useGlobalSettings } from './GlobalSettings';
 
 // :: TODOs :: //
 // =========== //
@@ -67,7 +66,6 @@ import { useGlobalSettings } from './GlobalSettings';
 
 export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
   if (!data) return;
-  const { currentMedia } = useGlobalSettings();
   // console.log('TODO!!!!! ::  fix but with missing words when splitting');
   // console.log("בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.".length);
   // console.log('card limit en: ', 285);
@@ -89,7 +87,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
         lang={lang}
         activateMenuIsActive={activateMenuIsActive}
         title={title}
-        currentMedia={currentMedia}
+        media={media}
       >
         <ExampleContent
           currentPara={data["article-main-paragraph"][lang].a}
@@ -112,7 +110,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
         lang={lang}
         activateMenuIsActive={activateMenuIsActive}
         title={title}
-        currentMedia={currentMedia}
+        media={media}
       >
         <ExampleContent
           currentPara={data["article-main-paragraph"][lang].b}
@@ -168,7 +166,7 @@ const TextParallaxContentComponent = ({
   lang,
   activateMenuIsActive,
   title,
-  currentMedia
+  media
 }) => {  
   return (
     <div
@@ -178,7 +176,7 @@ const TextParallaxContentComponent = ({
       }}
     >
       <div className="relative h-[150vh]" id={`${isMapVisible ? 'map-img' : ''}`}>
-        <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} currentMedia={currentMedia} />
+        <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} media={media} />
         <OverlayCopy
           heading={heading}
           subheading={subheading}
@@ -188,7 +186,7 @@ const TextParallaxContentComponent = ({
           lang={lang}
           activateMenuIsActive={activateMenuIsActive}
           title={title}
-          currentMedia={currentMedia}
+          media={media}
         />
       </div>
       {children}
@@ -196,7 +194,7 @@ const TextParallaxContentComponent = ({
   );
 };
 
-const StickyImage = ({ imgUrl, isMapVisible, data, lang, currentMedia }) => {
+const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -223,7 +221,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, currentMedia }) => {
       >
       <motion.div
         className="absolute inset-0 bg-neutral-950/80"
-        style={{ opacity: currentMedia === "mobile" ? opacityMobile : opacity }}
+        style={{ opacity: media === "mobile" ? opacityMobile : opacity }}
         />
         
         {
@@ -255,7 +253,7 @@ const OverlayCopy = ({
   lang,
   activateMenuIsActive,
   title,
-  currentMedia
+  media
 }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -268,7 +266,7 @@ const OverlayCopy = ({
   const opacityMobile = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [1, 1, 0]);
   return (
     <motion.div
-      style={{ y, opacity: currentMedia === "mobile" ? opacityMobile : opacity }}
+      style={{ y, opacity: media === "mobile" ? opacityMobile : opacity }}
       ref={targetRef}
       className={`hero-content absolute ${isCtaButton ? 'pt-32' : ''} left-0 top-0 flex
       ${isCtaButton ? 'h-screen' : 'h-[45%]'} w-full flex-col items-center
