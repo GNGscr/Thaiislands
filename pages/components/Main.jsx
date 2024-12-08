@@ -203,7 +203,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
 
   const scale = useTransform(scrollYProgress, [0, 0.02, 1], [1, 1, 0.85]);
   const opacity = useTransform(scrollYProgress, [0, 0.02, 1], [1, 0, 0]);
-  const opacityMobile = useTransform(scrollYProgress, [0, 0.02, 1], [0.25, 0, 0]);
+  const opacityMobile = useTransform(scrollYProgress, [0, 0.05, 1], [0.3, 0.15, 0]);
   if (!imgUrl) return '';
   else return (
     <motion.div
