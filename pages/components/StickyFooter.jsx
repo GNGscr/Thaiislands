@@ -13,7 +13,7 @@ export default function StickyFooter({ data, lang }) {
     // Set the display value to switch by toggle (ease fnc) between flex and none
     const isDisplayed = useTransform(
         scrollYProgress,
-        [0, 0.15, 0.25, 0.975, 1],
+        [0, 0.15, 0.25, 0.985, 1],
         ["none", "none", "none", "flex", "flex"],
         { ease: (t) => Math.round(t) }
     );
