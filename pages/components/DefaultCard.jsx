@@ -49,8 +49,8 @@ const DefaultCard = ({
                     }
                 </motion.div>
 
-                <motion.div initial={{ opacity: 1, width: '100%', fontSize: "initial" }}
-                    animate={!isContentVisible ? { opacity: 1, width: '100%', fontSize: 0 } : { opacity: 0, fontSize: "31.2px", width: 0  }}
+                <motion.div initial={{ opacity: 1, width: '100%' }}
+                    animate={!isContentVisible ? { opacity: 1, width: '100%' } : { opacity: 0, width: 0  }}
                     transition={{ duration: 0.15, type: 'spring' }}
                     className="front-hotel-name-wrapper">
                   <div className="card-front-hotel-name">
