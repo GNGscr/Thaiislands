@@ -21,12 +21,12 @@ export default function KohSamui() {
     let mainHtml;
     useEffect(() => {
       mainHtml = document.querySelector('html');
-      if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? HE_IL : EN_US);
+      if (mainHtml) toggleMainHtmlLang(mainHtml);
 
     }, [stateLanguage]);
 
     const toggleLanguage = () => {
-      if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
+      if (mainHtml) toggleMainHtmlLang(mainHtml);
       
       if (globalLanguage === en) {
         setStateLanguage(he);
@@ -36,6 +36,9 @@ export default function KohSamui() {
         setLanguage(en); 
       }
     }
+
+    const toggleMainHtmlLang = mainHtml => 
+      mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
     
     return (
       <>
@@ -50,15 +53,15 @@ export default function KohSamui() {
         <Main
           activateMenuIsActive={(bool) => setMenuIsActive(bool)}
           data={kohSamuiData}
-          lang={kohSamuiData['language-text'][globalLanguage]}
+          lang={kohSamuiData['language-text'][stateLanguage]}
           media={currentMedia}
-          title={kohSamuiData["island-name"][globalLanguage]}
+          title={kohSamuiData["island-name"][stateLanguage]}
           mainImg={kohSamuiData.heroImage}
           mapDrawing={samuiMap.src} />
         <div id="media">
-          <SocialsSection data={kohSamuiData} lang={kohSamuiData['language-text'][globalLanguage]} />
+          <SocialsSection data={kohSamuiData} lang={kohSamuiData['language-text'][stateLanguage]} />
         </div>
-        <StickyFooter data={kohSamuiData} lang={kohSamuiData['language-text'][globalLanguage]} />
+        <StickyFooter data={kohSamuiData} lang={kohSamuiData['language-text'][stateLanguage]} />
         <SectionAnimation menuIsActive={menuIsActive} title={kohSamuiData["island-name"][globalLanguage]} />
       </>
     )

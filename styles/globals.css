@@ -1268,6 +1268,7 @@ html[lang="he-IL"] .button-lightning {
   background-color: #000;
   border-radius: 1.15rem;
   text-align: center;
+  min-width: 59.8px !important;
   padding: 0rem 0.65rem;
   border: 8.5px solid #000;
   transition: .3s ease-in-out;
@@ -1932,12 +1933,18 @@ html[lang="en-US"] .star-score {
     padding-top: 5rem !important;
   }
   html[lang="he-IL"] .navbar-ul {
-    max-width: 169.42px;
+    max-width: 248.04px !important;
+    min-width: 148.04px !important;
   }
 
   html[lang="en-US"] .navbar-ul {
-    max-width: 248.04px;
+    max-width: 248.04px !important;
+    min-width: 248.04px !important;
   }
+  /* .navbar-ul {
+    max-width: 250px;
+    min-width: 150px;
+  } */
 
   .section-content-para {
     grid-auto-columns: repeat(12, minmax(0, 1fr)) !important;
@@ -2180,12 +2187,42 @@ html[lang="en-US"] .star-score {
   }
 }
 
+@media not all and (min-height: 899px) and (min-resolution:.1dpi) {
 
+  .safari-only {
+    color: #0000ff;
+    border-color: #cccccc;
+    --webkit-padding-after: 1.7rem;
+  }
+}
 
+/* chrom and safari (any version) */
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    /* .my-classes {} */
+}
 
+/* safari something */
 
+@media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio: 0) {
+  @media screen {
+    /* .my-classes {} */
+  }
+}
 
+/* safari (7.1+) */
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+  background-color: #ff0000;
+}
+
+/* safari (10.1+) */
+
+@media not all and (min-resolution:.001dpcm) {
+  @media screen {
+    /* .my-classes {} */
+  }
+}
 
 
 

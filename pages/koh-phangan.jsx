@@ -14,7 +14,7 @@ const HE_IL = 'he-IL';
 const EN_US = 'en-US';
 
 export default function KohPhangan() {
-  const { language, setLanguage, currentMedia, setCurrentMedia } = useGlobalSettings();
+  const { language, setLanguage, currentMedia } = useGlobalSettings();
     let [menuIsActive, setMenuIsActive] = useState(false);
     const [ stateLanguage, setStateLanguage ] = useState("en");
     let globalLanguage = language;
@@ -36,13 +36,12 @@ export default function KohPhangan() {
         setLanguage(en); 
       }
     }
-    console.log(currentMedia);
     
     return (
       <>
         <Navbar
           data={kohPhanganData}
-          lang={kohPhanganData['language-text'][globalLanguage]}
+          lang={kohPhanganData['language-text'][stateLanguage]}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
           media={currentMedia}
@@ -51,15 +50,15 @@ export default function KohPhangan() {
         <Main
           activateMenuIsActive={(bool) => setMenuIsActive(bool)}
           data={kohPhanganData}
-          lang={kohPhanganData['language-text'][globalLanguage]}
+          lang={kohPhanganData['language-text'][stateLanguage]}
           media={currentMedia}
-          title={kohPhanganData["island-name"][globalLanguage]}
+          title={kohPhanganData["island-name"][stateLanguage]}
           mainImg={kohPhanganData.heroImage}
           mapDrawing={phanganMap.src} />
         <div id="media">
-          <SocialsSection data={kohPhanganData} lang={kohPhanganData['language-text'][globalLanguage]} />
+          <SocialsSection data={kohPhanganData} lang={kohPhanganData['language-text'][stateLanguage]} />
         </div>
-        <StickyFooter data={kohPhanganData} lang={kohPhanganData['language-text'][globalLanguage]} />
+        <StickyFooter data={kohPhanganData} lang={kohPhanganData['language-text'][stateLanguage]} />
         <SectionAnimation menuIsActive={menuIsActive} title={kohPhanganData["island-name"][globalLanguage]} />
       </>
     )
