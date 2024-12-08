@@ -10,7 +10,7 @@ export default function StickyFooter({ data, lang }) {
       target: container,
       offset: ['start start', 'end start']
     });
-      // Set the color to switch by toggle (ease fnc) between sections
+      // Set the display value to switch by toggle (ease fnc) between flex and none
   const isDisplayed = useTransform(
     scrollYProgress,
     [0, 0.15, 0.25, 0.975, 1],
