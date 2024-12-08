@@ -3,15 +3,51 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import ScreenFitText from "./ScreenFitText";
+import rinbeach from '../../pages/public/images/koh-phangan-rin-beach.PNG';
+import phangandownhill from '../../pages/public/images/koh-phangan-downhill-view.jpg';
+import phanganChilling from '../../pages/public/images/koh-phangan-chilling.jpg';
+import phanganParties from '../../pages/public/images/koh-phangan-party.jpg';
+import phanganRasta from '../../pages/public/images/koh-phangan-rasta-1.jpg';
+import jambar1 from '../../pages/public/images/koh-phangan-jambar-1.jpg';
+import jambar2 from '../../pages/public/images/koh-phangan-jambar-2.jpg';
+import jambar3 from '../../pages/public/images/koh-phangan-jambar-3.jpg';
 
-const imgs = [
-  "https://pix8.agoda.net/hotelImages/6361579/-1/ceb6fd59eeaa5ac5818fd085fb590183.jpg?ca=9&ce=1&s=1024x",
-  "https://pix8.agoda.net/hotelImages/1076675/-1/6ad3788b021595c5b7b97da30b71281e.jpg?ce=0&s=600x",
-  "https://pix8.agoda.net/hotelImages/281786/-1/91b569d25172cb7afc157ae5f01e64cf.jpg?ca=21&ce=0&s=1024x",
-  "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x",
-  "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/518472395.jpg?k=363cd4b3eba3d3331c5813fb147aac64a0b15e9e66ca401dc9c42664c04cdc67&o=&s=600x",
-  "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/107139232.jpg?k=7e8a35317bf27c353f184c168cd01a64093b553a6ad5639c9144480866752dca&o=&s=600x",
-  "https://pix8.agoda.net/hotelImages/248099/-1/13446a580a17ed6ed5cd9b25ff430428.jpg?ce=0&s=1024x",
+import samuiMall from '../../pages/public/images/koh-samui-mall.jpg';
+import samuiTraffic1 from '../../pages/public/images/koh-samui-traffic-1.jpg';
+import samuiTraffic2 from '../../pages/public/images/koh-samui-traffic-2.jpg';
+import samuiBand1 from '../../pages/public/images/koh-samui-band-1.jpg';
+import samuiPig from '../../pages/public/images/koh-samui-pig.jpg';
+import samuiDrunkGirls from '../../pages/public/images/koh-samui-girls.jpg';
+
+import taoMainImg from '../../pages/public/images/KohTaoMainImg.jpeg';
+
+
+
+let imgs = [];
+const phanganImgs = [
+  phangandownhill.src,
+  jambar1.src,
+  jambar3.src,
+  jambar2.src,
+  phanganParties.src,
+  phanganChilling.src,
+  rinbeach.src,
+];
+const samuiImgs = [
+  samuiMall.src,
+  samuiTraffic1.src,
+  samuiTraffic2.src,
+  samuiBand1.src,
+  samuiPig.src,
+  samuiDrunkGirls.src,
+];
+const taoImgs = [
+  samuiMall.src,
+  samuiTraffic1.src,
+  samuiTraffic2.src,
+  samuiBand1.src,
+  samuiPig.src,
+  samuiDrunkGirls.src,
 ];
 
 const ONE_SECOND = 1000;
@@ -26,11 +62,17 @@ const SPRING_OPTIONS = {
 };
 
 const spacingIndex = {
-  "en": { first: 3, second: 12 },
-  "he": { first: 7, second: 14 },
+  "en": { first: 8, second: 16 },
+  "he": { first: 7, second: 16 },
 };
 
-export default function SwipeCarousel({data, lang}) {
+export default function SwipeCarousel({ data, lang }) {
+
+  imgs = data["island-name"].en === "Koh Phangan"
+    ? phanganImgs
+    : data["island-name"].en === "Koh Samui"
+      ? samuiImgs
+      : taoImgs;
 
   const [imgIndex, setImgIndex] = useState(0);
   
