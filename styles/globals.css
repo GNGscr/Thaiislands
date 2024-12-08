@@ -1961,6 +1961,9 @@ html[lang="en-US"] .star-score {
   #thaiislands {
     position: static;
   }
+  .about-nav {
+    right: 1.5rem;
+  }
   
   .shuffle {
     display: none;
@@ -1971,12 +1974,13 @@ html[lang="en-US"] .star-score {
   }
 
   .about-us > p {
+    margin-top: 1.5rem !important;
     margin-bottom: 10rem !important;
   }
 
   .about-us-title {
     margin-top: 0rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem !important;
     line-height: 40px;
   }
   .page-btns-wrp {
