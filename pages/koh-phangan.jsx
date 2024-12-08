@@ -16,8 +16,6 @@ const EN_US = 'en-US';
 export default function KohPhangan() {
   const { language, setLanguage, currentMedia } = useGlobalSettings();
     let [menuIsActive, setMenuIsActive] = useState(false);
-    // const [ stateLanguage, setStateLanguage ] = useState("en");
-    // let globalLanguage = language;
     let mainHtml;
     useEffect(() => {
       mainHtml = document.querySelector('html');
@@ -27,14 +25,7 @@ export default function KohPhangan() {
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
-
-      if (language === en) {
-        // setStateLanguage(he);
-        setLanguage(he);
-      } else { 
-        // setStateLanguage(en);
-        setLanguage(en); 
-      }
+      language === en ? setLanguage(he) : setLanguage(en);
     }
     
     return (

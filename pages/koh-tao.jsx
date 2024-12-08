@@ -16,32 +16,23 @@ const EN_US = 'en-US';
 export default function KohTao() {
   const { language, setLanguage, currentMedia } = useGlobalSettings();
     let [menuIsActive, setMenuIsActive] = useState(false);
-    const [ stateLanguage, setStateLanguage ] = useState("en");
-    let globalLanguage = language;
     let mainHtml;
     useEffect(() => {
       mainHtml = document.querySelector('html');
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? HE_IL : EN_US);
 
-    }, [stateLanguage]);
+    }, [language]);
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
-
-      if (globalLanguage === en) {
-        setStateLanguage(he);
-        setLanguage(he);
-      } else { 
-        setStateLanguage(en);
-        setLanguage(en); 
-      }
+      language === en ? setLanguage(he) : setLanguage(en);
     }
     
     return (
       <>
         <Navbar
           data={kohTaoData}
-          lang={kohTaoData['language-text'][stateLanguage] || "he"}
+          lang={kohTaoData['language-text'][language] || "he"}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
           media={currentMedia}
@@ -50,16 +41,16 @@ export default function KohTao() {
         <Main
           activateMenuIsActive={(bool) => setMenuIsActive(bool)}
           data={kohTaoData}
-          lang={kohTaoData['language-text'][stateLanguage] || "he"}
+          lang={kohTaoData['language-text'][language] || "he"}
           media={currentMedia}
           title="Koh Tao"
           mainImg={kohTaoData.heroImage}
           mapDrawing={kohTaoMap.src} />
         <div id="media">
-          <SocialsSection data={kohTaoData} lang={kohTaoData['language-text'][stateLanguage] || "he"} />
+          <SocialsSection data={kohTaoData} lang={kohTaoData['language-text'][language] || "he"} />
         </div>
-        <StickyFooter data={kohTaoData} lang={kohTaoData['language-text'][stateLanguage] || "he"} />
-        <SectionAnimation menuIsActive={menuIsActive} title={kohTaoData["island-name"][globalLanguage]} />
+        <StickyFooter data={kohTaoData} lang={kohTaoData['language-text'][language] || "he"} />
+        <SectionAnimation menuIsActive={menuIsActive} title={kohTaoData["island-name"][language]} />
       </>
     )
 }
