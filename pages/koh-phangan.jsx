@@ -21,7 +21,7 @@ export default function KohPhangan() {
       mainHtml = document.querySelector('html');
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? HE_IL : EN_US);
 
-    }, [language]);
+    });
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
