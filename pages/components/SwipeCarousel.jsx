@@ -68,11 +68,13 @@ const spacingIndex = {
 
 export default function SwipeCarousel({ data, lang }) {
 
-  imgs = data["island-name"].en === "Koh Phangan"
-    ? phanganImgs
-    : data["island-name"].en === "Koh Samui"
-      ? samuiImgs
-      : taoImgs;
+  if (data) {
+    imgs = data["island-name"].en === "Koh Phangan"
+      ? phanganImgs
+      : data["island-name"].en === "Koh Samui"
+        ? samuiImgs
+        : taoImgs;
+  }
 
   const [imgIndex, setImgIndex] = useState(0);
   
