@@ -3,23 +3,23 @@ import Noise from './Noise';
 import React, { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-// [#c8bdb0]
 export default function StickyFooter({ data, lang }) {
     const container = useRef();
     const { scrollYProgress } = useScroll({
       target: container,
       offset: ['start start', 'end start']
     });
-      // Set the display value to switch by toggle (ease fnc) between flex and none
-  const isDisplayed = useTransform(
-    scrollYProgress,
-    [0, 0.15, 0.25, 0.975, 1],
-    ["none", "none", "none", "flex", "flex"],
-    { ease: (t) => Math.round(t) }
-  );
+    
+    // Set the display value to switch by toggle (ease fnc) between flex and none
+    const isDisplayed = useTransform(
+        scrollYProgress,
+        [0, 0.15, 0.25, 0.975, 1],
+        ["none", "none", "none", "flex", "flex"],
+        { ease: (t) => Math.round(t) }
+    );
 
-  useEffect(() => {
-  }, [isDisplayed]);
+    useEffect(() => {
+    }, [isDisplayed]);
 
     return (
         <motion.div 
