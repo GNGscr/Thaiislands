@@ -53,7 +53,10 @@ const DefaultCard = ({
                     animate={!isContentVisible ? { opacity: 1, width: '100%' } : { opacity: 0, width: 0  }}
                     transition={{ duration: 0.15, type: 'spring' }}
                     className="front-hotel-name-wrapper">
-                  <div className="card-front-hotel-name">
+                  <div className="card-front-hotel-name"
+                    style={!isContentVisible
+                        ? { "-webkit-text-stroke": "0.15px #333" }
+                        : { "-webkit-text-stroke": "0.65px #777" }}>
                     {hotelName}
                   </div>  
                 </motion.div>
