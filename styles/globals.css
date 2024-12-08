@@ -1936,13 +1936,13 @@ html[lang="en-US"] .star-score {
     padding-top: 5rem !important;
   }
   html[lang="he-IL"] .navbar-ul {
-    max-width: 200.04px !important;
-    /* min-width: 148.04px !important; */
+    max-width: 248.04px !important;
+    min-width: 148.04px !important;
   }
 
   html[lang="en-US"] .navbar-ul {
     max-width: 248.04px !important;
-    /* min-width: 248.04px !important; */
+    min-width: 248.04px !important;
   }
   .navbar-ul {
     max-width: 250px;
