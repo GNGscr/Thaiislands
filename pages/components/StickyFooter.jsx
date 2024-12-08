@@ -29,7 +29,7 @@ export default function StickyFooter({ data, lang }) {
             whileInView={{ opacity: 0.85 }}
             transition={{ duration: 0.1 }}
         >
-            <div className="relative h-[300px]">
+            <div className="relative h-[300px] w-screen">
                 <Noise data={data} lang={lang} />
             </div>
         </motion.div>
