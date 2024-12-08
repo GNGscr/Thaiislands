@@ -2014,7 +2014,7 @@ html[lang="en-US"] .star-score {
   .lang {
     top: 0.15rem;
   }
-  section:has(.lang):focus {
+  .lang:focus {
     outline: none;
   }
   html[lang="en-US"] .lang {
