@@ -1278,6 +1278,9 @@ html[lang="he-IL"] .button-lightning {
   color: #000;
   border: 8.5px solid #fff;
 }
+/* .lang:focus {
+  outline: none;
+} */
 
 .section-content-h,
 .hover-map {
@@ -2010,6 +2013,9 @@ html[lang="en-US"] .star-score {
   }
   .lang {
     top: 0.15rem;
+  }
+  section:has(.lang):focus {
+    outline: none;
   }
   html[lang="en-US"] .lang {
     margin-right: 0.25rem !important;
