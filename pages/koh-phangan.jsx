@@ -21,11 +21,16 @@ export default function KohPhangan() {
       mainHtml = document.querySelector('html');
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? HE_IL : EN_US);
 
-    });
+    }, [language].latest);
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
-      language === en ? setLanguage(he) : setLanguage(en);
+
+      if (language === en) {
+        setLanguage(he);
+      } else {
+        setLanguage(en); 
+      }
     }
     
     return (
