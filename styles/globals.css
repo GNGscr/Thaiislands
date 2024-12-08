@@ -1941,10 +1941,10 @@ html[lang="en-US"] .star-score {
     max-width: 248.04px !important;
     min-width: 248.04px !important;
   } */
-  /* .navbar-ul {
+  .navbar-ul {
     max-width: 250px;
-    min-width: 150px;
-  } */
+    /* min-width: 150px; */
+  }
 
   .section-content-para {
     grid-auto-columns: repeat(12, minmax(0, 1fr)) !important;
