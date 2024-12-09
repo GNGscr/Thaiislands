@@ -1932,6 +1932,10 @@ html[lang="en-US"] .star-score {
 
 @media (max-width: 680px) {
 
+  .hero-content {
+    padding-top: 0.5rem !important;
+  }
+
   .links-layout {
     padding-top: 5rem !important;
   }
@@ -2073,7 +2077,7 @@ html[lang="en-US"] .star-score {
     padding-right: 5%;
   }
   .button-lightning {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
   html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {
