@@ -35,7 +35,7 @@ const DefaultCard = ({
                 style={{ backgroundImage: `url(${image})` }}>
 
                 <img src={image} width="100" height="100" alt="img" 
-                    style={!!isContentVisible ? { filter: 'blur(2.5px)'} : {} }
+                    style={!!isContentVisible ? { filter: 'blur(2.5px) brightness(0.75)'} : {} }
                     className="w-[100%] h-[100%] rounded-[6px] absolute top-0 left-0 z-1" />
 
                 <div className="card-front-mask" />
