@@ -1964,7 +1964,7 @@ html[lang="en-US"] .star-score {
 
   #thaiislands {
     position: static;
-    padding-top: 3rem;
+    padding-top: 5rem;
   }
   .about-nav {
     right: 1.5rem;
@@ -1975,7 +1975,7 @@ html[lang="en-US"] .star-score {
   }
 
   #thaiislands {
-    font-size: 2rem !important;
+    font-size: 2.25rem !important;
   }
 
   .about-us > p {
