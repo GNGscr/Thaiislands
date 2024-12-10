@@ -58,6 +58,14 @@ const FlipCard = ({
                     {hotelName}
                   </motion.div>  
                 </div>
+                <motion.div 
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: !isFlipped ? 1 : 0 }}
+                    transition={{ duration: 0.15, type: 'spring' }}
+                    style={{ rotate: '180deg' }}
+                    className="absolute bottom-[2rem]">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30.002" height="15" viewBox="0 0 15.802 8.73"><path fill="#fff" data-name="angle-small-down" d="M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21A1,1,0,0,0,5.29,9.62l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z" transform="translate(19.001 16.087) rotate(180)"></path></svg>
+                </motion.div>
               </div>
 
               <div 
