@@ -44,7 +44,7 @@ export default function ShuffleHero() {
         <p className={`text-base md:text-3xl text-slate-700 my-4 md:my-6 about-us-title text-white`}>
           {kohPhanganData.aboutUsPage.subHeader[language]}
         </p>
-        <div className="flex justify-between mt-[7.5rem] w-[96%] z-5 page-btns-wrp">
+        <div className="flex justify-between mt-[8.5rem] w-[96%] z-5 page-btns-wrp">
           {
             kohPhanganData.aboutUsPage.pages.map((page, index) => {
               return (
@@ -62,7 +62,7 @@ export default function ShuffleHero() {
             })}
         </div>
       </div>
-      <ShuffleGrid />
+      <ShuffleGrid language={language} />
     </section>
   );
 };
@@ -185,22 +185,28 @@ const squareData = [
 
 const generateSquares = () => {
   return shuffle(squareData).map((sq) => (
-    <motion.div
-      key={sq.id}
-      layout
-      transition={{ duration: 1.5, type: "spring" }}
-      className="w-full h-full"
-      style={{
-        backgroundImage: `url(${sq.src})`,
-        backgroundSize: "cover",
-      }}
-    ></motion.div>
+    <a key={sq.id} href={sq.link} target="_blank" rel="noopener noreferrer" className="shuffle-square">
+      <motion.div     
+        layout
+        transition={{ duration: 1.5, type: "spring" }}
+        className="w-full h-full"
+        style={{
+          backgroundImage: `url(${sq.src})`,
+          backgroundSize: "cover",
+        }}
+      ></motion.div>
+    </a>
   ));
 };
 
-const ShuffleGrid = () => {
+const ShuffleGrid = ({language}) => {
   const timeoutRef = useRef(null);
   const [squares, setSquares] = useState(generateSquares());
+
+  const shuffleTitle = {
+    "en": "Try the Blind Selection",
+    "he": "תנסו את הבחירה העיוורת",
+  };
 
   useEffect(() => {
     shuffleSquares();
@@ -216,8 +222,11 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="shuffle grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
-      {squares.map((sq) => sq)}
+    <div className="shuffle-grid-wrapper">
+      <div className="shuffle-title">{shuffleTitle[language]} </div>
+      <div className="shuffle grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
+        {squares.map((sq) => sq)}
+      </div>
     </div>
   );
 };
