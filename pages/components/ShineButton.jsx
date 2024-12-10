@@ -12,7 +12,7 @@ const ShineButton = ({ isLogoSection, data }) => {
         <a style={{ zIndex: 0 }}
           href={isLogoSection
           ? "https://facebook.com" 
-          : "https://www.instagram.com/"}
+          : "https://www.instagram.com/daniel__ehrlich/"}
           target="_blank" rel="noopener noreferrer">
           <motion.button
             className={`w-full flex justify-center rounded bg-neutral-900 px-9 py-3 text-xl

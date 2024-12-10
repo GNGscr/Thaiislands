@@ -242,7 +242,7 @@ export default function Navbar({
       >
         <div className="inner-navbar w-screen flex align-space-between justify-center text-white">
           <div className={`social flex gap-4 ml-7 mt-1 ${pathname === '/about-us' || pathname === '/' ? 'invisible' : 'visible'}`}>
-            <motion.a href="https://www.instagram.com/"
+            <motion.a href="https://www.instagram.com/daniel__ehrlich/"
             style={{ color }}
              target="_blank" rel="noopener noreferrer">
               <svg data-name="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="cursor-pointer"
