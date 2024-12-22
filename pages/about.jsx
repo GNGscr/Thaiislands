@@ -1,7 +1,7 @@
 import ShuffleHero from './components/ShuffleHero';
-import data from '../pages/public/data/data.json';
+import data from './public/data/data.json';
 
-export default function AboutUs() {
+export default function About() {
     const pages = [
         {label: 'Koh Phangan', link: '/koh-phangan', img: ''},
         {label: 'Koh Samui', link: '/koh-samui', img: ''},
@@ -24,7 +24,6 @@ export default function AboutUs() {
                 ThaiIslands
             </h3>
             <ShuffleHero />
-                {/* <div className="about-us-mask" style={{zIndex: 2}}></div> */}
         </div>
     )
 }

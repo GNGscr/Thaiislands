@@ -95,6 +95,7 @@ export default function SwipeCarousel({ data, lang }) {
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onDragEnd = () => {
@@ -125,7 +126,10 @@ export default function SwipeCarousel({ data, lang }) {
                   initial={{ opacity: 0, y: "120%", skewX: "15deg" }}
                   whileInView={{ opacity: 1, y: 0, skewX: 0 }}
                   transition={{ duration: 0.35, type: "spring", delay: i * 0.03, }}
-                  className={`${counter === spacingIndex[lang].first || counter === spacingIndex[lang].second ? 'mr-[1rem]' : ''}`}
+                  className={
+                    `${counter === spacingIndex[lang].first
+                      || counter === spacingIndex[lang].second ? 'mr-[1rem]' : ''}`
+                  }
                 >
                   {letter}
                 </motion.div>

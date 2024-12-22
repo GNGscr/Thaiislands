@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 // import vid from '../public/images/khoPhanganView.mp4';
 // import ReactPlayer from 'react-player';
 import { useGlobalSettings } from "./components/GlobalSettings";
-import AboutUs from "./about-us";
+import AboutUs from "./about";
 
 // const HE_IL = 'he-IL';
 // const EN_US = 'en-US';

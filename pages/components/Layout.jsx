@@ -17,7 +17,7 @@ export default function Layout() {
   let globalLanguage = language;
 
   const links = [
-    { "en": "About Us", "he": "עלינו", "link": "/about-us" },
+    { "en": "About", "he": "עלינו", "link": "/about" },
     { "en": "Koh Phangan", "he": "קופנגן", "link": "/koh-phangan" },
     { "en": "Koh Samui", "he": "קוסמוי", "link": "/koh-samui" },
     { "en": "Koh Tao", "he": "קוטאו", "link": "/koh-tao" },

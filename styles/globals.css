@@ -817,7 +817,8 @@ html[lang="en-US"] .filter {
 }
 
 .shuffle-title {
-  font-size: 1.15rem;
+  font-size: 1rem;
+  font-weight: 700;
   width: 100%;
   padding-bottom: 0.5rem;
 }
@@ -1830,6 +1831,10 @@ html[lang="en-US"] .star-score {
 
 @media (max-width: 1080px) {
 
+  .shuffle-grid-wrapper {
+    display: none;
+  }
+
   html[lang="he-IL"] .navbar-ul {
     max-width: 474.51px;
   }
@@ -2222,6 +2227,7 @@ html[lang="en-US"] .star-score {
   .inner-footer > div {
     gap: 1rem !important;
   }
+
 }
 
 @media (max-width: 420px) {

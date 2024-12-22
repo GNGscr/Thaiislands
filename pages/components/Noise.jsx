@@ -19,15 +19,15 @@ export default function Noise({ data, lang }) {
       "district": "Mueang",
       "paths": [
         { "label": "Phuket", "link": "/", "isActive": false },
-        { "label": "KohChiang", "link": "/", "isActive": false },
+        { "label": "KohChang", "link": "/", "isActive": false },
         { "label": "someIsland", "link": "/", "isActive": false }
       ]
     },
     {
       "district": "North",
       "paths": [
-        { "label": "ChianMai", "link": "/", "isActive": false },
-        { "label": "Kanchianabory", "link": "/", "isActive": false },
+        { "label": "ChiangMai", "link": "/", "isActive": false },
+        { "label": "kanchanaburi", "link": "/", "isActive": false },
         { "label": "someIsland", "link": "/", "isActive": false }
       ]
     },
@@ -84,7 +84,7 @@ const ExampleContent = ({pages, pathname}) => {
                             {
                               page.paths.map(({label, link, isActive}, i) => {
                                 return (
-                                  <a key={i} href={isActive ? link : '/about-us'}
+                                  <a key={i} href={isActive ? link : '/about'}
                                     onClick={(e) => !isActive ?? e.preventDefault()}
                                     className={isActive ? '' : 'disabled'}
                                     style={isActive ? { opacity: 1 } : { opacity: 0.5} }

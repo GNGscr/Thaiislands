@@ -9,10 +9,10 @@ export default function App({ Component, pageProps }) {
   
   useEffect(() => {
     if (router.pathname === '') {
-      router.push('/about-us');
+      router.push('/about');
     }
     if (router.pathname === '/') {
-      router.push('/about-us');
+      router.push('/about');
     }
   }, [router]);
   
