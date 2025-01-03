@@ -62,7 +62,7 @@ const TiltCardComponent = ({ isLogoSection, data }) => {
       <div className="absolute inset-4 grid place-content-center"
           style={{ transform: "translateZ(75px)", transformStyle: "preserve-3d" }}>
             <p className="tilt-card text-gray-600 text-center text-2xl font-bold shadow-lg"
-              style={{ transform: "translateZ(50px)" }}>
+              style={{ transform: "translateZ(50px)", position: "relative", top: "2.5rem" }}>
                 <ShineButton isLogoSection={isLogoSection} data={data} />
             </p>
       </div>

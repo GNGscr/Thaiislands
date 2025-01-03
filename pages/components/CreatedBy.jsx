@@ -6,8 +6,7 @@ const CreatedBy = () => {
     }
     
     return (
-        <a href={`https://debrand-design.vercel.app/` || `https://debrand-design-iipvd4tdx-debrand808-gmailcoms-projects.vercel.app/`}
-        // <a href="https://debrand.design.com"
+        <a href={`https://debrand-design.vercel.app/`}
             rel="noopener noreferrer"
             target="_blank"
             className="relative"
