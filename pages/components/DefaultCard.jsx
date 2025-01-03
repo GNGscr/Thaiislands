@@ -59,8 +59,8 @@ const DefaultCard = ({
                     animate={!isContentVisible ? { opacity: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.15, type: 'spring' }}
                     style={media === "mobile"
-                        ? { "-webkit-text-stroke": "0.15px #333" }
-                        : { "-webkit-text-stroke": "0.65px #777" }}>
+                        ? { "WebkitTextStroke": "0.15px #333" }
+                        : { "WebkitTextStroke": "0.65px #777" }}>
                     {hotelName}
                   </motion.div>  
                 </motion.div>
