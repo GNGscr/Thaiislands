@@ -1827,6 +1827,27 @@ html[lang="en-US"] .star-score {
 }
 
 
+.horizontal-scroll-title {
+  font-family: var(--main-font);
+  font-size: 3rem;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rest-card-content {
+  display: flex;
+  top: 7.5rem;
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 0 15%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
 
 
 @media (max-width: 1080px) {
@@ -1951,6 +1972,23 @@ html[lang="en-US"] .star-score {
 
 
 @media (max-width: 680px) {
+
+  .group {
+    height: 96.5vh;
+    width: 95.5vw;
+  }
+
+  .horizontal-scroll-title {
+    font-size: 2rem;
+  }
+
+  .rest-card-content {
+    top: 15rem;
+    font-size: 1.15rem;
+  }
+  .group > div > p {
+    font-size: 2rem;
+  }
 
   .hero-content {
     padding-top: 0.5rem !important;

@@ -7,6 +7,8 @@ import SectionAnimation from "./components/SectionAnimation";
 import kohPhanganData from "./public/data/kohPhanganData.json";
 import { useGlobalSettings } from "./components/GlobalSettings";
 import phanganMap from './public/images/phangan-map.png';
+import HorizontalCarousel from "./components/HorizontalCarousel";
+import VerticalAccordion from "./components/VerticalAccordion";
 
 const he = "he";
 const en = "en";
@@ -18,6 +20,7 @@ export default function KohPhangan() {
     let [menuIsActive, setMenuIsActive] = useState(false);
     let mainHtml;
     useEffect(() => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       mainHtml = document.querySelector('html');
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? HE_IL : EN_US);
 
@@ -46,9 +49,12 @@ export default function KohPhangan() {
           title={kohPhanganData["island-name"][language]}
           mainImg={kohPhanganData.heroImage}
           mapDrawing={phanganMap.src} />
+        <HorizontalCarousel />
+        {/* <VerticalAccordion /> */}
         <div id="media">
           <SocialsSection data={kohPhanganData} lang={kohPhanganData['language-text'][language]} />
         </div>
+
         <StickyFooter data={kohPhanganData} lang={kohPhanganData['language-text'][language]} />
         <SectionAnimation menuIsActive={menuIsActive} title={kohPhanganData["island-name"][language]} />
       </>
