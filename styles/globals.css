@@ -1858,6 +1858,15 @@ html[lang="en-US"] .star-score {
   text-align: center;
 }
 
+.horizontal-scroll {
+  padding: 3rem 0 !important;
+}
+
+.horizontal-scroll-group {
+  height: 96.5vh;
+  width: 98vw;
+}
+
 .horizontal-scroll-group > div > p {
   position: relative;
   top: -5rem;
@@ -1998,7 +2007,7 @@ html[lang="en-US"] .star-score {
 
   .horizontal-scroll-group {
     height: 96.5vh;
-    width: 95.5vw;
+    width: 96.5vw;
   }
 
   .horizontal-scroll-title {

@@ -6,6 +6,7 @@ import { useRef } from "react";
 import img1 from "../public/images/koh-phangan-rasta-1.jpg";
 import mimiImg from "../public/images/IMG_7608.PNG";
 import puraVidaImg from "../public/images/pura-vida-img.jpg";
+import houseOfSanskara from "../public/images/house-of-sanskara.jpg";
 import locationSVG from "../public/images/location-sign-svgrepo-com.svg";
 
 export default function HorizontalCarousel({ data }) {
@@ -101,28 +102,38 @@ const cards = [
     id: 2,
   },
   {
-    url: img1.src,
-    title: "Title 3",
+    url: houseOfSanskara.src,
+    link: "https://mimi.koh-phangan.com",
+    title: "House of Sanskara",
+    content: "House of Sanskara is located on Haadrin beach and has.. a place that feels like home. everyone is nice and friendly, great service with a smile.",
     id: 3,
   },
   {
     url: img1.src,
-    title: "Title 4",
+    link: "https://mimi.koh-phangan.com",
+    title: "Cafe #4",
+    content: "Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
     id: 4,
   },
   {
     url: img1.src,
-    title: "Title 5",
+    link: "https://mimi.koh-phangan.com",
+    title: "Cafe #5",
+    content: "Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
     id: 5,
   },
   {
     url: img1.src,
-    title: "Title 6",
+    link: "https://mimi.koh-phangan.com",
+    title: "Cafe #6",
+    content: "Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
     id: 6,
   },
   {
     url: img1.src,
-    title: "Title 7",
+    link: "https://mimi.koh-phangan.com",
+    title: "Cafe #7",
+    content: "Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
     id: 7,
   },
 ];
