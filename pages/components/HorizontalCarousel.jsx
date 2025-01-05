@@ -7,7 +7,7 @@ import mimiImg from "../public/images/IMG_7608.PNG";
 
 export default function HorizontalCarousel() {
   return (
-    <div className="bg-white">
+    <div className="horizontal-scroll bg-white">
       <div className="flex h-24 items-center justify-center">
         <span className="horizontal-scroll-title">
           Cafe & Resutrnats
@@ -67,7 +67,7 @@ const Card = ({ card }) => {
           {card.title}
         </p>
       </div>
-        <div className="rest-card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vero cum deserunt vel voluptatum officiis nisi, ipsam totam fugiat? Facere voluptates dolor id nesciunt quod.</div>
+        <div className="rest-card-content"> {card.content? card.content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vero cum deserunt vel voluptatum officiis nisi, ipsam totam fugiat? Facere voluptates dolor id nesciunt quod.'}</div>
     </div>
   );
 };
@@ -76,6 +76,7 @@ const cards = [
   {
     url: mimiImg.src,
     title: "Cafe Mimi",
+    content: "Mimi Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile, the prices might be a bit higher, but you get your money's worth, everything is tasty and good.",
     id: 1,
   },
   {

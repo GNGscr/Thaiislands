@@ -1973,9 +1973,13 @@ html[lang="en-US"] .star-score {
 
 @media (max-width: 680px) {
 
+  .horizontal-scroll {
+    padding: 5rem 0 !important;
+  }
+
   .horizontal-scroll-group {
     height: 96.5vh;
-    width: 95.5vw;
+    width: 92.5vw;
   }
 
   .horizontal-scroll-title {
@@ -1983,11 +1987,14 @@ html[lang="en-US"] .star-score {
   }
 
   .rest-card-content {
-    top: 15rem;
-    font-size: 1.15rem;
+    top: 16.5rem;
+    font-size: 1.05rem;
   }
   .horizontal-scroll-group > div > p {
     font-size: 2rem;
+    /* font-size: 1.5rem;
+    position: relative;
+    top: -16rem; */
   }
 
   .hero-content {
