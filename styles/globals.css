@@ -1973,7 +1973,7 @@ html[lang="en-US"] .star-score {
 
 @media (max-width: 680px) {
 
-  .group {
+  .horizontal-scroll-group {
     height: 96.5vh;
     width: 95.5vw;
   }
@@ -1986,7 +1986,7 @@ html[lang="en-US"] .star-score {
     top: 15rem;
     font-size: 1.15rem;
   }
-  .group > div > p {
+  .horizontal-scroll-group > div > p {
     font-size: 2rem;
   }
 

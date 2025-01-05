@@ -47,7 +47,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[91.5vh] w-[97.5vw] overflow-hidden bg-neutral-200 rounded-3xl"
+      className="horizontal-scroll-group relative h-[91.5vh] w-[97.5vw] overflow-hidden bg-neutral-200 rounded-3xl"
     >
       <div
         style={{
