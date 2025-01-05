@@ -3,6 +3,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 // /Users/de/Desktop/Thaiislands/pages/public/images/koh-phangan-rasta-1.jpg
 import img1 from "../public/images/koh-phangan-rasta-1.jpg";
+import mimiImg from "../public/images/IMG_7608.PNG";
+
 export default function HorizontalCarousel() {
   return (
     <div className="bg-white">
@@ -43,12 +45,12 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Card = ({ card }) => {
-  console.log(card)
   return (
     <div
       key={card.id}
-      className="horizontal-scroll-group relative h-[91.5vh] w-[97.5vw] overflow-hidden bg-neutral-200 rounded-3xl"
-    >
+      className={`horizontal-scroll-group 
+        relative h-[91.5vh] w-[97.5vw] overflow-hidden 
+        bg-neutral-200 rounded-3xl`}>
       <div
         style={{
           backgroundImage: `url(${card.url})`,
@@ -72,7 +74,7 @@ const Card = ({ card }) => {
 
 const cards = [
   {
-    url: img1.src,
+    url: mimiImg.src,
     title: "Cafe Mimi",
     id: 1,
   },
