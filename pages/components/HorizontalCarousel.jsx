@@ -1,12 +1,14 @@
 
 import { motion, useTransform, useScroll } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 // /Users/de/Desktop/Thaiislands/pages/public/images/koh-phangan-rasta-1.jpg
 import img1 from "../public/images/koh-phangan-rasta-1.jpg";
 import mimiImg from "../public/images/IMG_7608.PNG";
+import puraVidaImg from "../public/images/pura-vida-img.jpg";
 import locationSVG from "../public/images/location-sign-svgrepo-com.svg";
 
-export default function HorizontalCarousel() {
+export default function HorizontalCarousel({ data }) {
   return (
     <div className="horizontal-scroll bg-white">
       <div className="flex h-24 items-center justify-center">
@@ -14,7 +16,7 @@ export default function HorizontalCarousel() {
           Cafe & Resutrnats
         </span>
       </div>
-      <HorizontalScrollCarousel />
+      <HorizontalScrollCarousel data={data} />
       {/* <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Recommended Locations
@@ -24,7 +26,7 @@ export default function HorizontalCarousel() {
   );
 };
 
-const HorizontalScrollCarousel = () => {
+const HorizontalScrollCarousel = ({ data }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -36,9 +38,10 @@ const HorizontalScrollCarousel = () => {
     <section ref={targetRef} className="relative h-[300vh] bg-white">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
-          {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })}
+          {data ? 
+            cards.map((card) => {
+              return <Card card={card} key={card.id} />;
+          }) : ''}
         </motion.div>
       </div>
     </section>
@@ -46,15 +49,21 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Card = ({ card }) => {
+  console.log(card.url);
+  
   return (
     <div
       key={card.id}
       className={`horizontal-scroll-group 
         relative h-[91.5vh] w-[97.5vw] overflow-hidden 
         bg-neutral-200 rounded-3xl`}>
+                        {/* <div className="item" style={{"--position": "1"}}><img src={ require("./images/1.jpeg")} alt=""></img></div> */}
+
+          {/* <img src={`./public/images/${card.url}`} alt="" /> */}
+          {/* <Image src={card.url} width="16" hei="16" alt="instagram icon" /> */}
       <div
         style={{
-          backgroundImage: `url(${card.url})`,
+          backgroundImage: `url(${[card.url]})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center"
@@ -85,8 +94,10 @@ const cards = [
     id: 1,
   },
   {
-    url: img1.src,
+    url: puraVidaImg.src,
+    link: "https://pura-vida.koh-phangan.com",
     title: "Pura Vida",
+    content: "Pura Vida Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
     id: 2,
   },
   {

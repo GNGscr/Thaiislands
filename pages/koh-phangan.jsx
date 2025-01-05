@@ -49,8 +49,13 @@ export default function KohPhangan() {
           title={kohPhanganData["island-name"][language]}
           mainImg={kohPhanganData.heroImage}
           mapDrawing={phanganMap.src} />
-        <HorizontalCarousel />
+        
+        {/* Horizontal Carousel */}
+
+          <HorizontalCarousel data={kohPhanganData} />
+
         {/* <VerticalAccordion /> */}
+
         <div id="media">
           <SocialsSection data={kohPhanganData} lang={kohPhanganData['language-text'][language]} />
         </div>

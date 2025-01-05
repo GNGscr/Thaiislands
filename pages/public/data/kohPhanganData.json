@@ -698,5 +698,49 @@
                 }
             ]
         }
-    ]
+    ],
+    "cafes-and-resturants": {
+        "tite": "Cafe & Resutrnats",
+        "cards": [
+            {
+              "url": "pura-vida-img.jpg",
+              "link": "https://mimi.koh-phangan.com",
+              "title": "Cafe Mimi",
+              "content": "Mimi Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
+              "id": 1
+            },
+            {
+              "url": "",
+              "link": "https://pura-vida.koh-phangan.com",
+              "title": "Pura Vida",
+              "content": "Pura Vida Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
+              "id": 2
+            },
+            {
+              "url": "",
+              "title": "Title 3",
+              "id": 3
+            },
+            {
+              "url": "",
+              "title": "Title 4",
+              "id": 4
+            },
+            {
+              "url": "",
+              "title": "Title 5",
+              "id": 5
+            },
+            {
+              "url": "",
+              "title": "Title 6",
+              "id": 6
+            },
+            {
+              "url": "",
+              "title": "Title 7",
+              "id": 7
+            }
+          ]
+    }
 }
