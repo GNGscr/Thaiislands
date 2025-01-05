@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 // /Users/de/Desktop/Thaiislands/pages/public/images/koh-phangan-rasta-1.jpg
 import img1 from "../public/images/koh-phangan-rasta-1.jpg";
-import mimiImg from "../public/images/IMG_7608.PNG";
+import mimiImg from "../public/images/cafe-mimi-1.jpg";
 import puraVidaImg from "../public/images/pura-vida-img.jpg";
 import houseOfSanskara from "../public/images/house-of-sanskara.jpg";
 import locationSVG from "../public/images/location-sign-svgrepo-com.svg";
