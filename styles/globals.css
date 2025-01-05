@@ -1849,6 +1849,14 @@ html[lang="en-US"] .star-score {
   color: #fff;
 }
 
+.rest-link > img {
+  scale: 0.035;
+  top: -135%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
 
 @media (max-width: 1080px) {
 
@@ -1973,6 +1981,11 @@ html[lang="en-US"] .star-score {
 
 @media (max-width: 680px) {
 
+  .rest-link > img {
+    scale: 0.1;
+    top: -5%;
+  }
+
   .horizontal-scroll {
     padding: 5rem 0 !important;
   }
@@ -1988,7 +2001,7 @@ html[lang="en-US"] .star-score {
 
   .rest-card-content {
     top: 16.5rem;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
   .horizontal-scroll-group > div > p {
     font-size: 2rem;

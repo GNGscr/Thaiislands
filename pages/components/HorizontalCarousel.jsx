@@ -4,6 +4,7 @@ import { useRef } from "react";
 // /Users/de/Desktop/Thaiislands/pages/public/images/koh-phangan-rasta-1.jpg
 import img1 from "../public/images/koh-phangan-rasta-1.jpg";
 import mimiImg from "../public/images/IMG_7608.PNG";
+import locationSVG from "../public/images/location-sign-svgrepo-com.svg";
 
 export default function HorizontalCarousel() {
   return (
@@ -60,6 +61,9 @@ const Card = ({ card }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
+      <div className="rest-link">
+        <img src={locationSVG.src} width="50" height="50" alt="location icon" />
+      </div>
       <div className="absolute inset-0 z-10 grid place-content-center">
         <p style={{ textAlign: 'center'}}
           className={`bg-gradient-to-br from-white/20 to-white/0 p-8 
@@ -75,8 +79,9 @@ const Card = ({ card }) => {
 const cards = [
   {
     url: mimiImg.src,
+    link: "https://mimi.koh-phangan.com",
     title: "Cafe Mimi",
-    content: "Mimi Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile, the prices might be a bit higher, but you get your money's worth, everything is tasty and good.",
+    content: "Mimi Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
     id: 1,
   },
   {
