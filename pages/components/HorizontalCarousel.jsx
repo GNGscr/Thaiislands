@@ -10,7 +10,7 @@ import locationSVG from "../public/images/location-sign-svgrepo-com.svg";
 
 export default function HorizontalCarousel({ data }) {
   return (
-    <div className="horizontal-scroll bg-white">
+    <div id="cafes" className="horizontal-scroll bg-white">
       <div className="flex h-24 items-center justify-center">
         <span className="horizontal-scroll-title">
           Cafe & Resutrnats

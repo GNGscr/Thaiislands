@@ -36,6 +36,7 @@ export default function Navbar({
         "map-img": { right: 102, width: 76 },
         "gallery": { right: 184, width: 115 },
         "hotels": { right: 300, width: 108 },
+        "cafes": { right: 300, width: 108 },
         "media": { right: 416, width: 89.8125 },
       },
       "en": {
@@ -43,6 +44,7 @@ export default function Navbar({
         "map-img": { left: 102, width: 76.5 },
         "gallery": { left: 190, width: 114 },
         "hotels": { left: 316, width: 104 },
+        "cafes": { left: 316, width: 104 },
         "media": { left: 432, width: 90.5 },
       },
     },
@@ -52,6 +54,7 @@ export default function Navbar({
         "map-img": { right: 44, width: 80 },
         "gallery": { right: 80, width: 87 },
         "hotels": { right: 140, width: 92 },
+        "cafes": { right: 140, width: 92 },
         "media": { right: 190, width: 83 },
       },
       "en": {
@@ -59,6 +62,7 @@ export default function Navbar({
         "map-img": { right: 44, width: 85 },
         "gallery": { right: 80, width: 120 },
         "hotels": { right: 140, width: 115 },
+        "cafes": { right: 140, width: 115 },
         "media": { right: 190, width: 102 },
       },
     },
@@ -68,6 +72,7 @@ export default function Navbar({
         "map-img": { right: 44, width: 40 },
         "gallery": { right: 80, width: 64 },
         "hotels": { right: 140, width: 50 },
+        "cafes": { right: 140, width: 50 },
         "media": { right: 190, width: 50 },
       },
       "en": {
@@ -75,6 +80,7 @@ export default function Navbar({
         "map-img": { left: 44, width: 40 },
         "gallery": { left: 80, width: 62 },
         "hotels": { left: 140, width: 56 },
+        "cafes": { left: 140, width: 56 },
         "media": { left: 190, width: 50 },
       },
     },

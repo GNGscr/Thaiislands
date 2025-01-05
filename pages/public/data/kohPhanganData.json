@@ -13,6 +13,7 @@
             { "label": "מפה", "intersectionId": "#map-img", "href": "#map" },
             { "label": "גלריה", "intersectionId": "#gallery", "href": "#gallery" },
             { "label": "מלונות", "intersectionId": "#hotels", "href": "#hotels" },
+            { "label": "מסעדות", "intersectionId": "#cafes", "href": "#cafes" },
             { "label": "מדיה", "intersectionId": "#media", "href": "#media" }
         ],
         "en": [
@@ -20,6 +21,7 @@
             { "label": "Map", "intersectionId": "#map-img", "href": "#map" },
             { "label": "Gallery", "intersectionId": "#gallery", "href": "#gallery" },
             { "label": "Hotels", "intersectionId": "#hotels", "href": "#hotels" },
+            { "label": "cafes", "intersectionId": "#cafes", "href": "#cafes" },
             { "label": "Media", "intersectionId": "#media", "href": "#media" }
         ]
     },

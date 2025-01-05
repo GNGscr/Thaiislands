@@ -1840,7 +1840,8 @@ html[lang="en-US"] .star-score {
   display: flex;
   top: 7.5rem;
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
   padding: 0 15%;
   text-align: center;
   justify-content: center;
@@ -1851,10 +1852,15 @@ html[lang="en-US"] .star-score {
 
 .rest-link > img {
   scale: 0.035;
-  top: -135%;
+  top: -95%;
   position: absolute;
   width: 100%;
   text-align: center;
+}
+
+.horizontal-scroll-group > div > p {
+  position: relative;
+  top: -5rem;
 }
 
 
@@ -2000,6 +2006,7 @@ html[lang="en-US"] .star-score {
   }
 
   .rest-card-content {
+    font-weight: 500;
     top: 16.5rem;
     font-size: 1.15rem;
   }
