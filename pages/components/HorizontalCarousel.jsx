@@ -9,15 +9,15 @@ import puraVidaImg from "../public/images/pura-vida-img.jpg";
 import houseOfSanskara from "../public/images/house-of-sanskara.jpg";
 import locationSVG from "../public/images/location-sign-svgrepo-com.svg";
 
-export default function HorizontalCarousel({ data }) {
+export default function HorizontalCarousel({ data, media }) {
   return (
-    <div id="cafes" className="horizontal-scroll bg-white">
+    <div className="horizontal-scroll bg-white">
       <div className="flex h-24 items-center justify-center">
         <span className="horizontal-scroll-title">
           Cafe & Resutrnats
         </span>
       </div>
-      <HorizontalScrollCarousel data={data} />
+      <HorizontalScrollCarousel data={data} media={media} />
       {/* <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Recommended Locations
@@ -27,16 +27,29 @@ export default function HorizontalCarousel({ data }) {
   );
 };
 
-const HorizontalScrollCarousel = ({ data }) => {
+const HorizontalScrollCarousel = ({ data, media }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-83.5%"]);
+  const dFE = {
+    "desktop": {
+      "start": "2%",
+      "end": "-83.5%",
+    },
+    "mobile": {
+      "start": "0.25%",
+      "end": "-86%",
+    },
+  };
+
+  // const isDesktop = media === "desktop";
+  const x = useTransform(scrollYProgress, [0, 1], [dFE[media].start, dFE[media].end]);
+  // const mobileX = useTransform(scrollYProgress, [0, 1], ["2%", "-83.5%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-white">
+    <section id="cafes" ref={targetRef} className="relative h-[300vh] bg-white">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {data ? 
@@ -105,10 +118,10 @@ const cards = [
     id: 3,
   },
   {
-    url: mimiImg.src,
+    url: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/91619164.jpg?k=07420f2e635d454e7fb6f52dd7d47a2cd75c2ecad12518039544bba79ce00418&o=&hp=1",
     link: "https://mimi.koh-phangan.com",
-    title: "Cafe Mimi",
-    content: "Mimi Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
+    title: "Shiralea",
+    content: "The Ultimate Hostel Experience. Nestled between jungle and beach on Thailand's tropical paradise island of Koh Phangan you can find Shiralea.",
     id: 4,
   },
   {

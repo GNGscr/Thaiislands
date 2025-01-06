@@ -33,9 +33,10 @@ const VerticalAccordion = () => {
   const [open, setOpen] = useState(items[1].id);
 
   return (
-    <section className="p-4 bg-white">
-      <div className="horizontal-scroll-title weekly-events">Weekly Events</div>
-      <div className="flex flex-col lg:flex-row h-fit lg:h-[90svh] w-full max-w-8xl mx-auto overflow-hidden">
+    <section className="p-4 bg-white v-accordion">
+      <div  className="horizontal-scroll-title weekly-events">Weekly Events</div>
+      <div className="accordion-inner flex flex-col lg:flex-row h-fit lg:h-[85svh] w-full max-w-8xl mx-auto overflow-hidden">
+        <div id="events" />
         {items ? 
           items.map((item) => {
             return (
@@ -159,9 +160,9 @@ const items = [
     id: 2,
     title: "Rasta Home",
     Icon: someIcon.src,
-    imgSrc: rastaHome.src,
+    imgSrc: "https://www.welove-kohphangan.com/wp-content/uploads/2019/01/123072401_3341123442661531_7538548781309728052_n.jpg",
     description:
-      "Great Hippie atmosphere, great live music.. dance floor, sitting on floor area..",
+      "Great Hippie atmosphere, great live music.. dance floor, sitting on floor area or chairs. Great vibe and atmosphere",
   },
   {
     id: 3,
@@ -170,7 +171,7 @@ const items = [
     imgSrc:
       "https://media-cdn.tripadvisor.com/media/photo-m/1280/27/e6/e7/64/caption.jpg",
     description:
-      "A fusion place that combines an outside bazar with art and accessories and a party with tech music. You can also cill on the beach..",
+      "A fusion place that combines an outside bazar with art and accessories and a party with tech music. You can also chill on the beach..",
   },
   {
     id: 4,

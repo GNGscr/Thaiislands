@@ -52,7 +52,7 @@ export default function KohPhangan() {
         
         {/* Horizontal Carousel */}
 
-          <HorizontalCarousel data={kohPhanganData} />
+          <HorizontalCarousel data={kohPhanganData} media={currentMedia} />
 
         <VerticalAccordion />
 

@@ -1859,7 +1859,8 @@ html[lang="en-US"] .star-score {
 }
 
 .horizontal-scroll {
-  padding: 3rem 0 !important;
+  padding-top: 1.5rem;
+  /* padding: 1.5rem 0 !important; */
 }
 
 .horizontal-scroll-group {
@@ -1874,6 +1875,14 @@ html[lang="en-US"] .star-score {
 
 .weekly-events {
   margin: 3rem 0;
+}
+
+#events {
+  position: relative;
+  /* margin: 3rem 0; */
+  /* top: 5rem; */
+  /* bottom: 2rem; */
+  margin-top: -3rem;
 }
 
 
@@ -2007,6 +2016,14 @@ html[lang="en-US"] .star-score {
 
 @media (max-width: 680px) {
 
+  .v-accordion {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+  .accordion-inner {
+    padding-top: 2rem;
+  }
+
   .rest-link > a > img {
     scale: 0.1;
     top: -5%;
@@ -2054,6 +2071,8 @@ html[lang="en-US"] .star-score {
     min-width: 248.04px !important; */
     max-width: 295px !important;
     min-width: 295px !important;
+    /* max-width: 350px !important; */
+    /* min-width: 350px !important; */
   }
   .navbar-ul {
     max-width: 250px !important;
