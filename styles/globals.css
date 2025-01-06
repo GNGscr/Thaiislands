@@ -2031,7 +2031,8 @@ html[lang="en-US"] .star-score {
   }
 
   .horizontal-scroll {
-    padding: 5rem 0 !important;
+    /* padding: 5rem 0 !important; */
+    padding-top: 5rem !important;
   }
 
   .horizontal-scroll-group {
