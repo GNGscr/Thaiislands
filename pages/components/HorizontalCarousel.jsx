@@ -44,9 +44,7 @@ const HorizontalScrollCarousel = ({ data, media }) => {
     },
   };
 
-  // const isDesktop = media === "desktop";
   const x = useTransform(scrollYProgress, [0, 1], [dFE[media].start, dFE[media].end]);
-  // const mobileX = useTransform(scrollYProgress, [0, 1], ["2%", "-83.5%"]);
 
   return (
     <section id="cafes" ref={targetRef} className="relative h-[300vh] bg-white">
