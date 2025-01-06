@@ -93,7 +93,7 @@ export const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }) =
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}
-            className="w-full h-full overflow-hidden relative bg-black flex items-end"
+            className="w-full h-full overflow-hidden relative bg-black flex items-end rounded"
           >
             <motion.div
               variants={descriptionVariants}
