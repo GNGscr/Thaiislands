@@ -58,10 +58,6 @@ const Card = ({ card }) => {
       className={`horizontal-scroll-group 
         relative h-[91.5vh] w-[97.5vw] overflow-hidden 
         bg-neutral-200 rounded-3xl`}>
-                        {/* <div className="item" style={{"--position": "1"}}><img src={ require("./images/1.jpeg")} alt=""></img></div> */}
-
-          {/* <img src={`./public/images/${card.url}`} alt="" /> */}
-          {/* <Image src={card.url} width="16" hei="16" alt="instagram icon" /> */}
       <div
         style={{
           backgroundImage: `url(${[card.url]})`,
@@ -72,7 +68,9 @@ const Card = ({ card }) => {
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="rest-link">
-        <img src={locationSVG.src} width="50" height="50" alt="location icon" />
+        <a href={card.link} target="_blank" rel="noopener noreferrer">
+          <img src={locationSVG.src} width="50" height="50" alt="location icon" />
+        </a>
       </div>
       <div className="absolute inset-0 z-10 grid place-content-center">
         <p style={{ textAlign: 'center'}}

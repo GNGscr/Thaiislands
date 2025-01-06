@@ -1850,7 +1850,7 @@ html[lang="en-US"] .star-score {
   color: #fff;
 }
 
-.rest-link > img {
+.rest-link > a > img {
   scale: 0.035;
   top: -95%;
   position: absolute;
@@ -1870,6 +1870,10 @@ html[lang="en-US"] .star-score {
 .horizontal-scroll-group > div > p {
   position: relative;
   top: -5rem;
+}
+
+.weekly-events {
+  margin: 3rem 0;
 }
 
 
@@ -2003,7 +2007,7 @@ html[lang="en-US"] .star-score {
 
 @media (max-width: 680px) {
 
-  .rest-link > img {
+  .rest-link > a > img {
     scale: 0.1;
     top: -5%;
   }
