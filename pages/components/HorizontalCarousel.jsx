@@ -44,7 +44,7 @@ const HorizontalScrollCarousel = ({ data, media }) => {
     },
   };
 
-  const x = useTransform(scrollYProgress, [0, 1], [dFE[media].start, dFE[media].end]);
+  const x = useTransform(scrollYProgress, [0, 1], [dFE[media]["start"], dFE[media]["end"]]);
 
   return (
     <section id="cafes" ref={targetRef} className="relative h-[300vh] bg-white">
