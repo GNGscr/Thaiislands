@@ -20,7 +20,6 @@
         "en": [
             { "label": "Home", "intersectionId": "#home", "href": "#home" },
             { "label": "Map", "intersectionId": "#map-img", "href": "#map" },
-            { "label": "Gallery", "intersectionId": "#gallery", "href": "#gallery" },
             { "label": "Hotels", "intersectionId": "#hotels", "href": "#hotels" },
             { "label": "cafes", "intersectionId": "#cafes", "href": "#cafes" },
             { "label": "events", "intersectionId": "#events", "href": "#events" },
