@@ -30,7 +30,7 @@ const useWindowSize = () => {
   };
 
 const VerticalAccordion = () => {
-  const [open, setOpen] = useState(items[0].id);
+  const [open, setOpen] = useState(items[1].id);
 
   return (
     <section className="p-4 bg-white">

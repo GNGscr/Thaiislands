@@ -3,7 +3,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 // /Users/de/Desktop/Thaiislands/pages/public/images/koh-phangan-rasta-1.jpg
-import img1 from "../public/images/koh-phangan-rasta-1.jpg";
+// import img1 from "../public/images/koh-phangan-rasta-1.jpg";
 import mimiImg from "../public/images/cafe-mimi-1.jpg";
 import puraVidaImg from "../public/images/pura-vida-img.jpg";
 import houseOfSanskara from "../public/images/house-of-sanskara.jpg";
@@ -33,7 +33,7 @@ const HorizontalScrollCarousel = ({ data }) => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0.2%", "-85.65%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-83.5%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-white">
@@ -50,8 +50,6 @@ const HorizontalScrollCarousel = ({ data }) => {
 };
 
 const Card = ({ card }) => {
-  console.log(card.url);
-  
   return (
     <div
       key={card.id}
