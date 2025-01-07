@@ -13,6 +13,7 @@ export default function SelectInput({ regions, filterRegion, isFiltering }) {
     useEffect(() => {
     }, [value]);
   
+    if (!regionNames) return;
     return (
       <motion.div className="filter-selector"
         transition={{ duration: 0.5, delay: 0 }}
