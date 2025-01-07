@@ -2,94 +2,102 @@
 import { motion } from "framer-motion";
 import FlipCard from "./FlipCard";
 import DefaultCard from "./DefaultCard";
+import SelectInput from "./SelectInput";
+import { useState } from "react";
+import filterIcon from "../public/images/filter-icon.svg";
+import Image from "next/image";
 
 export default function HotelsSection({ data, lang, media }) {
 
-const rowCardsAnimation = {
-    0: {
-      variants: {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-        slideStart: { x: [0, "100px"], opacity: [0, 0] },
-        slideEnd: { x: ["100px", 0], opacity: [0, 1] },
+  const [ displayedRegions, setDisplayedRegions ] = useState(data.regions);
+  const [ isFiltering, setIsFiltering ] = useState(false);
+  const [ isTooltipVisible, setIsTooltipVisible ] = useState(false)
+
+  const rowCardsAnimation = {
+      0: {
+        variants: {
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+          slideStart: { x: [0, "100px"], opacity: [0, 0] },
+          slideEnd: { x: ["100px", 0], opacity: [0, 1] },
+        },
+        initial: ["hidden", "slideStart"],
+        whileInView: ["visible", "slideEnd"],
+        exit: ["visible", "slideStart"],
+        viewport: { amount: 0.4 },
+        transition: { type: "spring", duration: 1, bounce: 0.55, stiffness: 150 },
       },
-      initial: ["hidden", "slideStart"],
-      whileInView: ["visible", "slideEnd"],
-      exit: ["visible", "slideStart"],
-      viewport: { amount: 0.4 },
-      transition: { type: "spring", duration: 1, bounce: 0.55, stiffness: 150 },
-    },
-    1: {
-      variants: {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-        slideStart: { y: [0, "25px"], opacity: [0, 0] },
-        slideEnd: { y: ["25px", 0], opacity: [0, 1] }
+      1: {
+        variants: {
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+          slideStart: { y: [0, "25px"], opacity: [0, 0] },
+          slideEnd: { y: ["25px", 0], opacity: [0, 1] }
+        },
+        initial: ["hidden", "slideStart"],
+        whileInView: ["visible", "slideEnd"],
+        exit: ["visible", "slideStart"],
+        viewport: { amount: 0.4
+        },
+        transition: { type: "spring", duration: 1, bounce: 0.5, stiffness: 145 }
       },
-      initial: ["hidden", "slideStart"],
-      whileInView: ["visible", "slideEnd"],
-      exit: ["visible", "slideStart"],
-      viewport: { amount: 0.4
+      2: {
+        variants: {
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+          slideStart: { x: [0, "-100px"], opacity: [0, 0] },
+          slideEnd: { x: ["-100px", 0], opacity: [0, 1] }
+        },
+        initial: ["hidden", "slideStart"],
+        whileInView: ["visible", "slideEnd"],
+        exit: ["visible", "slideStart"],
+        viewport: { amount: 0.4 },
+        transition: { type: "spring", duration: 1, bounce: 0.55, stiffness: 150 }
       },
-      transition: { type: "spring", duration: 1, bounce: 0.5, stiffness: 145 }
-    },
-    2: {
-      variants: {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-        slideStart: { x: [0, "-100px"], opacity: [0, 0] },
-        slideEnd: { x: ["-100px", 0], opacity: [0, 1] }
+  };
+  const mobileRowCardsAnimation = {
+      0: {
+        variants: {
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+          slideStart: { x: [0, "25px"], opacity: [0, 0] },
+          slideEnd: { x: ["25px", 0], opacity: [0, 1] },
+        },
+        initial: ["hidden", "slideStart"],
+        whileInView: ["visible", "slideEnd"],
+        exit: ["visible", "slideStart"],
+        viewport: { amount: 0.4 },
+        transition: { type: "tween", duration: 0.4, bounce: 0.15, stiffness: 75, },
       },
-      initial: ["hidden", "slideStart"],
-      whileInView: ["visible", "slideEnd"],
-      exit: ["visible", "slideStart"],
-      viewport: { amount: 0.4 },
-      transition: { type: "spring", duration: 1, bounce: 0.55, stiffness: 150 }
-    },
-};
-const mobileRowCardsAnimation = {
-    0: {
-      variants: {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-        slideStart: { x: [0, "25px"], opacity: [0, 0] },
-        slideEnd: { x: ["25px", 0], opacity: [0, 1] },
-      },
-      initial: ["hidden", "slideStart"],
-      whileInView: ["visible", "slideEnd"],
-      exit: ["visible", "slideStart"],
-      viewport: { amount: 0.4 },
-      transition: { type: "tween", duration: 0.4, bounce: 0.15, stiffness: 75, },
-    },
-    1: {
-      variants: {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-        slideStart: { x: [0, "-25px"], opacity: [0, 0] },
-        slideEnd: { x: ["-25px", 0], opacity: [0, 1] }
-      },
-      initial: ["hidden", "slideStart"],
-      whileInView: ["visible", "slideEnd"],
-      exit: ["visible", "slideStart"],
-      viewport: { amount: 0.4 },
-      transition: { type: "tween", duration: 0.4, bounce: 0.15, stiffness: 75, }
-    }
-};
-const mobileOneRowCardsAnimation = {
-    0: {
-      variants: {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-        slideStart: { y: [0, "50px"], opacity: [0, 0] },
-        slideEnd: { y: ["50px", 0], opacity: [0, 1] },
-      },
-      initial: ["hidden", "slideStart"],
-      whileInView: ["visible", "slideEnd"],
-      exit: ["visible", "slideStart"],
-      viewport: { amount: 0.4 },
-      transition: { type: "tween", duration: 0.4, bounce: 0.15, stiffness: 75, },
-    }
-};
+      1: {
+        variants: {
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+          slideStart: { x: [0, "-25px"], opacity: [0, 0] },
+          slideEnd: { x: ["-25px", 0], opacity: [0, 1] }
+        },
+        initial: ["hidden", "slideStart"],
+        whileInView: ["visible", "slideEnd"],
+        exit: ["visible", "slideStart"],
+        viewport: { amount: 0.4 },
+        transition: { type: "tween", duration: 0.4, bounce: 0.15, stiffness: 75, }
+      }
+  };
+  const mobileOneRowCardsAnimation = {
+      0: {
+        variants: {
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+          slideStart: { y: [0, "50px"], opacity: [0, 0] },
+          slideEnd: { y: ["50px", 0], opacity: [0, 1] },
+        },
+        initial: ["hidden", "slideStart"],
+        whileInView: ["visible", "slideEnd"],
+        exit: ["visible", "slideStart"],
+        viewport: { amount: 0.4 },
+        transition: { type: "tween", duration: 0.4, bounce: 0.15, stiffness: 75, },
+      }
+  };
 
 const regionsTitleAnimation = {
     variants: {
@@ -104,12 +112,24 @@ const regionsTitleAnimation = {
     viewport: { amount: 0.4 },
     transition: { type: "spring", duration: 1, bounce: 0 }
 };
+
+  const filterRegion = value => {
+    setDisplayedRegions(
+      value === "All Regions"
+      ? data.regions
+      : data.regions.filter(r => r.regionName.en === value)
+    );
+    setIsFiltering(!isFiltering);
+  };
+
   if (!data) return;
   return (
     <div className="relative h-fit" style={{ direction: 'rtl' }} id="hotels">
-    <div className={`sticky top-0 w-screen flex flex-col justify-center align-center
+    <div className={`hotels-title-wrapper sticky top-0 w-screen
+      flex flex-col justify-center align-center
       bg-[#fff] p-[1rem] overflow-hidden`} 
       style={{ zIndex: 2 }}>
+
       <motion.div 
         initial={{ opacity: 0, letterSpacing: '10px' }}
         whileInView={{ opacity: 0.7, letterSpacing: '0px' }}
@@ -117,10 +137,36 @@ const regionsTitleAnimation = {
         className="hotels-title">
         {data["resorts-and-hotels-title"][lang]}
       </motion.div>
+
+      <div className="filter-section">
+        <div
+          className="tooltip"
+          style={{ opacity: isTooltipVisible ? 1 : 0 }}>
+            Filter by Region
+        </div>
+
+        <motion.div className="filter-icon"
+          onMouseEnter={() => setIsTooltipVisible(true)}
+          onMouseLeave={() => setIsTooltipVisible(false)}
+          onClick={() => setIsFiltering(!isFiltering)}
+          initial={{ display: 'block' }}
+          animate={{ display: isFiltering ? 'none' : 'block' }}
+          transition={{ duration: 0, delay: isFiltering ? 0 : 0.25 }}
+          // style={{ display: isFiltering ? 'none' : 'block' }}
+        >
+          <div className="filter-is-on"></div>
+          <Image src={filterIcon.src} alt="filter icon" width="15" height="15" />
+        </motion.div>
+        <SelectInput
+          regions={data.regions}
+          filterRegion={filterRegion}
+          isFiltering={isFiltering} 
+        />
+      </div>
     </div>
     <div className="flex flex-col">
-      {
-        data.regions.map((region, i) => {
+      {displayedRegions ? 
+        displayedRegions.map((region, i) => {
           const { regionAffiliates } = region;
           let regionAffiliatesArray = [];
           regionAffiliates.map((affiliate, index) => {
@@ -196,7 +242,7 @@ const regionsTitleAnimation = {
               </div>
             </div>
           )
-        })
+        }) : ''
       }
     </div>
   </div>

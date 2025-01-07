@@ -77,7 +77,7 @@ export default function Navbar({
         "gallery": { right: 80, width: 64 },
         "hotels": { right: 140, width: 50 },
         "cafes": { right: 140, width: 50 },
-        // "events": { right: 140, width: 50 },
+        "events": { right: 140, width: 50 },
         "media": { right: 190, width: 50 },
       },
       "en": {
@@ -86,7 +86,7 @@ export default function Navbar({
         "gallery": { left: 80, width: 62 },
         "hotels": { left: 140, width: 56 },
         "cafes": { left: 140, width: 56 },
-        // "events": { left: 140, width: 56 },
+        "events": { left: 140, width: 56 },
         "media": { left: 190, width: 50 },
       },
     },
