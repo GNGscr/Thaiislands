@@ -6,68 +6,15 @@ import ButtonLightningAnimation from "./ButtonLightningAnimation";
 import HotelsSection from "./HotelsSection";
 import TiltComponent from "./TiltComponent";
 
-// :: TODOs :: //
-// =========== //
-
+// :: TODOs :: 
 // OverAll - 
-        // Check how to fetch everything from outside source including gallery photos all dynamic text and values !!!
-        // Add cookies for crawlers 
-        // Connect google analytics (using Goldi) to check for data and have control
-
-// Navbar - 
-        // add other buttons (connect all buttons to vars including lang and maybe linktree)
-        // add scroll event for scroll y = 0 default state to display nav & hide bg switch border-color and font-color.
-        // set (if possible) mask on nav button svg to display opposite color when hovering same color - if not possible just add text-shadow to svg 
-
-        // When clicking on nav button make a middle animation so it wont jump to place suprisingley :)
-
-        // Set Navabr to have selected value so it will be able to have state (maybe with current) 
-        // && also set something function to know if the user is in this section 
-        // and if it is set it to be selected like this for each section
-
-
-// Header Hero - Maybe replace with Icon (Maybe with animation or without) fix subheader fontsize/weight etc..
-
-// Logo - 
-        // fix animation when in "view" (use scrollYPosition to see when in view and try animating using FramerMotion if not toggle class like before)
-
-// Map -
-        // set map relative to map-photo and make the second mask (with the hover me txt) make it 50% height and justify-end..
-        // ..so it will clear faster and be remove to enable hover the map (also remember to set opacity to 0 on photo when hover)
-        
-        // { on hover the map section: if user is already over the map but mask interupts, 
-        // so if user clicks the hover the map mask to see why nothing is happening
-        //  it will start animation to remove the blocking section, so the users hover will work }
-
-        // When Clicking on navbar map - the animation to move the mask up will be invoked so the user will see text & it will be ready to be hovered already
-
-        // Fix - the mask shadow bg to be cleared (only on this section) with the text [so the will be cleared together and after bright]
-
-      
-
-// Hotels - set new UI for section (all of it)
-
-// DONE!!!!!!!!    // Bottom ScreenFitText - set row of icons for all of his social networks [OVER THE FIT_TEXT] - maybe make it floating (using fload card animation)
-// ============
-
-
-// Footer - Fix sticky bug so it will work good && add footer content + ul>li + all reserved etc..
-
-// Check small media and and X button animation [facebook, instagram, linktree,]
-
-
-
-// DONT FORGET TO FINISH AND UPLOAD ICE CREAM SITE ;))
-// ------------------------------------------------- //
-
-
-
+// Check how to fetch everything from outside source including gallery photos all dynamic text and values !!!
+// Add cookies for crawlers 
+// Connect google analytics (using Goldi) to check for data and have control
 
 
 export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
   if (!data) return;
-  // console.log('TODO!!!!! ::  fix but with missing words when splitting');
-  // console.log("בונגלוס על הים עם בריכה משותפת, מלון בסגנון מודרני עם חדרים יחסית פשוטים. מתאים למטיילים יחידים,זוגות ומשפחות. במקום יש מסעדה עם צוות אדיב ושירותי. ממוקם בין טונג סלה לבאן תאי. באווירה רגועה ושקטה.".length);
   // console.log('card limit en: ', 285);
   // console.log('card limit he: ', 225);
   // console.log('card limit en recommended: ', 255);
@@ -204,7 +151,9 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
   const scale = useTransform(scrollYProgress, [0, 0.02, 1], [1, 1, 0.85]);
   const opacity = useTransform(scrollYProgress, [0, 0.02, 1], [1, 0, 0]);
   const opacityMobile = useTransform(scrollYProgress, [0, 0.05, 1], [0.3, 0.15, 0]);
+
   if (!imgUrl) return '';
+  
   else return (
     <motion.div
       style={{

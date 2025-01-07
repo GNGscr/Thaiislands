@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import someIcon from "../public/images/svg-logo-loader.svg";
 import Image from "next/image";
 
-
 const useWindowSize = () => {
     const [windowSize, setWindowSize] = useState({
       width: undefined,

@@ -1,11 +1,11 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import FlipCard from "./FlipCard";
 import DefaultCard from "./DefaultCard";
 import SelectInput from "./SelectInput";
 import { useState, useEffect } from "react";
 import filterIcon from "../public/images/filter-icon.svg";
-import Image from "next/image";
 
 export default function HotelsSection({ data, lang, media }) {
 
@@ -160,7 +160,6 @@ const regionsTitleAnimation = {
           initial={{ display: 'block' }}
           animate={{ display: isFiltering ? 'none' : 'block' }}
           transition={{ duration: 0, delay: isFiltering ? 0 : 0.25 }}
-          // style={{ display: isFiltering ? 'none' : 'block' }}
         >
           <div className="filter-is-on"></div>
           <Image src={filterIcon.src} alt="filter icon" width="15" height="15" />

@@ -19,10 +19,6 @@ import samuiBand1 from '../../pages/public/images/koh-samui-band-1.jpg';
 import samuiPig from '../../pages/public/images/koh-samui-pig.jpg';
 import samuiDrunkGirls from '../../pages/public/images/koh-samui-girls.jpg';
 
-import taoMainImg from '../../pages/public/images/KohTaoMainImg.jpeg';
-
-
-
 let imgs = [];
 const phanganImgs = [
   phangandownhill.src,
@@ -176,9 +172,7 @@ const Images = ({ imgIndex }) => {
               backgroundRepeat: 'no-repeat',
               backgroundPosition: "center",
             }}
-            animate={{
-              scale: imgIndex === idx ? 0.95 : 0.85,
-            }}
+            animate={{  scale: imgIndex === idx ? 0.95 : 0.85 }}
             transition={SPRING_OPTIONS}
             className="aspect-video h-[40vw] w-[100vw] shrink-0 rounded-xl object-cover"
           />

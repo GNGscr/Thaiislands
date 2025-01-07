@@ -1,6 +1,4 @@
-
 export default function LogoLoader() {
-    
   return (
     <section className="svg-logo-loader-wrapper relative">
       <svg className="svg-logo-loader" width="50" height="50" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 258 64" preserveAspectRatio="xMidYMid meet">

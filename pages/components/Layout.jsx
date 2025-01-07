@@ -1,18 +1,17 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useGlobalSettings } from './GlobalSettings';
 import { motion } from "framer-motion";
-// import SectionAnimation from "./SectionAnimation";
 
 
 export default function Layout() {
-  const { language, setCurrentMedia, currentMedia } = useGlobalSettings();
+  const { language, setCurrentMedia } = useGlobalSettings();
   const scope = useRef(null);
   const [ isSideNavToggleSvgVisible, setIsSideNavToggleSvgVisible ] = useState(false);
   const [ isSideNavToggleVisible, setIsSideNavToggleVisible ] = useState(false);
   
-  const router = useRouter()
+  // const router = useRouter()
   const pathname = usePathname();
   let globalLanguage = language;
 
@@ -45,13 +44,6 @@ export default function Layout() {
   const goToLink = e => {
     setIsSideNavToggleSvgVisible(true);
     setIsSideNavToggleVisible(false);
-    // e.preventDefault()
-    // console.log(e.target.href);
-    // setIsSideNavToggleSvgVisible(true);
-    // setTimeout(() => {
-    //   setIsSideNavToggleSvgVisible(false);
-    //   router.push(e.target.href);
-    // }, 500);
   }
 
   const mouseEnter = () => {
@@ -71,7 +63,7 @@ export default function Layout() {
     initial: { x: "-115%", width: "175px" },
     animate: { x: 0, transition: { duration: .4 } }
   };
-  
+
   return (
     <div ref={scope}
       className="layout-wrapper fixed w-full flex align-center top-[0rem]"
@@ -109,16 +101,7 @@ export default function Layout() {
             )
           })
         }
-
-        {/* language toggle issue to fix before adding  */}
-
-        {/* <Link href="/KohTao" onClick={e => goToLink(e)} className={`link ${pathname === '/KohTao' ? 'active-link' : ''}`}>
-          {setLinksLang("Koh Tao", "קוטאו")}
-        </Link> */}
-
       </motion.div>
-      
-      {/* <SectionAnimation menuIsActive={false} /> */}
     </div>
   );
 }

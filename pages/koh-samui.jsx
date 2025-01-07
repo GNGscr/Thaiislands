@@ -32,7 +32,6 @@ export default function KohSamui() {
       <>
         <Navbar
           data={kohSamuiData}
-          lang={kohSamuiData['language-text'][language]}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
           media={currentMedia}

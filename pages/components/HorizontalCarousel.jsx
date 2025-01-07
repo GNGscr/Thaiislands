@@ -1,9 +1,6 @@
 
 import { motion, useTransform, useScroll } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
-// /Users/de/Desktop/Thaiislands/pages/public/images/koh-phangan-rasta-1.jpg
-// import img1 from "../public/images/koh-phangan-rasta-1.jpg";
 import mimiImg from "../public/images/cafe-mimi-1.jpg";
 import puraVidaImg from "../public/images/pura-vida-img.jpg";
 import houseOfSanskara from "../public/images/house-of-sanskara.jpg";
@@ -18,11 +15,6 @@ export default function HorizontalCarousel({ data, media }) {
         </span>
       </div>
       <HorizontalScrollCarousel data={data} media={media} />
-      {/* <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Recommended Locations
-        </span>
-      </div> */}
     </div>
   );
 };

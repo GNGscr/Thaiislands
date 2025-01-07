@@ -1,30 +1,12 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useMotionValueEvent, useAnimate, useTransform, easeInOut } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent, useAnimate, useTransform } from "framer-motion";
 import RevealLinks from "./RevealLinks";
 import { usePathname } from 'next/navigation';
 import { useGlobalSettings } from './GlobalSettings';
 
-// const [hookedYPostion, setHookedYPosition] = React.useState(0);
-// useMotionValueEvent(scrollYProgress, "change", (latest) => {
-//   setHookedYPosition(latest);
-// })
-// scrollYProgress.current: {scrollYProgress.current}<br/>
-// scrollYProgress.hookedYPostion: {hookedYPostion}<br/>
-
-
-
-// const { scrollY } = useScroll()
-// const [scrollDirection, setScrollDirection] = useState("down")
-
-// useMotionValueEvent(scrollY, "change", (current) => {
-//   const diff = current - scrollY.getPrevious()
-//   setScrollDirection(diff > 0 ? "down" : "up")
-// })
-
 export default function Navbar({
   data,
-  lang,
   toggleLanguage,
   activateMenuIsActive
 }) {
@@ -89,7 +71,7 @@ export default function Navbar({
         "events": { left: 140, width: 56 },
         "media": { left: 190, width: 50 },
       },
-    },
+    }
   };
   
   const directionToOffset = {
@@ -129,7 +111,6 @@ export default function Navbar({
     return () => (window.removeEventListener('resize', resizeEvent));
   });
 
-  // Set menu main div to be y position 0 visible and toggleSvg bool value on initial load
   useEffect(() => {
     let main = document.querySelector("#main");
     if (main) {
@@ -243,7 +224,9 @@ export default function Navbar({
   );
   useEffect(() => {
   }, [color]);
+
   if (!data || !currentMedia) return;
+
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: 4 }}>
       <motion.div id="main" variants={variants} className="relative w-full flex align-center top-[0.75rem]"
@@ -284,7 +267,9 @@ export default function Navbar({
           <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
         </div>
         <div onClick={() => setIsNavbarVisible(true)}
-          className={`text-white absolute top-[2.85rem] flex justify-center h-[100%] w-full`} style={{ rotate: "180deg" }}>
+          className={`text-white absolute top-[2.85rem]
+            flex justify-center h-[100%] w-full`}
+          style={{ rotate: "180deg" }}>
           <svg
             id="toggle-svg"
             className="cursor-pointer"
@@ -367,9 +352,7 @@ const Tab = ({ children, setPosition, lang, onClick, directionToOffset }) => {
 const Cursor = ({ position, currentMedia }) => {
   return (
     <motion.li
-      animate={{
-        ...position,
-      }}
+      animate={{ ...position }}
       className="absolute z-0 h-7 rounded-full bg-black md:h-12"
       style={
         // currentMedia === 'mobile' ? { height: '2.35rem' }

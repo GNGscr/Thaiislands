@@ -35,7 +35,6 @@ export default function KohPhangan() {
       <>
         <Navbar
           data={kohPhanganData}
-          lang={kohPhanganData['language-text'][language]}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
           media={currentMedia}

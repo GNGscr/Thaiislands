@@ -32,7 +32,6 @@ export default function KohTao() {
       <>
         <Navbar
           data={kohTaoData}
-          lang={kohTaoData['language-text'][language] || "he"}
           toggleLanguage={toggleLanguage}
           activateMenuIsActive={(bool) => setMenuIsActive(bool)} 
           media={currentMedia}

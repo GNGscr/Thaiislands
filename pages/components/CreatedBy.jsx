@@ -23,7 +23,6 @@ const CreatedBy = () => {
               <span className="text-[#fff] text-[2rem] mb-[0.85rem]">.</span>
               <span className="text-[#c8bdb0]" style={{opacity: 0.9}}>DESIGN</span>
                 
-              {/* <span className="text-[2rem] ml-[-0.025rem] mt-[0.785rem] text-[#fff]" style={{opacity: 1}}>*</span> */}
               <span className="text-[2.1rem] ml-[0.005rem] mt-[0.875rem] text-[#fff]" style={{opacity: 1}}>*</span>
             </span>
 

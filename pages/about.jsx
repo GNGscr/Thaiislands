@@ -14,8 +14,7 @@ export default function About() {
                 borderRadius: '1.85rem',
                 backgroundImage: `url(${data["heroImage"]})`,
                 backgroundSize: "cover",
-                backgroundRepeat: 'no-repeat',
-                // backgroundColor: 'black'
+                backgroundRepeat: 'no-repeat'
             }}>
             <h3 id="thaiislands"
                 className="about-us-title font-bold mt-[1rem] mb-[1rem]"

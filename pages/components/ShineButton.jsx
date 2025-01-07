@@ -1,12 +1,8 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import InstagramPlainIcon from '../public/images/instagram-plain.svg';
 
-const ShineButton = ({ isLogoSection, data }) => {
-  // if (data) {
-  //   console.log('data', data.linktreeLink);
-  //   console.log('data', data.instagramLink);
-  // }
+const ShineButton = ({ isLogoSection }) => {
   
     return (
         <a style={{ zIndex: 0 }}

@@ -6,10 +6,6 @@ export default function SelectInput({ regions=[], filterRegion, isFiltering }) {
     let regionNames = regions ? ["All Regions", ...regions.map(r => r.regionName.en)] : [];
     const [value, setValue] = useState(regionNames[0]);
 
-    const handleChange = (e) => {
-        setValue(e.target.value);
-    }
-
     useEffect(() => {
     }, [value]);
   
@@ -25,7 +21,7 @@ export default function SelectInput({ regions=[], filterRegion, isFiltering }) {
         }}>
         <select
           value={value}
-          onChange={handleChange}
+          onChange={e => setValue(e.target.value)}
         >
             {regionNames.map((rName, index) => {
                 return <option key={index} value={rName}>{rName}</option>

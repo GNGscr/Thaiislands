@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { motion, useAnimate } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { usePathname } from 'next/navigation';
 import CreatedBy from "./CreatedBy";
 
-export default function Noise({ data, lang }) {
+// You can download these PNGs here:
+// https://www.hover.dev/black-noise.png
+// https://www.hover.dev/noise.png
+
+export default function Noise() {
 
   const pathname = usePathname();
   const pages = [
@@ -56,9 +60,6 @@ const NoiseComponent = () => {
         ease: "linear",
         repeatType: "mirror",
       }}
-      // You can download these PNGs here:
-      // https://www.hover.dev/black-noise.png
-      // https://www.hover.dev/noise.png
       style={{
         backgroundImage: 'url("https://www.hover.dev/black-noise.png")',
         // backgroundImage: 'url("https://www.hover.dev/noise.png")',
@@ -70,7 +71,7 @@ const NoiseComponent = () => {
 
 const ExampleContent = ({pages, pathname}) => {
   const [isColorRed, setIsColorRed] = useState(false);
-  const linkClicked = (e, isActive) => !isActive ?? e.preventDefault(); // Prevent default anchor behavior;
+  // const linkClicked = (e, isActive) => !isActive ?? e.preventDefault(); // Prevent default anchor behavior;
   return (
     <div className="relative grid h-[350px] place-content-center space-y-6 bg-neutral-950 p-8 text-white">
       <div className="inner-footer relative -top-[30] text-neutral-20 w-fit px-4 py-2 font-semibold text-neutral-200 transition-colors">

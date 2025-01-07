@@ -1,12 +1,9 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-// import imgSrc from '../../pages/public/images/summer-luxury-beach-resort-and-spa.webp';
 import kohPhanganData from "../public/data/kohPhanganData.json";
 import { useGlobalSettings } from './GlobalSettings';
-import Navbar from "./Navbar";
 import RevealLinks from "./RevealLinks";
-// import squareDataJson from "../../pages/public/data/squareData.json";
 
 const he = "he";
 const en = "en";
@@ -54,7 +51,13 @@ export default function ShuffleHero() {
                   className={`w-[32%] page-btn font-medium w-[100%]
                       py-3 px-4 rounded transition-all active:scale-95`}
                     initial={{ color: "#000", backgroundColor: "#fff", rotateX: 0 }}
-                    whileHover={{ fontWeight: 600, letterSpacing: "0.005rem", color: "#fff", backgroundColor: "#000", rotateX: 360 }}
+                    whileHover={{
+                      fontWeight: 600,
+                      letterSpacing: "0.005rem",
+                      color: "#fff",
+                      backgroundColor: "#000",
+                      rotateX: 360
+                    }}
                     transition={{ duration: .1, delay: 0.065 }}>
                     {page.label[language]}
                 </motion.a>

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function ButtonLightningAnimation({text, activateMenuIsActive}) {
+export default function ButtonLightningAnimation({ text, activateMenuIsActive }) {
   const handleClick = (e) => {
     e.preventDefault(); // Prevent default anchor behavior
 
@@ -20,11 +20,14 @@ export default function ButtonLightningAnimation({text, activateMenuIsActive}) {
     <motion.div
     initial={{ opacity: 0, scale: 0, skewX: "-15deg" }}
     whileInView={{ opacity: 1, scale: 1, skewX: 0 }}
-    // animate={text ? { opacity: 1, scale: 0, skewX: 0 } : { opacity: 0, scale: 1, skewX: -5 }}
     transition={{ duration: 0.65, type: "tween", }}
       className={`button-lightning grid place-content-center
       p-4 text-3xl --font-space-grotesk`}>
-      <a href="#hotels" onClick={handleClick}><DrawOutlineButton>{text}</DrawOutlineButton></a>
+      <a href="#hotels" onClick={handleClick}>
+        <DrawOutlineButton>
+          {text}
+        </DrawOutlineButton>
+      </a>
     </motion.div>
   );
 };

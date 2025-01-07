@@ -3,12 +3,11 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import ScreenFitText from './ScreenFitText';
-import { useGlobalSettings } from './GlobalSettings';
 
 export default function SocialsSection({data, lang}) {
-  const { language, setLanguage, currentMedia, setCurrentMedia } = useGlobalSettings();
-  // let globalLanguage = language;
+
   if (!data) return;
+
   return (
     <main className="magnetic-main z-4 bg-[#fff]">
       <div className="overflow-hidden flex justify-center bg-[#fff]">
@@ -60,28 +59,29 @@ export default function SocialsSection({data, lang}) {
   )
 }
 
-const IconsMagnetic = ({children}) => {
-    const magnetic = useRef(null);
+const IconsMagnetic = ({ children }) => {
+    
+  const magnetic = useRef(null);
 
-    useEffect( () => {
-        const xTo = gsap.quickTo(magnetic.current, "x", {duration: 1, ease: "elastic.out(1, 0.3)"})
-        const yTo = gsap.quickTo(magnetic.current, "y", {duration: 1, ease: "elastic.out(1, 0.3)"})
+  useEffect( () => {
+      const xTo = gsap.quickTo(magnetic.current, "x", {duration: 1, ease: "elastic.out(1, 0.3)"})
+      const yTo = gsap.quickTo(magnetic.current, "y", {duration: 1, ease: "elastic.out(1, 0.3)"})
 
-        magnetic.current.addEventListener("mousemove", (e) => {
-            const { clientX, clientY } = e;
-            const {height, width, left, top} = magnetic.current.getBoundingClientRect();
-            const x = clientX - (left + width/2)
-            const y = clientY - (top + height/2)
-            xTo(x);
-            yTo(y)
-        })
-        magnetic.current.addEventListener("mouseleave", (e) => {
-            xTo(0);
-            yTo(0)
-        })
-    }, [])
+      magnetic.current.addEventListener("mousemove", (e) => {
+          const { clientX, clientY } = e;
+          const {height, width, left, top} = magnetic.current.getBoundingClientRect();
+          const x = clientX - (left + width/2)
+          const y = clientY - (top + height/2)
+          xTo(x);
+          yTo(y)
+      })
+      magnetic.current.addEventListener("mouseleave", (e) => {
+          xTo(0);
+          yTo(0)
+      })
+  }, [])
 
-    return (
-        React.cloneElement(children, {ref:magnetic})
-    )
+  return (
+      React.cloneElement(children, {ref:magnetic})
+  )
 }
