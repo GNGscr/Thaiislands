@@ -2111,8 +2111,22 @@ a {
 
 
 @media (max-width: 680px) {
-
+/* 
   .filter-section {
+    display: none;
+  } */
+
+  .filter-selector {
+    flex-direction: column;
+    left: -19rem;
+    top: -0.5rem;
+    background-color: #fff;
+  }
+  .filter-section {
+    direction: rtl;
+    right: 8vw;
+  }
+  .tooltip {
     display: none;
   }
 
