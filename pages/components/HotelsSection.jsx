@@ -3,15 +3,19 @@ import { motion } from "framer-motion";
 import FlipCard from "./FlipCard";
 import DefaultCard from "./DefaultCard";
 import SelectInput from "./SelectInput";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import filterIcon from "../public/images/filter-icon.svg";
 import Image from "next/image";
 
 export default function HotelsSection({ data, lang, media }) {
 
-  const [ displayedRegions, setDisplayedRegions ] = useState(data.regions);
+  const [ displayedRegions, setDisplayedRegions ] = useState();
   const [ isFiltering, setIsFiltering ] = useState(false);
-  const [ isTooltipVisible, setIsTooltipVisible ] = useState(false)
+  const [ isTooltipVisible, setIsTooltipVisible ] = useState(false);
+
+  useEffect(() => {
+    setDisplayedRegions(data.regions);
+  }, []);
 
   const rowCardsAnimation = {
       0: {

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-export default function SelectInput({ regions, filterRegion, isFiltering }) {
+export default function SelectInput({ regions=[], filterRegion, isFiltering }) {
     
-    let regionNames = ["All Regions", ...regions.map(r => r.regionName.en)];
+    let regionNames = regions ? ["All Regions", ...regions.map(r => r.regionName.en)] : [];
     const [value, setValue] = useState(regionNames[0]);
 
     const handleChange = (e) => {
@@ -13,7 +13,7 @@ export default function SelectInput({ regions, filterRegion, isFiltering }) {
     useEffect(() => {
     }, [value]);
   
-    if (!regionNames) return;
+    if (!regions && !regionNames) return;
     return (
       <motion.div className="filter-selector"
         transition={{ duration: 0.5, delay: 0 }}
