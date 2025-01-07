@@ -1984,10 +1984,6 @@ a {
 
 
 @media (max-width: 1080px) {
-  
-  .filter-section {
-    display: none;
-  }
 
   .shuffle-grid-wrapper {
     display: none;
@@ -2115,6 +2111,10 @@ a {
 
 
 @media (max-width: 680px) {
+
+  .filter-section {
+    display: none;
+  }
 
   .v-accordion {
     padding-top: 2rem;
