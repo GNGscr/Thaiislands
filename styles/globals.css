@@ -1953,6 +1953,7 @@ html[lang="en-US"] .star-score {
 }
 select {
   color: #444;
+  background-color: #fff;
 }
 select:focus-visible{
   outline: none;
@@ -2118,7 +2119,7 @@ a {
 
   .filter-selector {
     flex-direction: column;
-    left: -19rem;
+    left: -20rem;
     top: -0.5rem;
     background-color: #fff;
   }

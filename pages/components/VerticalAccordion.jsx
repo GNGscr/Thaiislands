@@ -2,7 +2,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import someIcon from "../public/images/svg-logo-loader.svg";
-import rastaHome from "../public/images/koh-phangan-rasta-1.jpg";
 import Image from "next/image";
 
 
