@@ -71,8 +71,7 @@ export default function Layout() {
     initial: { x: "-115%", width: "175px" },
     animate: { x: 0, transition: { duration: .4 } }
   };
-  // 245px
-  // isSomething ? variants.animate : variants.initial
+  
   return (
     <div ref={scope}
       className="layout-wrapper fixed w-full flex align-center top-[0rem]"

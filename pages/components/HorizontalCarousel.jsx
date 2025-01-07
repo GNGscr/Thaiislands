@@ -38,6 +38,10 @@ const HorizontalScrollCarousel = ({ data, media }) => {
       "start": "2%",
       "end": "-83.5%",
     },
+    "tablet": {
+      "start": "1.05%", 
+      "end": "-84.25%", 
+    },
     "mobile": {
       "start": "0.25%",
       "end": "-86%",
