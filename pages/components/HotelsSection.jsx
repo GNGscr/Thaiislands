@@ -118,12 +118,17 @@ const regionsTitleAnimation = {
 };
 
   const filterRegion = value => {
+    const target = document.getElementById("hotels");
     setDisplayedRegions(
       value === "All Regions"
       ? data.regions
       : data.regions.filter(r => r.regionName.en === value)
     );
     setIsFiltering(!isFiltering);
+    if (target) {
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
   };
 
   if (!data) return;
