@@ -120,8 +120,7 @@ const regionsTitleAnimation = {
   const filterRegion = value => {
     const target = document.getElementById("hotels");
     setDisplayedRegions(
-      value === "All Regions"
-      ? data.regions
+      value === "All Regions" ? data.regions
       : data.regions.filter(r => r.regionName.en === value)
     );
     setIsFiltering(!isFiltering);
