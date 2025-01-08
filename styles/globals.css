@@ -1142,8 +1142,7 @@ html[lang="he-IL"] .svg-logo-loader-wrapper svg {
   height: fit-content;
   position: relative;
   top: 3rem;
-  /* padding: 2rem 0; */
-  padding: 1.85rem 0;
+  padding: 1.75rem 0;
   z-index: 1;
   min-height: 160px;
   margin-bottom: 375px;
