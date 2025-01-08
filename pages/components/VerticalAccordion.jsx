@@ -31,27 +31,29 @@ const VerticalAccordion = () => {
   const [open, setOpen] = useState(items[1].id);
 
   return (
+        <div className="sticky-accordion-wrp sticky top-[-8rem] lg:h-[112.5svh]">
     <section className="p-4 bg-white v-accordion">
-      <div  className="horizontal-scroll-title weekly-events">Weekly Events</div>
-      <div className="accordion-inner flex flex-col lg:flex-row h-fit lg:h-[85svh] w-full max-w-8xl mx-auto overflow-hidden">
-        <div id="events" />
-        {items ? 
-          items.map((item) => {
-            return (
-              <Panel
-                key={item.id}
-                open={open}
-                setOpen={setOpen}
-                id={item.id}
-                Icon={item.Icon} 
-                title={item.title}
-                imgSrc={item.imgSrc}
-                description={item.description}
-              />
-            )
-        }) : ''}
-      </div>
-    </section>
+        <div  className="horizontal-scroll-title weekly-events">Weekly Events</div>
+        <div className="accordion-inner flex flex-col lg:flex-row h-fit lg:h-[85svh] w-full max-w-8xl mx-auto overflow-hidden">
+          <div id="events" />
+          {items ? 
+            items.map((item) => {
+              return (
+                <Panel
+                  key={item.id}
+                  open={open}
+                  setOpen={setOpen}
+                  id={item.id}
+                  Icon={item.Icon} 
+                  title={item.title}
+                  imgSrc={item.imgSrc}
+                  description={item.description}
+                />
+              )
+          }) : ''}
+        </div>
+      </section>
+     </div>
   );
 };
 

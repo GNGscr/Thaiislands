@@ -1142,6 +1142,7 @@ html[lang="he-IL"] .svg-logo-loader-wrapper svg {
   height: fit-content;
   position: relative;
   top: 3rem;
+  padding: 2rem 0;
   z-index: 1;
   min-height: 160px;
   margin-bottom: 375px;
@@ -1158,6 +1159,7 @@ html[lang="he-IL"] .magnetic-main {
   font-family: var(--main-font);
   width: 100%;
   display: flex;
+  padding-top: 2rem;
   justify-content: center;
   background-color: #fff;
   z-index: 4;
@@ -2131,6 +2133,10 @@ a {
     display: none;
   }
 
+  .sticky-accordion-wrp {
+    background-color: #888;
+  }
+
   .v-accordion {
     padding-top: 2rem;
     padding-bottom: 2.5rem;
@@ -2138,6 +2144,7 @@ a {
   .accordion-inner {
     padding-top: 2.5rem;
     margin-bottom: 3rem;
+    background: maroon;
   }
 
   .rest-link > a > img {
