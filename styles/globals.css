@@ -2140,6 +2140,7 @@ a {
   .v-accordion {
     padding-top: 2rem;
     padding-bottom: 2.5rem;
+    padding: 1rem 10vw !important;
   }
   .accordion-inner {
     padding-top: 2.5rem;
