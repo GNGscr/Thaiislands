@@ -7,8 +7,8 @@ import SectionAnimation from "./components/SectionAnimation";
 import kohPhanganData from "./public/data/kohPhanganData.json";
 import { useGlobalSettings } from "./components/GlobalSettings";
 import phanganMap from './public/images/phangan-map.png';
-import HorizontalCarousel from "./components/HorizontalCarousel";
-import VerticalAccordion from "./components/VerticalAccordion";
+// import HorizontalCarousel from "./components/HorizontalCarousel";
+// import VerticalAccordion from "./components/VerticalAccordion";
 
 const he = "he";
 const en = "en";
