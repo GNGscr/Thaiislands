@@ -178,6 +178,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
           ? <div id="map">
               <div className="map-responsive">
                 <iframe src={data.googleMap.link}
+                    rel="preconnect"
                     width={data["island-name"][lang] === "Koh Phangan" ? "600" : "100%"} 
                     height="450" 
                     allowFullScreen 

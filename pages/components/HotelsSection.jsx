@@ -147,10 +147,9 @@ const regionsTitleAnimation = {
       </motion.div>
 
       <div className="filter-section">
-        <div
-          className="tooltip"
-          style={{ opacity: isTooltipVisible ? 1 : 0 }}>
-            Filter by Region
+        <div className="tooltip"
+            style={{ opacity: isTooltipVisible ? 1 : 0 }}>
+          Filter by Region
         </div>
 
         <motion.div className="filter-icon"
