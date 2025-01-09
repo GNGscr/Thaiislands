@@ -50,9 +50,7 @@ export default function KohPhangan() {
           mapDrawing={phanganMap.src} />
         
         {/* Horizontal Carousel */}
-
           {/* <HorizontalCarousel data={kohPhanganData} media={currentMedia} />
-
         <VerticalAccordion /> */}
 
         <div id="media">
