@@ -184,7 +184,7 @@ const Images = ({ imgIndex }) => {
 
 const Dots = ({ imgIndex, setImgIndex, media }) => {
   return (
-    <div className={`flex w-full justify-center gap-2 mt-[15px] mb-[5${media === 'desktop' ?'vh' : 'svh'}]`}>
+    <div className={`flex w-full justify-center gap-2 mt-[15px] mb-[5${media === 'desktop' ?'vh' : 'lvh'}]`}>
       {imgs.map((_, idx) => {
         return (
           <button
