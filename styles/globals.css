@@ -2159,8 +2159,8 @@ a {
   }
 
   .horizontal-scroll-group {
-    /* height: 96.5vh; */
-    height: 96.5%;
+    height: 96.5vh;
+    /* height: 96.5%; */
     width: 96.5vw;
   }
 
