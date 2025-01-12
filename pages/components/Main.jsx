@@ -70,7 +70,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
       </TextParallaxContentComponent>
 
       <div className={`relative h-[${
-          media === 'desktop'? '120' : '60'}${media === 'desktop' ? 'vh' : 'lvh'}]`
+          media === 'desktop'? '120' : '60'}${media === 'desktop' ? 'vh' : 'vh'}]`
           }>
         <div className="sticky top-0">
           <SwipeCarousel data={data} lang={lang} media={media} />
