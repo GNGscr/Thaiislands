@@ -31,7 +31,7 @@ const VerticalAccordion = ({ media }) => {
   const [open, setOpen] = useState(items[1].id);
 
   return (
-        <div className={`sticky-accordion-wrp sticky top-[-8rem] lg:h-[112.5${media === '' ? 'svh' : 'svh'}]`}>
+        <div className={`sticky-accordion-wrp sticky top-[-8rem] lg:h-[112.5${media === 'desktop' ? 'svh' : 'svh'}]`}>
     <section className="bg-white v-accordion" style={{ padding: `1rem 10${media === 'desktop' ? 'vw' : 'vh'}` }}>
         <div  className="horizontal-scroll-title weekly-events">Weekly Events</div>
         <div className={`accordion-inner flex flex-col lg:flex-row h-fit lg:h-[85${media === 'desktop' ? 'svh' : 'svh'}] w-full max-w-8xl mx-auto overflow-hidden`}>
