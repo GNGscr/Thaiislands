@@ -4,7 +4,7 @@ import { useGlobalSettings } from "./components/GlobalSettings";
 import AboutUs from "./about";
 
 export default function Home() {
-  const { language, setLanguage, setCurrentMedia } = useGlobalSettings();
+  const { language, setLanguage, setCurrentMedia, currentMedia } = useGlobalSettings();
   const mainRef = useRef(null);
   // const SPREADSHEET_ID = '10dyZecjgALnOMPj_bKV5s5XNVR0Si4USZI2dn0XYGdU';
   // const API_KEY = 'AIzaSyDXh5hbQG0D8kTEWlmvbbwqDzjDd-48lms';
@@ -60,7 +60,7 @@ export default function Home() {
 
   return (
     <div ref={mainRef}>
-      <AboutUs />
+      <AboutUs media={currentMedia} />
     </div>
   );
 }

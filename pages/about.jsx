@@ -1,14 +1,14 @@
 import ShuffleHero from './components/ShuffleHero';
 import data from './public/data/data.json';
 
-export default function About() {
+export default function About({ media }) {
     const pages = [
         {label: 'Koh Phangan', link: '/koh-phangan', img: ''},
         {label: 'Koh Samui', link: '/koh-samui', img: ''},
         {label: 'Koh Tao', link: '/koh-tao', img: ''},
     ];
     return (
-        <div className="about-us flex flex-col justify-center h-[96.5vh] relative"
+        <div className={`about-us flex flex-col justify-center h-[96.5${media === 'desktop' ? 'vh' : '%'}] relative`}
             style={{
                 margin: '0.75rem',
                 borderRadius: '1.85rem',

@@ -7,7 +7,7 @@ import rinbeach from '../../pages/public/images/koh-phangan-rin-beach.PNG';
 import phangandownhill from '../../pages/public/images/koh-phangan-downhill-view.jpg';
 import phanganChilling from '../../pages/public/images/koh-phangan-chilling.jpg';
 import phanganParties from '../../pages/public/images/koh-phangan-party.jpg';
-import phanganRasta from '../../pages/public/images/koh-phangan-rasta-1.jpg';
+// import phanganRasta from '../../pages/public/images/koh-phangan-rasta-1.jpg';
 import jambar1 from '../../pages/public/images/koh-phangan-jambar-1.jpg';
 import jambar2 from '../../pages/public/images/koh-phangan-jambar-2.jpg';
 import jambar3 from '../../pages/public/images/koh-phangan-jambar-3.jpg';
@@ -62,7 +62,7 @@ const spacingIndex = {
   "he": { first: 7, second: 16 },
 };
 
-export default function SwipeCarousel({ data, lang }) {
+export default function SwipeCarousel({ data, lang, media }) {
 
   if (data) {
     imgs = data["island-name"].en === "Koh Phangan"
@@ -152,7 +152,7 @@ export default function SwipeCarousel({ data, lang }) {
           <Images imgIndex={imgIndex} />
         </motion.div>
         
-        <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+        <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} media={media} />
       </div>
     </div>
   );
@@ -182,9 +182,9 @@ const Images = ({ imgIndex }) => {
   );
 };
 
-const Dots = ({ imgIndex, setImgIndex }) => {
+const Dots = ({ imgIndex, setImgIndex, media }) => {
   return (
-    <div className="flex w-full justify-center gap-2 mt-[15px] mb-[5vh]">
+    <div className={`flex w-full justify-center gap-2 mt-[15px] mb-[5${media === 'desktop' ?'vh' : '%'}]`}>
       {imgs.map((_, idx) => {
         return (
           <button

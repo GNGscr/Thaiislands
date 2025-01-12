@@ -43,12 +43,12 @@ const HorizontalScrollCarousel = ({ data, media }) => {
   let x = useTransform(scrollYProgress, [0, 1], [media ? dFE[media].start : '', media ? dFE[media].end : '']);
 
   return (
-    <section id="cafes" ref={targetRef} className="relative h-[300vh] bg-white">
+    <section id="cafes" ref={targetRef} className={`relative h-[300${media === 'desktop' ? 'vh' : '%'}] bg-white`}>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {data ? 
             cards.map((card) => {
-              return <Card card={card} key={card.id} />;
+              return <Card card={card} media={media} key={card.id} />;
           }) : ''}
         </motion.div>
       </div>
@@ -56,12 +56,12 @@ const HorizontalScrollCarousel = ({ data, media }) => {
   );
 };
 
-const Card = ({ card }) => {
+const Card = ({ card, media }) => {
   return (
     <div
       key={card.id}
       className={`horizontal-scroll-group 
-        relative h-[91.5vh] w-[97.5vw] overflow-hidden 
+        relative h-[91.5${media === 'desktop' ? 'vh' : '%'}] w-[97.5vw] overflow-hidden 
         bg-neutral-200 rounded-3xl`}>
       <div
         style={{
