@@ -70,7 +70,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
       </TextParallaxContentComponent>
 
       <div className={`relative h-[${
-          media === 'desktop'? '120' : '60'}${media === 'desktop' ? 'vh' : 'dvh'}]`
+          media === 'desktop'? '120' : '60'}${media === 'desktop' ? 'vh' : 'lvh'}]`
           }>
         <div className="sticky top-0">
           <SwipeCarousel data={data} lang={lang} media={media} />
@@ -122,7 +122,7 @@ const TextParallaxContentComponent = ({
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className={`relative h-[150${media === 'desktop' ? 'vh' : 'dvh'}]`} id={`${isMapVisible ? 'map-img' : ''}`}>
+      <div className={`relative h-[150${media === 'desktop' ? 'vh' : 'vh'}]`} id={`${isMapVisible ? 'map-img' : ''}`}>
         <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} media={media} />
         <OverlayCopy
           heading={heading}
@@ -161,7 +161,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
         backgroundSize: "cover",
         backgroundRepeat: 'no-repeat',
         backgroundPosition: "center",
-        height: `calc(100${media === 'desktop' ? 'vh' : 'd vh'} - ${IMG_PADDING * 2}px)`,
+        height: `calc(100${media === 'desktop' ? 'vh' : 'vh'} - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale
       }}
