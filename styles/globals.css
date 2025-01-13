@@ -81,6 +81,12 @@
   user-select: none;
 }
 
+*:focus,
+*:focus-visible,
+*:focus-within {
+  outline: none;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
