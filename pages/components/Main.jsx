@@ -161,7 +161,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
         backgroundSize: "cover",
         backgroundRepeat: 'no-repeat',
         backgroundPosition: "center",
-        height: `calc(100${media === 'desktop' ? 'vh' : 'vh'} - ${IMG_PADDING * 2}px)`,
+        height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale
       }}
