@@ -122,7 +122,7 @@ const TextParallaxContentComponent = ({
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className={`relative h-[150${media === 'desktop' ? 'vh': 'vh'}]`} id={`${isMapVisible ? 'map-img' : ''}`}>
+      <div className={`relative h-[150vh]`} id={`${isMapVisible ? 'map-img' : ''}`}>
         <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} media={media} />
         <OverlayCopy
           heading={heading}
