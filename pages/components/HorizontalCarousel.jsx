@@ -61,7 +61,7 @@ const Card = ({ card, media }) => {
     <div
       key={card.id}
       className={`horizontal-scroll-group 
-        relative h-[91.5${media === 'desktop' ? 'vh' : 'lvh'}] w-[97.5vw] overflow-hidden 
+        relative h-[91.5${media === 'desktop' ? 'vh' : 'svh'}] w-[97.5vw] overflow-hidden 
         bg-neutral-200 rounded-3xl`}>
       <div
         style={{
