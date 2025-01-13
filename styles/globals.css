@@ -368,8 +368,13 @@ html[lang="he-IL"] .cta-button {
 
 
 select {
+  background-color: #fff;
   -webkit-tap-highlight-color: transparent !important;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+}
+option {
+  padding-block-end: 0;
+  padding-inline: 0;
 }
 /* Disable blue highlight on button click */
 button {
