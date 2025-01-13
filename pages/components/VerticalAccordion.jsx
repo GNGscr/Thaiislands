@@ -32,7 +32,7 @@ const VerticalAccordion = ({ media }) => {
 
   return (
         <div className={`sticky-accordion-wrp sticky top-[-8rem] lg:h-[112.5svh]`}>
-    <section className="bg-white v-accordion" style={{ padding: `1rem 10vw` }}>
+    <section className="bg-white v-accordion" style={{ padding: `1rem 13vw` }}>
         <div  className="horizontal-scroll-title weekly-events">Weekly Events</div>
         <div className={`accordion-inner flex flex-col lg:flex-row h-fit lg:h-[85svh] w-full max-w-8xl mx-auto overflow-hidden`}>
           <div id="events" />
@@ -101,7 +101,8 @@ export const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }) =
               initial="closed"
               animate="open"
               exit="closed"
-              className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white"
+              className="px-8 py-2 bg-black/40 backdrop-blur-sm text-white"
+              style={{ textAlign: "center" }}
             >
               <p>{description}</p>
             </motion.div>
