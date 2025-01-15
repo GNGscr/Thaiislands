@@ -27,7 +27,7 @@ const useWindowSize = () => {
     return windowSize;
   };
 
-const VerticalAccordion = ({ media }) => {
+const VerticalAccordion = () => {
   const [open, setOpen] = useState(items[1].id);
 
   return (

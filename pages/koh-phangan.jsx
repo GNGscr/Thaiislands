@@ -51,7 +51,7 @@ export default function KohPhangan() {
         
         {/* Horizontal Carousel */}
           {/* <HorizontalCarousel data={kohPhanganData} media={currentMedia} /> */}
-        <VerticalAccordion media={currentMedia} />
+        <VerticalAccordion />
 
         <div id="media">
           <SocialsSection data={kohPhanganData} lang={kohPhanganData['language-text'][language]} />
