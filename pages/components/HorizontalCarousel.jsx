@@ -25,7 +25,7 @@ const HorizontalScrollCarousel = ({ data, media }) => {
     target: targetRef,
   });
 
-  const dFE = {
+  const deviceMedium = {
     "desktop": {
       "start": "2%",
       "end": "-83.5%",
@@ -40,7 +40,15 @@ const HorizontalScrollCarousel = ({ data, media }) => {
     },
   };
 
-  let x = useTransform(scrollYProgress, [0, 1], [media ? dFE[media].start : '', media ? dFE[media].end : '']);
+  let x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [media
+      ? deviceMedium[media].start
+      : '', media
+        ? deviceMedium[media].end
+        : '']
+  );
 
   return (
     <section id="cafes" ref={targetRef} className={`relative h-[300${media === 'desktop' ? 'vh' : 'dvh'}] bg-white`}>
