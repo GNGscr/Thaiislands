@@ -6,9 +6,9 @@ import DefaultCard from "./DefaultCard";
 import SelectInput from "./SelectInput";
 import { useState, useEffect } from "react";
 import filterIcon from "../public/images/filter-icon.svg";
-import RowCardsAnimation from "../public/data/RowCardsAnimation.json";
-import MobileRowCardsAnimationJson from "../public/data/MobileRowCardsAnimation.json";
-import MobileOneRowCardsAnimationJson from "../public/data/MobileOneRowCardsAnimation.json";
+import RowCardsAnimation from "../public/data/rowCardsAnimation.json";
+import MobileRowCardsAnimationJson from "../public/data/mobileRowCardsAnimation.json";
+import MobileOneRowCardsAnimationJson from "../public/data/mobileOneRowCardsAnimation.json";
 import RegionsTitleAnimationJson from "../public/data/regionalTitleAnimation.json";
 
 export default function HotelsSection({ data, lang, media }) {
