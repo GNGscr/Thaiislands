@@ -1,0 +1,43 @@
+const RowCardsAnimation = {
+    0: {
+      variants: {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+        slideStart: { x: [0, "100px"], opacity: [0, 0] },
+        slideEnd: { x: ["100px", 0], opacity: [0, 1] },
+      },
+      initial: ["hidden", "slideStart"],
+      whileInView: ["visible", "slideEnd"],
+      exit: ["visible", "slideStart"],
+      viewport: { amount: 0.4 },
+      transition: { type: "spring", duration: 1, bounce: 0.55, stiffness: 150 },
+    },
+    1: {
+      variants: {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+        slideStart: { y: [0, "25px"], opacity: [0, 0] },
+        slideEnd: { y: ["25px", 0], opacity: [0, 1] }
+      },
+      initial: ["hidden", "slideStart"],
+      whileInView: ["visible", "slideEnd"],
+      exit: ["visible", "slideStart"],
+      viewport: { amount: 0.4
+      },
+      transition: { type: "spring", duration: 1, bounce: 0.5, stiffness: 145 }
+    },
+    2: {
+      variants: {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+        slideStart: { x: [0, "-100px"], opacity: [0, 0] },
+        slideEnd: { x: ["-100px", 0], opacity: [0, 1] }
+      },
+      initial: ["hidden", "slideStart"],
+      whileInView: ["visible", "slideEnd"],
+      exit: ["visible", "slideStart"],
+      viewport: { amount: 0.4 },
+      transition: { type: "spring", duration: 1, bounce: 0.55, stiffness: 150 }
+    },
+};
+export default RowCardsAnimation;

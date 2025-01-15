@@ -6,6 +6,10 @@ import DefaultCard from "./DefaultCard";
 import SelectInput from "./SelectInput";
 import { useState, useEffect } from "react";
 import filterIcon from "../public/images/filter-icon.svg";
+import RowCardsAnimation from "./HotelSectionAnimations/RowCardsAnimationJson";
+import MobileRowCardsAnimationJson from "./HotelSectionAnimations/MobileRowCardsAnimationJson";
+import MobileOneRowCardsAnimationJson from "./HotelSectionAnimations/MobileOneRowCardsAnimationJson";
+import RegionsTitleAnimationJson from "./HotelSectionAnimations/RegionsTitleAnimationJson";
 
 export default function HotelsSection({ data, lang, media }) {
 
@@ -16,106 +20,6 @@ export default function HotelsSection({ data, lang, media }) {
   useEffect(() => {
     setDisplayedRegions(data.regions);
   }, []);
-
-  const rowCardsAnimation = {
-      0: {
-        variants: {
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-          slideStart: { x: [0, "100px"], opacity: [0, 0] },
-          slideEnd: { x: ["100px", 0], opacity: [0, 1] },
-        },
-        initial: ["hidden", "slideStart"],
-        whileInView: ["visible", "slideEnd"],
-        exit: ["visible", "slideStart"],
-        viewport: { amount: 0.4 },
-        transition: { type: "spring", duration: 1, bounce: 0.55, stiffness: 150 },
-      },
-      1: {
-        variants: {
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-          slideStart: { y: [0, "25px"], opacity: [0, 0] },
-          slideEnd: { y: ["25px", 0], opacity: [0, 1] }
-        },
-        initial: ["hidden", "slideStart"],
-        whileInView: ["visible", "slideEnd"],
-        exit: ["visible", "slideStart"],
-        viewport: { amount: 0.4
-        },
-        transition: { type: "spring", duration: 1, bounce: 0.5, stiffness: 145 }
-      },
-      2: {
-        variants: {
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-          slideStart: { x: [0, "-100px"], opacity: [0, 0] },
-          slideEnd: { x: ["-100px", 0], opacity: [0, 1] }
-        },
-        initial: ["hidden", "slideStart"],
-        whileInView: ["visible", "slideEnd"],
-        exit: ["visible", "slideStart"],
-        viewport: { amount: 0.4 },
-        transition: { type: "spring", duration: 1, bounce: 0.55, stiffness: 150 }
-      },
-  };
-  const mobileRowCardsAnimation = {
-      0: {
-        variants: {
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-          slideStart: { x: [0, "25px"], opacity: [0, 0] },
-          slideEnd: { x: ["25px", 0], opacity: [0, 1] },
-        },
-        initial: ["hidden", "slideStart"],
-        whileInView: ["visible", "slideEnd"],
-        exit: ["visible", "slideStart"],
-        viewport: { amount: 0.4 },
-        transition: { type: "tween", duration: 0.4, bounce: 0.15, stiffness: 75, },
-      },
-      1: {
-        variants: {
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-          slideStart: { x: [0, "-25px"], opacity: [0, 0] },
-          slideEnd: { x: ["-25px", 0], opacity: [0, 1] }
-        },
-        initial: ["hidden", "slideStart"],
-        whileInView: ["visible", "slideEnd"],
-        exit: ["visible", "slideStart"],
-        viewport: { amount: 0.4 },
-        transition: { type: "tween", duration: 0.4, bounce: 0.15, stiffness: 75, }
-      }
-  };
-  const mobileOneRowCardsAnimation = {
-      0: {
-        variants: {
-          hidden: { opacity: 0 },
-          visible: { opacity: 1 },
-          slideStart: { y: [0, "50px"], opacity: [0, 0] },
-          slideEnd: { y: ["50px", 0], opacity: [0, 1] },
-        },
-        initial: ["hidden", "slideStart"],
-        whileInView: ["visible", "slideEnd"],
-        exit: ["visible", "slideStart"],
-        viewport: { amount: 0.4 },
-        transition: { type: "tween", duration: 0.4, bounce: 0.15, stiffness: 75, },
-      }
-  };
-
-const regionsTitleAnimation = {
-    variants: {
-      hidden: { opacity: 0 },
-      visible: { opacity: 1 },
-      slideStart: { y: ["15px", 0], opacity: [0, 1] },
-      slideEnd: { y: [0, "15px"], opacity: [1, 0] }
-    },
-    initial: ["hidden"],
-    whileInView: ["hidden", "slideStart"],
-    exit: ["visible", "slideEnd"],
-    viewport: { amount: 0.4 },
-    transition: { type: "spring", duration: 1, bounce: 0 }
-};
 
   const filterRegion = value => {
     const target = document.getElementById("hotels");
@@ -187,7 +91,7 @@ const regionsTitleAnimation = {
           if (region.regionName && lang) currentRegionName = region.regionName[lang];          
           return (
             <div key={i} className="w-screen relative">
-              <motion.div style={{ opacity: 0 }} {...regionsTitleAnimation} className="region-title">
+              <motion.div style={{ opacity: 0 }} {...RegionsTitleAnimationJson} className="region-title">
                 {currentRegionName}
               </motion.div>
               <div className="flex flex-col pb-6"> 
@@ -202,10 +106,10 @@ const regionsTitleAnimation = {
                         {
                           affiliatesRow.map((affiliates, counter) => {
                             let currentMediaRowCardsAnimation = media === "mobile"
-                              ? mobileOneRowCardsAnimation[counter]
+                              ? MobileOneRowCardsAnimationJson[counter]
                               : media === "tablet"
-                              ? mobileRowCardsAnimation[counter]
-                              : rowCardsAnimation[counter];
+                              ? MobileRowCardsAnimationJson[counter]
+                              : RowCardsAnimation[counter];
                             return (
                               <motion.div
                                 key={counter} 
