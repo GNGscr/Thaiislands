@@ -6,10 +6,10 @@ import DefaultCard from "./DefaultCard";
 import SelectInput from "./SelectInput";
 import { useState, useEffect } from "react";
 import filterIcon from "../public/images/filter-icon.svg";
-import RowCardsAnimation from "./HotelSectionAnimations/RowCardsAnimationJson";
-import MobileRowCardsAnimationJson from "./HotelSectionAnimations/MobileRowCardsAnimationJson";
-import MobileOneRowCardsAnimationJson from "./HotelSectionAnimations/MobileOneRowCardsAnimationJson";
-import RegionsTitleAnimationJson from "./HotelSectionAnimations/RegionsTitleAnimationJson";
+import RowCardsAnimation from "../public/data/RowCardsAnimation.json";
+import MobileRowCardsAnimationJson from "../public/data/MobileRowCardsAnimation.json";
+import MobileOneRowCardsAnimationJson from "../public/data/MobileOneRowCardsAnimation.json";
+import RegionsTitleAnimationJson from "../public/data/regionalTitleAnimation.json";
 
 export default function HotelsSection({ data, lang, media }) {
 
