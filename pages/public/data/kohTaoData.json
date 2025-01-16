@@ -8,105 +8,67 @@
         "en": "en"
     },
     "navbar": {
-        "he": [
-            {
-                "label": "בית",
-                "intersectionId": "#home",
-                "href": "#home"
-            },
-            {
-                "label": "מפה",
-                "intersectionId": "#map-img",
-                "href": "#map"
-            },
-            {
-                "label": "גלריה",
-                "intersectionId": "#gallery",
-                "href": "#gallery"
-            },
-            {
-                "label": "מלונות",
-                "intersectionId": "#hotels",
-                "href": "#hotels"
-            },
-            {
-                "label": "מדיה",
-                "intersectionId": "#media",
-                "href": "#media"
-            }
-        ],
-        "en": [
-            {
-                "label": "Home",
-                "intersectionId": "#home",
-                "href": "#home"
-            },
-            {
-                "label": "Map",
-                "intersectionId": "#map-img",
-                "href": "#map"
-            },
-            {
-                "label": "Gallery",
-                "intersectionId": "#gallery",
-                "href": "#gallery"
-            },
-            {
-                "label": "Hotels",
-                "intersectionId": "#hotels",
-                "href": "#hotels"
-            },
-            {
-                "label": "Media",
-                "intersectionId": "#media",
-                "href": "#media"
-            }
-        ]
+        "desktop": {
+            "he": [
+                { "label": "בית", "intersectionId": "#home", "href": "#home" },
+                { "label": "מפה", "intersectionId": "#map-img", "href": "#map" },
+                { "label": "גלריה", "intersectionId": "#gallery", "href": "#gallery" },
+                { "label": "מלונות", "intersectionId": "#hotels", "href": "#hotels" },
+                { "label": "מדיה", "intersectionId": "#media", "href": "#media" }
+            ],
+            "en": [
+                { "label": "Home", "intersectionId": "#home", "href": "#home" },
+                { "label": "Map", "intersectionId": "#map-img", "href": "#map" },
+                { "label": "Gallery", "intersectionId": "#gallery", "href": "#gallery" },
+                { "label": "Hotels", "intersectionId": "#hotels", "href": "#hotels" },
+                { "label": "Media", "intersectionId": "#media", "href": "#media" }
+            ]
+        },
+        "tablet": {
+            "he": [
+                { "label": "בית", "intersectionId": "#home", "href": "#home" },
+                { "label": "מפה", "intersectionId": "#map-img", "href": "#map" },
+                { "label": "גלריה", "intersectionId": "#gallery", "href": "#gallery" },
+                { "label": "מלונות", "intersectionId": "#hotels", "href": "#hotels" },
+                { "label": "מדיה", "intersectionId": "#media", "href": "#media" }
+            ],
+            "en": [
+                { "label": "Home", "intersectionId": "#home", "href": "#home" },
+                { "label": "Map", "intersectionId": "#map-img", "href": "#map" },
+                { "label": "Gallery", "intersectionId": "#gallery", "href": "#gallery" },
+                { "label": "Hotels", "intersectionId": "#hotels", "href": "#hotels" },
+                { "label": "Media", "intersectionId": "#media", "href": "#media" }
+            ]
+        },
+        "mobile": {
+            "he": [
+                { "label": "בית", "intersectionId": "#home", "href": "#home" },
+                { "label": "מפה", "intersectionId": "#map-img", "href": "#map" },
+                { "label": "גלריה", "intersectionId": "#gallery", "href": "#gallery" },
+                { "label": "מלונות", "intersectionId": "#hotels", "href": "#hotels" },
+                { "label": "מדיה", "intersectionId": "#media", "href": "#media" }
+            ],
+            "en": [
+                { "label": "Home", "intersectionId": "#home", "href": "#home" },
+                { "label": "Map", "intersectionId": "#map-img", "href": "#map" },
+                { "label": "Gallery", "intersectionId": "#gallery", "href": "#gallery" },
+                { "label": "Hotels", "intersectionId": "#hotels", "href": "#hotels" },
+                { "label": "Media", "intersectionId": "#media", "href": "#media" }
+            ]
+        }
     },
     "filter": {
         "he": [
-            {
-                "label": "הכל",
-                "id": "all",
-                "value": "0"
-            },
-            {
-                "label": 4,
-                "id": "four",
-                "value": "4"
-            },
-            {
-                "label": 3,
-                "id": "three",
-                "value": "3"
-            },
-            {
-                "label": 2,
-                "id": "two",
-                "value": "2"
-            }
+            { "label": "הכל", "id": "all", "value": "0" },
+            { "label": 4, "id": "four", "value": "4" },
+            { "label": 3, "id": "three", "value": "3" },
+            { "label": 2, "id": "two", "value": "2" }
         ],
         "en": [
-            {
-                "label": "All",
-                "id": "all",
-                "value": "0"
-            },
-            {
-                "label": 4,
-                "id": "four",
-                "value": "4"
-            },
-            {
-                "label": 3,
-                "id": "three",
-                "value": "3"
-            },
-            {
-                "label": 2,
-                "id": "two",
-                "value": "2"
-            }
+            { "label": "All", "id": "all", "value": "0" },
+            { "label": 4, "id": "four", "value": "4" },
+            { "label": 3, "id": "three", "value": "3" },
+            { "label": 2, "id": "two", "value": "2" }
         ]
     },
     "heroImage": "https://pix6.agoda.net/geo/city/17389/1_17389_02.jpg?ca=6&ce=1&s=1920x822",
@@ -122,24 +84,15 @@
         "pages": [
             {
                 "link": "/koh-phangan",
-                "label": {
-                    "en": "Koh Phangan",
-                    "he": "קופנגן"
-                }
+                "label": { "en": "Koh Phangan", "he": "קופנגן" }
             },
             {
                 "link": "/koh-samui",
-                "label": {
-                    "en": "Koh Samui",
-                    "he": "קוסמוי"
-                }
+                "label": { "en": "Koh Samui", "he": "קוסמוי" }
             },
             {
                 "link": "/koh-tao",
-                "label": {
-                    "en": "Koh Tao",
-                    "he": "קוטאו"
-                }
+                "label": { "en": "Koh Tao", "he": "קוטאו" }
             }
         ]
     },

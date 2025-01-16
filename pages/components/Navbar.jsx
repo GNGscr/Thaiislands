@@ -126,7 +126,7 @@ export default function Navbar({
   
   useEffect(() => {
     const intersections =
-      document.querySelectorAll([...data["navbar"][language].map((item) => item.intersectionId)]);
+      document.querySelectorAll([...data["navbar"][currentMedia][language].map((item) => item.intersectionId)]);
     const intersectionsIterator = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -226,7 +226,8 @@ export default function Navbar({
   }, [color]);
 
   if (!data || !currentMedia) return;
-
+  console.log("data: ", data);
+  
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: 4 }}>
       <motion.div id="main" variants={variants} className="relative w-full flex align-center top-[0.75rem]"
@@ -257,7 +258,7 @@ export default function Navbar({
           <SlideTabs
             setPosition={setPosition}
             position={position}
-            navbar={data["navbar"][language]}
+            navbar={data["navbar"][currentMedia][language]}
             lang={language}
             onButtonClick={handleButtonClick}
             pathname={pathname}
@@ -284,6 +285,9 @@ export default function Navbar({
 };
 
 const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathname, currentMedia, directionToOffset }) => {
+  debugger;
+  console.log("navbar: ", navbar);
+  
   return (
     <ul
       onMouseLeave={() => {
@@ -295,7 +299,7 @@ const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathnam
       className={`navbar-ul mx-auto rounded-full gap-3 p-1
         ${pathname === '/about' || pathname === '/' ? 'invisible' : 'visible'}`}
     >
-      {
+      { navbar ?
         navbar.map(({ href, label }) => {
           return (
             <a 
@@ -311,7 +315,7 @@ const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathnam
               </Tab>
             </a>
           );
-        })
+        }) : ''
       }
       <Cursor position={position} currentMedia={currentMedia} />
     </ul>
