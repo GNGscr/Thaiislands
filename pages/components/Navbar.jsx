@@ -284,10 +284,7 @@ export default function Navbar({
   );
 };
 
-const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathname, currentMedia, directionToOffset }) => {
-  debugger;
-  console.log("navbar: ", navbar);
-  
+const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathname, currentMedia, directionToOffset }) => {  
   return (
     <ul
       onMouseLeave={() => {
