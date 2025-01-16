@@ -30,6 +30,53 @@ export default function KohPhangan() {
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
       language === en ? setLanguage(he) : setLanguage(en);
     }
+
+  //   "desktop": {
+  //     "he": {
+  //         "home": {
+  //             "right": 4,
+  //             "width": 84
+  //         },
+  //         "map-img": {
+  //             "right": 102,
+  //             "width": 76
+  //         },
+  //         "gallery": {
+  //             "right": 184,
+  //             "width": 115
+  //         },
+  //         "hotels": {
+  //             "right": 300,
+  //             "width": 108
+  //         },
+  //         "media": {
+  //             "right": 416,
+  //             "width": 89.8125
+  //         }
+  //     },
+  //     "en": {
+  //         "home": {
+  //             "left": 4,
+  //             "width": 88
+  //         },
+  //         "map-img": {
+  //             "left": 102,
+  //             "width": 76.5
+  //         },
+  //         "gallery": {
+  //             "left": 190,
+  //             "width": 114
+  //         },
+  //         "hotels": {
+  //             "left": 316,
+  //             "width": 104
+  //         },
+  //         "media": {
+  //             "left": 432,
+  //             "width": 90.5
+  //         }
+  //     }
+  // },
     
     return (
       <>
@@ -50,7 +97,7 @@ export default function KohPhangan() {
           mapDrawing={phanganMap.src} />
         
         {/* Horizontal Carousel */}
-          {/* <HorizontalCarousel data={kohPhanganData} media={currentMedia} /> */}
+          <HorizontalCarousel data={kohPhanganData} media={currentMedia} />
         <VerticalAccordion />
 
         <div id="media">

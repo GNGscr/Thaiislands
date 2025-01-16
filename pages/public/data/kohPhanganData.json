@@ -20,14 +20,19 @@
                 "href": "#map"
             },
             {
-                "label": "גלריה",
-                "intersectionId": "#gallery",
-                "href": "#gallery"
-            },
-            {
                 "label": "מלונות",
                 "intersectionId": "#hotels",
                 "href": "#hotels"
+            },
+            {
+                "label": "מסעדות",
+                "intersectionId": "#cafes",
+                "href": "#cafes"
+            },
+            {
+                "label": "אירועים",
+                "intersectionId": "#events",
+                "href": "#events"
             },
             {
                 "label": "מדיה",
@@ -47,14 +52,19 @@
                 "href": "#map"
             },
             {
-                "label": "Gallery",
-                "intersectionId": "#gallery",
-                "href": "#gallery"
-            },
-            {
                 "label": "Hotels",
                 "intersectionId": "#hotels",
                 "href": "#hotels"
+            },
+            {
+                "label": "Cafes",
+                "intersectionId": "#cafes",
+                "href": "#cafes"
+            },
+            {
+                "label": "Events",
+                "intersectionId": "#events",
+                "href": "#events"
             },
             {
                 "label": "Media",

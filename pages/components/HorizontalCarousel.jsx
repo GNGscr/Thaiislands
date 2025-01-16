@@ -51,7 +51,7 @@ const HorizontalScrollCarousel = ({ data, media }) => {
   );
 
   return (
-    <section id="cafes" ref={targetRef} className={`relative h-[300${media === 'desktop' ? 'vh' : 'dvh'}] bg-white`}>
+    <section id="cafes" ref={targetRef} className={`relative h-[300vh] bg-white`}>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {data ?
