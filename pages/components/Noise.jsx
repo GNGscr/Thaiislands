@@ -14,7 +14,7 @@ export default function Noise() {
   return (
     // NOTE: An overflow of hidden will be required on a wrapping  element to see expected results
     <div className="relative overflow-hidden">
-      <PagesPathComponent pages={FooterNoisePages} pathname={pathname} />
+      <PagesLinks pages={FooterNoisePages} pathname={pathname} />
       <NoiseComponent />
     </div>
   );
@@ -41,7 +41,7 @@ const NoiseComponent = () => {
   );
 };
 
-const PagesPathComponent = ({ pages, pathname }) => {
+const PagesLinks = ({ pages, pathname }) => {
 
   const [isColorRed, setIsColorRed] = useState(false);
   const DE = "Daniel Ehrlich";
