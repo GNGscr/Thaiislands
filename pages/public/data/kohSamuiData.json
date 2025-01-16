@@ -9,32 +9,104 @@
     },
     "navbar": {
         "he": [
-            { "label": "בית", "intersectionId": "#home", "href": "#home" },
-            { "label": "מפה", "intersectionId": "#map-img", "href": "#map" },
-            { "label": "גלריה", "intersectionId": "#gallery", "href": "#gallery" },
-            { "label": "מלונות", "intersectionId": "#hotels", "href": "#hotels" },
-            { "label": "מדיה", "intersectionId": "#media", "href": "#media" }
+            {
+                "label": "בית",
+                "intersectionId": "#home",
+                "href": "#home"
+            },
+            {
+                "label": "מפה",
+                "intersectionId": "#map-img",
+                "href": "#map"
+            },
+            {
+                "label": "גלריה",
+                "intersectionId": "#gallery",
+                "href": "#gallery"
+            },
+            {
+                "label": "מלונות",
+                "intersectionId": "#hotels",
+                "href": "#hotels"
+            },
+            {
+                "label": "מדיה",
+                "intersectionId": "#media",
+                "href": "#media"
+            }
         ],
         "en": [
-            { "label": "Home", "intersectionId": "#home", "href": "#home" },
-            { "label": "Map", "intersectionId": "#map-img", "href": "#map" },
-            { "label": "Gallery", "intersectionId": "#gallery", "href": "#gallery" },
-            { "label": "Hotels", "intersectionId": "#hotels", "href": "#hotels" },
-            { "label": "Media", "intersectionId": "#media", "href": "#media" }
+            {
+                "label": "Home",
+                "intersectionId": "#home",
+                "href": "#home"
+            },
+            {
+                "label": "Map",
+                "intersectionId": "#map-img",
+                "href": "#map"
+            },
+            {
+                "label": "Gallery",
+                "intersectionId": "#gallery",
+                "href": "#gallery"
+            },
+            {
+                "label": "Hotels",
+                "intersectionId": "#hotels",
+                "href": "#hotels"
+            },
+            {
+                "label": "Media",
+                "intersectionId": "#media",
+                "href": "#media"
+            }
         ]
     },
     "filter": {
         "he": [
-            { "label": "הכל", "id": "all", "value": "0" },
-            { "label": 4, "id": "four", "value": "4" },
-            { "label": 3, "id": "three", "value": "3" },
-            { "label": 2, "id": "two", "value": "2" }
+            {
+                "label": "הכל",
+                "id": "all",
+                "value": "0"
+            },
+            {
+                "label": 4,
+                "id": "four",
+                "value": "4"
+            },
+            {
+                "label": 3,
+                "id": "three",
+                "value": "3"
+            },
+            {
+                "label": 2,
+                "id": "two",
+                "value": "2"
+            }
         ],
         "en": [
-            { "label": "All", "id": "all", "value": "0" },
-            { "label": 4, "id": "four", "value": "4" },
-            { "label": 3, "id": "three", "value": "3" },
-            { "label": 2, "id": "two", "value": "2" }
+            {
+                "label": "All",
+                "id": "all",
+                "value": "0"
+            },
+            {
+                "label": 4,
+                "id": "four",
+                "value": "4"
+            },
+            {
+                "label": 3,
+                "id": "three",
+                "value": "3"
+            },
+            {
+                "label": 2,
+                "id": "two",
+                "value": "2"
+            }
         ]
     },
     "heroImage": "https://pix6.agoda.net/geo/city/17198/1098ae2e160ff31c31451530ec89c78c.jpg?ce=0&s=1920x822",
@@ -98,7 +170,7 @@
         },
         "en": {
             "a": "Koh Samui is one of the most popular islands in Thailand, with tropical beaches, luxury hotels, and beachfront resorts. The island offers a diverse experience for all types of travelers—couples, families, and backpackers. Koh Samui is one of the most popular islands in Thailand, with tropical beaches, luxury hotels, and beachfront resorts. The island offers a diverse experience for all types of travelers—couples, families, and backpackers.",
-            "b":"You can find luxury hotels with infinity pools, excellent restaurants, and water sports activities. The island also boasts stunning beaches like Chaweng, Lamai, and Bophut, all of which offer everything needed for the perfect vacation. The island itself is very big and is more western than it's closest islands. It's easy to find here a normal mall with anything you need to that you can't find on other samller islands."
+            "b": "You can find luxury hotels with infinity pools, excellent restaurants, and water sports activities. The island also boasts stunning beaches like Chaweng, Lamai, and Bophut, all of which offer everything needed for the perfect vacation. The island itself is very big and is more western than it's closest islands. It's easy to find here a normal mall with anything you need to that you can't find on other samller islands."
         }
     },
     "article-second-paragraph": {

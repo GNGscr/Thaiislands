@@ -9,32 +9,104 @@
     },
     "navbar": {
         "he": [
-            { "label": "בית", "intersectionId": "#home", "href": "#home" },
-            { "label": "מפה", "intersectionId": "#map-img", "href": "#map" },
-            { "label": "גלריה", "intersectionId": "#gallery", "href": "#gallery" },
-            { "label": "מלונות", "intersectionId": "#hotels", "href": "#hotels" },
-            { "label": "מדיה", "intersectionId": "#media", "href": "#media" }
+            {
+                "label": "בית",
+                "intersectionId": "#home",
+                "href": "#home"
+            },
+            {
+                "label": "מפה",
+                "intersectionId": "#map-img",
+                "href": "#map"
+            },
+            {
+                "label": "גלריה",
+                "intersectionId": "#gallery",
+                "href": "#gallery"
+            },
+            {
+                "label": "מלונות",
+                "intersectionId": "#hotels",
+                "href": "#hotels"
+            },
+            {
+                "label": "מדיה",
+                "intersectionId": "#media",
+                "href": "#media"
+            }
         ],
         "en": [
-            { "label": "Home", "intersectionId": "#home", "href": "#home" },
-            { "label": "Map", "intersectionId": "#map-img", "href": "#map" },
-            { "label": "Gallery", "intersectionId": "#gallery", "href": "#gallery" },
-            { "label": "Hotels", "intersectionId": "#hotels", "href": "#hotels" },
-            { "label": "Media", "intersectionId": "#media", "href": "#media" }
+            {
+                "label": "Home",
+                "intersectionId": "#home",
+                "href": "#home"
+            },
+            {
+                "label": "Map",
+                "intersectionId": "#map-img",
+                "href": "#map"
+            },
+            {
+                "label": "Gallery",
+                "intersectionId": "#gallery",
+                "href": "#gallery"
+            },
+            {
+                "label": "Hotels",
+                "intersectionId": "#hotels",
+                "href": "#hotels"
+            },
+            {
+                "label": "Media",
+                "intersectionId": "#media",
+                "href": "#media"
+            }
         ]
     },
     "filter": {
         "he": [
-            { "label": "הכל", "id": "all", "value": "0" },
-            { "label": 4, "id": "four", "value": "4" },
-            { "label": 3, "id": "three", "value": "3" },
-            { "label": 2, "id": "two", "value": "2" }
+            {
+                "label": "הכל",
+                "id": "all",
+                "value": "0"
+            },
+            {
+                "label": 4,
+                "id": "four",
+                "value": "4"
+            },
+            {
+                "label": 3,
+                "id": "three",
+                "value": "3"
+            },
+            {
+                "label": 2,
+                "id": "two",
+                "value": "2"
+            }
         ],
         "en": [
-            { "label": "All", "id": "all", "value": "0" },
-            { "label": 4, "id": "four", "value": "4" },
-            { "label": 3, "id": "three", "value": "3" },
-            { "label": 2, "id": "two", "value": "2" }
+            {
+                "label": "All",
+                "id": "all",
+                "value": "0"
+            },
+            {
+                "label": 4,
+                "id": "four",
+                "value": "4"
+            },
+            {
+                "label": 3,
+                "id": "three",
+                "value": "3"
+            },
+            {
+                "label": 2,
+                "id": "two",
+                "value": "2"
+            }
         ]
     },
     "heroImage": "https://pix6.agoda.net/geo/city/17402/1_17402_02.jpg?ca=6&ce=1&s=1920x822",
@@ -124,7 +196,6 @@
             "desktop": "Hover under the text to view map and above it to view image"
         }
     },
-    
     "mapSkech": "../pages/public/images/phangan-map.png",
     "googleMap": {
         "link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75468.17036922644!2d100.02495431595077!3d9.739631379237098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3054fd96fa0377ef%3A0xd3fd8d1a5e79affe!2sKo%20Pha%20Ngan!5e1!3m2!1sen!2sil!4v1727364051594!5m2!1sen!2sil"
@@ -703,44 +774,44 @@
         "tite": "Cafe & Resutrnats",
         "cards": [
             {
-              "url": "pura-vida-img.jpg",
-              "link": "https://mimi.koh-phangan.com",
-              "title": "Cafe Mimi",
-              "content": "Mimi Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
-              "id": 1
+                "url": "pura-vida-img.jpg",
+                "link": "https://mimi.koh-phangan.com",
+                "title": "Cafe Mimi",
+                "content": "Mimi Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
+                "id": 1
             },
             {
-              "url": "",
-              "link": "https://pura-vida.koh-phangan.com",
-              "title": "Pura Vida",
-              "content": "Pura Vida Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
-              "id": 2
+                "url": "",
+                "link": "https://pura-vida.koh-phangan.com",
+                "title": "Pura Vida",
+                "content": "Pura Vida Cafe is a place that feels like home. everyone is nice and friendly, great service with a smile.",
+                "id": 2
             },
             {
-              "url": "",
-              "title": "Title 3",
-              "id": 3
+                "url": "",
+                "title": "Title 3",
+                "id": 3
             },
             {
-              "url": "",
-              "title": "Title 4",
-              "id": 4
+                "url": "",
+                "title": "Title 4",
+                "id": 4
             },
             {
-              "url": "",
-              "title": "Title 5",
-              "id": 5
+                "url": "",
+                "title": "Title 5",
+                "id": 5
             },
             {
-              "url": "",
-              "title": "Title 6",
-              "id": 6
+                "url": "",
+                "title": "Title 6",
+                "id": 6
             },
             {
-              "url": "",
-              "title": "Title 7",
-              "id": 7
+                "url": "",
+                "title": "Title 7",
+                "id": 7
             }
-          ]
+        ]
     }
 }

@@ -13,9 +13,9 @@ import RegionsTitleAnimationJson from "../public/data/regionalTitleAnimation.jso
 
 export default function HotelsSection({ data, lang, media }) {
 
-  const [ displayedRegions, setDisplayedRegions ] = useState();
-  const [ isFiltering, setIsFiltering ] = useState(false);
-  const [ isTooltipVisible, setIsTooltipVisible ] = useState(false);
+  const [displayedRegions, setDisplayedRegions] = useState();
+  const [isFiltering, setIsFiltering] = useState(false);
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
   useEffect(() => {
     setDisplayedRegions(data.regions);
@@ -25,7 +25,7 @@ export default function HotelsSection({ data, lang, media }) {
     const target = document.getElementById("hotels");
     setDisplayedRegions(
       value === "All Regions" ? data.regions
-      : data.regions.filter(r => r.regionName.en === value)
+        : data.regions.filter(r => r.regionName.en === value)
     );
     setIsFiltering(!isFiltering);
     if (target) {
@@ -37,124 +37,124 @@ export default function HotelsSection({ data, lang, media }) {
   if (!data) return;
   return (
     <div className="relative h-fit" style={{ direction: 'rtl' }} id="hotels">
-    <div className={`hotels-title-wrapper sticky top-0 w-screen
+      <div className={`hotels-title-wrapper sticky top-0 w-screen
       flex flex-col justify-center align-center
-      bg-[#fff] p-[1rem] overflow-hidden`} 
-      style={{ zIndex: 2 }}>
+      bg-[#fff] p-[1rem] overflow-hidden`}
+        style={{ zIndex: 2 }}>
 
-      <motion.div 
-        initial={{ opacity: 0, letterSpacing: '10px' }}
-        whileInView={{ opacity: 0.7, letterSpacing: '0px' }}
-        transition={{ duration: 0.5 }}
-        className="hotels-title">
-        {data["resorts-and-hotels-title"][lang]}
-      </motion.div>
-
-      <div className="filter-section">
-        <div className="tooltip"
-            style={{ opacity: isTooltipVisible ? 1 : 0 }}>
-          Filter by Region
-        </div>
-
-        <motion.div className="filter-icon"
-          onMouseEnter={() => setIsTooltipVisible(true)}
-          onMouseLeave={() => setIsTooltipVisible(false)}
-          onClick={() => setIsFiltering(!isFiltering)}
-          initial={{ display: 'block' }}
-          animate={{ display: isFiltering ? 'none' : 'block' }}
-          transition={{ duration: 0, delay: isFiltering ? 0 : 0.25 }}
-        >
-          <div className="filter-is-on"></div>
-          <Image src={filterIcon.src} alt="filter icon" width="15" height="15" />
+        <motion.div
+          initial={{ opacity: 0, letterSpacing: '10px' }}
+          whileInView={{ opacity: 0.7, letterSpacing: '0px' }}
+          transition={{ duration: 0.5 }}
+          className="hotels-title">
+          {data["resorts-and-hotels-title"][lang]}
         </motion.div>
-        <SelectInput
-          regions={data.regions}
-          filterRegion={filterRegion}
-          isFiltering={isFiltering} 
-        />
+
+        <div className="filter-section">
+          <div className="tooltip"
+            style={{ opacity: isTooltipVisible ? 1 : 0 }}>
+            Filter by Region
+          </div>
+
+          <motion.div className="filter-icon"
+            onMouseEnter={() => setIsTooltipVisible(true)}
+            onMouseLeave={() => setIsTooltipVisible(false)}
+            onClick={() => setIsFiltering(!isFiltering)}
+            initial={{ display: 'block' }}
+            animate={{ display: isFiltering ? 'none' : 'block' }}
+            transition={{ duration: 0, delay: isFiltering ? 0 : 0.25 }}
+          >
+            <div className="filter-is-on"></div>
+            <Image src={filterIcon.src} alt="filter icon" width="15" height="15" />
+          </motion.div>
+          <SelectInput
+            regions={data.regions}
+            filterRegion={filterRegion}
+            isFiltering={isFiltering}
+          />
+        </div>
+      </div>
+      <div className="flex flex-col">
+        {displayedRegions ?
+          displayedRegions.map((region, i) => {
+            const { regionAffiliates } = region;
+            let regionAffiliatesArray = [];
+            regionAffiliates.map((affiliate, index) => {
+              let subArrayIndex = [];
+              // if media is mobile row is limited into two cards for the two cards row animation
+              // else limit each row into three cards per row with three the thee row animation
+              subArrayIndex = Math.floor(index / (media === "mobile" ? 1 : media === "tablet" ? 2 : 3));
+              if (!regionAffiliatesArray[subArrayIndex]) regionAffiliatesArray[subArrayIndex] = [];
+              regionAffiliatesArray[subArrayIndex].push(affiliate);
+            });
+            let currentRegionName;
+            if (region.regionName && lang) currentRegionName = region.regionName[lang];
+            return (
+              <div key={i} className="w-screen relative">
+                <motion.div style={{ opacity: 0 }} {...RegionsTitleAnimationJson} className="region-title">
+                  {currentRegionName}
+                </motion.div>
+                <div className="flex flex-col pb-6">
+                  {
+                    regionAffiliatesArray.map((affiliatesRow, i) => {
+                      return (
+                        <div
+                          key={i}
+                          viewport={{ once: false }}
+                          className="affiliates-row gap-8"
+                        >
+                          {
+                            affiliatesRow.map((affiliates, counter) => {
+                              let currentMediaRowCardsAnimation = media === "mobile"
+                                ? MobileOneRowCardsAnimationJson[counter]
+                                : media === "tablet"
+                                  ? MobileRowCardsAnimationJson[counter]
+                                  : RowCardsAnimation[counter];
+                              return (
+                                <motion.div
+                                  key={counter}
+                                  className="affiliate-card"
+                                  style={{ opacity: 0 }}
+                                  {
+                                  ...currentMediaRowCardsAnimation
+                                  }
+                                >
+                                  {
+                                    media === "desktop"
+                                      ?
+                                      <FlipCard
+                                        hotelName={affiliates.affiliateName}
+                                        numOfStars={affiliates.affiliateNumberOfStars}
+                                        content={affiliates.affiliateContent[lang]}
+                                        googleScore={affiliates.affiliateGoogleScore}
+                                        link={affiliates.affiliateLink}
+                                        image={affiliates.affiliateStyleImage}
+                                        lang={lang} />
+                                      :
+                                      <DefaultCard
+                                        hotelName={affiliates.affiliateName}
+                                        numOfStars={affiliates.affiliateNumberOfStars}
+                                        content={affiliates.affiliateContent[lang]}
+                                        googleScore={affiliates.affiliateGoogleScore}
+                                        link={affiliates.affiliateLink}
+                                        image={affiliates.affiliateStyleImage}
+                                        lang={lang}
+                                        media={media} />
+                                  }
+                                </motion.div>
+                              )
+                            })
+                          }
+                        </div>
+                      )
+                    })
+                  }
+                </div>
+              </div>
+            )
+          }) : ''
+        }
       </div>
     </div>
-    <div className="flex flex-col">
-      {displayedRegions ? 
-        displayedRegions.map((region, i) => {
-          const { regionAffiliates } = region;
-          let regionAffiliatesArray = [];
-          regionAffiliates.map((affiliate, index) => {
-            let subArrayIndex = [];
-            // if media is mobile row is limited into two cards for the two cards row animation
-            // else limit each row into three cards per row with three the thee row animation
-            subArrayIndex = Math.floor(index / (media === "mobile" ? 1 : media === "tablet" ? 2 : 3));
-            if (!regionAffiliatesArray[subArrayIndex]) regionAffiliatesArray[subArrayIndex] = [];
-            regionAffiliatesArray[subArrayIndex].push(affiliate);
-          });
-          let currentRegionName;
-          if (region.regionName && lang) currentRegionName = region.regionName[lang];          
-          return (
-            <div key={i} className="w-screen relative">
-              <motion.div style={{ opacity: 0 }} {...RegionsTitleAnimationJson} className="region-title">
-                {currentRegionName}
-              </motion.div>
-              <div className="flex flex-col pb-6"> 
-                {
-                  regionAffiliatesArray.map((affiliatesRow, i) => {
-                    return (
-                      <div 
-                        key={i} 
-                        viewport={{once: false}}
-                        className="affiliates-row gap-8"
-                      >
-                        {
-                          affiliatesRow.map((affiliates, counter) => {
-                            let currentMediaRowCardsAnimation = media === "mobile"
-                              ? MobileOneRowCardsAnimationJson[counter]
-                              : media === "tablet"
-                              ? MobileRowCardsAnimationJson[counter]
-                              : RowCardsAnimation[counter];
-                            return (
-                              <motion.div
-                                key={counter} 
-                                className="affiliate-card" 
-                                style={{ opacity: 0 }}
-                              {
-                                ...currentMediaRowCardsAnimation
-                              }
-                              >
-                                {
-                                  media === "desktop"
-                                  ?
-                                    <FlipCard
-                                      hotelName={affiliates.affiliateName}
-                                      numOfStars={affiliates.affiliateNumberOfStars}
-                                      content={affiliates.affiliateContent[lang]}
-                                      googleScore={affiliates.affiliateGoogleScore}
-                                      link={affiliates.affiliateLink}
-                                      image={affiliates.affiliateStyleImage}
-                                      lang={lang} />
-                                  :
-                                    <DefaultCard 
-                                      hotelName={affiliates.affiliateName}
-                                      numOfStars={affiliates.affiliateNumberOfStars}
-                                      content={affiliates.affiliateContent[lang]}
-                                      googleScore={affiliates.affiliateGoogleScore}
-                                      link={affiliates.affiliateLink}
-                                      image={affiliates.affiliateStyleImage}
-                                      lang={lang}
-                                      media={media} />
-                                }
-                              </motion.div>
-                            )
-                          })
-                        }
-                      </div>
-                    )
-                  })
-                }
-              </div>
-            </div>
-          )
-        }) : ''
-      }
-    </div>
-  </div>
   );
 };

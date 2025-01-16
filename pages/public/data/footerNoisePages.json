@@ -1,0 +1,62 @@
+[
+  {
+    "district": "Surathani",
+    "paths": [
+      {
+        "label": "KohPhangan",
+        "link": "/koh-phangan",
+        "isActive": true
+      },
+      {
+        "label": "KohSamui",
+        "link": "/koh-samui",
+        "isActive": true
+      },
+      {
+        "label": "KohTao",
+        "link": "/koh-tao",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "district": "Mueang",
+    "paths": [
+      {
+        "label": "Phuket",
+        "link": "/",
+        "isActive": false
+      },
+      {
+        "label": "KohChang",
+        "link": "/",
+        "isActive": false
+      },
+      {
+        "label": "someIsland",
+        "link": "/",
+        "isActive": false
+      }
+    ]
+  },
+  {
+    "district": "North",
+    "paths": [
+      {
+        "label": "ChiangMai",
+        "link": "/",
+        "isActive": false
+      },
+      {
+        "label": "kanchanaburi",
+        "link": "/",
+        "isActive": false
+      },
+      {
+        "label": "someIsland",
+        "link": "/",
+        "isActive": false
+      }
+    ]
+  }
+]

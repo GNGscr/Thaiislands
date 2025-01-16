@@ -31,8 +31,8 @@ const HorizontalScrollCarousel = ({ data, media }) => {
       "end": "-83.5%",
     },
     "tablet": {
-      "start": "1.05%", 
-      "end": "-84.25%", 
+      "start": "1.05%",
+      "end": "-84.25%",
     },
     "mobile": {
       "start": "0.25%",
@@ -46,18 +46,18 @@ const HorizontalScrollCarousel = ({ data, media }) => {
     [media
       ? deviceMedium[media].start
       : '', media
-        ? deviceMedium[media].end
-        : '']
+      ? deviceMedium[media].end
+      : '']
   );
 
   return (
     <section id="cafes" ref={targetRef} className={`relative h-[300${media === 'desktop' ? 'vh' : 'dvh'}] bg-white`}>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
-          {data ? 
+          {data ?
             cards.map((card) => {
               return <Card card={card} media={media} key={card.id} />;
-          }) : ''}
+            }) : ''}
         </motion.div>
       </div>
     </section>
@@ -86,13 +86,13 @@ const Card = ({ card, media }) => {
         </a>
       </div>
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p style={{ textAlign: 'center'}}
+        <p style={{ textAlign: 'center' }}
           className={`bg-gradient-to-br from-white/20 to-white/0 p-8 
           text-6xl font-black uppercase text-white backdrop-blur-lg`}>
           {card.title}
         </p>
       </div>
-        <div className="rest-card-content"> {card.content? card.content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vero cum deserunt vel voluptatum officiis nisi, ipsam totam fugiat? Facere voluptates dolor id nesciunt quod.'}</div>
+      <div className="rest-card-content"> {card.content ? card.content : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vero cum deserunt vel voluptatum officiis nisi, ipsam totam fugiat? Facere voluptates dolor id nesciunt quod.'}</div>
     </div>
   );
 };
