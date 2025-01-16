@@ -19,7 +19,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
   // console.log('card limit he: ', 225);
   // console.log('card limit en recommended: ', 255);
   // console.log('card limit he recommended: ', 205);
-  
+
   return (
     <div className="bg-white main">
       <TextParallaxContentComponent
@@ -40,7 +40,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
           currentPara={data["article-main-paragraph"][lang].a}
           isLogoSection={true}
           sidePara={data.sideParagraphs.sidePara1}
-          lang={lang} 
+          lang={lang}
         />
 
       </TextParallaxContentComponent>
@@ -69,29 +69,28 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
 
       </TextParallaxContentComponent>
 
-      <div className={`relative h-[${
-          media === 'desktop'? '120' : '60'}${media === 'desktop' ? 'vh': 'lvh'}]`
-          }>
+      <div className={`relative h-[${media === 'desktop' ? '120' : '60'}${media === 'desktop' ? 'vh' : 'lvh'}]`
+      }>
         <div className="sticky top-0">
           <SwipeCarousel data={data} lang={lang} media={media} />
         </div>
       </div>
 
       <div className="decleration-wrapper">
-        <motion.div 
+        <motion.div
           className="decleration"
           initial={{ opacity: 0, y: "120%", }}
           whileInView={{ opacity: 1, y: 0, }}
           transition={{ duration: 0.75, type: "spring" }}
-          >
+        >
           <span className="text-7xl text-[#ccc] relative top-[-0.75rem]"></span>
-            {data["article-second-paragraph"][lang]} 
+          {data["article-second-paragraph"][lang]}
           <div
             className={`blink-emoji text-[2.25rem] absolute bottom-[-0.5rem]
               ${lang === 'he' ? 'left-80' : 'right-60'} pl-9`}>
             😉
           </div>
-          <span className="text-7xl text-[#ccc]" style={{transform: "rotateZ(180deg)"}}></span>
+          <span className="text-7xl text-[#ccc]" style={{ transform: "rotateZ(180deg)" }}></span>
         </motion.div>
       </div>
       <HotelsSection data={data} lang={lang} media={media} />
@@ -114,7 +113,7 @@ const TextParallaxContentComponent = ({
   activateMenuIsActive,
   title,
   media
-}) => {  
+}) => {
   return (
     <div
       style={{
@@ -153,7 +152,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
   const opacityMobile = useTransform(scrollYProgress, [0, 0.05, 1], [0.3, 0.15, 0]);
 
   if (!imgUrl) return '';
-  
+
   else return (
     <motion.div
       style={{
@@ -167,28 +166,28 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
       }}
       ref={targetRef}
       className="sticky z-0 overflow-hidden rounded-3xl"
-      >
+    >
       <motion.div
         className="absolute inset-0 bg-neutral-950/80"
         style={{ opacity: media === "mobile" ? opacityMobile : opacity }}
-        />
-        
-        {
-          isMapVisible
+      />
+
+      {
+        isMapVisible
           ? <div id="map">
-              <div className="map-responsive">
-                <iframe src={data.googleMap.link}
-                    width={data["island-name"][lang] === "Koh Phangan" ? "600" : "100%"} 
-                    height="450" 
-                    allowFullScreen 
-                    loading="lazy" 
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Responsive Google Map">
-                </iframe>
-              </div>
+            <div className="map-responsive">
+              <iframe src={data.googleMap.link}
+                width={data["island-name"][lang] === "Koh Phangan" ? "600" : "100%"}
+                height="450"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Responsive Google Map">
+              </iframe>
+            </div>
           </div>
           : ''
-        }
+      }
     </motion.div>
   );
 };
@@ -209,7 +208,7 @@ const OverlayCopy = ({
     target: targetRef,
     offset: ["start end", "end start"],
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
   const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
   const opacityMobile = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [1, 1, 0]);
@@ -223,9 +222,9 @@ const OverlayCopy = ({
     >
       <div className="hover-the-map-txt text-center text-4xl font-bold md:text-7xl">
         {
-        isHeader
-          ? <h3 className="mt-[-3rem]">{title}</h3>
-          : <div className="hover-map">{heading}</div>
+          isHeader
+            ? <h3 className="mt-[-3rem]">{title}</h3>
+            : <div className="hover-map">{heading}</div>
         }
       </div>
       <motion.div
@@ -239,8 +238,8 @@ const OverlayCopy = ({
     </motion.div>
   );
 };
-// bug with overflow
-const ExampleContent = ({currentPara,isLogoSection, sidePara, lang, data}) => (
+
+const ExampleContent = ({ currentPara, isLogoSection, sidePara, lang, data }) => (
   <div className={`section-content
     ${lang === "he"
       ? 'mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12'
@@ -256,13 +255,14 @@ const ExampleContent = ({currentPara,isLogoSection, sidePara, lang, data}) => (
             initial={{
               opacity: 0,
               x: lang === "he" ? "-100%" : "100%",
-              skewX: "30deg"}}
+              skewX: "30deg"
+            }}
             whileInView={{ opacity: 1, x: "15%", skewX: 0 }}
             transition={{ duration: 0.4, type: "tween", }}
           >
             {sidePara[lang]}
           </motion.div>
-          </div>
+        </div>
       }
     </h2>
     <div className="section-content-para col-span-1 md:col-span-8">
