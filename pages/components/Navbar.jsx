@@ -226,8 +226,6 @@ export default function Navbar({
   }, [color]);
 
   if (!data || !currentMedia) return;
-  console.log("data: ", data);
-  
   return (
     <div ref={scope} className="fixed w-full flex align-center top-[0rem] left-0" style={{ zIndex: 4 }}>
       <motion.div id="main" variants={variants} className="relative w-full flex align-center top-[0.75rem]"

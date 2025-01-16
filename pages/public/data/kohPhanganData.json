@@ -52,18 +52,14 @@
             "he": [
                 { "label": "בית", "intersectionId": "#home", "href": "#home" },
                 { "label": "מפה", "intersectionId": "#map-img", "href": "#map" },
-                { "label": "גלריה", "intersectionId": "#gallery", "href": "#gallery" },
                 { "label": "מלונות", "intersectionId": "#hotels", "href": "#hotels" },
-                { "label": "מסעדות", "intersectionId": "#cafes", "href": "#cafes" },
                 { "label": "אירועים", "intersectionId": "#events", "href": "#events" },
                 { "label": "מדיה", "intersectionId": "#media", "href": "#media" }
             ],
             "en": [
                 { "label": "Home", "intersectionId": "#home", "href": "#home" },
                 { "label": "Map", "intersectionId": "#map-img", "href": "#map" },
-                { "label": "Gallery", "intersectionId": "#gallery", "href": "#gallery" },
                 { "label": "Hotels", "intersectionId": "#hotels", "href": "#hotels" },
-                { "label": "Cafes", "intersectionId": "#cafes", "href": "#cafes" },
                 { "label": "Events", "intersectionId": "#events", "href": "#events" },
                 { "label": "Media", "intersectionId": "#media", "href": "#media" }
             ]
