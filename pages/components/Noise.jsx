@@ -12,7 +12,7 @@ export default function Noise() {
 
   const pathname = usePathname();
   return (
-    // NOTE: An overflow of hidden will be required on a wrapping element to see expected results
+    // NOTE: An overflow of hidden will be required on a wrapping  element to see expected results
     <div className="relative overflow-hidden">
       <PagesPathComponent pages={FooterNoisePages} pathname={pathname} />
       <NoiseComponent />
@@ -41,7 +41,8 @@ const NoiseComponent = () => {
   );
 };
 
-const PagesPathComponent = ({ FooterNoisePages, pathname }) => {
+const PagesPathComponent = ({ pages, pathname }) => {
+
   const [isColorRed, setIsColorRed] = useState(false);
   const DE = "Daniel Ehrlich";
   return (
@@ -49,8 +50,8 @@ const PagesPathComponent = ({ FooterNoisePages, pathname }) => {
       <div className="inner-footer relative -top-[30] text-neutral-20 w-fit px-4 py-2 font-semibold text-neutral-200 transition-colors">
         <div className="flex gap-[15rem] w-[50%]">
           {
-            FooterNoisePages
-              ? FooterNoisePages.map((page, i) => {
+            pages
+              ? pages.map((page, i) => {
                 return (
                   <div key={i} className="text-[1.1rem] pt-3">
 
