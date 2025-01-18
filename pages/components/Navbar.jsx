@@ -65,7 +65,8 @@ export default function Navbar({
   
   useEffect(() => {
     const intersections =
-      document.querySelectorAll([...data["navbar"][currentMedia][language].map((item) => item.intersectionId)]);
+      document.querySelectorAll([...data["navbar"][currentMedia][language].map((item) =>
+        item.intersectionId)]);
     const intersectionsIterator = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

@@ -375,9 +375,16 @@ html[lang="he-IL"] .cta-button {
 
 select {
   outline: none;
-  background-color: #fff;
+  background: #fff;
   -webkit-tap-highlight-color: transparent !important;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none; */
+  /* appearance: none; */
+  /* pointer-events: visibleFill; */
+  /* box-shadow: inset 1px 1px 2px #DDD8DC; */
+  /* Remove default arrow */
+  /* background-image: url(...); */
 }
 select > option {
   outline: none;
