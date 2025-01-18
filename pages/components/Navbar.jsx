@@ -16,7 +16,7 @@ export default function Navbar({
       "he": {
         "home": { right: 4, width: 84 },
         "map-img": { right: 102, width: 76 },
-        // "gallery": { right: 184, width: 115 },
+        "gallery": { right: 184, width: 115 },
         "hotels": { right: 300, width: 108 },
         "cafes": { right: 300, width: 108 },
         "events": { right: 320, width: 108 },
@@ -25,7 +25,7 @@ export default function Navbar({
       "en": {
         "home": { left: 4, width: 88 },
         "map-img": { left: 102, width: 76.5 },
-        // "gallery": { left: 190, width: 114 },
+        "gallery": { left: 190, width: 114 },
         "hotels": { left: 316, width: 104 },
         "cafes": { left: 316, width: 104 },
         "events": { left: 356, width: 104 },
