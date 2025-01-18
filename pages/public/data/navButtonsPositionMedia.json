@@ -17,6 +17,14 @@
                 "right": 300,
                 "width": 108
             },
+            "cafes": {
+                "right": 300,
+                "width": 108
+            },
+            "events": {
+                "right": 320,
+                "width": 108
+            },
             "media": {
                 "right": 416,
                 "width": 89.8125
@@ -37,6 +45,14 @@
             },
             "hotels": {
                 "left": 316,
+                "width": 104
+            },
+            "cafes": {
+                "left": 316,
+                "width": 104
+            },
+            "events": {
+                "left": 356,
                 "width": 104
             },
             "media": {
@@ -63,9 +79,17 @@
                 "right": 140,
                 "width": 92
             },
-            "media": {
+            "cafes": {
                 "right": 140,
                 "width": 92
+            },
+            "events": {
+                "right": 140,
+                "width": 92
+            },
+            "media": {
+                "right": 190,
+                "width": 83
             }
         },
         "en": {
@@ -82,6 +106,14 @@
                 "width": 120
             },
             "hotels": {
+                "right": 140,
+                "width": 115
+            },
+            "cafes": {
+                "right": 140,
+                "width": 115
+            },
+            "events": {
                 "right": 140,
                 "width": 115
             },

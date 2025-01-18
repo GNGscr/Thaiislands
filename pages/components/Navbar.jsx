@@ -4,75 +4,14 @@ import { motion, useScroll, useMotionValueEvent, useAnimate, useTransform } from
 import RevealLinks from "./RevealLinks";
 import { usePathname } from 'next/navigation';
 import { useGlobalSettings } from './GlobalSettings';
+import navButtonsPositionMedia from "../public/data/navButtonsPositionMedia.json";
+
 
 export default function Navbar({
   data,
   toggleLanguage,
   activateMenuIsActive
 }) {
-
-  const navButtonsPositionMedia = {
-    "desktop": {
-      "he": {
-        "home": { right: 4, width: 84 },
-        "map-img": { right: 102, width: 76 },
-        "gallery": { right: 184, width: 115 },
-        "hotels": { right: 300, width: 108 },
-        "cafes": { right: 300, width: 108 },
-        "events": { right: 320, width: 108 },
-        "media": { right: 416, width: 89.8125 },
-      },
-      "en": {
-        "home": { left: 4, width: 88 },
-        "map-img": { left: 102, width: 76.5 },
-        "gallery": { left: 190, width: 114 },
-        "hotels": { left: 316, width: 104 },
-        "cafes": { left: 316, width: 104 },
-        "events": { left: 356, width: 104 },
-        "media": { left: 432, width: 90.5 },
-      },
-    },
-    "tablet": {
-      "he": {
-        "home": { right: 40, width: 80 },
-        "map-img": { right: 44, width: 80 },
-        "gallery": { right: 80, width: 87 },
-        "hotels": { right: 140, width: 92 },
-        "cafes": { right: 140, width: 92 },
-        "events": { right: 140, width: 92 },
-        "media": { right: 190, width: 83 },
-      },
-      "en": {
-        "home": { right: 40, width: 100 },
-        "map-img": { right: 44, width: 85 },
-        "gallery": { right: 80, width: 120 },
-        "hotels": { right: 140, width: 115 },
-        "cafes": { right: 140, width: 115 },
-        "events": { right: 140, width: 115 },
-        "media": { right: 190, width: 102 },
-      },
-    },
-    "mobile": {
-      "he": {
-        "home": { right: 4, width: 40 },
-        "map-img": { right: 44, width: 40 },
-        "gallery": { right: 80, width: 64 },
-        "hotels": { right: 140, width: 50 },
-        // "cafes": { right: 140, width: 50 },
-        // "events": { right: 140, width: 50 },
-        "media": { right: 190, width: 50 },
-      },
-      "en": {
-        "home": { left: 4, width: 44 },
-        "map-img": { left: 44, width: 40 },
-        "gallery": { left: 80, width: 62 },
-        "hotels": { left: 140, width: 56 },
-        // "cafes": { left: 140, width: 56 },
-        // "events": { left: 140, width: 56 },
-        "media": { left: 190, width: 50 },
-      },
-    }
-  };
   
   const directionToOffset = {
     "en": "left",
