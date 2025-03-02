@@ -20,10 +20,10 @@ export default function Layout() {
     { "en": "Koh Phangan", "he": "קופנגן", "link": "/koh-phangan" },
     { "en": "Koh Samui", "he": "קוסמוי", "link": "/koh-samui" },
     { "en": "Koh Tao", "he": "קוטאו", "link": "/koh-tao" },
-    { "en": "Phuket", "he": "פוקט", "link": "/phuket" },
-    { "en": "Chang Mae", "he": "צ׳אנג מאי ", "link": "/changmai" },
-    { "en": "Pai", "he": "פאי", "link": "/pai" },
-    { "en": "Krabi", "he": "קראבי", "link": "krabi" }
+    // { "en": "Phuket", "he": "פוקט", "link": "/phuket" },
+    // { "en": "Chang Mae", "he": "צ׳אנג מאי ", "link": "/changmai" },
+    // { "en": "Pai", "he": "פאי", "link": "/pai" },
+    // { "en": "Krabi", "he": "קראבי", "link": "krabi" }
   ];
 
   useEffect(() => {
