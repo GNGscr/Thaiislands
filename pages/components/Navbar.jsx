@@ -28,6 +28,7 @@ export default function Navbar({
     opacity: 1,
   });
 
+  const [ lastYPosition, setLastYPosition ] = useState(0);
   const [currentButton, setCurrentButton] = useState();
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [isNavToggleSvgVisible, setIsNavToggleSvgVisible] = useState(false);
@@ -50,6 +51,14 @@ export default function Navbar({
     return () => (window.removeEventListener('resize', resizeEvent));
   });
 
+  // useEffect(() => {
+  //   const lastPosition = window.addEventListener('scroll', (e) => {
+  //     e.preventDefault();
+  //     setLastYPosition(window.scrollY);
+  //   });
+  //   return () => (window.removeEventListener('scroll', lastPosition));
+  // });
+
   useEffect(() => {
     let main = document.querySelector("#main");
     if (main) {
@@ -64,10 +73,12 @@ export default function Navbar({
   }, [isNavbarVisible, animate]);
   
   useEffect(() => {
+
     const intersections =
       document.querySelectorAll([...data["navbar"][currentMedia][language].map((item) =>
         item.intersectionId)]);
     const intersectionsIterator = (entries) => {
+
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const intersectingEntry = entry.target.id.replace('#', '');
@@ -112,7 +123,7 @@ export default function Navbar({
       navButtonsPositionMedia[currentMedia][language][currentButton];
     if (lastPosition) {
       setPosition({
-        [directionToOffset[language]]: lastPosition[directionToOffset[language]],
+      [directionToOffset[language]]: lastPosition[directionToOffset[language]],
         width: lastPosition.width,
         opacity: 1,
       });

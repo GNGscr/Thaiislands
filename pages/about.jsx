@@ -8,7 +8,7 @@ export default function About({ media }) {
         {label: 'Koh Tao', link: '/koh-tao', img: ''},
     ];
     return (
-        <div className={`about-us flex flex-col justify-center h-[96.5${media === 'desktop' ? 'vh' : 'vh'}] relative`}
+        <div className={`about-us flex flex-col justify-center h-[96.5vh] relative`}
             style={{
                 margin: '0.75rem',
                 borderRadius: '1.85rem',

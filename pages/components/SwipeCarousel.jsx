@@ -20,6 +20,7 @@ import samuiPig from '../../pages/public/images/koh-samui-pig.jpg';
 import samuiDrunkGirls from '../../pages/public/images/koh-samui-girls.jpg';
 
 let imgs = [];
+
 const phanganImgs = [
   phangandownhill.src,
   jambar1.src,
@@ -91,8 +92,7 @@ export default function SwipeCarousel({ data, lang, media }) {
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  });
 
   const onDragEnd = () => {
     const x = dragX.get();
@@ -188,6 +188,7 @@ const Dots = ({ imgIndex, setImgIndex, media }) => {
       {imgs.map((_, idx) => {
         return (
           <button
+            aria-label="dots-btn"
             key={idx}
             onClick={() => setImgIndex(idx)}
             className={`h-3 w-3 rounded-full transition-colors ${

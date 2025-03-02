@@ -19,6 +19,7 @@ export default function HotelsSection({ data, lang, media }) {
 
   useEffect(() => {
     setDisplayedRegions(data.regions);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const filterRegion = value => {
@@ -28,6 +29,7 @@ export default function HotelsSection({ data, lang, media }) {
         : data.regions.filter(r => r.regionName.en === value)
     );
     setIsFiltering(!isFiltering);
+    
     if (target) {
       const targetPosition = target.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: targetPosition, behavior: 'smooth' });

@@ -18,9 +18,9 @@ export default function ButtonLightningAnimation({ text, activateMenuIsActive })
   }
   return (
     <motion.div
-    initial={{ opacity: 0, scale: 0, skewX: "-15deg" }}
-    whileInView={{ opacity: 1, scale: 1, skewX: 0 }}
-    transition={{ duration: 0.65, type: "tween", }}
+      initial={{ opacity: 0, scale: 0, skewX: "-15deg" }}
+      whileInView={{ opacity: 1, scale: 1, skewX: 0 }}
+      transition={{ duration: 0.65, type: "tween", }}
       className={`button-lightning grid place-content-center
       p-4 text-3xl --font-space-grotesk`}>
       <a href="#hotels" onClick={handleClick}>
@@ -35,6 +35,7 @@ export default function ButtonLightningAnimation({ text, activateMenuIsActive })
 const DrawOutlineButton = ({ children, ...rest }) => {
   return (
     <button
+      aria-label="cta-btn"
       {...rest}
       className="group relative px-4 py-2 font-medium text-slate-100 transition-colors duration-[400ms] hover:text-white"
     >

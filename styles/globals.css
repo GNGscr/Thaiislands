@@ -378,6 +378,7 @@ select {
   background: #fff;
   -webkit-tap-highlight-color: transparent !important;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  cursor: pointer;
   /* -webkit-appearance: none; */
   /* -moz-appearance: none; */
   /* appearance: none; */
@@ -386,15 +387,91 @@ select {
   /* Remove default arrow */
   /* background-image: url(...); */
 }
-select > option {
+
+/* select > option {
   outline: none;
   padding-block-end: 0;
   padding-inline: 0;
   appearance: none;
-}
+  background: #fff;
+} */
 select:focus, section > input:focus {
   outline: none;
 }
+select * {
+  background: red;
+}
+
+
+/* Style the select element */
+/* .filter-selector select {
+  background-color: red;
+  color: green;
+  border: 1px solid #333;  
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* Style the option elements */
+/* .filter-selector select option {
+  background-color: red;
+  color: green;
+} */
+
+/* Optional: Style the button if you want to make it consistent */
+/* .filter-selector .filter-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+} */
+
+
+
+
+/* Style the select element */
+.filter-selector select {
+  /* background-color: red; */
+  color: #555;
+  /* border: 1px solid #ccc;  */
+   /* Optional: to give a border to the select box */
+  padding: 0.5rem 0;
+  font-size: 1.15rem;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  /* padding-block-end: 2rem; */
+  /* padding-inline-end: 2rem; */
+}
+select > * {
+  background-color: red;
+}
+
+/* Style the option elements */
+.filter-selector select option::slotted {
+  background-color: yellow;
+  color: blue;
+}
+
+/* Optional: Style the button if you want to make it consistent */
+.filter-selector .filter-btn {
+  /* background-color: #007bff; */
+  background-color: #171717;
+  color: white;
+  padding: 0.35rem 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+
+
 /* Disable blue highlight on button click */
 button {
   -webkit-tap-highlight-color: transparent;
@@ -1973,17 +2050,22 @@ html[lang="en-US"] .star-score {
   width: fit-content;
   column-gap: 1rem;
   position: absolute;
-  left: 1rem;
-  top: 0.25rem;
+  left: 0rem;
+  /* top: 0.25rem; */
+  top: -0.25rem;
   visibility: visible;
 }
 select {
   color: #444;
   background-color: #fff;
+  max-width: 350px;
 }
-select:focus-visible{
+select:focus-visible {
   outline: none;
 }
+/* select::placeholder {
+  font-size: 1.5rem;
+} */
 .filter-btn {
   margin-top: 0.35rem;
   background-color: #000;

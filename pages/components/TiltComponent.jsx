@@ -15,8 +15,8 @@ const TiltComponent = ({ isLogoSection, data }) => {
   );
 };
 
-const ROTATION_RANGE = 22.5;
-const HALF_ROTATION_RANGE = 22.5 / 2;
+const ROTATION_RANGE = 15;
+const HALF_ROTATION_RANGE = 15 / 2;
 
 const TiltCardComponent = ({ isLogoSection, data }) => {
   const ref = useRef(null);

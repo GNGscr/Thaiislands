@@ -19,7 +19,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
   // console.log('card limit he: ', 225);
   // console.log('card limit en recommended: ', 255);
   // console.log('card limit he recommended: ', 205);
-
+  
   return (
     <div className="bg-white main">
       <TextParallaxContentComponent
@@ -112,7 +112,8 @@ const TextParallaxContentComponent = ({
   lang,
   activateMenuIsActive,
   title,
-  media
+  media,
+  router
 }) => {
   return (
     <div
@@ -122,7 +123,7 @@ const TextParallaxContentComponent = ({
       }}
     >
       <div className={`relative h-[150vh]`} id={`${isMapVisible ? 'map-img' : ''}`}>
-        <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} media={media} />
+        <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} media={media} router={router} />
         <OverlayCopy
           heading={heading}
           subheading={subheading}
@@ -141,16 +142,17 @@ const TextParallaxContentComponent = ({
 };
 
 const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
+
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["end end", "end start"],
   });
-
+  
   const scale = useTransform(scrollYProgress, [0, 0.02, 1], [1, 1, 0.85]);
-  const opacity = useTransform(scrollYProgress, [0, 0.02, 1], [1, 0, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.0275, 1], [1, 0, 0]);
   const opacityMobile = useTransform(scrollYProgress, [0, 0.05, 1], [0.3, 0.15, 0]);
-
+  
   if (!imgUrl) return '';
 
   else return (

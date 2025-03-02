@@ -63,6 +63,7 @@ export const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }) =
   return (
     <>
       <button
+        aria-label="panel-btn"
         className="bg-white hover:bg-slate-50 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
         onClick={() => setOpen(id)}
       >
