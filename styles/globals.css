@@ -1264,6 +1264,7 @@ html[lang="he-IL"] .magnetic-main {
   justify-content: center;
   background-color: #fff;
   z-index: 4;
+  font-size: 3rem;
 }
 html[lang="en-US"] .social-title {
   font-size: 3rem;
