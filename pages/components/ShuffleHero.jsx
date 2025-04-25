@@ -118,7 +118,7 @@ const ShuffleGrid = ({language}) => {
 
   const shuffleTitle = {
     "en": "Try the Blind Selection - (click randomly on one of the options)",
-    "he": "תנסו את הבחירה העיוורת - (בחרו רנדומלית באחת האופציות)",
+    "he": "תנסו את הבחירה העיוורת - (ליחצו רנדומלית על אחת האופציות)",
   };
 
   useEffect(() => {

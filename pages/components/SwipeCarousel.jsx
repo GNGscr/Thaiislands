@@ -7,7 +7,6 @@ import rinbeach from '../../pages/public/images/koh-phangan-rin-beach.PNG';
 import phangandownhill from '../../pages/public/images/koh-phangan-downhill-view.jpg';
 import phanganChilling from '../../pages/public/images/koh-phangan-chilling.jpg';
 import phanganParties from '../../pages/public/images/koh-phangan-party.jpg';
-// import phanganRasta from '../../pages/public/images/koh-phangan-rasta-1.jpg';
 import jambar1 from '../../pages/public/images/koh-phangan-jambar-1.jpg';
 import jambar2 from '../../pages/public/images/koh-phangan-jambar-2.jpg';
 import jambar3 from '../../pages/public/images/koh-phangan-jambar-3.jpg';
@@ -18,6 +17,8 @@ import samuiTraffic2 from '../../pages/public/images/koh-samui-traffic-2.jpg';
 import samuiBand1 from '../../pages/public/images/koh-samui-band-1.jpg';
 import samuiPig from '../../pages/public/images/koh-samui-pig.jpg';
 import samuiDrunkGirls from '../../pages/public/images/koh-samui-girls.jpg';
+import LANG from "../public/data/en.json";
+// import { cn } from "../public/services/utils";
 
 let imgs = [];
 
@@ -55,7 +56,7 @@ const SPRING_OPTIONS = {
   type: "spring",
   mass: 3,
   stiffness: 400,
-  damping: 50,
+  damping: DRAG_BUFFER,
 };
 
 const spacingIndex = {
@@ -66,9 +67,9 @@ const spacingIndex = {
 export default function SwipeCarousel({ data, lang, media }) {
 
   if (data) {
-    imgs = data["island-name"].en === "Koh Phangan"
+    imgs = data["island-name"].en === LANG.KOH_PHANGAN
       ? phanganImgs
-      : data["island-name"].en === "Koh Samui"
+      : data["island-name"].en === LANG.KOH_SAMUI
         ? samuiImgs
         : taoImgs;
   }
@@ -111,9 +112,9 @@ export default function SwipeCarousel({ data, lang, media }) {
       <ScreenFitText className="relative mb-[10rem]" isOnCarousal={true} text={data["island-name"]["en"]} />
       <div className="vacation-gallery-wrapper relative overflow-hidden rounded-xl mt-[5rem]" id="gallery">
         <div 
-          className="vacation-gallery w-full flex align-center justify-center text-[3rem] mb-[5px]" 
-          style={{ fontFamily: "--font-space-grotesk", opacity: 0.7, }}>
-          { 
+          className="vacation-gallery w-full flex align-center justify-center text-[3rem] mb-[5px]"
+          style={{ fontFamily: "--font-space-grotesk", opacity: 0.7 }}>
+          { // this is a loop to build split words
             ourVacationGalleryArray.map((letter, i) => {
               let counter = i + 1;
               return (

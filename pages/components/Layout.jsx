@@ -1,33 +1,20 @@
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from 'next/navigation';
 import { useGlobalSettings } from './GlobalSettings';
 import { motion } from "framer-motion";
-
+import links from "../public/data/links.json";
 
 export default function Layout() {
+  // const scope = useRef(null);
   const { language, setCurrentMedia } = useGlobalSettings();
-  const scope = useRef(null);
   const [ isSideNavToggleSvgVisible, setIsSideNavToggleSvgVisible ] = useState(false);
   const [ isSideNavToggleVisible, setIsSideNavToggleVisible ] = useState(false);
   
-  // const router = useRouter()
   const pathname = usePathname();
   let globalLanguage = language;
 
-  const links = [
-    { "en": "About", "he": "עלינו", "link": "/about" },
-    { "en": "Koh Phangan", "he": "קופנגן", "link": "/koh-phangan" },
-    { "en": "Koh Samui", "he": "קוסמוי", "link": "/koh-samui" },
-    { "en": "Koh Tao", "he": "קוטאו", "link": "/koh-tao" },
-    // { "en": "Phuket", "he": "פוקט", "link": "/phuket" },
-    // { "en": "Chang Mae", "he": "צ׳אנג מאי ", "link": "/changmai" },
-    // { "en": "Pai", "he": "פאי", "link": "/pai" },
-    // { "en": "Krabi", "he": "קראבי", "link": "krabi" }
-  ];
-
   useEffect(() => {
-
     if (window.innerWidth < 680) {
       setCurrentMedia("mobile");
       localStorage.setItem("media", "mobile");
@@ -38,26 +25,12 @@ export default function Layout() {
       setCurrentMedia("desktop");
       localStorage.setItem("media", "desktop");
     }
-     
-  });
+  }); 
 
-  const goToLink = e => {
-    setIsSideNavToggleSvgVisible(true);
-    setIsSideNavToggleVisible(false);
-  }
-
-  const mouseEnter = () => {
-    setIsSideNavToggleSvgVisible(true);
-    setIsSideNavToggleVisible(true);
-  }
-  const mouseleave = () => {
-    setIsSideNavToggleSvgVisible(false);
-    setIsSideNavToggleVisible(false);
-  }
-
-  const setLinksLang = (en, he) => {
-    return globalLanguage === "en" ? en : he;
-  }
+  const setSideVisibility = (navTglSvg, navTgl) => {
+    setIsSideNavToggleSvgVisible(navTglSvg);
+    setIsSideNavToggleVisible(navTgl);
+  };
 
   const variants = {
     initial: { x: "-115%", width: "175px" },
@@ -65,7 +38,7 @@ export default function Layout() {
   };
 
   return (
-    <div ref={scope}
+    <div
       className="layout-wrapper fixed w-full flex align-center top-[0rem]"
       style={{ zIndex: 3 }}>
       <motion.div
@@ -75,8 +48,8 @@ export default function Layout() {
         initial="initial"
         whileHover="animate"
         animate={isSideNavToggleVisible ? "animate" : "initial"}
-        onMouseEnter={mouseEnter}
-        onMouseLeave={mouseleave}
+        onMouseLeave={() => setSideVisibility(false, false)}
+        onMouseEnter={() => setSideVisibility(true, true)}
       >
         <div className="side-toggle-svg-wrapper">
 
@@ -88,15 +61,16 @@ export default function Layout() {
         </div>
 
         {
-          links.map(({ en, he, link }, index) => {
+          
+          links.map(({ link }, index) => {
             return (
               <Link
                 key={index}
                 href={link}
-                onClick={e => goToLink(e)}
+                onClick={() => setSideVisibility(true, false)}
                 className={`link ${pathname === link ? 'active-link' : ''}`}
               >
-                {setLinksLang(en, he)}
+                {links[index][globalLanguage]}
               </Link>
             )
           })

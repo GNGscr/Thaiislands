@@ -21,6 +21,9 @@ export default function Navbar({
   const { language, currentMedia, setCurrentMedia } = useGlobalSettings();
   const pathname = usePathname();
 
+  console.log(navButtonsPositionMedia[currentMedia][language]);
+  
+
   const [position, setPosition] = useState({
     [directionToOffset[language]]: 
       navButtonsPositionMedia[currentMedia][language].home[directionToOffset[language]],

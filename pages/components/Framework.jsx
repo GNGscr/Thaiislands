@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 
 export default function Framework({ frameworkOn=false }) {
 
@@ -10,7 +9,7 @@ export default function Framework({ frameworkOn=false }) {
         { "key": 2, "label": "2" }
     ];
 
-    useEffect(() => setIsFramework(!!frameworkOn ? true : false), [isFramework]);
+    useEffect(() => setIsFramework(!!frameworkOn ? true : false), [isFramework, frameworkOn]);
 
     return (
         <div className="framework">

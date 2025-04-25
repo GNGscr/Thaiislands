@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import img1 from '../../pages/public/images/panviman-resort.png';
@@ -39,8 +40,8 @@ const FlipCard = ({
               transition={{ duration: 0.005, animationDirection: "normal" }}
               onAnimationComplete={() => setIsAnimating(false)}
             >
-              <div 
-                className={`flip-card-front w-[100%] h-[100%] bg-cover border-[1px] text-white
+              {/* flip card front side */}
+              <div className={`flip-card-front w-[100%] h-[100%] bg-cover border-[1px] text-white
                   rounded-[6px] relative pointer-events-${isFlipped ? 'none' : 'auto'}`}
                 style={{ backgroundImage: `url(${img1})` }}
               >
@@ -74,12 +75,12 @@ const FlipCard = ({
                 </motion.div>
               </div>
 
+                  {/* flip card back side */}
               <div 
                 style={{ transform: 'rotateX(180deg)' }}
                 className={`flip-card-back w-[100%] h-[100%] bg-cover
                   border-[1px] text-black rounded-[6px] relative flex flex-col p-[0.5rem]
-                  `}
-                  >
+                  `}>
                 <img
                   src={image}
                   alt="img"
