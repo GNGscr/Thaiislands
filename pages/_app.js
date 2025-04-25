@@ -25,18 +25,3 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
-
-
-// import React from 'react';
-// import GlobalSettingsProvider from './GlobalSettings'; // Path to the updated file
-// import YourComponent from './YourComponent';
-
-// const App = () => {
-//   return (
-//     <GlobalSettingsProvider>
-//       <YourComponent />
-//     </GlobalSettingsProvider>
-//   );
-// };
-
-// export default App;
