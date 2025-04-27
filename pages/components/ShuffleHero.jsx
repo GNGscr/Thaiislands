@@ -32,7 +32,7 @@ export default function ShuffleHero() {
     <section className={`w-full mt-[-1.25rem] px-8 py-12 grid grid-cols-1 md:grid-cols-2
         items-center gap-[7.5rem] max-w-6xl mx-auto text-white`}
         style={{ textAlign: language === en ? 'left' : 'right'}}>
-      <div className={`about-nav flex justify-end w-full h-[60px] fixed top-[1rem] right-0`}>
+      <div className={`about-nav flex justify-end w-full h-[60px] fixed top-[1rem] right-0`} style={{ visibility: "hidden" }}>
         <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
       </div>
       <div className="about-us">
@@ -40,7 +40,7 @@ export default function ShuffleHero() {
           {kohPhanganData.aboutUsPage.header[language]}
         {/* 😉 */}
         </h3>
-        <p className={`text-base md:text-3xl text-slate-700 my-4 md:my-6 about-us-title text-white`}>
+        <p className={`text-base md:text-2xl text-slate-700 my-4 md:my-6 about-us-title text-white`}>
           {kohPhanganData.aboutUsPage.subHeader[language]}
         </p>
         <div className="flex justify-between mt-[8.5rem] w-[96%] z-5 page-btns-wrp">
