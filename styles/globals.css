@@ -899,7 +899,7 @@ html[lang="en-US"] .filter {
   z-index: 3;
 }
 .link:hover:not(.active-link) {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .active-link {
@@ -911,7 +911,7 @@ html[lang="en-US"] .filter {
   align-items: center;
   justify-content: center;
   padding: 0.35rem 1.1rem;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   border-radius: 0.15rem;
 }
 
