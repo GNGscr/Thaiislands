@@ -7,21 +7,18 @@ import HotelsSection from "./HotelsSection";
 import TiltComponent from "./TiltComponent";
 import { usePathname } from 'next/navigation';
 
-// :: TODOs :: 
-// OverAll - 
-// Check how to fetch everything from outside source including gallery photos all dynamic text and values !!!
-// Add cookies for crawlers 
-// Connect google analytics (using Goldi) to check for data and have control
-
 
 export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
+  
   if (!data) return;
-  // console.log('card limit en: ', 285);
-  // console.log('card limit he: ', 225);
-  // console.log('card limit en recommended: ', 255);
-  // console.log('card limit he recommended: ', 205);
+
   const pathname = usePathname();
-  console.log(pathname);
+
+  const emojiLocation = {
+    "/koh-phangan": "top-34 left-[65%]",
+    "/koh-samui": "top-20 left-[78%]",
+    "/koh-tao": "top-18 left-[85%]",
+  };
   
   return (
     <div className="bg-white main">
@@ -89,8 +86,9 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
           <span className="text-7xl text-[#ccc] relative top-[-0.75rem]"></span>
           {data["article-second-paragraph"][lang]}
           <div
-            className={`blink-emoji text-[2.25rem] absolute bottom-[-0.5rem]
-              ${lang === 'he' ? 'left-80' : 'right-60'} pl-9 ${pathname === "/koh-phangan" ? 'top-14 left-[85%]' : ''}`}>
+            className={`blink-emoji text-[2.25rem] absolute bottom-[-0.5rem] pl-9 
+              ${lang === 'he' ? 'left-80' : 'right-60'}
+              ${emojiLocation[pathname]}`}>
             😉
           </div>
           <span className="text-7xl text-[#ccc]" style={{ transform: "rotateZ(180deg)" }}></span>
@@ -248,10 +246,11 @@ const ExampleContent = ({ currentPara, isLogoSection, sidePara, lang, data }) =>
   <div className={`section-content
     ${lang === "he"
       ? 'mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12'
-      : 'mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-12 pt-24 md:grid-cols-12 md:grid-cols-reverse'
+      : 'mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-12 pt-24 md:grid-cols-12'
     }
-    `}>
-    <h2 className={`section-content-h col-span-1 text-3xl font-bold md:col-span-4 overflow-hidden`}>
+    `}
+    style={{ direction: "rtl", gap: "6rem" }}>
+    <h2 className={`section-content-h col-span-1 text-3xl font-bold md:col-span-4 overflow-hidden`} style={{ direction: "ltr" }}>
       {sidePara && lang &&
 
         <div className="text-[2.7rem] relative right-[15%] text-[#aaa]">
@@ -270,7 +269,7 @@ const ExampleContent = ({ currentPara, isLogoSection, sidePara, lang, data }) =>
         </div>
       }
     </h2>
-    <div className="section-content-para col-span-1 md:col-span-8">
+    <div className="section-content-para col-span-1 md:col-span-8" style={{ direction: "ltr" }}>
       <p className="section-content-para-1 mb-4 text-xl text-neutral-600 md:text-2xl">
         {currentPara}
       </p>

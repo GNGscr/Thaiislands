@@ -28,6 +28,7 @@ export default function KohPhangan() {
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === LANG.HE_IL ? LANG.EN_US : LANG.HE_IL);
         language === en ? setLanguage(he) : setLanguage(en);
     };
+          console.log(currentMedia);
           
     return (
       <>
@@ -48,7 +49,7 @@ export default function KohPhangan() {
           mapDrawing={phanganMap.src} />
         
         {/* Horizontal Carousel */}
-        {currentMedia === "desktop" ?? <HorizontalCarousel data={kohPhanganData} media={currentMedia} />}
+        {currentMedia && currentMedia === "desktop" ? <HorizontalCarousel data={kohPhanganData} media={currentMedia} /> : ""}
         <VerticalAccordion />
 
         <div id="media">
