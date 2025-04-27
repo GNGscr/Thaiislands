@@ -2,6 +2,7 @@
 import locationSVG from "../public/images/location-sign-svgrepo-com.svg";
 
 export default function Card({ card, media }) {
+    if (!card) return;
     return (
       <div
         key={card.id}
