@@ -1984,7 +1984,8 @@ html[lang="en-US"] .star-score {
 
 .horizontal-scroll-group {
   height: 96.5vh;
-  width: 78vw;
+  /* width: 78vw; */
+  width: 76vw;
 }
 
 .horizontal-scroll-group > div > p {
