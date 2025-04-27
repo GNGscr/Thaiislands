@@ -12,6 +12,9 @@ export default function Navbar({
   toggleLanguage,
   activateMenuIsActive
 }) {
+  useEffect(() => {
+    if (toggleLanguage) return;
+  }, [toggleLanguage]);
   
   const directionToOffset = {
     "en": "left",
@@ -21,12 +24,9 @@ export default function Navbar({
   const { language, currentMedia, setCurrentMedia } = useGlobalSettings();
   const pathname = usePathname();
 
-  console.log(navButtonsPositionMedia[currentMedia][language]);
-  
-
   const [position, setPosition] = useState({
     [directionToOffset[language]]: 
-      navButtonsPositionMedia[currentMedia][language].home[directionToOffset[language]],
+      navButtonsPositionMedia[currentMedia][language].home[directionToOffset[language]] || "",
     width: navButtonsPositionMedia[currentMedia][language].home.width,
     opacity: 1,
   });
@@ -53,14 +53,6 @@ export default function Navbar({
     });
     return () => (window.removeEventListener('resize', resizeEvent));
   });
-
-  // useEffect(() => {
-  //   const lastPosition = window.addEventListener('scroll', (e) => {
-  //     e.preventDefault();
-  //     setLastYPosition(window.scrollY);
-  //   });
-  //   return () => (window.removeEventListener('scroll', lastPosition));
-  // });
 
   useEffect(() => {
     let main = document.querySelector("#main");
@@ -240,6 +232,7 @@ const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathnam
   return (
     <ul
       onMouseLeave={() => {
+        // position value
         setPosition((pv) => ({
           ...pv,
           opacity: 0,
@@ -264,7 +257,7 @@ const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathnam
               </Tab>
             </a>
           );
-        }) : ''
+        }) : ""
       }
       <Cursor position={position} currentMedia={currentMedia} />
     </ul>
@@ -282,9 +275,9 @@ const Tab = ({ children, setPosition, lang, onClick, directionToOffset }) => {
         const { width, right, left } = ref.current.getBoundingClientRect();
         const grandparentRect =
           ref.current.parentElement.parentElement.getBoundingClientRect();
-        const offset = lang === "he" 
-          ? grandparentRect.right - right 
-          : left - grandparentRect.left;
+        const offset = lang === "en" 
+        ? left - grandparentRect.left
+        : grandparentRect.right - right;
         
         setPosition({
           [directionToOffset[lang]]: offset,
@@ -307,12 +300,9 @@ const Cursor = ({ position, currentMedia }) => {
     <motion.li
       animate={{ ...position }}
       className="absolute z-0 h-7 rounded-full bg-black md:h-12"
-      style={
-        // currentMedia === 'mobile' ? { height: '2.35rem' }
-        currentMedia === 'mobile' ? { height: '2.25rem' }
-          : currentMedia === 'tablet' ? { height: '2.65rem' }
-            : { height: '3rem' }
-      }
+      style={{ height:
+        `${currentMedia === "mobile" ? 2.35 : currentMedia === "tablet" ? 2.25 : 3}rem`
+      }}
     />
   );
 };
