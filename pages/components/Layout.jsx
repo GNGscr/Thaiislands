@@ -34,7 +34,7 @@ export default function Layout() {
 
   const variants = {
     initial: { x: "-115%", width: "175px" },
-    animate: { x: 0, transition: { duration: .4 } }
+    animate: { x: "-5%", transition: { duration: .4 } }
   };
 
   return (

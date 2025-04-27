@@ -872,6 +872,7 @@ html[lang="en-US"] .filter {
   font-size: 1rem;
   z-index: 99;
   gap: 1rem;
+  max-width: 150px;
 }
 
 .side-toggle-svg-wrapper {
@@ -887,19 +888,20 @@ html[lang="en-US"] .filter {
 
 #side-toggle-svg {
   position: absolute;
-  left: 12.75rem;
+  /* left: 10.5rem; */
+  left: 11rem;
 }
 
 .link {
   padding: 0.6rem 1rem;
   transition: .2s ease-in-out;
-  min-width: 160px;
+  min-width: 135px;
   min-height: 50px;
   text-align: center;
   z-index: 3;
 }
 .link:hover:not(.active-link) {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .active-link {
@@ -910,8 +912,8 @@ html[lang="en-US"] .filter {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.35rem 1.1rem;
-  font-size: 1.1rem;
+  padding: 0.35rem 0rem;
+  font-size: 1rem;
   border-radius: 0.15rem;
 }
 
@@ -1436,6 +1438,7 @@ html[lang="he-IL"] .button-lightning {
   padding-top: 3rem;
   width: 100%;
   display: flex;
+  font-size: 1.35rem;
 }
 html[lang="he-IL"] .decleration {
   direction: rtl;
