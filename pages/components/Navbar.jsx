@@ -5,7 +5,6 @@ import RevealLinks from "./RevealLinks";
 import { usePathname } from 'next/navigation';
 import { useGlobalSettings } from './GlobalSettings';
 import navButtonsPositionMedia from "../public/data/navButtonsPositionMedia.json";
-import NavbarSlideTabs from "./NavbarSlideTabs";
 
 
 export default function Navbar({
@@ -208,7 +207,7 @@ export default function Navbar({
               </svg>
             </motion.a>
           </div>
-          <NavbarSlideTabs
+          <SlideTabs
             setPosition={setPosition}
             position={position}
             navbar={data["navbar"][currentMedia][language]}
@@ -218,16 +217,6 @@ export default function Navbar({
             currentMedia={currentMedia}
             directionToOffset={directionToOffset}
           />
-          {/* <SlideTabs
-            setPosition={setPosition}
-            position={position}
-            navbar={data["navbar"][currentMedia][language]}
-            lang={language}
-            onButtonClick={handleButtonClick}
-            pathname={pathname}
-            currentMedia={currentMedia}
-            directionToOffset={directionToOffset}
-          /> */}
           <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
         </div>
         <div onClick={() => setIsNavbarVisible(true)}
@@ -244,5 +233,86 @@ export default function Navbar({
         </div>
       </motion.div>
     </div>
+  );
+};
+
+const SlideTabs = ({ setPosition, position, navbar, lang, onButtonClick, pathname, currentMedia, directionToOffset }) => {  
+  return (
+    <ul
+      onMouseLeave={() => {
+        setPosition((pv) => ({
+          ...pv,
+          opacity: 0,
+        }));
+      }}
+      className={`navbar-ul mx-auto rounded-full gap-3 p-1
+        ${pathname === '/about' || pathname === '/' ? 'invisible' : 'visible'}`}
+    >
+      { navbar ?
+        navbar.map(({ href, label }) => {
+          return (
+            <a 
+              href={href}  // Set current button on click
+              onClick={(e) => onButtonClick(e, label, href.replace('#', ''))}
+              key={label}>
+              <Tab
+                lang={lang}
+                setPosition={setPosition}
+                directionToOffset={directionToOffset}
+              >
+                {label}
+              </Tab>
+            </a>
+          );
+        }) : ''
+      }
+      <Cursor position={position} currentMedia={currentMedia} />
+    </ul>
+  );
+};
+
+const Tab = ({ children, setPosition, lang, onClick, directionToOffset }) => {
+  const ref = useRef(null);
+  return (
+    <li
+      ref={ref}
+      onMouseEnter={() => {
+        if (!ref?.current) return;
+        
+        const { width, right, left } = ref.current.getBoundingClientRect();
+        const grandparentRect =
+          ref.current.parentElement.parentElement.getBoundingClientRect();
+        const offset = lang === "he" 
+          ? grandparentRect.right - right 
+          : left - grandparentRect.left;
+        
+        setPosition({
+          [directionToOffset[lang]]: offset,
+          width,
+          opacity: 1,
+        });
+      }}
+      onClick={onClick} // Call onClick when tab is clicked
+      className={`relative z-10 block cursor-pointer px-3 py-1.5 
+        text-xs uppercase text-white mix-blend-difference md:px-5 
+        md:py-3 md:text-base`}
+    >
+      {children}
+    </li>
+  );
+};
+
+const Cursor = ({ position, currentMedia }) => {
+  return (
+    <motion.li
+      animate={{ ...position }}
+      className="absolute z-0 h-7 rounded-full bg-black md:h-12"
+      style={
+        // currentMedia === 'mobile' ? { height: '2.35rem' }
+        currentMedia === 'mobile' ? { height: '2.25rem' }
+          : currentMedia === 'tablet' ? { height: '2.65rem' }
+            : { height: '3rem' }
+      }
+    />
   );
 };
