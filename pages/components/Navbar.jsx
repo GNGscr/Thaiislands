@@ -214,7 +214,9 @@ export default function Navbar({
             currentMedia={currentMedia}
             directionToOffset={directionToOffset}
           />
-          {/* <RevealLinks toggleLanguage={toggleLanguage} lang={language} /> */}
+          <div style={{ visibility: "hidden" }}>
+            <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
+          </div>
         </div>
         <div onClick={() => setIsNavbarVisible(true)}
           className={`text-white absolute top-[2.85rem]
