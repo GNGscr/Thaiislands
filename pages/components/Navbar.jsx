@@ -186,7 +186,8 @@ export default function Navbar({
         onMouseLeave={handleMouseLeave}
       >
         <div className="inner-navbar w-screen flex align-space-between justify-center text-white">
-          <div className={`social flex gap-4 ml-7 mt-1 ${pathname === '/about' || pathname === '/' ? 'invisible' : 'visible'}`}>
+          <div className={`social flex gap-4 ml-7 mt-1 ${pathname === '/about' || pathname === '/' ? 'invisible' : 'visible'}`}
+            style={{ height: "fit-content"}}>
             <motion.a href="https://www.instagram.com/daniel__ehrlich/"
             style={{ color }}
              target="_blank" rel="noopener noreferrer">

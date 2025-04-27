@@ -2371,6 +2371,7 @@ a {
     padding-top: 0.5rem;
     margin-left: 0 !important;
     gap: 0.25rem !important;
+    height: fit-content;
   }
   .links-wrapper {
     top: 3rem;
@@ -2528,6 +2529,7 @@ a {
   }
   .social {
     padding-top: 0.25rem;
+    height: fit-content;
   }
   svg[data-name="facebook"],
   svg[data-name="instagram"] {
