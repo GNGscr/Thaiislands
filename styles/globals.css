@@ -1306,8 +1306,10 @@ html[lang="he-IL"] .social-title {
   width: fit-content;
   background: #fff;
   border: 2px solid black;
-  /* flex-direction: row-reverse; */
 }
+/* .direction-offset {
+  flex-direction: row-reverse;
+} */
 html[lang="en-US"] .navbar-ul,
 html[lang="en-US"] .page-btns-wrp {
   direction: ltr;
