@@ -5,6 +5,7 @@ import SwipeCarousel from "./SwipeCarousel";
 import ButtonLightningAnimation from "./ButtonLightningAnimation";
 import HotelsSection from "./HotelsSection";
 import TiltComponent from "./TiltComponent";
+import { usePathname } from 'next/navigation';
 
 // :: TODOs :: 
 // OverAll - 
@@ -19,6 +20,8 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
   // console.log('card limit he: ', 225);
   // console.log('card limit en recommended: ', 255);
   // console.log('card limit he recommended: ', 205);
+  const pathname = usePathname();
+  console.log(pathname);
   
   return (
     <div className="bg-white main">
@@ -87,7 +90,7 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
           {data["article-second-paragraph"][lang]}
           <div
             className={`blink-emoji text-[2.25rem] absolute bottom-[-0.5rem]
-              ${lang === 'he' ? 'left-80' : 'right-60'} pl-9`}>
+              ${lang === 'he' ? 'left-80' : 'right-60'} pl-9 ${pathname === "/koh-phangan" ? 'top-14 left-[85%]' : ''}`}>
             😉
           </div>
           <span className="text-7xl text-[#ccc]" style={{ transform: "rotateZ(180deg)" }}></span>
