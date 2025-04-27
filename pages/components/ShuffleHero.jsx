@@ -1,4 +1,4 @@
-
+"use client"
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import kohPhanganData from "../public/data/kohPhanganData.json";
@@ -43,7 +43,7 @@ export default function ShuffleHero() {
         <p className={`text-base md:text-2xl text-slate-700 my-4 md:my-6 about-us-title text-white`}>
           {kohPhanganData.aboutUsPage.subHeader[language]}
         </p>
-        <div className="flex justify-between mt-[8.5rem] w-[96%] z-5 page-btns-wrp">
+        <div className="flex justify-between mt-[10rem] w-[96%] z-5 page-btns-wrp">
           {
             kohPhanganData.aboutUsPage.pages.map((page, index) => {
               return (
