@@ -9,16 +9,15 @@ import { usePathname } from 'next/navigation';
 
 
 export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
-  
-  if (!data) return;
 
   const pathname = usePathname();
-
   const emojiLocation = {
     "/koh-phangan": "top-34 left-[65%]",
     "/koh-samui": "top-20 left-[78%]",
     "/koh-tao": "top-18 left-[85%]",
   };
+
+  if (!data) return;
   
   return (
     <div className="bg-white main">
