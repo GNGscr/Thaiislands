@@ -6,7 +6,7 @@ const EN_US = 'en-US';
 const he = 'he';
 const en = 'en';
 
-export function useLanguageToggle() {
+export default function useLanguageToggle() {
   const { language, setLanguage } = useGlobalSettings();
   const [mainHtml, setMainHtml] = useState(null);
 
