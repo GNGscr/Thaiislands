@@ -32,7 +32,7 @@ export default function ShuffleHero() {
     <section className={`w-full mt-[-1.25rem] px-8 py-12 grid grid-cols-1 md:grid-cols-2
         items-center gap-[7.5rem] max-w-6xl mx-auto text-white`}
         style={{ textAlign: language === en ? 'left' : 'right'}}>
-      <div className={`about-nav flex justify-end w-full h-[60px] fixed top-[1rem] right-0 hidden`}>
+      <div className={`about-nav flex justify-end w-full h-[60px] fixed top-[1rem] right-0`}>
         <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
       </div>
       <div className="about-us">

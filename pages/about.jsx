@@ -2,11 +2,12 @@ import ShuffleHero from './components/ShuffleHero';
 import data from './public/data/data.json';
 
 export default function About({ media }) {
-    const pages = [
-        {label: 'Koh Phangan', link: '/koh-phangan', img: ''},
-        {label: 'Koh Samui', link: '/koh-samui', img: ''},
-        {label: 'Koh Tao', link: '/koh-tao', img: ''},
-    ];
+    // const pages = [
+    //     {label: 'Koh Phangan', link: '/koh-phangan', img: ''},
+    //     {label: 'Koh Samui', link: '/koh-samui', img: ''},
+    //     {label: 'Koh Tao', link: '/koh-tao', img: ''},
+    // ];
+    const THAILANDS = "ThaiIslands";
     return (
         <div className={`about-us flex flex-col justify-center h-[96.5vh] relative`}
             style={{
@@ -20,7 +21,7 @@ export default function About({ media }) {
                 className="about-us-title font-bold mt-[1rem] mb-[1rem]"
                 style={{ textAlign: 'center', fontSize: '2.65rem', color: 'white' }}
             >
-                ThaiIslands
+                {THAILANDS}
             </h3>
             <ShuffleHero />
         </div>

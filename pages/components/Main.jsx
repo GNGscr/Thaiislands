@@ -115,6 +115,8 @@ const TextParallaxContentComponent = ({
   media,
   router
 }) => {
+  console.log(imgUrl);
+  
   return (
     <div
       style={{
