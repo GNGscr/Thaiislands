@@ -174,7 +174,6 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
         className="absolute inset-0 bg-neutral-950/80"
         style={{ opacity: media === "mobile" ? opacityMobile : opacity }}
       />
-
       {
         isMapVisible
           ? <div id="map">
