@@ -1,8 +1,12 @@
 {
     "LANG": {
+        "en": "en",
+        "he": "he",
         "HE_IL": "he-IL",
         "EN_US": "en-US",
+        "THAIISLANDS": "Thaiislands",
         "KOH_PHANGAN": "Koh Phangan",
-        "KOH_SAMUI": "Koh Samui"
+        "KOH_SAMUI": "Koh Samui",
+        "KOH_TAO": "Koh Tao"
     }
 }

@@ -10,6 +10,7 @@ export default function Home() {
   // const API_KEY = 'AIzaSyDXh5hbQG0D8kTEWlmvbbwqDzjDd-48lms';
   // const RANGE = 'Sheet1!A1:D25'; // Adjust the range as needed
 
+
   const [ dimension, setDimension ] = useState({width: 0, height: 0});
   const updateDimension = () => {
       const { innerWidth, innerHeight } = window;

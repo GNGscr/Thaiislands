@@ -1,21 +1,23 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import kohPhanganData from "../public/data/kohPhanganData.json";
+import { islandIdMap } from "@/lib/constants/privateData";
 import { useGlobalSettings } from './GlobalSettings';
+import SectionAnimation from "./SectionAnimation";
 import RevealLinks from "./RevealLinks";
+import { LANG } from "../public/data/en.json";  
 import SquareData from "../public/data/squareData.json";
 
-const he = "he";
-const en = "en";
-const HE_IL = 'he-IL';
-const EN_US = 'en-US';
 
 export default function ShuffleHero() {
   const { language, setLanguage } = useGlobalSettings();
+  const [data, setData] = useState({}); 
+  const [isLoading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { HE_IL, EN_US, he, en } = LANG;
+  const islandId = islandIdMap.kohPhanganDataId;
 
   let mainHtml;
-
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     mainHtml = document.querySelector('html');
@@ -27,6 +29,31 @@ export default function ShuffleHero() {
     if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
     language === en ? setLanguage(he) : setLanguage(en);
   }
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const fetchItems = async () => {
+      setLoading(true);
+      try {
+        const res = await fetch('/api/islands?' + new URLSearchParams({ id: islandId }).toString());
+        if (!res.ok) throw new Error("Failed to fetch island data");
+        const json = await res.json();
+        setData(json);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (isLoading) return <SectionAnimation menuIsActive={isLoading} title={"Thaiislands"} />;
+    if (error) return <p>שגיאה: {error}</p>;
+
+    const { _id, cafesAndResturants, ...dataNoId } = data;
+    
+    if(!Object.keys(dataNoId).length) return;
   
   return (
     <section className={`w-full mt-[-1.25rem] px-8 py-12 grid grid-cols-1 md:grid-cols-2
@@ -37,15 +64,15 @@ export default function ShuffleHero() {
       </div>
       <div className="about-us">
         <h3 className={`text-1xl md:text-[2rem] font-semibold about-us-title`}>
-          {kohPhanganData.aboutUsPage.header[language]}
+          {dataNoId.aboutUsPage.header[language]}
         {/* 😉 */}
         </h3>
         <p className={`text-base md:text-2xl text-slate-700 my-4 md:my-6 about-us-title text-white`}>
-          {kohPhanganData.aboutUsPage.subHeader[language]}
+          {dataNoId.aboutUsPage.subHeader[language]}
         </p>
         <div className="flex justify-between mt-[10rem] w-[96%] z-5 page-btns-wrp">
           {
-            kohPhanganData.aboutUsPage.pages.map((page, index) => {
+            dataNoId.aboutUsPage.pages.map((page, index) => {
               return (
                 <motion.a
                   key={index}

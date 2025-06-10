@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import ScreenFitText from './ScreenFitText';
-import IconsMagnetic from './IconsMagnetic';
 
 export default function SocialsSection({ data, lang }) {
   if (!data) return;
@@ -54,5 +54,37 @@ export default function SocialsSection({ data, lang }) {
       </div>
       <ScreenFitText isOnCarousal={false} text={data["island-name"]["en"]} />
     </main>
+  )
+}
+
+
+const IconsMagnetic = ({ children }) => {
+
+  const magnetic = useRef(null);
+
+  useEffect(() => {
+    const xTo = gsap.quickTo(magnetic.current, "x", { duration: 1, ease: "elastic.out(1, 0.3)" })
+    const yTo = gsap.quickTo(magnetic.current, "y", { duration: 1, ease: "elastic.out(1, 0.3)" })
+
+    const mouseMoving =  magnetic.current.addEventListener("mousemove", (e) => {
+      const { clientX, clientY } = e;
+      const { height, width, left, top } = magnetic.current.getBoundingClientRect();
+      const x = clientX - (left + width / 2);
+      const y = clientY - (top + height / 2);
+      xTo(x);
+      yTo(y);
+      // remove listener to avoid having multiple listeners running
+      return () =>  magnetic.current.removeEventListener("mousemove", mouseMoving);
+    });
+    const mouseLeaving = magnetic.current.addEventListener("mouseleave", (e) => {
+      xTo(0);
+      yTo(0);
+      return () => magnetic.current.removeEventListener("mouseleave", mouseLeaving);
+    });
+  }, []);
+
+
+  return (
+    React.cloneElement(children, { ref: magnetic })
   )
 }

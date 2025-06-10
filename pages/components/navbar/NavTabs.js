@@ -2,6 +2,7 @@ import Tab from "./Tab";
 import Cursor from "./Cursor";
 
 export default function NavTabs({ data, lang, position, setPosition, pathname, currentMedia, onButtonClick, directionToOffset }) {
+  if (!data) return;
   const navbar = data["navbar"][currentMedia][lang];
 
   return (

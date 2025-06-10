@@ -5,15 +5,37 @@ import Main from "../components/Main";
 import SocialsSection from "../components/SocialsSection";
 import StickyFooter from "../components/StickyFooter";
 import SectionAnimation from "../components/SectionAnimation";
+import { useGlobalSettings } from "../components/GlobalSettings";
+import { useEffect } from "react";
+import { LANG } from "../public/data/en.json";
 
 export default function IslandPageLayout({
+  // filteredData,
     data,
     media,
-    language,
-    toggleLanguage,
+    // language,
+    // toggleLanguage,
     mapImage,
 }) {
-    const [menuIsActive, setMenuIsActive] = useState(false);
+    // const [menuIsActive, setMenuIsActive] = useState(false);
+    // console.log('DDDDD', Object.keys(filteredData).length);
+    // if (!data.legnth) return;
+    const { language, setLanguage, currentMedia } = useGlobalSettings();
+    let [menuIsActive, setMenuIsActive] = useState(false);
+    let mainHtml;
+    useEffect(() => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      mainHtml = document.querySelector('html');
+      if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang);
+    }, [language].latest);
+
+    const toggleLanguage = () => {
+      if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === LANG.HE_IL ? LANG.EN_US : LANG.HE_IL);
+        language === en ? setLanguage(he) : setLanguage(en);
+    };
+          // console.log(currentMedia);
+    if (!data) return;
+    
     const langText = data['language-text'][language];
     
     return <>
