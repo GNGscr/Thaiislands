@@ -6,6 +6,7 @@ import ButtonLightningAnimation from "./ButtonLightningAnimation";
 import HotelsSection from "./HotelsSection";
 import TiltComponent from "./TiltComponent";
 import { usePathname } from 'next/navigation';
+import MapEmbed from "./MapEmbed";
 
 
 export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
@@ -178,14 +179,7 @@ const StickyImage = ({ imgUrl, isMapVisible, data, lang, media }) => {
         isMapVisible
           ? <div id="map">
             <div className="map-responsive">
-              <iframe src={data.googleMap.link}
-                width={data["island-name"][lang] === "Koh Phangan" ? "600" : "100%"}
-                height="450"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Responsive Google Map">
-              </iframe>
+              <MapEmbed link={data.googleMap.link} lang={data["island-name"][lang]} />
             </div>
           </div>
           : ''
