@@ -1,17 +1,19 @@
 'use client';
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import kohTaoMap from './public/images/kohTao.jpeg';
 import { useGlobalSettings } from './components/GlobalSettings';
 import IslandPageLayout from "./layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
 import SectionAnimation from "./components/SectionAnimation";
-import { LANG } from "./public/data/en.json";
+import lang from "./public/data/en.json";
 // import kohTaoData from "./public/data/kohTaoData.json";
 
 export default function KohTao() {
   const { currentMedia } = useGlobalSettings();
   const [data, setData] = useState();
   const islandId = islandIdMap.kohTaoDataId;
+  const { LANG } = lang;
 
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -39,10 +41,16 @@ export default function KohTao() {
     if (!data) return;
 
     return (
-      <IslandPageLayout
-        data={data}
-        media={currentMedia}
-        mapImage={kohTaoMap.src}
-      />
+      <>
+        <Head>
+          <title>Thaiislands - Koh Tao</title>
+          <meta name="description" content="Thaiislands - Information about the Koh Tao." />
+        </Head>
+        <IslandPageLayout
+          data={data}
+          media={currentMedia}
+          mapImage={kohTaoMap.src}
+        />
+      </>
     )
 }

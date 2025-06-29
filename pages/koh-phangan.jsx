@@ -1,12 +1,14 @@
 'use client';
+import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import phanganMap from './public/images/phangan-map.png';
 import { useGlobalSettings } from './components/GlobalSettings';
 import IslandPageLayout from "./layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
 import SectionAnimation from "./components/SectionAnimation";
-import { LANG } from "./public/data/en.json";
+import lang from "./public/data/en.json";
 
+const { LANG } = lang;
 
 export default function KohPhangan() {
   const { currentMedia } = useGlobalSettings();
@@ -41,10 +43,16 @@ export default function KohPhangan() {
     if(!Object.keys(dataNoId).length) return;
     
     return (
-      <IslandPageLayout
-        data={dataNoId}
-        media={currentMedia}
-        mapImage={phanganMap.src}
-      />
+      <>
+        <Head>
+          <title>Thaiislands - Koh Phangan</title>
+          <meta name="description" content="Thaiislands - Information about the Koh Phangan." />
+        </Head>
+        <IslandPageLayout
+          data={dataNoId}
+          media={currentMedia}
+          mapImage={phanganMap.src}
+        />
+      </>
     )
 }

@@ -17,9 +17,10 @@ import samuiTraffic2 from '../../pages/public/images/koh-samui-traffic-2.jpg';
 import samuiBand1 from '../../pages/public/images/koh-samui-band-1.jpg';
 import samuiPig from '../../pages/public/images/koh-samui-pig.jpg';
 import samuiDrunkGirls from '../../pages/public/images/koh-samui-girls.jpg';
-import { LANG } from "../public/data/en.json";
+import lang from "../public/data/en.json";
 
 let imgs = [];
+const { LANG } = lang;
 
 const phanganImgs = [
   phangandownhill.src,

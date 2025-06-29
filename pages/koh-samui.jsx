@@ -1,11 +1,12 @@
 'use client';
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import samuiMap from './public/images/Beach-Map-Koh-Samui.jpg';
 import { useGlobalSettings } from './components/GlobalSettings';
 import IslandPageLayout from "./layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
 import SectionAnimation from "./components/SectionAnimation";
-import { LANG } from "./public/data/en.json";
+import lang from "./public/data/en.json";
 
 export default function KohSamui() {
   const { currentMedia } = useGlobalSettings(); 
@@ -13,6 +14,7 @@ export default function KohSamui() {
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const islandId = islandIdMap.kohSamuiDataId;
+  const { LANG } = lang;
   
     useEffect(() => {
       fetchIsland();
@@ -37,10 +39,16 @@ export default function KohSamui() {
     if (!data) return;
 
     return (
-      <IslandPageLayout
-        data={data}
-        media={currentMedia}
-        mapImage={samuiMap.src}
-      />
+      <>
+        <Head>
+          <title>Thaiislands - Koh Samui</title>
+          <meta name="description" content="Thaiislands - Information about the Koh Samui." />
+        </Head>
+        <IslandPageLayout
+          data={data}
+          media={currentMedia}
+          mapImage={samuiMap.src}
+        />
+      </>
     )
 }

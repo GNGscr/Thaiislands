@@ -8,7 +8,7 @@ export const useIslandStore = create((set, get) => ({
   error: {},            // { [islandId]: errorMessage }
 
   loadIsland: async (id) => {
-    console.log(id);
+    // console.log(id);
     
     const { data } = get();
     // if (data[id]) return; // prevents reload

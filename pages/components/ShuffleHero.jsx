@@ -5,7 +5,7 @@ import { islandIdMap } from "@/lib/constants/privateData";
 import { useGlobalSettings } from './GlobalSettings';
 import SectionAnimation from "./SectionAnimation";
 import RevealLinks from "./RevealLinks";
-import { LANG } from "../public/data/en.json";  
+import lang from "../public/data/en.json";  
 import SquareData from "../public/data/squareData.json";
 
 
@@ -14,6 +14,7 @@ export default function ShuffleHero() {
   const [data, setData] = useState({}); 
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { LANG } = lang;
   const { HE_IL, EN_US, he, en } = LANG;
   const islandId = islandIdMap.kohPhanganDataId;
 

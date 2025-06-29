@@ -7,7 +7,7 @@ import StickyFooter from "../components/StickyFooter";
 import SectionAnimation from "../components/SectionAnimation";
 import { useGlobalSettings } from "../components/GlobalSettings";
 import { useEffect } from "react";
-import { LANG } from "../public/data/en.json";
+import lang from "../public/data/en.json";
 
 export default function IslandPageLayout({
   // filteredData,
@@ -20,6 +20,7 @@ export default function IslandPageLayout({
     // const [menuIsActive, setMenuIsActive] = useState(false);
     // console.log('DDDDD', Object.keys(filteredData).length);
     // if (!data.legnth) return;
+    const { LANG } = lang;
     const { language, setLanguage, currentMedia } = useGlobalSettings();
     let [menuIsActive, setMenuIsActive] = useState(false);
     let mainHtml;
