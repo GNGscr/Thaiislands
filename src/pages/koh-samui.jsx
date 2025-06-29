@@ -1,12 +1,12 @@
 'use client';
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import samuiMap from './public/images/Beach-Map-Koh-Samui.jpg';
-import { useGlobalSettings } from './components/GlobalSettings';
-import IslandPageLayout from "./layouts/IslandPageLayout";
+import samuiMap from '../public/images/Beach-Map-Koh-Samui.jpg';
+import { useGlobalSettings } from '../components/GlobalSettings';
+import IslandPageLayout from "../layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
-import SectionAnimation from "./components/SectionAnimation";
-import lang from "./public/data/en.json";
+import SectionAnimation from "../components/SectionAnimation";
+import lang from "../public/data/en.json";
 
 export default function KohSamui() {
   const { currentMedia } = useGlobalSettings(); 

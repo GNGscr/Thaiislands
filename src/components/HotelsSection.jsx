@@ -61,6 +61,13 @@ export default function HotelsSection({ data, lang, media }) {
           <motion.div className="filter-icon"
             onMouseEnter={() => setIsTooltipVisible(true)}
             onMouseLeave={() => setIsTooltipVisible(false)}
+            aria-label={`button`}
+            role="button"
+            tabIndex="0"
+            onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ')
+                  setIsFiltering(!isFiltering);
+            }}
             onClick={() => setIsFiltering(!isFiltering)}
             initial={{ display: 'block' }}
             animate={{ display: isFiltering ? 'none' : 'block' }}

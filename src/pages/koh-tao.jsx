@@ -1,13 +1,12 @@
 'use client';
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import kohTaoMap from './public/images/kohTao.jpeg';
-import { useGlobalSettings } from './components/GlobalSettings';
-import IslandPageLayout from "./layouts/IslandPageLayout";
+import kohTaoMap from '../public/images/kohTao.jpeg';
+import { useGlobalSettings } from '../components/GlobalSettings';
+import IslandPageLayout from "../layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
-import SectionAnimation from "./components/SectionAnimation";
-import lang from "./public/data/en.json";
-// import kohTaoData from "./public/data/kohTaoData.json";
+import SectionAnimation from "../components/SectionAnimation";
+import lang from "../public/data/en.json";
 
 export default function KohTao() {
   const { currentMedia } = useGlobalSettings();

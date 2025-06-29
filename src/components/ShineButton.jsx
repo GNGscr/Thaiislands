@@ -27,6 +27,7 @@ const ShineButton = ({ isLogoSection }) => {
 
     return (
         <a style={{ zIndex: 0 }}
+          aria-label={`${isLogoSection ? 'Facebook' : 'Instagram'}`}
           href={isLogoSection
           ? "https://facebook.com" 
           : "https://www.instagram.com/daniel__ehrlich/"}

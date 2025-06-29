@@ -1,12 +1,12 @@
 'use client';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import phanganMap from './public/images/phangan-map.png';
-import { useGlobalSettings } from './components/GlobalSettings';
-import IslandPageLayout from "./layouts/IslandPageLayout";
+import phanganMap from '../public/images/phangan-map.png';
+import { useGlobalSettings } from '../components/GlobalSettings';
+import IslandPageLayout from "../layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
-import SectionAnimation from "./components/SectionAnimation";
-import lang from "./public/data/en.json";
+import SectionAnimation from "../components/SectionAnimation";
+import lang from "../public/data/en.json";
 
 const { LANG } = lang;
 

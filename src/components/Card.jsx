@@ -19,7 +19,7 @@ export default function Card({ card, media }) {
           className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
         ></div>
         <div className="rest-link">
-          <a href={card.link} target="_blank" rel="noopener noreferrer">
+          <a href={card.link} target="_blank" rel="noopener noreferrer" aria-label="Location">
             <img src={locationSVG.src} width="50" height="50" alt="location icon" />
           </a>
         </div>

@@ -22,6 +22,11 @@ export default function Tab({ children, setPosition, lang, onClick, directionToO
           opacity: 1,
         });
       }}
+      tabIndex={0}
+      aria-label="Scroll to section"
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") onClick(e);
+      }}
       onClick={onClick} // Call onClick when tab is clicked
       className={`relative z-10 block cursor-pointer px-3 py-1.5 
         text-xs uppercase text-white mix-blend-difference md:px-5 

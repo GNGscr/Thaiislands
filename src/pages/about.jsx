@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import ShuffleHero from './components/ShuffleHero';
-import data from './public/data/data.json';
-import lang from "./public/data/en.json";
+import ShuffleHero from '../components/ShuffleHero';
+import data from '../public/data/data.json';
+import lang from "../public/data/en.json";
 
 export default function About({ media }) {
     const { LANG } = lang;

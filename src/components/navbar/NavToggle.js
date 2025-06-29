@@ -4,6 +4,12 @@ import React from "react";
 export default function NavToggle({ isVisible, onClick }) {
   return (
     <div
+      role="button"
+      aria-label="Toggle"
+      tabIndex="0"
+      onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') onClick();
+      }}
       onClick={onClick}
       className="text-white absolute top-[2.85rem] flex justify-center h-full w-full"
       style={{ rotate: "180deg" }}

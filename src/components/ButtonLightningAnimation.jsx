@@ -23,11 +23,18 @@ export default function ButtonLightningAnimation({ text, activateMenuIsActive })
       transition={{ duration: 0.65, type: "tween", }}
       className={`button-lightning grid place-content-center
       p-4 text-3xl --font-space-grotesk`}>
-      <a href="#hotels" onClick={handleClick}>
+      <div
+        aria-label={`button`}
+        role="button"
+        tabIndex="0"
+        onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') handleClick(e);
+        }}
+        onClick={handleClick}>
         <DrawOutlineButton>
           {text}
         </DrawOutlineButton>
-      </a>
+      </div>
     </motion.div>
   );
 };

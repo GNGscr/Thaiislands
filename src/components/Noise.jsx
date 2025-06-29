@@ -54,15 +54,24 @@ const PagesLinks = ({ pages, pathname }) => {
                   <div className="footer-th font-bold pb-2">{page.district}</div>
                   {
                     page.paths.map(({ label, link, isActive }, i) => {
+                      const isCurrent = pathname === link;
+                      const disabled = !isActive;
+
                       return (
-                        <a key={i} href={isActive ? link : '/about'}
-                          onClick={(e) => !isActive ?? e.preventDefault()}
-                          className={isActive ? '' : 'disabled'}
-                          style={isActive ? { opacity: 1 } : { opacity: 0.5 }}
+                        <a key={i}
+                          href={isActive ? link : '/about'}
+                          onClick={(e) => {
+                            if (disabled) e.preventDefault();
+                          }}
+                          className={disabled ? 'disabled' : ''}
+                          style={{ opacity: disabled ? 0.5 : 1 }}
+                          aria-disabled={disabled}
+                          tabIndex={disabled ? -1 : 0}
+                          aria-label={label}
                         >
                           <motion.div
                             className="footer-link flex"
-                            style={{ color: isColorRed === false && pathname === link ? '#ff0000' : '#fff' }}
+                            style={{ color: !isColorRed && isCurrent ? '#ff0000' : '#fff' }}
                             whileHover={isActive ? { color: '#ff0000' } : {}}
                             onMouseEnter={() => setIsColorRed(true)}
                             onMouseLeave={() => setIsColorRed(false)}>

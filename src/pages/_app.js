@@ -2,8 +2,8 @@ import "/styles/globals.css";
 import Head from "next/head";
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import Layout from "./components/Layout";
-import GlobalSettingsProvider from "./components/GlobalSettings";
+import Layout from "../components/Layout";
+import GlobalSettingsProvider from "../components/GlobalSettings";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();

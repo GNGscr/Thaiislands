@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import img1 from '../../pages/public/images/panviman-resort.png';
+import img1 from '../public/images/panviman-resort.png';
 import Image from 'next/image';
 import starSvg from '../public/images/star.svg';
 
@@ -32,7 +32,14 @@ const FlipCard = ({
 
   return (
     <div className="flex items-center justify-center">
-        <div className="flip-card w-[352px] h-[294.42px] rounded-md" onClick={handleFlip}>
+        <div className="flip-card w-[352px] h-[294.42px] rounded-md"
+          aria-label={`button`}
+          role="button"
+          tabIndex="0"
+          onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') handleFlip();
+          }}
+          onClick={handleFlip}>
             <motion.div
               className="flip-card-inner w-[100%] h-[100%]"
               initilal={{ rotateX: 0 }}

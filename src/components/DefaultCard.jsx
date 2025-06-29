@@ -28,6 +28,12 @@ const DefaultCard = ({
     return (
         <div className="flex items-center justify-center">
             <div className="flip-card w-[352px] h-[294.42px] rounded-md"
+                aria-label={`button`}
+                role="button"
+                tabIndex="0"
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') handleClick();
+                }}
                 onClick={() => handleClick()}>
                 <div className="flip-card-inner w-[100%] h-[100%]">
                     <div className={`flip-card-front w-[100%] h-[100%] bg-cover

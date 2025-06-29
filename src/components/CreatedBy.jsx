@@ -1,16 +1,12 @@
 const CreatedBy = () => {
   
-  const handleGoToDeBrand = e => {
-      // e.preventDefault(); // Prevent default anchor behavior
-      console.log('set animation');
-    }
     
     return (
         <a href={`https://debrand-design.vercel.app/`}
             rel="noopener noreferrer"
             target="_blank"
-            className="relative"
-            onClick={handleGoToDeBrand}>
+            aria-label="Portfolio"
+            className="relative">
         <div className="created-by">
             Created by
             <span
