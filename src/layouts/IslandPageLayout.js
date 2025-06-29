@@ -18,7 +18,6 @@ export default function IslandPageLayout({
     mapImage,
 }) {
     // const [menuIsActive, setMenuIsActive] = useState(false);
-    // console.log('DDDDD', Object.keys(filteredData).length);
     // if (!data.legnth) return;
     const { LANG } = lang;
     const { language, setLanguage, currentMedia } = useGlobalSettings();
@@ -34,7 +33,7 @@ export default function IslandPageLayout({
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === LANG.HE_IL ? LANG.EN_US : LANG.HE_IL);
         language === en ? setLanguage(he) : setLanguage(en);
     };
-          // console.log(currentMedia);
+    
     if (!data) return;
     
     const langText = data['language-text'][language];
