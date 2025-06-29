@@ -252,7 +252,7 @@ const ExampleContent = ({ currentPara, isLogoSection, sidePara, lang, data }) =>
             initial={{
               opacity: 0,
               x: lang === "he" ? "-100%" : "100%",
-              skewX: "30deg"
+              skewX: 30
             }}
             whileInView={{ opacity: 1, x: "15%", skewX: 0 }}
             transition={{ duration: 0.4, type: "tween", }}

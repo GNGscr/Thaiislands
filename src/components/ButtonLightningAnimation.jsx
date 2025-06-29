@@ -18,7 +18,7 @@ export default function ButtonLightningAnimation({ text, activateMenuIsActive })
   }
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0, skewX: "-15deg" }}
+      initial={{ opacity: 0, scale: 0, skewX: -15 }}
       whileInView={{ opacity: 1, scale: 1, skewX: 0 }}
       transition={{ duration: 0.65, type: "tween", }}
       className={`button-lightning grid place-content-center

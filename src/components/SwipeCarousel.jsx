@@ -120,7 +120,7 @@ export default function SwipeCarousel({ data, lang, media }) {
               return (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: "120%", skewX: "15deg" }}
+                  initial={{ opacity: 0, y: "120%", skewX: 15 }}
                   whileInView={{ opacity: 1, y: 0, skewX: 0 }}
                   transition={{ duration: 0.35, type: "spring", delay: i * 0.03, }}
                   className={
