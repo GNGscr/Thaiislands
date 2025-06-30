@@ -2127,11 +2127,6 @@ a {
   cursor: pointer;
 }
 
-.hero-content {
-  padding: 0 5%;
-  padding-top: 3.5rem;
-}
-
 @media (max-width: 1080px) {
 
   .shuffle-grid-wrapper {
@@ -2164,7 +2159,7 @@ a {
   }
   .hero-content {
     padding: 0 5%;
-    padding-top: 0rem;
+    padding-top: 3.5rem;
   }
   .navbar-ul {
     max-height: 3.4rem;
@@ -2177,8 +2172,6 @@ a {
   .button-lightning {
     padding-top: 0.5rem;
     font-size: 1.65rem;
-    position: absolute;
-    bottom: 2.5rem;
   }
 
   html[lang="he-IL"] .button-lightning {
@@ -2226,11 +2219,6 @@ a {
     gap: 0 !important;
   }
 
-  .section-content-para-1,
-  .section-content-para-2 {
-    max-width: 50vw;
-  }
-
   #thaiislands {
     position: relative;
     top: 8rem;
@@ -2252,10 +2240,6 @@ a {
     scale: 0.65;
     position: relative;
     bottom: 1rem;
-  }
-
-  .quote {
-    margin-left: 10%;
   }
 
   .inner-footer > div {
@@ -2496,8 +2480,6 @@ a {
   }
   .button-lightning {
     font-size: 1.75rem;
-    position: absolute;
-    bottom: 5rem;
   }
   html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {
@@ -2512,8 +2494,7 @@ a {
     gap: 2rem !important;
   }
   .quote {
-    font-size: 2.5rem;  
-    margin-left: 0;
+    font-size: 2.5rem;
   }
   .section-content {
     padding-top: 0rem !important;
@@ -2522,7 +2503,6 @@ a {
   .section-content-para-1,
   .section-content-para-2 {
     font-size: 1.25rem !important;
-    max-width: fit-content;
   }
   .screen-fix-txt {
     top: 18.5rem;
