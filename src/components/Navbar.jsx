@@ -113,7 +113,7 @@ export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
             currentMedia={currentMedia}
             directionToOffset={directionToOffset}
           />
-          <div style={{ visibility: "hidden" }}>
+          <div className="reveal-links-wrapper">
             <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
           </div>
         </div>

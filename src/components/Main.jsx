@@ -242,8 +242,8 @@ const ExampleContent = ({ currentPara, isLogoSection, sidePara, lang, data }) =>
       : 'mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-12 pt-24 md:grid-cols-12'
     }
     `}
-    style={{ direction: "rtl", gap: "6rem" }}>
-    <h2 className={`section-content-h col-span-1 text-3xl font-bold md:col-span-4 overflow-hidden`} style={{ direction: "ltr" }}>
+    style={{ gap: "6rem" }}>
+    <h2 className={`section-content-h col-span-1 text-3xl font-bold md:col-span-4 overflow-hidden`}>
       {sidePara && lang &&
 
         <div className="text-[2.7rem] relative right-[15%] text-[#aaa]">
@@ -262,7 +262,7 @@ const ExampleContent = ({ currentPara, isLogoSection, sidePara, lang, data }) =>
         </div>
       }
     </h2>
-    <div className="section-content-para col-span-1 md:col-span-8" style={{ direction: "ltr" }}>
+    <div className="section-content-para col-span-1 md:col-span-8">
       <p className="section-content-para-1 mb-4 text-xl text-neutral-600 md:text-2xl">
         {currentPara}
       </p>

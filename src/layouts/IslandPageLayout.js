@@ -31,7 +31,7 @@ export default function IslandPageLayout({
 
     const toggleLanguage = () => {
       if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === LANG.HE_IL ? LANG.EN_US : LANG.HE_IL);
-        language === en ? setLanguage(he) : setLanguage(en);
+        language === LANG.en ? setLanguage(LANG.he) : setLanguage(LANG.en);
     };
     
     if (!data) return;

@@ -888,8 +888,10 @@ html[lang="en-US"] .filter {
 
 #side-toggle-svg {
   position: absolute;
-  /* left: 10.5rem; */
   left: 11rem;
+  stroke: #aaa;
+  transform: scale(2);
+  rotate: 90deg;
 }
 
 .link {
@@ -1309,6 +1311,11 @@ html[lang="he-IL"] .social-title {
   background: #fff;
   border: 2px solid black;
 }
+
+.reveal-links-wrapper {
+  display: flex;
+}
+
 /* .direction-offset {
   flex-direction: row-reverse;
 } */
@@ -1336,15 +1343,13 @@ html[lang="he-IL"] .section-content {
 }
 html[lang="en-US"] .section-content-para {
   direction: ltr;
-
-  /* max-width: 80%; */
+}
+html[lang="he-IL"] .section-content-para {
+  direction: rtl;
 }
 html[lang="en-US"] .section-content-para-1,
 html[lang="en-US"] .section-content-para-2 {
   font-size: 1.25rem;
-}
-html[lang="he-IL"] .section-content-para {
-  direction: rtl;
 }
 .section-content h2 {
   line-height: 45px;
