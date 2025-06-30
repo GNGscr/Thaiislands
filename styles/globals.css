@@ -2480,6 +2480,8 @@ a {
   }
   .button-lightning {
     font-size: 1.75rem;
+    position: absolute;
+    bottom: 5rem;
   }
   html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {

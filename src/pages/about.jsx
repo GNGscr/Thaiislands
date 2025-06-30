@@ -14,20 +14,20 @@ export default function About() {
     const [error, setError] = useState(null);
     const islandId = islandIdMap.kohPhanganDataId;
     
-  const fetchIslandData = useFetchIsland();
-  
-  const fetchIsland = async () => {
-    setLoading(true);
-    const { data, error } = await fetchIslandData(islandId);
-    setData(data);
-    setError(error);
-    setLoading(false);
-  };
+    const fetchIslandData = useFetchIsland();
+    
+    const fetchIsland = async () => {
+        setLoading(true);
+        const { data, error } = await fetchIslandData(islandId);
+        setData(data);
+        setError(error);
+        setLoading(false);
+    };
 
-  useEffect(() => {
-    if (!islandId) return;
-    fetchIsland();
-  }, []);
+    useEffect(() => {
+        if (!islandId) return;
+        fetchIsland();
+    }, []);
 
     if (isLoading) return <SectionAnimation menuIsActive={isLoading} title={LANG.THAIISLANDS} />;
     if (error) return <NotFoundMessage message={error} />;
