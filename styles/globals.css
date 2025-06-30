@@ -2480,11 +2480,13 @@ a {
   }
   .button-lightning {
     font-size: 1.75rem;
+    position: absolute;
+    bottom: 5rem;
   }
   html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {
     padding-top: 2.5rem;
-    top: 7rem;
+    top: 10rem;
   }
   .hover-the-map-txt {
     margin-bottom: 3rem;
