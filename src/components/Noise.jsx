@@ -4,10 +4,6 @@ import { usePathname } from 'next/navigation';
 import CreatedBy from "./CreatedBy";
 import FooterNoisePages from "../public/data/footerNoisePages.json";
 
-// You can download these PNGs here:
-// https://www.hover.dev/black-noise.png
-// https://www.hover.dev/noise.png
-
 export default function Noise() {
 
   const pathname = usePathname();

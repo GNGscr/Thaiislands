@@ -2103,6 +2103,10 @@ a {
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.navbar-ul > a > li {
+  padding: 0.725rem 1.6rem;
+}
+
 
 @media (max-width: 1080px) {
 
@@ -2236,6 +2240,10 @@ a {
   .filter-section {
     display: none;
   } */
+
+.navbar-ul > a > li {
+  padding: 0.9rem 0.2rem;
+}
 
   .filter-selector {
     flex-direction: column;
