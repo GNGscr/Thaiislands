@@ -2236,13 +2236,9 @@ a {
 
 
 @media (max-width: 680px) {
-/* 
-  .filter-section {
-    display: none;
-  } */
 
 .navbar-ul > a > li {
-  padding: 0.9rem 0.2rem;
+  padding: 0.725rem 0.2rem;
 }
 
   .filter-selector {
