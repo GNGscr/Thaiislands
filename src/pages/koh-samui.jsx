@@ -7,6 +7,7 @@ import IslandPageLayout from "../layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
 import SectionAnimation from "../components/SectionAnimation";
 import lang from "../public/data/en.json";
+import NotFoundMessage from "../components/NotFound";
 
 export default function KohSamui() {
   const { currentMedia } = useGlobalSettings(); 
@@ -35,7 +36,7 @@ export default function KohSamui() {
     };
 
     if (isLoading) return <SectionAnimation menuIsActive={isLoading} title={LANG.KOH_SAMUI} />;
-    if (error) return <p>שגיאה: {error}</p>;
+    if (error) return <NotFoundMessage message={error} />;
     if (!data) return;
 
     return (

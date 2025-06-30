@@ -7,11 +7,12 @@ import IslandPageLayout from "../layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
 import SectionAnimation from "../components/SectionAnimation";
 import lang from "../public/data/en.json";
+import NotFoundMessage from '../components/NotFound';
 
 const { LANG } = lang;
 
 export default function KohPhangan() {
-  const { currentMedia } = useGlobalSettings();
+  const { currentMedia, language } = useGlobalSettings();
   const [data, setData] = useState(); 
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -36,7 +37,7 @@ export default function KohPhangan() {
     };
 
     if (isLoading) return <SectionAnimation menuIsActive={isLoading} title={LANG.KOH_PHANGAN} />;
-    if (error) return <p>שגיאה: {error}</p>;
+    if (error) return <NotFoundMessage message={error} />;
 
     const { _id, cafesAndResturants, ...dataNoId } = data;
     

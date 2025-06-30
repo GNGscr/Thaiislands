@@ -7,6 +7,7 @@ import IslandPageLayout from "../layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
 import SectionAnimation from "../components/SectionAnimation";
 import lang from "../public/data/en.json";
+import NotFoundMessage from "../components/NotFound";
 
 export default function KohTao() {
   const { currentMedia } = useGlobalSettings();
@@ -36,7 +37,7 @@ export default function KohTao() {
     };
     
     if (isLoading) return <SectionAnimation menuIsActive={isLoading} title={LANG.KOH_TAO} />;
-    if (error) return <p>שגיאה: {error}</p>;
+    if (error) return <NotFoundMessage message={error} />;
     if (!data) return;
 
     return (

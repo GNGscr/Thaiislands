@@ -2107,6 +2107,26 @@ a {
   padding: 0.725rem 1.6rem;
 }
 
+.centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.back-btn {
+  margin-bottom: 1rem;
+  position: fixed;
+  left: 2rem;
+  top: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
 @media (max-width: 1080px) {
 
