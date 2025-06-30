@@ -2238,7 +2238,7 @@ a {
 @media (max-width: 680px) {
 
 .navbar-ul > a > li {
-  padding: 0.725rem 0.2rem;
+  padding: 0.85rem 0.2rem;
 }
 
   .filter-selector {
