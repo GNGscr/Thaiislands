@@ -5,6 +5,7 @@ import lang from "../public/data/en.json";
 import { useState, useEffect } from 'react';
 import SectionAnimation from '../components/SectionAnimation';
 import NotFoundMessage from '../components/NotFound';
+import useFetchIsland from '../hooks/useIslandFetcher';
 
 export default function About() {
     const { LANG } = lang;
@@ -13,23 +14,20 @@ export default function About() {
     const [error, setError] = useState(null);
     const islandId = islandIdMap.kohPhanganDataId;
     
-    const fetchIsland = async () => {
-        setLoading(true);
-        try {
-            const res = await fetch('/api/islands?' + new URLSearchParams({ id: islandId }).toString());
-            if (!res.ok) throw new Error("Failed to fetch island data");
-            const json = await res.json();
-            setData(json);
-        } catch (err) {
-        setError(err.message);
-        } finally {
-        setLoading(false);
-        }
-    };
-        
-    useEffect(() => {
-        fetchIsland();
-    }, []);
+  const fetchIslandData = useFetchIsland();
+  
+  const fetchIsland = async () => {
+    setLoading(true);
+    const { data, error } = await fetchIslandData(islandId);
+    setData(data);
+    setError(error);
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    if (!islandId) return;
+    fetchIsland();
+  }, []);
 
     if (isLoading) return <SectionAnimation menuIsActive={isLoading} title={LANG.THAIISLANDS} />;
     if (error) return <NotFoundMessage message={error} />;
