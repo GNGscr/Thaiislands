@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-export default function SelectInput({ regions = [], filterRegion, isFiltering }) {
+export default function SelectInput({
+  regions = [],
+  filterRegion,
+  isFiltering
+}) {
+
   let regionNames = regions && ["All Regions", ...regions.map(r => r.regionName.en)];
   const [value, setValue] = useState(regionNames[0]);
 
@@ -27,7 +32,7 @@ export default function SelectInput({ regions = [], filterRegion, isFiltering })
     >
       <select
         value={value}
-        onChange={e => filterChange(e)}
+        onChange={filterChange}
       >
         {regionNames.map((rName, index) => {
           return <option key={index} value={rName}>{rName}</option>;

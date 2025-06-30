@@ -1,18 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { islandIdMap } from "@/lib/constants/privateData";
 import { useGlobalSettings } from './GlobalSettings';
 import RevealLinks from "./RevealLinks";
 import lang from "../public/data/en.json";  
 import SquareData from "../public/data/squareData.json";
 
 
-export default function ShuffleHero({data}) {
+export default function ShuffleHero({ data }) {
   const { language, setLanguage } = useGlobalSettings();
   const { LANG } = lang;
   const { HE_IL, EN_US, he, en } = LANG;
-  const islandId = islandIdMap.kohPhanganDataId;
 
   let mainHtml;
   useEffect(() => {

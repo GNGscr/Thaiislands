@@ -7,16 +7,20 @@ import HotelsSection from "./HotelsSection";
 import TiltComponent from "./TiltComponent";
 import { usePathname } from 'next/navigation';
 import MapEmbed from "./MapEmbed";
+import emojiLocation  from '../public/data/emoji-location.json';
 
 
-export default function Main({ data, lang, media, activateMenuIsActive, title, mainImg, mapDrawing }) {
+export default function Main({
+  data,
+  lang,
+  media,
+  activateMenuIsActive,
+  title,
+  mainImg,
+  mapDrawing
+}) {
 
   const pathname = usePathname();
-  const emojiLocation = {
-    "/koh-phangan": "top-34 left-[65%]",
-    "/koh-samui": "top-20 left-[78%]",
-    "/koh-tao": "top-18 left-[85%]",
-  };
 
   if (!data) return;
   
@@ -69,7 +73,9 @@ export default function Main({ data, lang, media, activateMenuIsActive, title, m
 
       </TextParallaxContentComponent>
 
-      <div className={`relative h-[${media === 'desktop' ? '120' : '60'}${media === 'desktop' ? 'vh' : 'lvh'}]`
+      <div className={
+        `relative h-[${media === 'desktop'? '120' : '60'}
+        ${media === 'desktop' ? 'vh' : 'lvh'}]`
       }>
         <div className="sticky top-0">
           <SwipeCarousel data={data} lang={lang} media={media} />

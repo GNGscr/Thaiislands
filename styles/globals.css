@@ -1334,12 +1334,11 @@ html[lang="he-IL"] .navbar-ul > a > li {
 }
 
 html[lang="en-US"] .section-content {
-  direction: rtl;
+  direction: rtl !important;
   gap: 6rem;
 }
 html[lang="he-IL"] .section-content {
   direction: ltr;
-  /* text-transform: capitalize; */
 }
 html[lang="en-US"] .section-content-para {
   direction: ltr;

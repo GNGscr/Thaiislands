@@ -4,37 +4,25 @@ import { usePathname } from 'next/navigation';
 import { useGlobalSettings } from './GlobalSettings';
 import { motion } from "framer-motion";
 import links from "../public/data/links.json";
+import setInnerWidth from "../public/utils/set-inner-width";
 
 export default function Layout() {
-  // const scope = useRef(null);
   const { language, setCurrentMedia } = useGlobalSettings();
   const [ isSideNavToggleSvgVisible, setIsSideNavToggleSvgVisible ] = useState(false);
   const [ isSideNavToggleVisible, setIsSideNavToggleVisible ] = useState(false);
   
-  const pathname = usePathname();
   let globalLanguage = language;
+  const pathname = usePathname();
+  
+  const sendCurrentMedia = media => setCurrentMedia(media);
 
   useEffect(() => {
-    if (window.innerWidth < 680) {
-      setCurrentMedia("mobile");
-      localStorage.setItem("media", "mobile");
-    } else if (window.innerWidth < 1080) {
-      setCurrentMedia("tablet");
-      localStorage.setItem("media", "tablet");
-    } else {
-      setCurrentMedia("desktop");
-      localStorage.setItem("media", "desktop");
-    }
+    setInnerWidth(sendCurrentMedia);
   }); 
 
   const setSideVisibility = (navTglSvg, navTgl) => {
     setIsSideNavToggleSvgVisible(navTglSvg);
     setIsSideNavToggleVisible(navTgl);
-  };
-
-  const variants = {
-    initial: { x: "-115%", width: "175px" },
-    animate: { x: "-5%", transition: { duration: .4 } }
   };
 
   return (
@@ -43,10 +31,9 @@ export default function Layout() {
       style={{ zIndex: 3 }}>
       <motion.div
         id="layout"
-        variants={variants}
         className={`links-layout p-2 m-3 relative w-full flex align-center top-[0.75rem]`}
-        initial="initial"
-        whileHover="animate"
+        initial={{ x: "-115%", width: "175px" }}
+        whileHover={{ x: "-5%", transition: { duration: .4 } }}
         animate={isSideNavToggleVisible ? "animate" : "initial"}
         onMouseLeave={() => setSideVisibility(false, false)}
         onMouseEnter={() => setSideVisibility(true, true)}
@@ -61,7 +48,6 @@ export default function Layout() {
         </div>
 
         {
-          
           links.map(({ link }, index) => {
             return (
               <Link
@@ -72,8 +58,7 @@ export default function Layout() {
               >
                 {links[index][globalLanguage]}
               </Link>
-            )
-          })
+          )})
         }
       </motion.div>
     </div>

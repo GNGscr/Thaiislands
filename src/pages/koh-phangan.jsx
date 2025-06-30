@@ -8,19 +8,16 @@ import { islandIdMap } from "@/lib/constants/privateData";
 import SectionAnimation from "../components/SectionAnimation";
 import lang from "../public/data/en.json";
 import NotFoundMessage from '../components/NotFound';
+import useFetchIsland from '../hooks/useFetchIsland';
 
 const { LANG } = lang;
 
 export default function KohPhangan() {
-  const { currentMedia, language } = useGlobalSettings();
+  const { currentMedia } = useGlobalSettings();
   const [data, setData] = useState(); 
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const islandId = islandIdMap.kohPhanganDataId;
-
-    useEffect(() => {
-    fetchIsland();
-  }, []);
 
   const fetchIsland = async () => {
       setLoading(true);
@@ -35,6 +32,10 @@ export default function KohPhangan() {
         setLoading(false);
       }
     };
+
+    useEffect(() => {
+      fetchIsland();
+    }, []);
 
     if (isLoading) return <SectionAnimation menuIsActive={isLoading} title={LANG.KOH_PHANGAN} />;
     if (error) return <NotFoundMessage message={error} />;
