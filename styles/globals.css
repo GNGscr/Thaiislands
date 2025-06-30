@@ -2326,7 +2326,8 @@ a {
     max-height: 2.7rem;
   }
   .navbar-ul {
-    max-width: 250px !important;
+    /* max-width: 250px !important; */
+    max-width: 260px !important;
     min-width: 150px !important;
   }
 
@@ -2409,6 +2410,7 @@ a {
   }
   .lang {
     top: 0.15rem;
+    margin-right: 0;
   }
   .lang:focus {
     outline: none;
@@ -2537,7 +2539,8 @@ a {
     font-size: 2rem;
   }
   .social {
-    padding-top: 0.25rem;
+    /* padding-top: 0.25rem; */
+    padding-top: 0;
     height: fit-content;
   }
   svg[data-name="facebook"],
