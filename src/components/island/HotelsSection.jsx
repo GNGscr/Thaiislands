@@ -5,6 +5,7 @@ import SelectInput from "../interactive/SelectInput";
 import { useState, useEffect } from "react";
 import filterIcon from "../../public/images/filter-icon.svg";
 import AffiliatesRegion from "../hotels/AffiliatesRegion";
+import HotelsTitle from "../hotels/HotelsTitle";
 
 export default function HotelsSection({ data, lang, media }) {
 
@@ -38,15 +39,7 @@ export default function HotelsSection({ data, lang, media }) {
       flex flex-col justify-center align-center
       bg-[#fff] p-[1rem] overflow-hidden`}
         style={{ zIndex: 2 }}>
-
-        <motion.div
-          initial={{ opacity: 0, letterSpacing: '10px' }}
-          whileInView={{ opacity: 0.7, letterSpacing: '0px' }}
-          transition={{ duration: 0.5 }}
-          className="hotels-title">
-          {data["resorts-and-hotels-title"][lang]}
-        </motion.div>
-
+          <HotelsTitle title={data["resorts-and-hotels-title"][lang]} />
         <div className="filter-section">
           <div className="tooltip"
             style={{ opacity: isTooltipVisible ? 1 : 0 }}>
