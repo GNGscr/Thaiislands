@@ -24,10 +24,6 @@ export function useFilteredRegions(regions) {
     }
   };
 
-  useEffect(() => {
-    console.log("isFiltering changed:", isFiltering);
-  }, [isFiltering]);
-
   const toggleFiltering = () => setIsFiltering((prev) => !prev);
 
   return {
