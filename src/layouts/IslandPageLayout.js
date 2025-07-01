@@ -5,10 +5,10 @@ import Main from "../components/landing/Main";
 import SocialsSection from "../components/interactive/SocialsSection";
 import StickyFooter from "../components/island/StickyFooter";
 import SectionAnimation from "../components/common/SectionAnimation";
-import { useGlobalSettings } from "../components/global/GlobalSettings";
+import { useLanguage } from "../hooks/useLanguage";
 
 export default function IslandPageLayout({ data, media, mapImage }) {
-    const { language, toggleLanguage } = useGlobalSettings();
+    const { language, toggleLanguage } = useLanguage();
     let [menuIsActive, setMenuIsActive] = useState(false);
     
     if (!data) return;
