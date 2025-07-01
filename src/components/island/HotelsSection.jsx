@@ -49,7 +49,6 @@ export default function HotelsSection({ data, lang, media }) {
             }}
             onClick={toggleFiltering}
             initial={{ display: 'block' }}
-            // animate={{ display: isFiltering ? 'none' : 'block' }}
             animate={{ opacity: isFiltering ? 0 : 1, pointerEvents: isFiltering ? 'none' : 'auto' }}
             transition={{ duration: 0, delay: isFiltering ? 0 : 0.25 }}
           >
