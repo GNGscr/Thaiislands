@@ -8,5 +8,6 @@ export const LANG = {
     KOH_PHANGAN: "קופנגן",
     KOH_SAMUI: "קוסמוי",
     KOH_TAO: "קוטאו",
-    BACK_BTN: "← חזרה"
+    BACK_BTN: "← חזרה",
+    FILTER_BY_REGION: "פילטור לפי אזור"
   };

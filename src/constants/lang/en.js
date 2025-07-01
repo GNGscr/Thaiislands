@@ -8,6 +8,7 @@ export const LANG = {
     KOH_PHANGAN: "Koh Phangan",
     KOH_SAMUI: "Koh Samui",
     KOH_TAO: "Koh Tao",
-    BACK_BTN: "← Back"
+    BACK_BTN: "← Back",
+    FILTER_BY_REGION: "Filter by Region"
   };
   
