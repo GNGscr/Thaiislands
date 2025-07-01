@@ -6,7 +6,7 @@ import { useGlobalSettings } from '../components/global/GlobalSettings';
 import IslandPageLayout from "../layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
 import SectionAnimation from "../components/common/SectionAnimation";
-import lang from "../public/data/en.json";
+import { LANG } from "../constants/lang/en";
 import NotFoundMessage from "../components/not-found/NotFound";
 import useFetchIsland from '../hooks/useIslandFetcher';
 
@@ -14,7 +14,7 @@ export default function KohTao() {
   const { currentMedia } = useGlobalSettings();
   const [data, setData] = useState();
   const islandId = islandIdMap.kohTaoDataId;
-  const { LANG } = lang;
+  const { THAIISLANDS, KOH_TAO } = LANG;
 
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -34,18 +34,19 @@ export default function KohTao() {
     fetchIsland();
   }, []);
     
-    if (isLoading) return <SectionAnimation menuIsActive={isLoading} title={LANG.KOH_TAO} />;
+    if (isLoading) return <SectionAnimation menuIsActive={isLoading} title={KOH_TAO} />;
     if (error) return <NotFoundMessage message={error} />;
-    if (!data) return;
+
+    const { _id, ...restData } = data;
 
     return (
       <>
         <Head>
-          <title>Thaiislands - Koh Tao</title>
-          <meta name="description" content="Thaiislands - Information about the Koh Tao." />
+          <title>{THAIISLANDS} - {KOH_TAO}</title>
+          <meta name="description" content={`${THAIISLANDS} - Information about the ${KOH_TAO}.`} />
         </Head>
         <IslandPageLayout
-          data={data}
+          data={restData}
           media={currentMedia}
           mapImage={kohTaoMap.src}
         />

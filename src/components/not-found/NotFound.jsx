@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import lang from '../../public/data/en.json';
+import { LANG } from "@/src/constants/lang/en";
 
 const NotFoundMessage = ({ message }) => {
-  const { LANG } = lang;
+  const { BACK_BTN } = LANG;
   return (
     <div className="centered-content">
       <Link href='/' className="back-btn">
-        {LANG.BACK_BTN}
+        {BACK_BTN}
       </Link>
       <motion.p
           initial={{ scale: 0.8, opacity: 0 }}

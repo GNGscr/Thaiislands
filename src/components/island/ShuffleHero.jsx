@@ -2,14 +2,13 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import RevealLinks from "../common/RevealLinks";
-import lang from "../../public/data/en.json";  
+import { LANG } from "@/src/constants/lang/en";
 import SquareData from "../../public/data/squareData.json";
 import { useLanguage } from "@/src/hooks/useLanguage";
 
 
 export default function ShuffleHero({ data }) {
   const { language, toggleLanguage } = useLanguage();
-  const { LANG } = lang;
   const { en } = LANG;
 
   const { _id, cafesAndResturants, ...dataNoId } = data;

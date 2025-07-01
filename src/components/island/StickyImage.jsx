@@ -15,6 +15,9 @@ export default function StickyImage({ imgUrl, isMapVisible, data, lang, media })
     const opacityMobile = useTransform(scrollYProgress, [0, 0.05, 1], [0.3, 0.15, 0]);    
     
     if (!imgUrl) return;
+
+    const islandName = data["island-name"][lang];
+    const googleMapLink = data.googleMap.link;
   
     return (
       <motion.div
@@ -39,8 +42,8 @@ export default function StickyImage({ imgUrl, isMapVisible, data, lang, media })
           isMapVisible
             ?? <div id="map">
               <div className="map-responsive">
-                <iframe src={data.googleMap.link}
-                  width={data["island-name"][lang] === "Koh Phangan" ? "600" : "100%"}
+                <iframe src={googleMapLink}
+                  width={islandName === "Koh Phangan" ? "600" : "100%"}
                   height="450"
                   allowFullScreen
                   loading="lazy"

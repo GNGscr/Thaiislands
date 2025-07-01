@@ -1,15 +1,18 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { motion, useScroll, useMotionValueEvent, useAnimate } from "framer-motion";
-import RevealLinks from "../../common/RevealLinks.jsx";
 import { usePathname } from 'next/navigation';
+import { motion, useScroll, useMotionValueEvent, useAnimate } from "framer-motion";
+// hooks
 import { useGlobalSettings } from "../../global/GlobalSettings.jsx";
-import navButtonsPositionMedia from "../../../public/data/navButtonsPositionMedia.json";
-import SlideTabs from "./SlideTabs.jsx";
 import useNavbarMedia from "../../../hooks/useNavbarMedia.js";
 import useNavbarIntersection from "../../../hooks/useNavbarIntersection.js";
+// layout & component
+import RevealLinks from "../../common/RevealLinks.jsx";
+import SlideTabs from "./SlideTabs.jsx";
 import NavSocials from "./NavSocials.jsx";
 import NavToggle from "./NavToggle.jsx";
+// data
+import navButtonsPositionMedia from "../../../public/data/navButtonsPositionMedia.json";
 
 export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
   const pathname = usePathname();
@@ -90,7 +93,7 @@ export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
         opacity: 1,
       });
     }
-    // Scroll to the section after the animation completes
+    // Scrolls to the section after the animation completes
     setTimeout(() => {
         const target = document.getElementById(sectionId);
         if (target) {
