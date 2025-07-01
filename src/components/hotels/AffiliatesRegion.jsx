@@ -4,7 +4,7 @@ import RowCardsAnimation from "../../public/data/rowCardsAnimation.json";
 import MobileRowCardsAnimationJson from "../../public/data/mobileRowCardsAnimation.json";
 import MobileOneRowCardsAnimationJson from "../../public/data/mobileOneRowCardsAnimation.json";
 import splitAffiliatesByMedia from "../../utils/splitAffiliatesByMedia";
-import AffiliateCard from "./AffiliateCard";
+import AffiliateCard from "./AffiliateCard.jsx";
 
 export default function AffiliatesRegion({ region, lang, media }) {
   const { regionAffiliates, regionName } = region;

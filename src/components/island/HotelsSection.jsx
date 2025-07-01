@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import SelectInput from "../interactive/SelectInput";
 import { useState } from "react";
 import filterIcon from "../../public/images/filter-icon.svg";
-import AffiliatesRegion from "../hotels/AffiliatesRegion";
+import AffiliatesRegion from "../hotels/AffiliatesRegion.jsx";
 import HotelsTitle from "../hotels/HotelsTitle";
 import { useFilteredRegions } from "@/src/hooks/useFilteredRegions";
 import { LANG } from "@/src/constants/lang/en";
