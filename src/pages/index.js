@@ -1,14 +1,12 @@
 "use client";
 import Head from "next/head";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useGlobalSettings } from "../components/GlobalSettings";
 import AboutUs from "./about";
 
 export default function Home() {
-  const { setCurrentMedia, currentMedia } = useGlobalSettings();
-  
-  const mainRef = useRef(null);
 
+  const { setCurrentMedia, currentMedia } = useGlobalSettings();
   const [ setDimension ] = useState({width: 0, height: 0});
 
   useEffect(() => {
@@ -37,11 +35,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={mainRef}>
+    <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <AboutUs media={currentMedia} />
-    </div>
+    </>
   );
 }

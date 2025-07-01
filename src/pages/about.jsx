@@ -49,7 +49,7 @@ export default function About() {
                 {}
                 <h3 id="thaiislands"
                     className="about-us-title font-bold mt-[1rem] mb-[1rem]"
-                    style={{ textAlign: 'center', fontSize: '2.65rem', color: 'white' }}>
+                    style={{ textAlign: 'center', fontSize: '2.65rem', color: 'white', zIndex: 1 }}>
                     {LANG.THAIISLANDS}
                 </h3>
                 <ShuffleHero data={data} />

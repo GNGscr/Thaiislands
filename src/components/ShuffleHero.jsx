@@ -30,44 +30,46 @@ export default function ShuffleHero({ data }) {
   if(!Object.keys(dataNoId).length) return;
   
   return (
-    <section className={`w-full mt-[-1.25rem] px-8 py-12 grid grid-cols-1 md:grid-cols-2
+    <section className="about-section-wrapper">
+      <div className={`about-section w-full mt-[-1.25rem] px-8 py-12 grid grid-cols-1 md:grid-cols-2
         items-center gap-[7.5rem] max-w-6xl mx-auto text-white`}
         style={{ textAlign: language === en ? 'left' : 'right'}}>
-      <div className={`about-nav flex justify-end w-full h-[60px] fixed top-[1rem] right-0`}>
-        <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
-      </div>
-      <div className="about-us">
-        <h3 className={`text-1xl md:text-[2rem] font-semibold about-us-title`}>
-          {dataNoId.aboutUsPage.header[language]}
-        </h3>
-        <p className={`text-base md:text-2xl text-slate-700 my-4 md:my-6 about-us-title text-white`}>
-          {dataNoId.aboutUsPage.subHeader[language]}
-        </p>
-        <div className="flex justify-between mt-[10rem] w-[96%] z-5 page-btns-wrp">
-          {
-            dataNoId.aboutUsPage.pages.map((page, index) => {
-              return (
-                <motion.a
-                  key={index}
-                  href={page.link}
-                  className={`w-[32%] page-btn font-medium w-[100%]
-                      py-3 px-4 rounded transition-all active:scale-95`}
-                    initial={{ color: "#000", backgroundColor: "#fff", rotateX: 0 }}
-                    whileHover={{
-                      fontWeight: 600,
-                      letterSpacing: "0.005rem",
-                      color: "#fff",
-                      backgroundColor: "#000",
-                      rotateX: 360
-                    }}
-                    transition={{ duration: .1, delay: 0.065 }}>
-                    {page.label[language]}
-                </motion.a>
-              )
-            })}
+        <div className={`about-nav flex justify-end w-full h-[60px] fixed top-[1rem] right-0`}>
+          <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
         </div>
+        <div className="about-us">
+          <h3 className={`text-1xl md:text-[2rem] font-semibold about-us-title`}>
+            {dataNoId.aboutUsPage.header[language]}
+          </h3>
+          <p className={`text-base md:text-2xl text-slate-700 my-4 md:my-6 about-us-title text-white`}>
+            {dataNoId.aboutUsPage.subHeader[language]}
+          </p>
+          <div className="flex justify-between mt-[10rem] w-[96%] z-5 page-btns-wrp">
+            {
+              dataNoId.aboutUsPage.pages.map((page, index) => {
+                return (
+                  <motion.a
+                    key={index}
+                    href={page.link}
+                    className={`w-[32%] page-btn font-medium w-[100%]
+                        py-3 px-4 rounded transition-all active:scale-95`}
+                      initial={{ color: "#000", backgroundColor: "#fff", rotateX: 0 }}
+                      whileHover={{
+                        fontWeight: 600,
+                        letterSpacing: "0.005rem",
+                        color: "#fff",
+                        backgroundColor: "#000",
+                        rotateX: 360
+                      }}
+                      transition={{ duration: .1, delay: 0.065 }}>
+                      {page.label[language]}
+                  </motion.a>
+                )
+              })}
+          </div>
+        </div>
+        <ShuffleGrid language={language} />
       </div>
-      <ShuffleGrid language={language} />
     </section>
   );
 };

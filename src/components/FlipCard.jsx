@@ -41,6 +41,10 @@ const FlipCard = ({
           }}
           onClick={handleFlip}>
             <motion.div
+              whileHover={{
+                scale: 1.03,
+                boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
+              }}
               className="flip-card-inner w-[100%] h-[100%]"
               initilal={{ rotateX: 0 }}
               animate={{ rotateX: isFlipped ? 180 : 0 }}
@@ -129,11 +133,8 @@ const FlipCard = ({
                       variants={{
                         initial: { scale: 1 },
                         animate: {
-                          scale: 1.04,
-                          transition: {
-                            duration: .2,
-                            type: "spring"
-                          }
+                          scale: 1.03,
+                          boxShadow: '0px 5px 10px rgba(0,0,0,0.4)'
                         }
                       }}
                       >
