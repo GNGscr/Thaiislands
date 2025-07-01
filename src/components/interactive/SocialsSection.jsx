@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
-import ScreenFitText from './ScreenFitText';
+import ScreenFitText from '../common/ScreenFitText';
 
 export default function SocialsSection({ data, lang }) {
   if (!data) return;

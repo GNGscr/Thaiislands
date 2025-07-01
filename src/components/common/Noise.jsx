@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from 'next/navigation';
-import CreatedBy from "./CreatedBy";
-import FooterNoisePages from "../public/data/footerNoisePages.json";
+import CreatedBy from "../landing/CreatedBy";
+import FooterNoisePages from "../../public/data/footerNoisePages.json";
 
 export default function Noise() {
 

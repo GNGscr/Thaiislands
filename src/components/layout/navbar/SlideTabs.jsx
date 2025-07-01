@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Tab from "./Tab";
-import Cursor from "./Cursor";
+import Tab from "./Tab.jsx";
+import Cursor from "./Cursor.jsx";
 
 export default function SlideTabs({
   setPosition,

@@ -1,15 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent, useAnimate } from "framer-motion";
-import RevealLinks from "./RevealLinks";
+import RevealLinks from "../../common/RevealLinks.jsx";
 import { usePathname } from 'next/navigation';
-import { useGlobalSettings } from './GlobalSettings';
-import navButtonsPositionMedia from "../public/data/navButtonsPositionMedia.json";
-import SlideTabs from "./navbar/SlideTabs";
-import useNavbarMedia from "../hooks/useNavbarMedia";
-import useNavbarIntersection from "../hooks/useNavbarIntersection";
-import NavSocials from "./navbar/NavSocials";
-import NavToggle from "./navbar/NavToggle";
+import { useGlobalSettings } from "../../global/GlobalSettings.jsx";
+import navButtonsPositionMedia from "../../../public/data/navButtonsPositionMedia.json";
+import SlideTabs from "./SlideTabs.jsx";
+import useNavbarMedia from "../../../hooks/useNavbarMedia.js";
+import useNavbarIntersection from "../../../hooks/useNavbarIntersection.js";
+import NavSocials from "./NavSocials.jsx";
+import NavToggle from "./NavToggle.jsx";
 
 export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
   const pathname = usePathname();

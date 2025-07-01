@@ -1,5 +1,5 @@
 "use client";
-import Noise from './Noise';
+import Noise from '../common/Noise';
 import React, { useRef, useEffect } from "react";
 import { m, motion, steps, useScroll, useTransform } from 'framer-motion';
 

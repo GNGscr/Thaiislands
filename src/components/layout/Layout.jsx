@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from 'next/navigation';
-import { useGlobalSettings } from './GlobalSettings';
+import { useGlobalSettings } from '../global/GlobalSettings';
 import { motion } from "framer-motion";
-import links from "../public/data/links.json";
-import setInnerWidth from "../public/utils/set-inner-width";
+import links from "../../public/data/links.json";
+import setInnerWidth from "../../public/utils/set-inner-width";
 
 export default function Layout() {
   const { language, setCurrentMedia } = useGlobalSettings();

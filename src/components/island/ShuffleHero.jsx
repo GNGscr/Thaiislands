@@ -1,29 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { useGlobalSettings } from './GlobalSettings';
-import RevealLinks from "./RevealLinks";
-import lang from "../public/data/en.json";  
-import SquareData from "../public/data/squareData.json";
+import { useGlobalSettings } from '../global/GlobalSettings';
+import RevealLinks from "../common/RevealLinks";
+import lang from "../../public/data/en.json";  
+import SquareData from "../../public/data/squareData.json";
 
 
 export default function ShuffleHero({ data }) {
-  const { language, setLanguage } = useGlobalSettings();
+  const { language, toggleLanguage } = useGlobalSettings();
   const { LANG } = lang;
-  const { HE_IL, EN_US, he, en } = LANG;
-
-  let mainHtml;
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    mainHtml = document.querySelector('html');
-    if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? HE_IL : EN_US);
-
-  }, [language].latest);
-
-  const toggleLanguage = () => {
-    if (mainHtml) mainHtml.setAttribute('lang', mainHtml.lang === HE_IL ? EN_US : HE_IL);
-    language === en ? setLanguage(he) : setLanguage(en);
-  }
+  const { en } = LANG;
 
   const { _id, cafesAndResturants, ...dataNoId } = data;
   

@@ -2,12 +2,12 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import phanganMap from '../public/images/phangan-map.png';
-import { useGlobalSettings } from '../components/GlobalSettings';
+import { useGlobalSettings } from '../components/global/GlobalSettings';
 import IslandPageLayout from "../layouts/IslandPageLayout";
 import { islandIdMap } from "@/lib/constants/privateData";
-import SectionAnimation from "../components/SectionAnimation";
+import SectionAnimation from "../components/common/SectionAnimation";
 import lang from "../public/data/en.json";
-import NotFoundMessage from '../components/NotFound';
+import NotFoundMessage from '../components/not-found/NotFound';
 import useFetchIsland from '../hooks/useIslandFetcher';
 
 const { LANG } = lang;

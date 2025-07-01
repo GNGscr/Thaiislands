@@ -1,13 +1,13 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import SwipeCarousel from "./SwipeCarousel";
-import ButtonLightningAnimation from "./ButtonLightningAnimation";
-import HotelsSection from "./HotelsSection";
-import TiltComponent from "./TiltComponent";
+import SwipeCarousel from "../island/SwipeCarousel";
+import ButtonLightningAnimation from "../common/ButtonLightningAnimation";
+import HotelsSection from "../island/HotelsSection";
+import TiltComponent from "../common/TiltComponent";
 import { usePathname } from 'next/navigation';
-import MapEmbed from "./MapEmbed";
-import emojiLocation  from '../public/data/emoji-location.json';
+import MapEmbed from "../interactive/MapEmbed";
+import emojiLocation  from '../../public/data/emoji-location.json';
 
 
 export default function Main({

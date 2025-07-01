@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import img1 from '../public/images/panviman-resort.png';
+import img1 from '../../public/images/panviman-resort.png';
 import Image from 'next/image';
-import starSvg from '../public/images/star.svg';
+import starSvg from '../../public/images/star.svg';
 
 const FlipCard = ({
   hotelName="",

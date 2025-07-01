@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import { useGlobalSettings } from "../components/GlobalSettings";
+import { useGlobalSettings } from "../components/global/GlobalSettings";
 import AboutUs from "./about";
 
 export default function Home() {

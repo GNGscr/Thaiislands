@@ -2,14 +2,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import FlipCard from "./FlipCard";
-import DefaultCard from "./DefaultCard";
-import SelectInput from "./SelectInput";
+import DefaultCard from "../common/DefaultCard";
+import SelectInput from "../interactive/SelectInput";
 import { useState, useEffect } from "react";
-import filterIcon from "../public/images/filter-icon.svg";
-import RowCardsAnimation from "../public/data/rowCardsAnimation.json";
-import MobileRowCardsAnimationJson from "../public/data/mobileRowCardsAnimation.json";
-import MobileOneRowCardsAnimationJson from "../public/data/mobileOneRowCardsAnimation.json";
-import RegionsTitleAnimationJson from "../public/data/regionalTitleAnimation.json";
+import filterIcon from "../../public/images/filter-icon.svg";
+import RowCardsAnimation from "../../public/data/rowCardsAnimation.json";
+import MobileRowCardsAnimationJson from "../../public/data/mobileRowCardsAnimation.json";
+import MobileOneRowCardsAnimationJson from "../../public/data/mobileOneRowCardsAnimation.json";
+import RegionsTitleAnimationJson from "../../public/data/regionalTitleAnimation.json";
 
 export default function HotelsSection({ data, lang, media }) {
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import lang from '../public/data/en.json';
+import lang from '../../public/data/en.json';
 
 const NotFoundMessage = ({ message }) => {
   const { LANG } = lang;

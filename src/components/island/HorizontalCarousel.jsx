@@ -4,7 +4,7 @@ import { useRef } from "react";
 import mimiImg from "../public/images/cafe-mimi-1.jpg";
 import puraVidaImg from "../public/images/pura-vida-img.jpg";
 import houseOfSanskara from "../public/images/house-of-sanskara.jpg";
-import deviceMedium from "../public/data/deviceMedium.json";
+import deviceMedium from "../../public/data/deviceMedium.json";
 import Card from "./Card";
 
 const cards = [

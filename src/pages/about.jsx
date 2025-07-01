@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import ShuffleHero from '../components/ShuffleHero';
+import ShuffleHero from '../components/island/ShuffleHero';
 import { islandIdMap } from '@/lib/constants/privateData';
 import lang from "../public/data/en.json";
 import { useState, useEffect } from 'react';
-import SectionAnimation from '../components/SectionAnimation';
-import NotFoundMessage from '../components/NotFound';
+import SectionAnimation from '../components/common/SectionAnimation';
+import NotFoundMessage from '../components/not-found/NotFound';
 import useFetchIsland from '../hooks/useIslandFetcher';
 
 export default function About() {

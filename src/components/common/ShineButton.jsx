@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import InstagramPlainIcon from '../public/images/instagram-plain.svg';
-import shinyButtonVariants from '../public/data/shinyButtonVatiants.json';
+import InstagramPlainIcon from '../../public/images/instagram-plain.svg';
+import shinyButtonVariants from '../../public/data/shinyButtonVatiants.json';
 
 const ShineButton = ({ isLogoSection }) => {
     return (

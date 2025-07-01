@@ -1,4 +1,4 @@
-import TiltComponent from "./TiltComponent";
+import TiltComponent from "../common/TiltComponent";
 import { motion } from "framer-motion";
 
 export default function ParallaxContent({ currentPara, isLogoSection, sidePara, lang, data }) {

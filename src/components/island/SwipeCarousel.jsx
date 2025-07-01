@@ -2,22 +2,22 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import ScreenFitText from "./ScreenFitText";
-import rinbeach from '../public/images/koh-phangan-rin-beach.PNG';
-import phangandownhill from '../public/images/koh-phangan-downhill-view.jpg';
-import phanganChilling from '../public/images/koh-phangan-chilling.jpg';
-import phanganParties from '../public/images/koh-phangan-party.jpg';
-import jambar1 from '../public/images/koh-phangan-jambar-1.jpg';
-import jambar2 from '../public/images/koh-phangan-jambar-2.jpg';
-import jambar3 from '../public/images/koh-phangan-jambar-3.jpg';
+import ScreenFitText from "../common/ScreenFitText";
+import rinbeach from '../../public/images/koh-phangan-rin-beach.PNG';
+import phangandownhill from '../../public/images/koh-phangan-downhill-view.jpg';
+import phanganChilling from '../../public/images/koh-phangan-chilling.jpg';
+import phanganParties from '../../public/images/koh-phangan-party.jpg';
+import jambar1 from '../../public/images/koh-phangan-jambar-1.jpg';
+import jambar2 from '../../public/images/koh-phangan-jambar-2.jpg';
+import jambar3 from '../../public/images/koh-phangan-jambar-3.jpg';
 
-import samuiMall from '../public/images/koh-samui-mall.jpg';
-import samuiTraffic1 from '../public/images/koh-samui-traffic-1.jpg';
-import samuiTraffic2 from '../public/images/koh-samui-traffic-2.jpg';
-import samuiBand1 from '../public/images/koh-samui-band-1.jpg';
-import samuiPig from '../public/images/koh-samui-pig.jpg';
-import samuiDrunkGirls from '../public/images/koh-samui-girls.jpg';
-import lang from "../public/data/en.json";
+import samuiMall from '../../public/images/koh-samui-mall.jpg';
+import samuiTraffic1 from '../../public/images/koh-samui-traffic-1.jpg';
+import samuiTraffic2 from '../../public/images/koh-samui-traffic-2.jpg';
+import samuiBand1 from '../../public/images/koh-samui-band-1.jpg';
+import samuiPig from '../../public/images/koh-samui-pig.jpg';
+import samuiDrunkGirls from '../../public/images/koh-samui-girls.jpg';
+import lang from "../../public/data/en.json";
 
 let imgs = [];
 const { LANG } = lang;

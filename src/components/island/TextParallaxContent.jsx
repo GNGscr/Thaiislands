@@ -1,5 +1,5 @@
 import StickyImage from "./StickyImage";
-import OverlayOpacity from "./OverlayOpacity";
+import OverlayOpacity from "../common/OverlayOpacity";
 
 export default function TextParallaxContent ({
     imgUrl,
