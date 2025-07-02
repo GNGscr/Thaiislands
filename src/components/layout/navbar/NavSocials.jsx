@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import styles from '../styles/Main.module.css';
 
 export default function NavSocials({ pathname }) {
   const hidden = pathname === "/" || pathname === "/about" ? "invisible" : "visible";
@@ -23,7 +24,7 @@ export default function NavSocials({ pathname }) {
   }, [color]);
 
   return (
-    <div className={`social flex gap-4 ml-7 mt-1 ${hidden}`} style={{ height: "fit-content" }}>
+    <div className={`${styles.social} flex gap-4 ml-7 mt-1 ${hidden}`} style={{ height: "fit-content" }}>
       <motion.a href="https://www.instagram.com/daniel__ehrlich/" style={{ color }} target="_blank" rel="noopener noreferrer">
         {/* Instagram SVG */}
         <svg data-name="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="cursor-pointer"
