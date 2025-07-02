@@ -13,7 +13,6 @@ import NavSocials from "./NavSocials.jsx";
 import NavToggle from "./NavToggle.jsx";
 // data
 import navButtonsPositionMedia from "../../../public/data/navButtonsPositionMedia.json";
-import styles from '../styles/Main.module.css';
 
 export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
   const pathname = usePathname();
@@ -125,7 +124,7 @@ export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
             currentMedia={currentMedia}
             directionToOffset={directionToOffset}
           />
-          <div className={styles.revealLinksWrapper}>
+          <div className="reveal-links-wrapper">
             <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
           </div>
         </div>
