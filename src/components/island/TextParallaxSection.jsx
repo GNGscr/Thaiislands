@@ -132,6 +132,7 @@ export default function TextParallaxSection({
           initial={{ opacity: 0, y: "75%" }}
           whileInView={{ opacity: 1, y: 0, }}
           transition={{ duration: 0.5, type: "tween", }}
+          dir={lang === 'he' ? 'rtl' : 'ltr'}
           className="main-header mb-2 text-center text-xl md:mb-4 md:text-4xl text-bold">
           {subheading}
         </motion.div>

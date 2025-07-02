@@ -895,19 +895,6 @@ html[lang="he-IL"] .navbar-ul > a > li {
   padding: 0.725rem 1.6rem;
 }
 
-html[lang="en-US"] .section-content {
-  direction: rtl !important;
-  gap: 6rem;
-}
-html[lang="he-IL"] .section-content {
-  direction: ltr;
-}
-html[lang="en-US"] .section-content-para {
-  direction: ltr;
-}
-html[lang="he-IL"] .section-content-para {
-  direction: rtl;
-}
 html[lang="en-US"] .section-content-para-1,
 html[lang="en-US"] .section-content-para-2 {
   font-size: 1.25rem;

@@ -101,8 +101,8 @@ const FlipCard = ({
                 <div className="card-back-mask" />
                 <div className="flip-card-back-inner">
                   <div className="card-header">{hotelName}</div>
-                  <div className="card-content">{content}</div>
-                    <div className="score-wrapper">
+                  <div className="card-content" dir={lang === 'he' ? 'rtl' : 'ltr'}>{content}</div>
+                    <div className="score-wrapper" dir={lang === 'he' ? 'rtl' : 'ltr'}>
 
                       <div className="google-score">
                         <div>{googleScore}</div>

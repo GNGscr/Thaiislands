@@ -112,7 +112,7 @@ export default function SwipeCarousel({ data, lang, media }) {
     <div className="flex flex-col">
       <ScreenFitText className="relative mb-[10rem]" isOnCarousal={true} text={data["island-name"]["en"]} />
       <div className="vacation-gallery-wrapper relative overflow-hidden rounded-xl mt-[5rem]" id="gallery">
-        <div 
+        <div dir={lang === 'he' ? 'rtl' : 'ltr'}
           className="vacation-gallery w-full flex align-center justify-center text-[3rem] mb-[5px]"
           style={{ fontFamily: "--font-space-grotesk", opacity: 0.7 }}>
           {
