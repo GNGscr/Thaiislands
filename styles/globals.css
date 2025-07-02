@@ -1861,6 +1861,7 @@ a {
   #thaiislands {
     position: static;
     padding-top: 5rem;
+    font-size: 2.65rem !important;
   }
   .about-nav {
     right: 1.5rem;
@@ -1870,19 +1871,20 @@ a {
     display: none;
   }
 
-  #thaiislands {
-    font-size: 2.15rem !important;
+  .about-us {
+    margin-top: 5rem;
   }
-
   .about-us > p {
     margin-top: 1.5rem !important;
     margin-bottom: 12rem !important;
+    padding: 0 1rem;
   }
 
   .about-us-title {
     margin-top: 0rem;
     font-size: 1.25rem !important;
     line-height: 40px;
+    padding: 0 1rem;
   }
   .page-btns-wrp {
     width: 100% !important;
