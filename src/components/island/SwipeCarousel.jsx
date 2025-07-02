@@ -19,7 +19,6 @@ import samuiBand1 from '../../public/images/koh-samui-band-1.jpg';
 import samuiPig from '../../public/images/koh-samui-pig.jpg';
 import samuiDrunkGirls from '../../public/images/koh-samui-girls.jpg';
 import { LANG } from "@/src/constants/lang/en";
-import styles from '../styles/Main.module.css';
 
 let imgs = [];
 const { KOH_PHANGAN, KOH_SAMUI } = LANG;
@@ -112,9 +111,9 @@ export default function SwipeCarousel({ data, lang, media }) {
   return (
     <div className="flex flex-col">
       <ScreenFitText className="relative mb-[10rem]" isOnCarousal={true} text={data["island-name"]["en"]} />
-      <div className={`${styles.vacationGalleryWrapper} relative overflow-hidden rounded-xl mt-[5rem]`} id="gallery">
+      <div className="vacation-gallery-wrapper relative overflow-hidden rounded-xl mt-[5rem]" id="gallery">
         <div dir={lang === 'he' ? 'rtl' : 'ltr'}
-          className={`${styles.vacationGallery} w-full flex align-center justify-center text-[3rem] mb-[5px]`}
+          className="vacation-gallery w-full flex align-center justify-center text-[3rem] mb-[5px]"
           style={{ fontFamily: "--font-space-grotesk", opacity: 0.7 }}>
           {
             ourVacationGalleryArray.map((letter, i) => {
@@ -150,7 +149,7 @@ export default function SwipeCarousel({ data, lang, media }) {
           }}
           transition={SPRING_OPTIONS}
           onDragEnd={onDragEnd}
-          className={`${styles.galleryImg} flex cursor-grab items-center active:cursor-grabbing`}
+          className="gallery-img flex cursor-grab items-center active:cursor-grabbing"
         >
           <Images imgIndex={imgIndex} />
         </motion.div>

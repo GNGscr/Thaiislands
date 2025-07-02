@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { usePathname } from 'next/navigation';
-import styles from '../styles/Main.module.css';
 
 export default function ScreenFitText({text, isOnCarousal}) {
   
@@ -53,7 +52,7 @@ export default function ScreenFitText({text, isOnCarousal}) {
 
   return (
     <div
-      className={`${styles.screenFixTxt} flex h-[250px] w-full items-centerjustify-center
+      className={`screen-fix-txt flex h-[250px] w-full items-centerjustify-center
         overflow-hidden relative ${isOnCarousal ? 'bottom-[-35rem] mt-[-20rem]' : 'mt-[-15rem]'}`}
       ref={containerRef}
     >
