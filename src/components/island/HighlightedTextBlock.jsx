@@ -13,7 +13,7 @@ const HighlightedTextBlock = ({ currentPara, isLogoSection, sidePara, lang, data
     transition:{ duration: 0.4, type: "tween", }
   };
   return (
-    <div className={`section-content
+    <div className={`${styles.sectionContent}
       ${lang === "he"
         ? 'mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12'
         : 'mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-12 pt-24 md:grid-cols-12'
@@ -21,13 +21,13 @@ const HighlightedTextBlock = ({ currentPara, isLogoSection, sidePara, lang, data
       `}
       dir={lang === 'he' ? 'ltr' : 'rtl'}
       style={{ gap: "6rem" }}>
-      <h2 className={`section-content-h col-span-1 text-3xl font-bold md:col-span-4 overflow-hidden`}>
+      <h2 className={`${styles.sectionContentH} col-span-1 text-3xl font-bold md:col-span-4 overflow-hidden`}>
         {sidePara && lang &&
   
           <div className="text-[2.7rem] relative right-[15%] text-[#aaa]">
             <motion.div
               dir={lang === 'he' ? 'rtl' : 'ltr'}
-              className="quote"
+              className={styles.quote}
               {...quoteVariants}
             >
               {sidePara[lang]}
