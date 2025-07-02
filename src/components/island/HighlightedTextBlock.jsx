@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import TiltComponent from "../common/TiltComponent";
+import styles from '../styles/Main.module.css'; 
 
 const HighlightedTextBlock = ({ currentPara, isLogoSection, sidePara, lang, data }) => {
   const quoteVariants = {
@@ -34,8 +35,8 @@ const HighlightedTextBlock = ({ currentPara, isLogoSection, sidePara, lang, data
           </div>
         }
       </h2>
-      <div className="section-content-para col-span-1 md:col-span-8" dir={lang === 'he' ? 'rtl' : 'ltr'}>
-        <p className="section-content-para-1 mb-4 text-xl text-neutral-600 md:text-2xl">
+      <div className={`${styles.sectionContentPara} col-span-1 md:col-span-8`} dir={lang === 'he' ? 'rtl' : 'ltr'}>
+        <p className={`${styles.sectionContentPara1} mb-4 text-xl text-neutral-600 md:text-2xl`}>
           {currentPara}
         </p>
   
