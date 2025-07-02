@@ -1,5 +1,6 @@
 import TiltComponent from "../common/TiltComponent";
 import { motion } from "framer-motion";
+import styles from '../styles/Main.module.css'; 
 
 export default function ParallaxContent({ currentPara, isLogoSection, sidePara, lang, data }) {
     return   <div className={`${styles.sectionContent}
