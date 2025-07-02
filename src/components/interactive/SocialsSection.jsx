@@ -3,22 +3,23 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import ScreenFitText from '../common/ScreenFitText';
+import styles from '../styles/Main.module.css';
 
 export default function SocialsSection({ data, lang }) {
   if (!data) return;
   return (
-    <main className="magnetic-main z-4 bg-[#fff]">
+    <main className={`${styles.magneticMain} z-4 bg-[#fff]`}>
       <div className="overflow-hidden flex justify-center bg-[#fff]">
         <motion.div
           initial={{ opacity: 0, y: "30%" }}
           whileInView={{ opacity: 0.7, y: 0 }}
           transition={{ duration: .75, type: "spring" }}
-          className="social-title">
+          className={styles.socialTitle}>
           {data.mySocials[lang]}
         </motion.div>
       </div>
 
-      <div className="magnetic-container">
+      <div className={styles.magneticContainer}>
         <IconsMagnetic>
           <a target="_blank" rel="noopener noreferrer" href={`https://www.facebook.com/daniel.ehrlich.98/`} aria-label="Facebook">
             <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.5 58" fill="#000">
