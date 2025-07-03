@@ -1952,13 +1952,12 @@ a {
     margin-right: 1.25rem;
   }
   .vacation-gallery {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
     font-size: 1.65rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .gallery-img {
-    /* scale: 1.25; */
     scale: 0.95;
     padding-top: 2rem;
     padding-bottom: 2rem;
