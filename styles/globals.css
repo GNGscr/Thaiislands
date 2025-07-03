@@ -2085,8 +2085,8 @@ a {
 
   .credits {
     flex-direction: column;
-    margin-top: 4.5rem !important;
-    margin-bottom: 2.5rem;
+    margin-top: 3.5rem !important;
+    margin-bottom: 4.5rem;
     gap: 0rem !important;
   }
   .created-by {
