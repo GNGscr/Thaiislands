@@ -1958,9 +1958,13 @@ a {
     font-size: 2rem;
   }
   .gallery-img {
-    scale: 1.25;
+    /* scale: 1.25; */
+    scale: 0.95;
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .tilt-card {
+    margin-left: 3rem;
   }
   svg.svg-logo-loader {
     width: 275px !important;

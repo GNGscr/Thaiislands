@@ -89,7 +89,7 @@ export default function Main({
 
       </TextParallaxSection>
 
-      <div className={`relative ${media === 'desktop' ? 'h-[120vh]' : 'h-[60lvh]'}`}>
+      <div className={`relative ${media === 'desktop' ? 'h-[120vh]' : 'h-[44lvh]'}`}>
         <div className="sticky top-0">
           <SwipeCarousel data={data} lang={lang} media={media} />
         </div>

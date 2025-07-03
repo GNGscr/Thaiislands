@@ -16,6 +16,7 @@
 @media (max-width: 680px) {
     .social {
         padding-top: 0;
+        margin-left: 0;
         height: fit-content;
     }
 
