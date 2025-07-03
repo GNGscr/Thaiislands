@@ -1963,8 +1963,11 @@ a {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  .tilt-card {
+  html[lang="en-US"] .tilt-card {
     margin-left: 3rem;
+  }
+  html[lang="he-IL"] .tilt-card {
+    margin-right: 3rem;
   }
   svg.svg-logo-loader {
     width: 275px !important;
