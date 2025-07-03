@@ -1,0 +1,93 @@
+.navbarUl {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    background: #fff;
+    border: 2px solid black;
+    transition: opacity 0.3s ease-in-out;
+}
+
+html[lang="en-US"] .navbarUl {
+    direction: ltr;
+}
+
+html[lang="he-IL"] .navbarUl {
+    direction: rtl;
+}
+
+html[lang="he-IL"] .navbarUl>a>li {
+    font-size: 1.25rem;
+    padding: 0.725rem 1.6rem;
+}
+
+.navbarUl>a>li {
+    padding: 0.725rem 1.6rem;
+}
+
+
+@media (max-width: 1080px) {
+    html[lang="he-IL"] .navbarUl {
+        max-width: 474.51px;
+    }
+
+    html[lang="en-US"] .navbarUl {
+        max-width: 586.82px;
+    }
+
+    .navbarUl>a {
+        max-width: fit-content;
+    }
+
+    .navbarUl>a>li {
+        padding: 0.725rem 1.6rem;
+    }
+
+    .navbarUl {
+        max-height: 3.4rem;
+        min-height: 1.75rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .navbarUl>a>li {
+        padding: 0.85rem 0.2rem;
+    }
+
+    html[lang="he-IL"] .navbarUl {
+        max-width: 248.04px;
+        min-width: 148.04px;
+    }
+
+    html[lang="en-US"] .navbarUl {
+        max-width: 248.04px;
+        min-width: 248.04px;
+        min-height: 3rem;
+        max-height: 2.7rem;
+    }
+
+    .navbarUl {
+        max-width: 260px;
+        min-width: 150px;
+    }
+
+    .navbarUl {
+        gap: 0;
+    }
+
+    html[lang="en-US"] .navbarUl>a>li {
+        padding: 0 0.415em;
+        font-size: 0.7rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    html[lang="he-IL"] .navbarUl>a>li {
+        padding: 0 0.5rem;
+        font-size: 1rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}

@@ -2,6 +2,7 @@
 import React from "react";
 import Tab from "./Tab.jsx";
 import Cursor from "./Cursor.jsx";
+import styles from '../navbar/styles/SlideTabs.module.css';
 
 export default function SlideTabs({
   setPosition,
@@ -21,7 +22,7 @@ export default function SlideTabs({
           opacity: 0,
         }));
       }}
-      className={`navbar-ul mx-auto rounded-full gap-3 p-1
+      className={`${styles.navbarUl} mx-auto rounded-full gap-3 p-1
         ${pathname === '/about' || pathname === '/' ? 'invisible' : 'visible'}`}
     >
       { navbar ?
