@@ -8,6 +8,7 @@ export default function NavToggle({ isVisible, onClick }) {
       aria-label="Toggle"
       tabIndex="0"
       onKeyDown={(e) => {
+        e.preventDefault();
           if (e.key === 'Enter' || e.key === ' ') onClick();
       }}
       onClick={onClick}

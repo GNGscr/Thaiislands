@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from '../styles/Main.module.css';
 import emojiStyles from '../styles/BlinkEmoji.module.css';
+import declerationVariants from '../styles/animations/declerationVariants.json';
 
 export default function Decleration ({ data, lang }) {
     if (!data) return;
@@ -8,9 +9,9 @@ export default function Decleration ({ data, lang }) {
       <div className={styles.declerationWrapper}>
         <motion.div
           className={styles.decleration}
-          initial={{ opacity: 0, y: "120%", }}
-          whileInView={{ opacity: 1, y: 0, }}
-          transition={{ duration: 0.75, type: "spring" }}
+          initial={declerationVariants.initial}
+          whileInView={declerationVariants.whileInView}
+          transition={declerationVariants.transition}
         >
           <span className="text-7xl text-[#ccc] relative top-[-0.75rem]"></span>
           {data["article-second-paragraph"][lang]}

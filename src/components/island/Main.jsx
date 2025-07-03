@@ -9,7 +9,7 @@ import HighlightedTextBlock from "./HighlightedTextBlock";
 import NotFoundMessage from "../not-found/NotFound";
 import styles from '../styles/Main.module.css';
 import emojiStyles from '../styles/BlinkEmoji.module.css';
-
+import declerationVariants from '../styles/animations/declerationVariants.json';
 
 export default function Main({
   data,
@@ -25,22 +25,20 @@ export default function Main({
 
   if (!data) return <NotFoundMessage message={"Data not found"} />;
 
-  const declerationVariants = {
-    initial: { opacity: 0, y: "120%", },
-    whileInView: { opacity: 1, y: 0, },
-    transition: { duration: 0.75, type: "spring" }
+  function getContent(data, lang, media, pathname) {
+    return {
+      paraA: data["article-main-paragraph"][lang].a,
+      paraB: data["article-main-paragraph"][lang].b,
+      secondPara: data["article-second-paragraph"][lang],
+      heading: data["map-title"][lang][media],
+      subheading: data['heroPara'][lang],
+      sidePara1: data.sideParagraphs.sidePara1,
+      sidePara2: data.sideParagraphs.sidePara2,
+      emojiLocationPathName: emojiLocation[pathname]
+    };
   };
 
-  const content = {
-    paraA: data["article-main-paragraph"][lang].a,
-    paraB: data["article-main-paragraph"][lang].b,
-    secondPara: data["article-second-paragraph"][lang],
-    heading: data["map-title"][lang][media],
-    subheading: data['heroPara'][lang],
-    sidePara1: data.sideParagraphs.sidePara1,
-    sidePara2: data.sideParagraphs.sidePara2,
-    emojiLocationPathName: emojiLocation[pathname]
-  };
+  const content = getContent(data, lang, media, pathname);
   
   return (
     <div className={`bg-white ${styles.main}`}>
@@ -100,7 +98,9 @@ export default function Main({
       <div className={styles.declerationWrapper}>
         <motion.div
           className={styles.decleration}
-          {...declerationVariants}
+          initial={declerationVariants.initial}
+          whileInView={declerationVariants.whileInView}
+          transition={declerationVariants.transition}
         >
           <span className="text-7xl text-[#ccc] relative top-[-0.75rem]"></span>
           {content.secondPara}
