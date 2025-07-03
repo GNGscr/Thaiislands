@@ -1970,6 +1970,10 @@ a {
   html[lang="he-IL"] .tilt-card {
     margin-right: 3rem;
   }
+  .dot {
+    bottom: -1rem;
+    position: relative;
+  }
   svg.svg-logo-loader {
     width: 275px !important;
     left: calc(50% - 130px);
