@@ -1,8 +1,4 @@
 "use client";
-// import React, { useRef } from "react";
-// import { motion, useScroll, useTransform } from "framer-motion";
-// import ButtonLightningAnimation from "../common/ButtonLightningAnimation";
-// import MapEmbed from "../interactive/MapEmbed";
 import StickyImage from "./StickyImage";
 import OverlayCopy from "../common/OverlayOpacity";
 
