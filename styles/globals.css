@@ -1638,6 +1638,10 @@ a {
   border-radius: 8px;
   cursor: pointer;
 }
+.dot {
+  bottom: -0.5rem;
+  position: relative;
+}
 
 @media (max-width: 1080px) {
 
@@ -1972,7 +1976,6 @@ a {
   }
   .dot {
     bottom: -1rem;
-    position: relative;
   }
   svg.svg-logo-loader {
     width: 275px !important;
