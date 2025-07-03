@@ -93,7 +93,7 @@ const PagesLinks = ({ pages, pathname }) => {
               style={{ opacity: 0.9 }}>
               Daniel Ehrlich
             </span>
-            <span className="text-[2rem] mt-[-1.5rem] ml-[-0.15rem]">
+            <span className="dot text-[2rem] mt-[-1.5rem] ml-[-0.15rem]">
               .
             </span>
           </div>
