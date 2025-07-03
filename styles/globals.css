@@ -1964,6 +1964,9 @@ a {
   html[lang="en-US"] .tilt-card {
     margin-left: 3rem;
   }
+  .tilt-card {
+    margin-left: 3rem;
+  }
   html[lang="he-IL"] .tilt-card {
     margin-right: 3rem;
   }
