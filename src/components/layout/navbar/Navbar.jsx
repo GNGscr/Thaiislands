@@ -13,6 +13,7 @@ import NavSocials from "./NavSocials.jsx";
 import NavToggle from "./NavToggle.jsx";
 // data
 import navButtonsPositionMedia from "../../../public/data/navButtonsPositionMedia.json";
+import styles from '../../styles/Navbar.module.css';
 
 export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
   const pathname = usePathname();
@@ -112,7 +113,7 @@ export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
         whileHover={{ y: 1, transition: { duration: .4 } }}
         onMouseEnter={() => setIsNavToggleSvgVisible(true)}
         onMouseLeave={handleMouseLeave}>
-        <div className="inner-navbar w-screen flex align-space-between justify-center text-white">
+        <div className={`${styles.innerNavbar} w-screen flex align-space-between justify-center text-white`}>
           <NavSocials pathname={pathname} />
           <SlideTabs
             setPosition={setPosition}
@@ -124,7 +125,7 @@ export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
             currentMedia={currentMedia}
             directionToOffset={directionToOffset}
           />
-          <div className="reveal-links-wrapper">
+          <div className={styles.revealLinksWrapper}>
             <RevealLinks toggleLanguage={toggleLanguage} lang={language} />
           </div>
         </div>
