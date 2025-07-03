@@ -1965,7 +1965,10 @@ a {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  html[lang="en-US"] .tilt-card {
+  .tilt-wrapper {
+    margin: 0 1rem 2rem 1rem;
+  }
+  /* html[lang="en-US"] .tilt-card {
     margin-left: 3rem;
   }
   .tilt-card {
@@ -1973,7 +1976,7 @@ a {
   }
   html[lang="he-IL"] .tilt-card {
     margin-right: 3rem;
-  }
+  } */
   .dot {
     bottom: -1rem;
   }

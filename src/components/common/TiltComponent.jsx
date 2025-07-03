@@ -9,7 +9,7 @@ import ShineButton from "./ShineButton";
 
 const TiltComponent = ({ isLogoSection, data }) => {
   return (
-    <div className={`grid h-[30px] w-[175px] place-content-center ${isLogoSection ? 'mb-16' : ''}`}>
+    <div className={`tilt-wrapper grid h-[30px] w-[175px] place-content-center ${isLogoSection ? 'mb-16' : ''}`}>
       <TiltCardComponent isLogoSection={isLogoSection} data={data} />
     </div>
   );
@@ -62,7 +62,9 @@ const TiltCardComponent = ({ isLogoSection, data }) => {
       <div className="absolute inset-4 grid place-content-center"
           style={{ transform: "translateZ(75px)", transformStyle: "preserve-3d" }}>
             <p className="tilt-card text-gray-600 text-center text-2xl font-bold shadow-lg"
-              style={{ transform: "translateZ(50px)", position: "relative", top: "2.5rem" }}>
+              style={{ transform: "translateZ(50px)", position: "relative", top: "2.5rem"
+                // dir={lang === "he" ? "rtl" : "ltr"}marginLeft: lang === "he" ? '' : ' , marginRight: 
+               }}>
                 <ShineButton isLogoSection={isLogoSection} data={data} />
             </p>
       </div>
