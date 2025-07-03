@@ -945,7 +945,7 @@ html[lang="he-IL"] .button-lightning {
   top: 0.5rem;
 }
 
-.lang {
+/* .lang {
   margin-right: 2.25rem;
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -964,7 +964,7 @@ html[lang="he-IL"] .button-lightning {
   background-color: #fff;
   color: #000;
   border: 8.5px solid #fff;
-}
+} */
 /* .lang:focus {
   outline: none;
 } */
@@ -1929,7 +1929,7 @@ a {
     display: flex;
     align-items: center;
   }
-  .lang {
+  /* .lang {
     top: 0.15rem;
     margin-right: 0;
   }
@@ -1941,7 +1941,7 @@ a {
   }
   html[lang="he-IL"] .lang {
     margin-right: 0 !important;
-  }
+  } */
   .affiliates-row {
     flex-direction: column;
   }
