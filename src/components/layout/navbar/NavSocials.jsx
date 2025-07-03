@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./NavSocials.module.css";
+import styles from "./styles/NavSocials.module.css";
 
 export default function NavSocials({ pathname }) {
   const hidden = pathname === "/" || pathname === "/about" ? "invisible" : "visible";
