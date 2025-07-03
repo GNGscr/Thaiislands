@@ -1,0 +1,28 @@
+.stickyImage {
+  position: sticky;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 1.5rem; /* tailwind's rounded-3xl */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 12px;
+  height: calc(100vh - 24px); /* התאמה לפדינג IMG_PADDING */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 10, 10, 0.8); /* neutral-950/80 */
+}
+
+.mapWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.mapResponsive {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

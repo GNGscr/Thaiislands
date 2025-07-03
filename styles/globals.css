@@ -1543,7 +1543,7 @@ html[lang="en-US"] .star-score {
   direction: rtl;
   width: fit-content;
   position: relative;
-  top: -2.5rem;
+  top: -2.25rem;
   right: 33.5vw;
   z-index: 20;
 }

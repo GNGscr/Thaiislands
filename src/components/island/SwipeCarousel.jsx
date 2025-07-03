@@ -170,8 +170,7 @@ const Images = ({ imgIndex }) => {
             style={{
               backgroundImage: `url(${imgSrc})`,
               backgroundSize: "cover",
-              backgroundSize: "75vw",
-              backgroundRepeat: 'no-repeat',
+              backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
             }}
             animate={{  scale: imgIndex === idx ? 0.95 : 0.85 }}
@@ -199,6 +198,9 @@ const Dots = ({ imgIndex, setImgIndex, media }) => {
           />
         );
       })}
+      <div aria-live="polite" className="sr-only">
+        Now showing image {imgIndex + 1} of {imgs.length}
+      </div>
     </div>
   );
 };

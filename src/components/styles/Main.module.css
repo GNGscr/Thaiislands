@@ -30,6 +30,7 @@ html[lang="he-IL"] .sectionContent h2 {
 .declerationWrapper {
   position: relative;
   height: 12.5rem;
+  margin: 0 5rem;
 }
 .decleration {
   position: sticky;
@@ -114,13 +115,19 @@ html[lang="he-IL"] .socialTitle {
 }
 
 /* === SLIDE IN TRANSITION === */
+
 .slideIn {
   position: fixed;
-  inset: 0;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform-origin: top bottom;
+  transform-origin: top;
+  transform-origin: bottom;
+  background-color: #0f0f0f;
   background-color: #fff;
   z-index: 8;
 }
@@ -200,5 +207,8 @@ html[lang="he-IL"] .socialTitle {
   }
   .decleration span {
     font-size: 3.5rem;
+  }
+  .slideInHeader {
+    font-size: 3rem;
   }
 }

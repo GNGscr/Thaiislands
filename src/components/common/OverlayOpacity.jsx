@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ButtonLightningAnimation from "./ButtonLightningAnimation";
+import styles from '../styles/OverlayCopy.module.css';
 
 export default function OverlayCopy({
   subheading,
@@ -28,11 +29,11 @@ export default function OverlayCopy({
     <motion.div
       ref={targetRef}
       style={{ y, opacity: media === "mobile" ? opacityMobile : opacity }}
-      className={`hero-content absolute ${isCtaButton ? 'pt-32' : ''} left-0 top-0 flex
+      className={`${styles.heroContent} absolute ${isCtaButton ? 'pt-32' : ''} left-0 top-0 flex
         ${isCtaButton ? 'h-screen' : 'h-[45%]'} w-full flex-col items-center
         ${isCtaButton ? 'justify-center' : 'justify-end'} text-white pl-[25%] pr-[25%] rtl`}
     >
-      <div className="hover-the-map-txt text-center text-4xl font-bold md:text-7xl">
+      <div className={`${styles.hoverTheMapText} text-center text-4xl font-bold md:text-7xl`}>
         {isHeader ? (
           <h3 className="mt-[-3rem]">{title}</h3>
         ) : (
@@ -45,7 +46,7 @@ export default function OverlayCopy({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, type: "tween" }}
         dir={lang === "he" ? "rtl" : "ltr"}
-        className="main-header mb-2 text-center text-xl md:mb-4 md:text-4xl text-bold"
+        className={`${styles.mainHeader} mb-2 text-center text-xl md:mb-4 md:text-4xl text-bold`}
       >
         {subheading}
       </motion.div>

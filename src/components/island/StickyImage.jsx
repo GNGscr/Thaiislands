@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import MapEmbed from "../interactive/MapEmbed";
+import styles from '../styles/StickyImage.module.css';
 
 const IMG_PADDING = 12;
 
@@ -39,7 +40,7 @@ export default function StickyImage({ imgUrl, isMapVisible, data, lang, media })
       />
       {isMapVisible && (
         <div id="map">
-          <div className="map-responsive">
+          <div className={styles.mapResponsive}>
             <MapEmbed
               link={data.googleMap.link}
               lang={data["island-name"][lang]}
