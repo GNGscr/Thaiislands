@@ -1,0 +1,30 @@
+.blinkEmoji {
+  font-size: 2.25rem;
+  position: absolute;
+  bottom: -0.5rem;
+  padding-left: 2.25rem;
+}
+
+.he {
+  left: 20rem; /* left-80 */
+}
+
+.en {
+  right: 15rem; /* right-60 */
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 1080px) {
+    .blinkEmoji {
+        right: 7.5rem !important;
+      }
+}
+@media (max-width: 680px) {
+    .blinkEmoji {
+        display: none;
+      }
+}

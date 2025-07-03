@@ -287,9 +287,9 @@ html[lang="en-US"] .filter {
   background-color: #fff;
 }
 
-.main {
+/* .main {
   max-width: 100%;
-}
+} */
 
 .footer-th {
   font-size: 1.35rem;
@@ -974,7 +974,7 @@ html[lang="he-IL"] .button-lightning {
   font-family: var(--secondary-font);
   font-size: 1.85rem !important;
 }
-.decleration-wrapper {
+/* .decleration-wrapper {
   position: relative;
   height: 12.5rem;
 }
@@ -998,7 +998,7 @@ html[lang="he-IL"] .decleration {
 html[lang="en-US"] .decleration {
   direction: ltr;
   font-size: 1.35rem;
-}
+} */
 
 .filter {
   width: 100%;
@@ -1702,16 +1702,16 @@ a {
     gap: 2.75rem;
   }
 
-  html[lang="he-IL"] .decleration,
+  /* html[lang="he-IL"] .decleration,
   html[lang="en-US"] .decleration {
     padding: 1rem 3rem 0 !important;
-  }
-  .blink-emoji {
+  } */
+  /* .blink-emoji {
     right: 7.5rem !important;
-  }
-  .decleration {
+  } */
+  /* .decleration {
     display: none;
-  }
+  } */
   .hotels-title {
     font-size: 1.45rem;
   }
@@ -2026,8 +2026,7 @@ a {
     padding: 0 2.5rem;
     padding-bottom: 1.15rem;
   }
-  .decleration-wrapper {
-    /* height: fit-content; */
+  /* .decleration-wrapper {
     height: 25rem;
     display: none;
   }
@@ -2037,10 +2036,10 @@ a {
   }
   .decleration span {
     font-size: 3.5rem;
-  }
-  .blink-emoji {
+  } */
+  /* .blink-emoji {
     display: none;
-  }
+  } */
   html[lang="en-US"] .social-title {
     font-size: 2rem;
   }

@@ -1,215 +1,204 @@
-html[lang="en-US"] .sectionContentPara1,
-html[lang="en-US"] .sectionContentPara2 {
-    font-size: 1.25rem;
+/* === MAIN WRAPPER === */
+.main {
+  background-color: white;
+  max-width: 100%;
 }
 
-.sectionContentPara1,
-.sectionContentPara2 {
-    font-size: 1.25rem !important;
+/* === SECTION HEADINGS === */
+.sectionContentH {
+  font-family: var(--secondary-font);
+  font-size: 1.85rem;
 }
 
 .sectionContent h2 {
-    line-height: 45px;
+  line-height: 45px;
 }
-
 html[lang="en-US"] .sectionContent h2 {
-    direction: ltr;
+  direction: ltr;
 }
-
 html[lang="he-IL"] .sectionContent h2 {
-    direction: rtl;
+  direction: rtl;
 }
 
-.sectionContentH {
-    font-family: var(--secondary-font);
-    font-size: 1.85rem !important;
+/* === PARAGRAPHS === */
+.sectionContentPara1,
+.sectionContentPara2 {
+  font-size: 1.25rem;
 }
 
-/* MAGNETIC ICONS */
+/* === DECLARATION SECTION === */
+.declerationWrapper {
+  position: relative;
+  height: 12.5rem;
+}
+.decleration {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  font-family: var(--main-font);
+  display: flex;
+  justify-content: center;
+  padding: 0 10rem;
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  font-size: 1.35rem;
+}
+html[lang="he-IL"] .decleration {
+  direction: rtl;
+  font-size: 1.5rem;
+}
+html[lang="en-US"] .decleration {
+  direction: ltr;
+  font-size: 1.35rem;
+}
+.decleration {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  position: relative;
+  padding: 2rem;
+}
 
+/* === MAGNETIC ICONS SECTION === */
 .magneticMain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: fit-content;
-    position: relative;
-    top: 3rem;
-    padding: 1.75rem 0;
-    z-index: 1;
-    min-height: 160px;
-    margin-bottom: 375px;
-  }
-
-  .socialTitle {
-    position: absolute;
-    top: 0rem;
-    font-family: var(--main-font);
-    width: 100%;
-    display: flex;
-    padding-top: 2rem;
-    justify-content: center;
-    background-color: #fff;
-    z-index: 4;
-    font-size: 3rem;
-  }
-  html[lang="en-US"] .socialTitle {
-    font-size: 3rem;
-  }
-  html[lang="he-IL"] .socialTitle {
-    font-size: 2.5rem;
-  }
-  .magneticContainer {
-    display: flex;
-    gap: 7.5rem;
-    height: 100%;
-    padding-top: 10rem;
-    padding-bottom: 5rem;
-    z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 3rem;
+  padding: 1.75rem 0;
+  margin-bottom: 375px;
+  z-index: 1;
+  min-height: 160px;
 }
+
+.socialTitle {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 2rem;
+  font-family: var(--main-font);
+  font-size: 2.75rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+}
+
+html[lang="en-US"] .socialTitle {
+  font-size: 3rem;
+}
+
+html[lang="he-IL"] .socialTitle {
+  font-size: 2.5rem;
+}
+
+.magneticContainer {
+  display: flex;
+  gap: 7.5rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  z-index: 9;
+}
+
 .magneticContainer > a > svg {
-    height: 100px;
-    fill: #c8bdb0;
-    transition: fill 0.2s;
-    cursor: pointer;
-    filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.15));
+  height: 100px;
+  fill: #c8bdb0;
+  transition: fill 0.2s;
+  cursor: pointer;
+  filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.15));
 }
-.magneticContainer > a > svg:hover{
-    fill: #ec4e39;
+.magneticContainer > a > svg:hover {
+  fill: #ec4e39;
 }
 
+/* === SLIDE IN TRANSITION === */
 .slideIn {
-    position: fixed;
-    height: 100%;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-origin: top;
-    transform-origin: bottom;
-    background-color: #0f0f0f;
-    background-color: #fff;
-    z-index: 8;
-  }
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: top bottom;
+  background-color: #fff;
+  z-index: 8;
+}
 
-  .centeredContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-  }
+.centeredContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
 
-  .backBtn {
-    margin-bottom: 1rem;
-    position: fixed;
-    left: 2rem;
-    top: 2rem;
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
+.backBtn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
 
+/* === RESPONSIVE MEDIA QUERIES === */
 @media (max-width: 1080px) {
-    .sectionContentPara {
-        grid-auto-columns: span 5 / span 5 !important;
-    }
-
-    .screenFixTxt > span {
-        bottom: 25px !important;
-      }
-
-      .magneticContainer {
-        scale: 0.75;
-      }
-      .sectionContentPara {
-        grid-auto-columns: span 5 / span 5 !important;
-      }
+  .magneticContainer {
+    scale: 0.75;
+    gap: 5rem;
+  }
+  .decleration {
+    display: none;
+  }
 }
 
 @media (max-width: 680px) {
-    .sectionContent {
-        gap: 2rem !important;
-    }
+  .sectionContent {
+    gap: 2rem;
+    padding: 0 0 2rem 0;
+  }
 
-    .sectionContent {
-        padding-top: 0rem !important;
-        padding-bottom: 2rem;
-    }
+  .sectionContentPara1,
+  .sectionContentPara2 {
+    font-size: 1.25rem;
+  }
 
-    .sectionContentPara1,
-    .sectionContentPara2 {
-        font-size: 1.5rem !important;
-    }
+  .socialTitle {
+    font-size: 2rem !important;
+  }
 
-    .sectionContentPara {
-        grid-auto-columns: repeat(12, minmax(0, 1fr)) !important;
-    }
+  .magneticMain > .screenFixTxt {
+    top: -1.5rem;
+  }
 
-    .quote {
-        font-size: 2.5rem;
-    }
+  .magneticContainer {
+    scale: 1;
+    gap: 2.5rem;
+    padding-top: 5rem;
+    padding-bottom: 1.75rem;
+  }
 
-    .vacationGalleryWrapper {
-        margin-right: 1.25rem;
-      }
-      .vacationGallery {
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-        font-size: 1.65rem;
-        font-size: 2rem;
-      }
-      .galleryImg {
-        scale: 1.25;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-      }
+  .magneticContainer > a > svg {
+    height: 50px;
+  }
 
-      .screenFixTxt {
-        top: 18.5rem;
-      }
-      .screenFixTxt > span {
-        bottom: -20px !important;
-      }
-      .magneticMain > .screenFixTxt {
-        top: -1.5rem;
-      }
-
-      html[lang="en-US"] .socialTitle {
-        font-size: 2rem;
-      }
-      html[lang="he-IL"] .socialTitle {
-        font-size: 2rem;
-      }
-
-      .magneticContainer {
-        scale: 1;
-      }
-      .magneticContainer {
-        gap: 2.5rem;
-        padding-top: 5rem;
-        padding-bottom: 1.75rem;
-      }
-      .magneticContainer > a > svg {
-        height: 50px;
-      }
-
-      .slideInHeader {
-        font-size: 3rem;
-      }
-
-      .sectionContentPara1,
-      .sectionContentPara2 {
-        font-size: 1.25rem !important;
-      }
-
-      .sectionContentPara {
-        grid-auto-columns: repeat(12, minmax(0, 1fr)) !important;
-      }
+  .slideInHeader {
+    font-size: 3rem;
+  }
+  .declerationWrapper {
+    height: 25rem;
+    display: none;
+  }
+  .decleration {
+    font-size: 1.5rem !important;
+    padding: 0 1rem;
+  }
+  .decleration span {
+    font-size: 3.5rem;
+  }
 }

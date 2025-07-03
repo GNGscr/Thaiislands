@@ -7,6 +7,8 @@ import emojiLocation  from '../../public/data/emoji-location.json';
 import TextParallaxSection from "./TextParallaxSection";
 import HighlightedTextBlock from "./HighlightedTextBlock";
 import NotFoundMessage from "../not-found/NotFound";
+import styles from '../styles/Main.module.css';
+import emojiStyles from '../styles/BlinkEmoji.module.css';
 
 
 export default function Main({
@@ -41,7 +43,7 @@ export default function Main({
   };
   
   return (
-    <div className="bg-white main">
+    <div className={`bg-white ${styles.main}`}>
       <TextParallaxSection
         isMapVisible={false}
         imgUrl={mainImg}
@@ -95,16 +97,16 @@ export default function Main({
         </div>
       </div>
 
-      <div className="decleration-wrapper">
+      <div className={styles.declerationWrapper}>
         <motion.div
-          className="decleration"
+          className={styles.decleration}
           {...declerationVariants}
         >
           <span className="text-7xl text-[#ccc] relative top-[-0.75rem]"></span>
           {content.secondPara}
           <div
-            className={`blink-emoji text-[2.25rem] absolute bottom-[-0.5rem] pl-9 
-              ${lang === 'he' ? 'left-80' : 'right-60'}
+            className={`${emojiStyles.blinkEmoji} text-[2.25rem] absolute bottom-[-0.5rem] pl-9 
+            ${lang === 'he' ? emojiStyles.he : emojiStyles.en}
               ${content.emojiLocationPathName}`}>
             😉
           </div>
