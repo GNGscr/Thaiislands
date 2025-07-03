@@ -3,12 +3,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Cursor({ position, currentMedia }) {
-  const heightStyle =
-    currentMedia === 'mobile'
-      ? { height: '2.6rem' }
+  const heightStyle = {
+    height: currentMedia === 'mobile'
+      ? '2.6rem'
       : currentMedia === 'tablet'
-        ? { height: '2.65rem' }
-        : { height: '3rem' };
+        ? '2.65rem'
+        : '3rem'
+  };
+    
 
   return (
     <motion.li

@@ -77,27 +77,9 @@
     font-size: 1rem;
     border-radius: 0.15rem;
 }
+    */
 
-.lang {
-    margin-right: 2.25rem;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 400;
-    font-family: var(--secondary-font);
-    background-color: #000;
-    border-radius: 1.15rem;
-    text-align: center;
-    min-width: 59.8px;
-    padding: 0rem 0.65rem;
-    border: 8.5px solid #000;
-    transition: .3s ease-in-out;
-  }
-  .lang:hover {
-    background-color: #fff;
-    color: #000;
-    border: 8.5px solid #fff;
-  } */
+
 
 @media (max-width: 1080px) {
 }
@@ -112,18 +94,5 @@
     /* .linksLayout {
         padding-top: 5rem;
     }
-
-    .lang {
-    top: 0.15rem;
-    margin-right: 0;
-  }
-  .lang:focus {
-    outline: none;
-  }
-  html[lang="en-US"] .lang {
-    margin-right: 0.25rem;
-  }
-  html[lang="he-IL"] .lang {
-    margin-right: 0;
-  } */
+        */
 }

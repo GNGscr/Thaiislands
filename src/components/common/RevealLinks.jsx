@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import styles from '../styles/FlipLink.module.css';
 
 const DURATION = 0.2;
 const STAGGER = 0.02;
@@ -14,7 +15,7 @@ const FlipLink = ({ lang, toggleLanguage }) => {
         toggleLanguage();
         setIsFlipped(prev => !prev); // Toggle the flip state on tap
       }}
-      className={`lang relative block overflow-hidden whitespace-nowrap text-1xl
+      className={`${styles.lang} relative block overflow-hidden whitespace-nowrap text-1xl
         font-black uppercase sm:text-1xl md:text-1xl lg:text-1xl`}
       style={{
         lineHeight: 1,
