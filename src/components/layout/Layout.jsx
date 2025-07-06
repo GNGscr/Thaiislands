@@ -53,6 +53,7 @@ export default function Layout() {
         }}
       >
         <div className="side-toggle-svg-wrapper">
+
           {/* svg is in position absolute to it's parent, so it's out of links flow */}
           <svg id="side-toggle-svg" className="cursor-pointer"
             style={{ opacity: isSideNavToggleSvgVisible ? 0 : 1 }}
@@ -76,6 +77,18 @@ export default function Layout() {
               </Link>
           )})
         }
+        {isMobile && (
+          <button
+            className="mobile-toggle-btn text-white text-2xl font-bold absolute left-12.5 bottom-5 z-50"
+            onClick={() => {
+              setIsSideNavToggleVisible(prev => !prev);
+              setSideVisibility(false, !isSideNavToggleVisible);
+            }}
+            aria-label="Toggle Navigation"
+          >
+            X
+          </button>
+        )}
       </motion.div>
     </div>
   );
