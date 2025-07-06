@@ -238,4 +238,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 📬 For feedback, suggestions or collaboration: 
     [LinkedIn](https://linkedin.com/in/daniel-ehrlich-36a389136) 
-    [PrivateEmail] [ehrlichdaniel1@gmail.com] or [WorkEmail][de.brand808@gmail.com]
+    [Emails]: [PrivateEmail][ehrlichdaniel1@gmail.com] or [WorkEmail][de.brand808@gmail.com]
