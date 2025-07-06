@@ -1,44 +1,164 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌴 ThaiIslands – UX-Oriented Destination Guide for Thai Islands
 
-## Getting Started
+A **full-stack**, multi-language web application built with **Next.js**, designed from scratch with a strong focus on **UX/UI, modular architecture, and clean code**. The app provides an engaging and informative experience for users planning a trip to Thailand's top islands: **Koh Phangan**, **Koh Samui**, and **Koh Tao**.
 
-First, run the development server:
+## 📸 Preview
+
+![ThaiIslands Preview](./public/images/screenshot.png)
+
+**Live site:** [https://thaiislands.vercel.app](https://thaiislands.vercel.app)  
+**Code:** [GitHub Repository](https://github.com/GNGscr/Thaiislands)
+
+---
+
+## 🧑‍💻 Author
+
+Created by **Daniel Erlich**, a **Full Stack Developer** with a strong orientation toward frontend and user experience (70% Frontend / 30% Backend).  
+Responsible for **ideation, design, development, and deployment** — end to end.
+
+---
+
+## 🚀 Features
+
+- **Multi-page UX-focused app** with smooth scroll, navigation, and rich visuals
+- **Dynamic content** per island using `slug`-based routing (`/koh-phangan`, `/koh-samui`, `/koh-tao`)
+- **Live MongoDB integration** via Mongoose + Next.js API routes
+- **Language toggle (Hebrew/English)** with direction-aware layouts (LTR/RTL)
+- **Context API** used for global state management (language, filters)
+- **Framer Motion animations**: microinteractions, staggered transitions, carousels
+- **Responsive design**: fully adapted for mobile/tablet/desktop
+- **Interactive side navigation**, filtering, and hover effects
+- **Accessible foundation**: structured markup with semantic elements and progressive enhancement
+- **Deployed on Vercel**
+
+---
+
+## 🧱 Tech Stack
+
+| Layer       | Technology                         |
+|------------|-------------------------------------|
+| Frontend   | React 18, Next.js, Framer Motion    |
+| Backend    | MongoDB Atlas, Mongoose             |
+| Styling    | Tailwind CSS + CSS Modules          |
+| State      | React Context API                   |
+| Deployment | Vercel                              |
+| Assets     | Optimized images, lazy loading      |
+| Animation  | Framer Motion                       |
+| i18n       | Built-in language support (HE/EN)   |
+
+---
+
+## 📁 Project Structure
+
+```bash
+
+Thaiislands/
+├── public/              # Static assets (images, favicon)
+├── src/
+│   ├── components/      # Modular UI components
+│   ├── data/            # Island-specific content
+│   ├── hooks/           # Custom React hooks
+│   ├── layout/          # Page layout structure
+│   ├── pages/           # Next.js routes
+│   └── styles/          # CSS modules and global styles
+├── .env.local           # Environment variables
+└── package.json         # Dependencies and scripts
+
+```
+
+---
+
+
+## 🛠️ Installation & Running Locally
+## Requires: Node.js 18+, npm or yarn, and a MongoDB Atlas connection
+
+## Clone the repo
+
+```bash
+
+git clone https://github.com/GNGscr/Thaiislands.git
+cd Thaiislands
+Install dependencies
+
+
+npm install
+# or
+yarn install
+Configure environment variables
+Create a .env.local file at the root with your MongoDB URI:
+
+```
+
+---
+
+## Connect to MongoDB
+
+
+```bash
+MONGODB_URI=your-mongodb-connection-string
+```
+
+---
+
+
+## Run the dev server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The app will run on http://localhost:3000.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## ✅ Pages Overview
+## Route	Description
+/	Landing page with intro + link to islands
+/koh-phangan	Island overview with hero, gallery, and hotels
+/koh-samui	Island page with alternate content
+/koh-tao	Similar structure, tailored for Koh Tao
+/about	Background and trip explanation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Each page pulls data live from MongoDB, rendered dynamically via SSR/ISR.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧠 Key Architectural Choices
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+No Redux or Zustand: All state management is handled via URL params + Context API to minimize overhead and encourage stateless behavior.
 
-## Deploy on Vercel
+Accessible-first: All interactive elements are progressively enhanced and aim to support keyboard use (some work remains).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Design-led development: UX wireframes and visual structure defined before code, ensuring consistency.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Thaiislands
-# Thaiislands
-# Thaiislands
-# Thaiislands
+Component reusability: Typography, buttons, and layouts extracted and reused across pages.
+
+
+---
+
+
+## 🌍 Languages & Directionality
+
+Supports Hebrew and English with dir="rtl"/ltr rendering
+
+Text, layouts, and animations adapt to language choice
+
+Toggle available in top-right menu
+
+
+---
+
+
+## 💡 Possible Improvements (Not included in current version)
+
+Lighthouse score optimization (accessibility, performance)
+
+Tests with Jest or Cypress
+
+Improved skeleton loading during SSR
+
+Meta tags (OG, SEO per page)

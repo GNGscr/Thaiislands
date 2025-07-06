@@ -53,7 +53,8 @@ export default function ScreenFitText({text, isOnCarousal}) {
   return (
     <div
       className={`screen-fix-txt flex h-[250px] w-full items-centerjustify-center
-        overflow-hidden relative ${isOnCarousal ? 'bottom-[-35rem] mt-[-20rem]' : 'mt-[-15rem]'}`}
+        overflow-hidden relative ${isOnCarousal ? 'fit-txt-carousal' : 'fix-txt-socials'}`}
+        // 'fit-txt-carousal' 'fix-txt-socials'
       ref={containerRef}
     >
       <span
