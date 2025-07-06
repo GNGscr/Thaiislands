@@ -1,10 +1,11 @@
-# 🌴 ThaiIslands – UX-Oriented Destination Guide for Thai Islands
+# 🌴 ThaiIslands – UX-Oriented Project
 
 A **full-stack**, multi-language web application built with **Next.js**, designed from scratch with a strong focus on **UX/UI, modular architecture, and clean code**. The app provides an engaging and informative experience for users planning a trip to Thailand's top islands: **Koh Phangan**, **Koh Samui**, and **Koh Tao**.
 
 ## 📸 Preview
 
 ![ThaiIslands Preview](./public/images/screenshot.png)
+
 
 **Live site:** [https://thaiislands.vercel.app](https://thaiislands.vercel.app)  
 **Code:** [GitHub Repository](https://github.com/GNGscr/Thaiislands)
@@ -30,7 +31,7 @@ An additional file, `UX_FLOW.md`, describing the user journey — what happens o
 
 ---
 
-# 🌴 Thai Islands – 🚀 Feature Overview
+# 🚀 Feature Overview
 
 A fully responsive, UX-driven travel experience built with **Next.js**, **MongoDB**, and **Framer Motion**, focusing on performance, accessibility, and engaging microinteractions.
 
@@ -82,9 +83,8 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 ## 📱 Responsiveness
 
-- Fully responsive across:
+- Responsive across:
   - Desktop 💻
-  - Tablet 📱
   - Mobile 📲
 - Elements reflow and resize based on screen size and orientation.
 
@@ -120,19 +120,6 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 | `/about`          | Background and trip explanation                 |
 
 Each page pulls data **live from MongoDB**, rendered dynamically via SSR/ISR.
-
-
----
-
-
-## 🛠️ Stack
-
-- **Frontend**: React + Next.js 14
-- **Styling**: CSS Modules + Framer Motion
-- **Backend**: MongoDB (via Mongoose)
-- **Deployment**: Vercel
-- **State**: Context API
-
 
 ---
 
