@@ -111,6 +111,31 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 ---
 
+## ✨ UX & Interactive Design Highlights
+
+- 🔁 **Scroll-based color transitions**:
+  Navbar icons (Instagram, Facebook) change color dynamically based on scroll position, ensuring visibility across content sections.
+
+- 🃏 **Hotel cards with flip animations**:
+  - Clicking a hotel card reveals a back-side with booking link
+  - Clicking outside flips it back smoothly
+
+- 🎯 **Hotel filtering by region**:
+  Filter buttons allow users to explore hotels by area (e.g. West Coast, North, East), improving discoverability.
+
+- 🌐 **Language-aware layout**:
+  LTR and RTL are fully supported, with mirrored animations and visual alignment for Hebrew/English.
+
+- 🧭 **Mobile side nav toggle**:
+  Responsive sidebar with click behavior for mobile users (tap to expand/collapse).
+
+- 🖱️ **Hover interactions**:
+  Interactive elements across the app respond visually to hover and tap, with smooth Framer Motion transitions.
+
+
+---
+
+
 ## 📊 Pages Overview
 
 | Route         | Description                                |
@@ -159,31 +184,6 @@ Thaiislands/
 
 ---
 
-
-## ✨ UX & Interactive Design Highlights
-
-- 🔁 **Scroll-based color transitions**:
-  Navbar icons (Instagram, Facebook) change color dynamically based on scroll position, ensuring visibility across content sections.
-
-- 🃏 **Hotel cards with flip animations**:
-  - Clicking a hotel card reveals a back-side with booking link
-  - Clicking outside flips it back smoothly
-
-- 🎯 **Hotel filtering by region**:
-  Filter buttons allow users to explore hotels by area (e.g. West Coast, North, East), improving discoverability.
-
-- 🌐 **Language-aware layout**:
-  LTR and RTL are fully supported, with mirrored animations and visual alignment for Hebrew/English.
-
-- 🧭 **Mobile side nav toggle**:
-  Responsive sidebar with click behavior for mobile users (tap to expand/collapse).
-
-- 🖱️ **Hover interactions**:
-  Interactive elements across the app respond visually to hover and tap, with smooth Framer Motion transitions.
-
-
-
----
 
 
 ## 🧠 Key Architectural Choices
