@@ -13,27 +13,130 @@ A **full-stack**, multi-language web application built with **Next.js**, designe
 
 ## 🧑‍💻 Author
 
-Created by **Daniel Erlich**, a **Full Stack Developer** with a strong orientation toward frontend and user experience (70% Frontend / 30% Backend).  
-Responsible for **ideation, design, development, and deployment** — end to end.
+Created by **Daniel Erlich**, a **Full Stack Developer** (≈70% Frontend / 30% Backend) with a strong focus on user experience, visual consistency, and architectural clarity.  
+Responsible for **ideation, design, UX planning, interface design, backend API, development, and frontend deployment** — fully end-to-end.
 
 ---
 
-## 🚀 Features
+## 🔍 UX/UI Documentation
 
-- **Multi-page UX-focused app** with smooth scroll, navigation, and rich visuals
-- **Dynamic content** per island using `slug`-based routing (`/koh-phangan`, `/koh-samui`, `/koh-tao`)
-- **Live MongoDB integration** via Mongoose + Next.js API routes
-- **Language toggle (Hebrew/English)** with direction-aware layouts (LTR/RTL)
-- **Context API** used for global state management (language, filters)
-- **Framer Motion animations**: microinteractions, staggered transitions, carousels
-- **Responsive design**: fully adapted for mobile/tablet/desktop
-- **Interactive side navigation**, filtering, and hover effects
-- **Accessible foundation**: structured markup with semantic elements and progressive enhancement
-- **Deployed on Vercel**
+ **1. UX/UI Overview (markdown file):**
+A `UX_UI.md` file summarizing all the UX and UI principles of the project — including design decisions, user flow, animations, accessibility focus, filtering, bilingual language support, and more.
+- [UX/UI Principles](./UX_UI.md)
+
+ **2. UX Walkthrough (markdown file):**
+An additional file, `UX_FLOW.md`, describing the user journey — what happens on the homepage, how the user navigates to the islands, how hotels are selected, what interactions are encountered along the way, etc.
+- [User Flow Walkthrough](./UX_FLOW.md)
 
 ---
 
-## 🧱 Tech Stack
+# 🌴 Thai Islands – 🚀 Feature Overview
+
+A fully responsive, UX-driven travel experience built with **Next.js**, **MongoDB**, and **Framer Motion**, focusing on performance, accessibility, and engaging microinteractions.
+
+---
+
+## 🧭 Navigation & Structure
+
+- **Multi-page SPA experience** using `slug`-based routing:
+  - `/koh-phangan`, `/koh-samui`, `/koh-tao`, etc.
+- **Sticky side navigation** with adaptive behavior:
+  - On desktop: hover-based interaction.
+  - On mobile: click/tap-based toggle.
+- **Smooth scroll** and scroll-aware highlights to guide user flow.
+
+---
+
+## 🌐 Language & Direction Support
+
+- **Bilingual UI**: Hebrew 🇮🇱 & English 🇬🇧.
+- **Dynamic LTR/RTL direction** depending on selected language.
+- Language toggle managed via **Context API** with persistent global state.
+
+---
+
+## 🔍 Content & Data
+
+- **Live data from MongoDB**:
+  - Pulled via `Mongoose` inside Next.js API routes.
+  - Each island page loads its relevant content dynamically.
+- **Hotel section**:
+  - Region-based filter.
+  - Flipping hotel cards with extra info and affiliate links.
+  - Animated dropdown for sorting/filtering.
+
+---
+
+## 🎨 UI/UX & Animation
+
+- **UX-focused layout**:
+  - Clean typography and layout hierarchy.
+  - Large tappable areas and mobile-first design principles.
+- **Framer Motion animations**:
+  - Section reveals, carousels, icon transitions, and hover effects.
+  - Staggered entrance animations for better storytelling.
+- **Microinteractions**:
+  - Button feedback, carousel indicators, animated toggles.
+
+---
+
+## 📱 Responsiveness
+
+- Fully responsive across:
+  - Desktop 💻
+  - Tablet 📱
+  - Mobile 📲
+- Elements reflow and resize based on screen size and orientation.
+
+---
+
+## ♿ Accessibility (A11y)
+
+- **Semantic HTML** with structured headings and ARIA attributes (in progress).
+- **Keyboard-accessible** interactive elements (focus states, skip links planned).
+- **Reduced motion preferences** respected (if set by user).
+
+---
+
+## 🧠 State & Logic
+
+- **Global state management** via `Context API`:
+  - Language toggle
+  - UI filters
+- **URL-based state**:
+  - Stateless filtering for hotels (stored in query params, not in Redux/Zustand).
+  - Supports bookmarking and shareable filter states.
+
+---
+
+## 📊 Pages Overview
+
+| Route              | Description                                     |
+|-------------------|-------------------------------------------------|
+| `/`               | Landing page with intro + link to islands       |
+| `/koh-phangan`    | Island overview with hero, gallery, and hotels  |
+| `/koh-samui`      | Island page with alternate content              |
+| `/koh-tao`        | Similar structure, tailored for Koh Tao         |
+| `/about`          | Background and trip explanation                 |
+
+Each page pulls data **live from MongoDB**, rendered dynamically via SSR/ISR.
+
+
+---
+
+
+## 🛠️ Stack
+
+- **Frontend**: React + Next.js 14
+- **Styling**: CSS Modules + Framer Motion
+- **Backend**: MongoDB (via Mongoose)
+- **Deployment**: Vercel
+- **State**: Context API
+
+
+---
+
+## 🛠️ Stack & Technologies
 
 | Layer       | Technology                         |
 |------------|-------------------------------------|
@@ -65,6 +168,36 @@ Thaiislands/
 ```
 
 ---
+
+
+## 🚀 Deployment
+
+- Hosted live on **[Vercel](https://vercel.com/)** with:
+  - Image optimization
+  - Dynamic routing
+  - Incremental static regeneration (planned)
+
+---
+
+
+## 🧠 Key Architectural Choices
+
+- **No Redux or Zustand**: All state management is handled via URL params + Context API to minimize overhead and encourage stateless behavior.
+- **Accessible-first**: All interactive elements are progressively enhanced and aim to support keyboard use (some work remains).
+- **Design-led development**: UX wireframes and visual structure defined before code, ensuring consistency.
+- **Component reusability**: Typography, cards, buttons, and layouts extracted and reused across pages.
+
+---
+
+## 🌍 Languages & Directionality
+
+- Supports **Hebrew** and **English** with `dir="rtl"`/`ltr` rendering
+- Text, layouts, and animations adapt to language choice
+- Toggle available in top-right menu
+
+
+---
+
 
 ## 🛠️ Installation & Running Locally
 
@@ -101,37 +234,6 @@ The app will run on `http://localhost:3000`.
 
 ---
 
-## ✅ Pages Overview
-
-| Route              | Description                                     |
-|-------------------|-------------------------------------------------|
-| `/`               | Landing page with intro + link to islands       |
-| `/koh-phangan`    | Island overview with hero, gallery, and hotels  |
-| `/koh-samui`      | Island page with alternate content              |
-| `/koh-tao`        | Similar structure, tailored for Koh Tao         |
-| `/about`          | Background and trip explanation                 |
-
-Each page pulls data **live from MongoDB**, rendered dynamically via SSR/ISR.
-
----
-
-## 🧠 Key Architectural Choices
-
-- **No Redux or Zustand**: All state management is handled via URL params + Context API to minimize overhead and encourage stateless behavior.
-- **Accessible-first**: All interactive elements are progressively enhanced and aim to support keyboard use (some work remains).
-- **Design-led development**: UX wireframes and visual structure defined before code, ensuring consistency.
-- **Component reusability**: Typography, buttons, and layouts extracted and reused across pages.
-
----
-
-## 🌍 Languages & Directionality
-
-- Supports **Hebrew** and **English** with `dir="rtl"`/`ltr` rendering
-- Text, layouts, and animations adapt to language choice
-- Toggle available in top-right menu
-
----
-
 ## 💡 Possible Improvements (Not included in current version)
 
 - Lighthouse score optimization (accessibility, performance)
@@ -147,4 +249,6 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-📬 For inquiries or collaboration: [LinkedIn](https://linkedin.com/in/your-profile) or [email@example.com]
+📬 For feedback, suggestions or collaboration: 
+    [LinkedIn](https://linkedin.com/in/daniel-ehrlich-36a389136) 
+    [PrivateEmail] [ehrlichdaniel1@gmail.com] or [WorkEmail][de.brand808@gmail.com]
