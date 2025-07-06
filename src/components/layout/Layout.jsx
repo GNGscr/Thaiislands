@@ -7,7 +7,7 @@ import links from "../../public/data/links.json";
 import setInnerWidth from "../../public/utils/set-inner-width";
 
 export default function Layout() {
-  const { language, setCurrentMedia } = useGlobalSettings();
+  const { language, currentMedia, setCurrentMedia } = useGlobalSettings();
   const [ isSideNavToggleSvgVisible, setIsSideNavToggleSvgVisible ] = useState(false);
   const [ isSideNavToggleVisible, setIsSideNavToggleVisible ] = useState(false);
   
@@ -15,6 +15,7 @@ export default function Layout() {
   const pathname = usePathname();
   
   const sendCurrentMedia = media => setCurrentMedia(media);
+  const isMobile = currentMedia === "mobile";
 
   useEffect(() => {
     setInnerWidth(sendCurrentMedia);
@@ -25,6 +26,11 @@ export default function Layout() {
     setIsSideNavToggleVisible(navTgl);
   };
 
+  const sideNavVariants = {
+    initial: { x: "-115%", width: "175px" },
+    animate: { x: "0%", transition: { duration: 0.4 } }
+  };
+
   return (
     <div
       className="layout-wrapper fixed w-full flex align-center top-[0rem]"
@@ -32,14 +38,21 @@ export default function Layout() {
       <motion.div
         id="layout"
         className={`links-layout p-2 m-3 relative w-full flex align-center top-[0.75rem]`}
-        initial={{ x: "-115%", width: "175px" }}
-        whileHover={{ x: "-5%", transition: { duration: .4 } }}
+        variants={sideNavVariants}
+        initial="initial"
         animate={isSideNavToggleVisible ? "animate" : "initial"}
+        whileHover={{ x: "-5%", transition: { duration: .4 } }}
         onMouseLeave={() => setSideVisibility(false, false)}
         onMouseEnter={() => setSideVisibility(true, true)}
+        onClick={() => {
+          if (isMobile) {
+            setIsSideNavToggleVisible(!isSideNavToggleVisible);
+          } else {
+            setIsSideNavToggleVisible(true);
+          }
+        }}
       >
         <div className="side-toggle-svg-wrapper">
-
           {/* svg is in position absolute to it's parent, so it's out of links flow */}
           <svg id="side-toggle-svg" className="cursor-pointer"
             style={{ opacity: isSideNavToggleSvgVisible ? 0 : 1 }}
@@ -53,7 +66,10 @@ export default function Layout() {
               <Link
                 key={index}
                 href={link}
-                onClick={() => setSideVisibility(true, false)}
+                onClick={() => {
+                  setSideVisibility(true, false);
+                  if (isMobile) setIsSideNavToggleVisible(false);
+                }}
                 className={`link ${pathname === link ? 'active-link' : ''}`}
               >
                 {links[index][globalLanguage]}
