@@ -40,7 +40,7 @@ This project was planned and designed with a **UX-first mindset** — focusing o
 **These early sketches guided the visual structure, UX decisions, and component breakdown used in the final app.**
 
 A `WIREFRAMES.md` file displaying all the wireframes for the project - **Desktop & Mobile**
-- [Wireframes](./WIREFRAMES.md)
+- [Wireframes](./WIREFRAMS.md)
 
 
 ---
