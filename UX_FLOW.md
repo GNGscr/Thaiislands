@@ -10,6 +10,10 @@ This document outlines the **typical user journey** through the site, and how th
 - Top-right corner: language toggle (HE/EN)
 - A central CTA leads to the island selector
 
+- 💻 **Only on desktop:** 
+  Clicking on each of the shuffling square (on the right), will lead user to blind selection.
+  (Added for user's fun experience and engagement)
+
 ---
 
 ## 🏝️ Island Pages (`/koh-phangan`, `/koh-samui`, `/koh-tao`)
@@ -18,6 +22,11 @@ Each island page features:
 
 - **Hero section** with imagery and title
 - **Overview paragraphs** describing what to expect
+
+- **Interactive Map:** 
+  - Desktop **(hover)** or Mobile **(tap)** 
+    on the map **(under displayed text)** will toggle google map 
+
 - **Carousel of photos**
 - **Hotels section** with:
   - Flip cards
