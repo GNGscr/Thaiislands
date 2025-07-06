@@ -23,11 +23,11 @@ Responsible for **ideation, design, UX planning, interface design, backend API, 
 
 ## 🔍 UX/UI Documentation
 
- **1. UX/UI Overview (markdown file):**
+ **1. UX/UI Overview:**
 A `UX_UI.md` file summarizing all the UX and UI principles of the project — including design decisions, user flow, animations, accessibility focus, filtering, bilingual language support, and more.
 - [UX/UI Principles](./UX_UI.md)
 
- **2. UX Walkthrough (markdown file):**
+ **2. UX Walkthrough:**
 An additional file, `UX_FLOW.md`, describing the user journey — what happens on the homepage, how the user navigates to the islands, how hotels are selected, what interactions are encountered along the way, etc.
 - [User Flow Walkthrough](./UX_FLOW.md)
 
