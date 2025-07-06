@@ -1,31 +1,19 @@
 import { useEffect, useState } from "react";
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams, useRouter } from "next/navigation";
 
 export function useFilteredRegions(regions) {
-  
   const [displayedRegions, setDisplayedRegions] = useState([]);
   const [isFiltering, setIsFiltering] = useState(false);
-  
-  useEffect(() => {
-    setDisplayedRegions(regions);
-  }, [regions]);
 
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const currentRegion = searchParams.get('region') || '';
+  const currentRegion = searchParams.get("region") || "";
   const [region, setRegion] = useState(currentRegion);
-  
+
   useEffect(() => {
-    const params = new URLSearchParams(searchParams.toString());
-    if (region) {
-      params.set('region', region);
-    } else {
-      params.delete('region');
-    }
-    const newUrl = `?${params.toString()}`;
-    router.push(newUrl);
-  }, [region]);
+    setDisplayedRegions(regions);
+  }, [regions]);
 
   const filterRegion = (value) => {
     const filtered =
@@ -35,13 +23,27 @@ export function useFilteredRegions(regions) {
 
     setDisplayedRegions(filtered);
     setIsFiltering(false);
-
-    const target = document.getElementById("hotels");
-    if (target) {
-      const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: targetPosition, behavior: "smooth" });
-    }
     setRegion(value);
+
+    // Preserve existing search params (like lang)
+    const params = new URLSearchParams(searchParams.toString());
+    if (value && value !== "All Regions") {
+      params.set("region", value);
+    } else {
+      params.delete("region");
+    }
+
+    const newUrl = `?${params.toString()}#hotels`;
+    router.push(newUrl);
+
+    requestAnimationFrame(() => {
+      const target = document.getElementById("hotels");
+      if (target) {
+        const targetPosition =
+          target.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      }
+    });
   };
 
   const toggleFiltering = () => setIsFiltering((prev) => !prev);
