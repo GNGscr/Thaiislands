@@ -1,6 +1,8 @@
 # 🌴 ThaiIslands – UX-Oriented Project
 
-A **full-stack**, multi-language web application built with **Next.js**, designed from scratch with a strong focus on **UX/UI, modular architecture, and clean code**. The app provides an engaging and informative experience for users planning a trip to Thailand's top islands: **Koh Phangan**, **Koh Samui**, and **Koh Tao**.
+
+ThaiIslands is a **full-stack**, multi-language web app showcasing Thailand’s top islands. Built from scratch with **React**, **Next.js**, **MongoDB**, **and a design-first approach.**
+
 
 ## 📸 Preview
 
@@ -111,13 +113,13 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 ## 📊 Pages Overview
 
-| Route              | Description                                     |
-|-------------------|-------------------------------------------------|
-| `/`               | Landing page with intro + link to islands       |
-| `/koh-phangan`    | Island overview with hero, gallery, and hotels  |
-| `/koh-samui`      | Island page with alternate content              |
-| `/koh-tao`        | Similar structure, tailored for Koh Tao         |
-| `/about`          | Background and trip explanation                 |
+| Route         | Description                                |
+|---------------|--------------------------------------------|
+| `/`           | Landing page with intro and navigation     |
+| `/koh-phangan`| Island overview (hero, gallery, hotels)    |
+| `/koh-samui`  | Alternate structure for Koh Samui          |
+| `/koh-tao`    | Koh Tao content                            |
+| `/about`      | Project background and travel notes        |
 
 Each page pulls data **live from MongoDB**, rendered dynamically via SSR/ISR.
 
@@ -154,15 +156,32 @@ Thaiislands/
 └── package.json         # Dependencies and scripts
 ```
 
+
 ---
 
 
-## 🚀 Deployment
+## ✨ UX & Interactive Design Highlights
 
-- Hosted live on **[Vercel](https://vercel.com/)** with:
-  - Image optimization
-  - Dynamic routing
-  - Incremental static regeneration (planned)
+- 🔁 **Scroll-based color transitions**:
+  Navbar icons (Instagram, Facebook) change color dynamically based on scroll position, ensuring visibility across content sections.
+
+- 🃏 **Hotel cards with flip animations**:
+  - Clicking a hotel card reveals a back-side with booking link
+  - Clicking outside flips it back smoothly
+
+- 🎯 **Hotel filtering by region**:
+  Filter buttons allow users to explore hotels by area (e.g. West Coast, North, East), improving discoverability.
+
+- 🌐 **Language-aware layout**:
+  LTR and RTL are fully supported, with mirrored animations and visual alignment for Hebrew/English.
+
+- 🧭 **Mobile side nav toggle**:
+  Responsive sidebar with click behavior for mobile users (tap to expand/collapse).
+
+- 🖱️ **Hover interactions**:
+  Interactive elements across the app respond visually to hover and tap, with smooth Framer Motion transitions.
+
+
 
 ---
 
@@ -181,6 +200,18 @@ Thaiislands/
 - Supports **Hebrew** and **English** with `dir="rtl"`/`ltr` rendering
 - Text, layouts, and animations adapt to language choice
 - Toggle available in top-right menu
+
+
+---
+
+
+
+## 🚀 Deployment
+
+- Hosted live on **[Vercel](https://vercel.com/)** with:
+  - Image optimization
+  - Dynamic routing
+  - Incremental static regeneration (planned)
 
 
 ---
@@ -212,9 +243,9 @@ MONGODB_URI=your-mongodb-connection-string
 
 4. **Run the dev server**
 ```bash
-npm run dev
-# or
-yarn dev
+    npm run dev
+    # or
+    yarn dev
 ```
 
 The app will run on `http://localhost:3000`.
