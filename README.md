@@ -51,7 +51,6 @@ Responsible for **ideation, design, development, and deployment** — end to end
 ## 📁 Project Structure
 
 ```bash
-
 Thaiislands/
 ├── public/              # Static assets (images, favicon)
 ├── src/
@@ -63,102 +62,89 @@ Thaiislands/
 │   └── styles/          # CSS modules and global styles
 ├── .env.local           # Environment variables
 └── package.json         # Dependencies and scripts
-
 ```
 
 ---
 
-
 ## 🛠️ Installation & Running Locally
-## Requires: Node.js 18+, npm or yarn, and a MongoDB Atlas connection
 
-## Clone the repo
+> Requires: Node.js 18+, npm or yarn, and a MongoDB Atlas connection
 
+1. **Clone the repo**
 ```bash
-
 git clone https://github.com/GNGscr/Thaiislands.git
 cd Thaiislands
-Install dependencies
+```
 
-
+2. **Install dependencies**
+```bash
 npm install
 # or
 yarn install
-Configure environment variables
-Create a .env.local file at the root with your MongoDB URI:
-
 ```
 
----
+3. **Configure environment variables**  
+Create a `.env.local` file at the root with your MongoDB URI:
 
-## Connect to MongoDB
-
-
-```bash
+```
 MONGODB_URI=your-mongodb-connection-string
 ```
 
----
-
-
-## Run the dev server
-
+4. **Run the dev server**
 ```bash
 npm run dev
 # or
 yarn dev
-The app will run on http://localhost:3000.
 ```
 
----
+The app will run on `http://localhost:3000`.
 
+---
 
 ## ✅ Pages Overview
-## Route	Description
-/	Landing page with intro + link to islands
-/koh-phangan	Island overview with hero, gallery, and hotels
-/koh-samui	Island page with alternate content
-/koh-tao	Similar structure, tailored for Koh Tao
-/about	Background and trip explanation
 
-## Each page pulls data live from MongoDB, rendered dynamically via SSR/ISR.
+| Route              | Description                                     |
+|-------------------|-------------------------------------------------|
+| `/`               | Landing page with intro + link to islands       |
+| `/koh-phangan`    | Island overview with hero, gallery, and hotels  |
+| `/koh-samui`      | Island page with alternate content              |
+| `/koh-tao`        | Similar structure, tailored for Koh Tao         |
+| `/about`          | Background and trip explanation                 |
 
+Each page pulls data **live from MongoDB**, rendered dynamically via SSR/ISR.
 
 ---
-
 
 ## 🧠 Key Architectural Choices
 
-No Redux or Zustand: All state management is handled via URL params + Context API to minimize overhead and encourage stateless behavior.
-
-Accessible-first: All interactive elements are progressively enhanced and aim to support keyboard use (some work remains).
-
-Design-led development: UX wireframes and visual structure defined before code, ensuring consistency.
-
-Component reusability: Typography, buttons, and layouts extracted and reused across pages.
-
+- **No Redux or Zustand**: All state management is handled via URL params + Context API to minimize overhead and encourage stateless behavior.
+- **Accessible-first**: All interactive elements are progressively enhanced and aim to support keyboard use (some work remains).
+- **Design-led development**: UX wireframes and visual structure defined before code, ensuring consistency.
+- **Component reusability**: Typography, buttons, and layouts extracted and reused across pages.
 
 ---
-
 
 ## 🌍 Languages & Directionality
 
-Supports Hebrew and English with dir="rtl"/ltr rendering
-
-Text, layouts, and animations adapt to language choice
-
-Toggle available in top-right menu
-
+- Supports **Hebrew** and **English** with `dir="rtl"`/`ltr` rendering
+- Text, layouts, and animations adapt to language choice
+- Toggle available in top-right menu
 
 ---
 
-
 ## 💡 Possible Improvements (Not included in current version)
 
-Lighthouse score optimization (accessibility, performance)
+- Lighthouse score optimization (accessibility, performance)
+- Tests with Jest or Cypress
+- Improved skeleton loading during SSR
+- Meta tags (OG, SEO per page)
 
-Tests with Jest or Cypress
+---
 
-Improved skeleton loading during SSR
+## 📜 License
 
-Meta tags (OG, SEO per page)
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+📬 For inquiries or collaboration: [LinkedIn](https://linkedin.com/in/your-profile) or [email@example.com]
