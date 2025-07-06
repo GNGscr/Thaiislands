@@ -16,7 +16,7 @@ ThaiIslands is a **full-stack**, multi-language web app showcasing Thailand’s 
 
 ## 🧑‍💻 Author
 
-Created by **Daniel Erlich**, a **Full Stack Developer** (≈70% Frontend / 30% Backend) with a strong focus on user experience, visual consistency, and architectural clarity.  
+Created by **Daniel Ehrlich**, a **Full Stack Developer** (≈70% Frontend / 30% Backend) with a strong focus on user experience, visual consistency, and architectural clarity.  
 Responsible for **ideation, design, UX planning, interface design, backend API, development, and frontend deployment** — fully end-to-end.
 
 ---
