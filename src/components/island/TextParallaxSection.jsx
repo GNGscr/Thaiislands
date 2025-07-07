@@ -121,7 +121,7 @@ export default function TextParallaxSection({
         ${isCtaButton ? 'h-screen' : 'h-[45%]'} w-full flex-col items-center
         ${isCtaButton ? 'justify-center' : 'justify-end'} text-white pl-[25%] pr-[25%] rtl`}
       >
-        <div className="hover-the-map-txt text-center text-4xl font-bold md:text-7xl">
+        <div className={`${isHeader ? '' : 'hover-the-map-txt'} text-center text-4xl font-bold md:text-7xl`}>
           {
             isHeader
               ? <h3 className="mt-[-3rem]">{title}</h3>
