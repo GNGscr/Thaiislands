@@ -1987,6 +1987,7 @@ a {
   .main-header {
     font-size: 2rem;
     line-height: 2.65rem;
+    padding: 0 2.5rem;
   }
   .not-map {
     height: 100vh !important;
