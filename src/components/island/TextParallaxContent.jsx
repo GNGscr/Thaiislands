@@ -18,7 +18,7 @@ export default function TextParallaxContent ({
   }) {
     return (
       <div style={{ paddingLeft: 12, paddingRight: 12, height: '100svh' }}>
-        <div className={`relative h-[150vh] ${!isMapVisible ? 'not-map' : ''}`} id={`${isMapVisible ? 'map-img' : ''}`}>
+        <div className={`relative h-[150vh]`} id={`${isMapVisible ? 'map-img' : ''}`}>
           <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} media={media} router={router} />
           <OverlayOpacity
             heading={heading}

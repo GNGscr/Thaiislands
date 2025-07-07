@@ -29,7 +29,7 @@ export default function TextParallaxSection({
           paddingRight: IMG_PADDING,
         }}
       >
-        <div className={`relative h-[150vh] ${!isMapVisible ? 'not-map' : ''}`} id={`${isMapVisible ? 'map-img' : ''}`}>
+        <div className={`relative h-[150vh]`} id={`${isMapVisible ? 'map-img' : ''}`}>
           <StickyImage imgUrl={imgUrl} isMapVisible={isMapVisible} data={data} media={media} router={router} />
           <OverlayCopy
             heading={heading}
