@@ -1988,10 +1988,12 @@ a {
     font-size: 2rem;
     line-height: 2.65rem;
   }
+  .not-map {
+    height: 100vh !important;
+  }
   .hero-content {
     padding-left: 5%;
     padding-right: 5%;
-    height: 95svh;
   }
   .button-lightning {
     font-size: 1.75rem;
