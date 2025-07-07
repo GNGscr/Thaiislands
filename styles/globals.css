@@ -1989,15 +1989,16 @@ a {
     line-height: 2.65rem;
     padding: 0 2.5rem;
     font-size: 1.45rem !important;
+    top: 2.75rem;
   }
   .text-center h3 {
     margin-top: -5rem;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   .hero-content {
     padding-left: 5%;
     padding-right: 5%;
-    height: 90vh;
+    height: 85vh;
   }
   .button-lightning {
     font-size: 1.75rem;
