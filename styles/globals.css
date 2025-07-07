@@ -1754,7 +1754,7 @@ a {
   }
   .page-btns-wrp {
     width: 100% !important;
-    margin-top: 2.5rem !important;
+    margin-top: 0rem !important;
   }
   .page-btns-wrp > a {
     font-size: 0.75rem !important;
@@ -1885,11 +1885,11 @@ a {
   }
 
   .about-us {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
   .about-us > p {
     margin-top: 1.5rem !important;
-    margin-bottom: 12rem !important;
+    margin-bottom: 10rem !important;
     padding: 0 1rem;
   }
 
