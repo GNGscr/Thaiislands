@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Cursor({ position, currentMedia }) {
   const heightStyle = {
     height: currentMedia === 'mobile'
-      ? '2.55rem'
+      ? '2.6rem'
       : currentMedia === 'tablet'
         ? '2.65rem'
         : '3rem'
