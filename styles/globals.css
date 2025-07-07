@@ -1873,7 +1873,7 @@ a {
 
   #thaiislands {
     position: static;
-    padding-top: 5rem;
+    padding-top: 2.5rem;
     font-size: 3rem !important;
   }
   .about-nav {
@@ -1885,11 +1885,11 @@ a {
   }
 
   .about-us {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
   .about-us > p {
     margin-top: 1.5rem !important;
-    margin-bottom: 10rem !important;
+    margin-bottom: 7.5rem !important;
     padding: 0 1rem;
   }
 
