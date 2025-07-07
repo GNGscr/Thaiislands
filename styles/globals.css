@@ -2005,12 +2005,10 @@ a {
   .button-lightning {
     font-size: 1.75rem;
     position: absolute;
-    bottom: 3rem;
+    bottom: 2rem;
   }
   html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {
-    /* padding-top: 2.5rem;
-    top: 10rem; */
     scale: 1.2;
     position: absolute;
     top: 80vh;
@@ -2187,148 +2185,5 @@ a {
     .main-header  {
       background: purple;
     }
-  }
-} */
-
-
-
-
-
-
-
-
-
-/* 
-@media (max-width: 680px) {
-
-  .social {
-    margin-left: 0 !important;
-    gap: 0rem !important;
-  }
-  .links-wrapper {
-    top: 3rem;
-  }
-  .navbar-ul {
-    gap: 0 !important;
-  }
-  .inner-navbar {
-    margin: 0 1.35rem;
-  }
-  html[lang="en-US"] .navbar-ul > a > li {
-    padding: 0.415em;
-    font-size: 0.7rem;
-  }
-  html[lang="he-IL"] .navbar-ul > a > li {
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
-  .lang {
-    top: 0.15rem;
-  }
-  html[lang="en-US"] .lang {
-    margin-right: 0.25rem !important;
-  }
-  html[lang="he-IL"] .lang {
-    margin-right: 0 !important;
-  }
-  .affiliates-row {
-    flex-direction: column;
-  }
-  .affiliates-row {
-    margin: 0;
-  }
-  .vacation-gallery-wrapper {
-    padding-top: 2.5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    scale: 1.35;
-  }
-  .vacation-gallery {
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-    font-size: 1.6rem;
-  }
-  svg.svg-logo-loader {
-    width: 275px !important;
-    left: calc(50% - 130px);
-  }
-  .main-header {
-    font-size: 2.5rem;
-    line-height: 2.65rem;
-  }
-  .hero-content {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-  .button-lightning {
-    font-size: 2.25rem;
-  }
-  html[lang="he-IL"] .button-lightning {
-    padding-top: 9.5rem;
-  }
-  .section-content {
-    gap: 2rem !important;
-  }
-  .quote {
-    font-size: 2.5rem;
-  }
-  .section-content {
-    padding-top: 0rem !important;
-    padding-bottom: 2rem;
-  }
-  .section-content-para-1,
-  .section-content-para-2 {
-    font-size: 1.25rem !important;
-  }
-  .screen-fix-txt {
-    top: 28.5rem;
-  }
-  .magnetic-main > .screen-fix-txt {
-    top: -1.5rem;
-  }
-  .hotels-title {
-    font-size: 2rem;
-    padding-top: 1.5rem;
-  }
-  .region-title {
-    font-size: 1.25rem;
-    text-align: center;
-    top: 6.15rem;
-    flex-wrap: wrap;
-    padding: 0 2.5rem;
-    padding-bottom: 1.15rem;
-  }
-  .decleration-wrapper {
-    height: 10rem;
-  }
-  .decleration {
-    font-size: 1.5rem !important;
-    padding: 0 1rem;
-  }
-  .decleration span {
-    font-size: 3.5rem;
-  }
-  .blink-emoji {
-    display: none;
-  }
-  html[lang="en-US"] .social-title {
-    font-size: 2rem;
-  }
-  html[lang="he-IL"] .social-title {
-    font-size: 2rem;
-  }
-  .magnetic-container {
-    gap: 2.5rem;
-    padding-top: 5rem;
-    padding-bottom: 1.75rem;
-  }
-  .magnetic-container > a > svg {
-    height: 50px;
-  }
-  #media {
-    margin-top: -2.5rem;
-  }
-  .footer > div > div > div > div > div {
-    gap: 1rem;
   }
 } */
