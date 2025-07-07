@@ -1988,12 +1988,13 @@ a {
     font-size: 2rem;
     line-height: 2.65rem;
     padding: 0 2.5rem;
+    font-size: 1.5rem !important;
   }
   .not-map {
     height: 100vh !important;
   }
   .text-center h3 {
-    margin-top: -7rem;
+    margin-top: -5rem;
   }
   .hero-content {
     padding-left: 5%;
