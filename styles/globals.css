@@ -1991,7 +1991,7 @@ a {
     font-size: 1.45rem !important;
   }
   .not-map {
-    height: 125vh !important;
+    /* height: 125vh !important; */
   }
   .text-center h3 {
     margin-top: -5rem;
