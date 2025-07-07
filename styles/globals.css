@@ -1991,9 +1991,13 @@ a {
   .not-map {
     height: 100vh !important;
   }
+  .text-center h3 {
+    margin-top: -6rem;
+  }
   .hero-content {
     padding-left: 5%;
     padding-right: 5%;
+    height: 95vh;
   }
   .button-lightning {
     font-size: 1.75rem;
