@@ -24,7 +24,7 @@ Each island page features:
 - **Overview paragraphs** describing what to expect
 
 - **Interactive Map:** 
-  - Desktop **(hover)** or Mobile **(tap)** 
+  - Hover **(desktop)** or tap **(mobile)**
     on the map **(according to the displayed text)** will toggle google map 
 
 - **Carousel of photos**
@@ -42,6 +42,11 @@ Each island page features:
 3. User can either:
    - Click **"Book now"** → opens external link
    - Click elsewhere on card → flips back
+
+4. Scroll behavior in **Hotels** section:
+  - Region name will stick to top until scrolling to the next region
+  - Cards will be displayed with animation entrence -
+    **different animtions for desktop and mobile**
 
 ---
 
@@ -69,12 +74,6 @@ Each island page features:
   - Color transition in nav icons (white ↔ black)
   - Animated entrances for sections
   - Navbar tab highlighting (active tab tracking)
-
-- Scroll in **Hotels** section:
-  - Region name will stick to top until next region
-  - Cards will be displayed with animation entrence
-
-    **different animtions for desktop and mobile**
 
 ---
 

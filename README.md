@@ -3,11 +3,11 @@
 
 ThaiIslands is a **full-stack**, multi-language web app showcasing Thailand’s top islands. Built from scratch with **React**, **Next.js**, **MongoDB**, **and a design-first approach.**
 
+---
 
 ## 📸 Preview
 
 ![ThaiIslands Preview](./public/images/screenshot.png)
-
 
 **Live site:** [https://thaiislands.vercel.app](https://thaiislands.vercel.app)  
 **Code:** [GitHub Repository](https://github.com/GNGscr/Thaiislands)
@@ -42,9 +42,7 @@ This project was planned and designed with a **UX-first mindset** — focusing o
 A `WIREFRAMES.md` file displaying all the wireframes for the project - **Desktop & Mobile**
 - [Wireframes](./WIREFRAMS.md)
 
-
 ---
-
 
 # 🚀 Feature Overview
 
@@ -119,6 +117,7 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 - **Global state management** via `Context API`:
   - Language toggle
   - UI filters
+
 - **URL-based state**:
   - Stateless filtering for hotels (stored in query params, not in Redux/Zustand).
   - Supports bookmarking and shareable filter states.
@@ -195,9 +194,7 @@ Thaiislands/
 └── package.json         # Dependencies and scripts
 ```
 
-
 ---
-
 
 
 ## 🧠 Key Architectural Choices
@@ -215,9 +212,7 @@ Thaiislands/
 - Text, layouts, and animations adapt to language choice
 - Toggle available in top-right menu
 
-
 ---
-
 
 
 ## 🚀 Deployment
