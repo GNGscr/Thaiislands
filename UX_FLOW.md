@@ -70,6 +70,12 @@ Each island page features:
   - Animated entrances for sections
   - Navbar tab highlighting (active tab tracking)
 
+- Scroll in **Hotels** section:
+  - Region name will stick to top until next region
+  - Cards will be displayed with animation entrence
+
+    **different animtions for desktop and mobile**
+
 ---
 
 ## 📱 Mobile Flow
