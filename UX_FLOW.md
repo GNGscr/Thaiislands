@@ -25,7 +25,7 @@ Each island page features:
 
 - **Interactive Map:** 
   - Desktop **(hover)** or Mobile **(tap)** 
-    on the map **(under displayed text)** will toggle google map 
+    on the map **(according to the displayed text)** will toggle google map 
 
 - **Carousel of photos**
 - **Hotels section** with:
