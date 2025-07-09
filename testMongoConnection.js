@@ -1,9 +1,11 @@
 const { MongoClient } = require('mongodb');
 
-// ה-URI שלך עם סיסמה תקינה (מוצפנת ב-URL encoding!)
-const uri = "mongodb+srv://daniel-admin:vJNJ9KWrqHwiGRTE@cluster0.xa234xv.mongodb.net/shoppingdb?retryWrites=true&w=majority&appName=Cluster0";
+const MONGO_URI_TEST = process.env.MONGO_URI_TEST;
+if (!MONGO_URI)
+  throw new Error('⚠️ MONGO_URI_TEST is not defined in environment variables');
 
-const client = new MongoClient(uri);
+
+const client = new MongoClient(MONGO_URI_TEST);
 
 async function testConnection() {
   try {

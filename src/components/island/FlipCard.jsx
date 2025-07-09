@@ -51,7 +51,9 @@ const FlipCard = ({
               transition={{ duration: 0.005, animationDirection: "normal" }}
               onAnimationComplete={() => setIsAnimating(false)}
             >
+              
               {/* flip card front side */}
+
               <div className={`flip-card-front w-[100%] h-[100%] bg-cover border-[1px] text-white
                   rounded-[6px] relative pointer-events-${isFlipped ? 'none' : 'auto'}`}
                 style={{ backgroundImage: `url(${img1})` }}
@@ -86,7 +88,8 @@ const FlipCard = ({
                 </motion.div>
               </div>
 
-                  {/* flip card back side */}
+              {/* flip card back side */}
+
               <div 
                 style={{ transform: 'rotateX(180deg)' }}
                 className={`flip-card-back w-[100%] h-[100%] bg-cover

@@ -94,15 +94,15 @@ export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
         opacity: 1,
       });
     }
-    // Scrolls to the section after the animation completes
     setTimeout(() => {
-        const target = document.getElementById(sectionId);
-        if (target) {
+      const target = document.getElementById(sectionId);
+      // Scrolls to the section after the animation completes
+      if (target) {
           const targetPosition = target.getBoundingClientRect().top + window.scrollY;
           window.scrollTo({ top: targetPosition, behavior: 'smooth' });
       }
         activateMenuIsActive(false);
-    }, 500); // Match this duration with the sectionAnimation duration
+    }, 500); // Match duration of the sectionAnimation duration
   };
 
   if (!data || !currentMedia) return;

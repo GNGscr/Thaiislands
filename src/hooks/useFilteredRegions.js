@@ -25,7 +25,7 @@ export function useFilteredRegions(regions) {
     setIsFiltering(false);
     setRegion(value);
 
-    // Preserve existing search params (like lang)
+    // Preserve existing search params - (like lang)
     const params = new URLSearchParams(searchParams.toString());
     if (value && value !== "All Regions") {
       params.set("region", value);

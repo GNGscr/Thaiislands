@@ -55,7 +55,7 @@ Each island page features:
 1. User opens filter dropdown
 2. Selects a region
 3. Hotel list updates instantly
-4. Filter selection is reflected in the URL (`?region=north`)
+4. Filter selection is reflected in the URL (`?region=Haadrin`)
 5. Navigating back or sharing preserves filter state
 
 ---
