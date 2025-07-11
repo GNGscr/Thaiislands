@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Layout from "../components/layout/Layout";
+import Script from "next/script";
 import GlobalSettingsProvider from "../components/global/GlobalSettings";
 
 export default function App({ Component, pageProps }) {
@@ -25,6 +26,23 @@ export default function App({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-733NCWWWD8"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-733NCWWWD8');
+        `}
+      </Script>
       <GlobalSettingsProvider>
         <Component {...pageProps} />
         <Layout />
