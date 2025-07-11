@@ -8,6 +8,8 @@ import GlobalSettingsProvider from "../components/global/GlobalSettings";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+
+  const NEXT_PUBLIC_GOOGLE_ANALYTICS_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
   
   useEffect(() => {
     if (router.pathname === '') {
@@ -28,7 +30,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-733NCWWWD8"
+        src={`https://www.googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
         strategy="afterInteractive"
       />
       <Script
@@ -40,7 +42,7 @@ export default function App({ Component, pageProps }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-733NCWWWD8');
+          gtag('config', ${NEXT_PUBLIC_GOOGLE_ANALYTICS_ID});
         `}
       </Script>
       <GlobalSettingsProvider>
