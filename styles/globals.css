@@ -1952,6 +1952,7 @@ a {
     margin-right: 1.25rem;
   }
   .dots {
+    margin-top: -1rem;
     margin-bottom: 2rem;
   }
   .vacation-gallery {
