@@ -6,7 +6,7 @@ import AboutUs from "./about";
 
 export default function Home() {
 
-  const { setCurrentMedia, currentMedia } = useGlobalSettings();
+  const { setCurrentMedia, currentMedia } = useGlobalSettings() || {};
   const [ setDimension ] = useState({width: 0, height: 0});
 
   useEffect(() => {

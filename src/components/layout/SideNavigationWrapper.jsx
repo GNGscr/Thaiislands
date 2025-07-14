@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import links from "../../public/data/links.json";
 import setInnerWidth from "../../public/utils/set-inner-width";
 
-export default function Layout() {
-  const { language, currentMedia, setCurrentMedia } = useGlobalSettings();
+export default function SideNavigationWrapper() {
+  const { language, currentMedia, setCurrentMedia } = useGlobalSettings() || {};
   const [ isSideNavToggleSvgVisible, setIsSideNavToggleSvgVisible ] = useState(false);
   const [ isSideNavToggleVisible, setIsSideNavToggleVisible ] = useState(false);
   

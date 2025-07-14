@@ -14,7 +14,7 @@ import SectionAnimation from "../components/common/SectionAnimation";
 import NotFoundMessage from "../components/not-found/NotFound";
 
 export default function KohSamui() {
-  const { currentMedia } = useGlobalSettings(); 
+  const { currentMedia } = useGlobalSettings() || {}; 
   const [data, setData] = useState();
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);

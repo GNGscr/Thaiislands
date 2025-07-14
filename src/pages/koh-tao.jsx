@@ -11,7 +11,7 @@ import NotFoundMessage from "../components/not-found/NotFound";
 import useFetchIsland from '../hooks/useIslandFetcher';
 
 export default function KohTao() {
-  const { currentMedia } = useGlobalSettings();
+  const { currentMedia } = useGlobalSettings() || {};
   const [data, setData] = useState();
   const islandId = islandIdMap.kohTaoDataId;
   const { THAIISLANDS, KOH_TAO } = LANG;

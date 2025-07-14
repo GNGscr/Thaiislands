@@ -17,7 +17,7 @@ import styles from '../../styles/Navbar.module.css';
 
 export default function Navbar({ data, toggleLanguage, activateMenuIsActive }) {
   const pathname = usePathname();
-  const { language, currentMedia, setCurrentMedia } = useGlobalSettings();
+  const { language, currentMedia, setCurrentMedia } = useGlobalSettings() || {};
   const { scrollY } = useScroll();
   const [scope, animate] = useAnimate();
   const directionToOffset = { "en": "left", "he": "right" };

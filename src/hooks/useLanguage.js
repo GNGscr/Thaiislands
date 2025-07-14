@@ -1,7 +1,7 @@
 import { useGlobalSettings } from "../components/global/GlobalSettings";
 
 export const useLanguage = () => {
-  const { language, setLanguage: setLangState } = useGlobalSettings();
+  const { language, setLanguage: setLangState } = useGlobalSettings() || {};
 
   const setLanguage = (lang) => {
     if (lang !== "en" && lang !== "he") return;

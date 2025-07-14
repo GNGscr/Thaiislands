@@ -1,5 +1,3 @@
-// src/components/global/GlobalSettings.jsx
-
 import React, { useState, createContext, useContext, useEffect } from 'react';
 
 const GlobalSettingsContext = createContext();
