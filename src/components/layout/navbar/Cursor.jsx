@@ -6,7 +6,7 @@ export default function Cursor({ position, currentMedia }) {
   let currentHeight = '3rem';
   switch (currentMedia) {
     case 'mobile':
-      currentHeight = '2.55rem';
+      currentHeight = '2.6rem';
       break;
     case 'tablet':
       currentHeight = '2.65rem';
