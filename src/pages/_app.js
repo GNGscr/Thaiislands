@@ -1,25 +1,13 @@
 import "/styles/globals.css";
 import Head from "next/head";
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 import SideNavigationWrapper from "../components/layout/SideNavigationWrapper";
 import Script from "next/script";
 import GlobalSettingsProvider from "../components/global/GlobalSettings";
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter();
 
   const NEXT_PUBLIC_GOOGLE_ANALYTICS_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
-  
-  useEffect(() => {
-    if (router.pathname === '') {
-      router.push('/about');
-    }
-    if (router.pathname === '/') {
-      router.push('/about');
-    }
-  }, [router]);
-  
+
   return (
     <>
       <Head>
