@@ -3,13 +3,18 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Cursor({ position, currentMedia }) {
-  const heightStyle = {
-    height: currentMedia === 'mobile'
-      ? '2.55rem'
-      : currentMedia === 'tablet'
-        ? '2.65rem'
-        : '3rem'
-  };
+  let currentHeight = '3rem';
+  switch (currentMedia) {
+    case 'mobile':
+      currentHeight = '2.55rem';
+      break;
+    case 'tablet':
+      currentHeight = '2.65rem';
+      break;
+    default:
+      currentHeight = '3rem';
+  }
+  const heightStyle = currentHeight ? { height: currentHeight } : {};
     
 
   return (
