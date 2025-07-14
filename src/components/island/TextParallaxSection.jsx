@@ -117,7 +117,8 @@ export default function TextParallaxSection({
       <motion.div
         style={{ y, opacity: media === "mobile" ? opacityMobile : opacity }}
         ref={targetRef}
-        className={`hero-content absolute ${isCtaButton ? 'pt-32' : ''} left-0 top-0 flex
+        className={`hero-content ${!isHeader && media === "mobile" ? 'map-section' : ''} 
+        absolute ${isCtaButton ? 'pt-32' : ''} left-0 top-0 flex
         ${isCtaButton ? 'h-screen' : 'h-[45%]'} w-full flex-col items-center
         ${isCtaButton ? 'justify-center' : 'justify-end'} text-white pl-[25%] pr-[25%] rtl`}
       >
