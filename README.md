@@ -133,9 +133,9 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
   - Tapping a hotel card reveals a back-side with booking with a link button options
   - Tapping on it again (not on button) flips it back smoothly
 
-- 🎯 **Sticky region title**:
+- 📌 **Sticky region title**:
   Region name will stick to the top (under title) - until the next region name that will replace it.
-  
+
 - 🎯 **Hotel filtering by region**:
   Filter buttons allow users to explore hotels by area (e.g. Baan tai, Haadrin, Thongsala), improving discoverability.
 
