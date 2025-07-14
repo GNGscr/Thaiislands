@@ -1942,19 +1942,6 @@ a {
     display: flex;
     align-items: center;
   }
-  /* .lang {
-    top: 0.15rem;
-    margin-right: 0;
-  }
-  .lang:focus {
-    outline: none;
-  }
-  html[lang="en-US"] .lang {
-    margin-right: 0.25rem !important;
-  }
-  html[lang="he-IL"] .lang {
-    margin-right: 0 !important;
-  } */
   .affiliates-row {
     flex-direction: column;
   }
