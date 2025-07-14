@@ -1,7 +1,15 @@
 import React, { useState, createContext, useContext, useEffect } from 'react';
 
 const GlobalSettingsContext = createContext();
-export const useGlobalSettings = () => useContext(GlobalSettingsContext);
+
+export const useGlobalSettings = () => {
+  const context = useContext(GlobalSettingsContext);
+  if (!context) {
+    throw new Error("useGlobalSettings must be used within a GlobalSettingsProvider");
+  }
+  return context;
+}
+
 
 const GlobalSettingsProvider = ({ children }) => {
   const [language, setLanguageState] = useState("en");
