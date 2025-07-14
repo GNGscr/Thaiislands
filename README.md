@@ -134,7 +134,7 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
   - Tapping on it again (not on button) flips it back smoothly
 
 - 🎯 **Hotel filtering by region**:
-  Filter buttons allow users to explore hotels by area (e.g. West Coast, North, East), improving discoverability.
+  Filter buttons allow users to explore hotels by area (e.g. Baan tai, Haadrin, Thongsala), improving discoverability.
 
 - 🌐 **Language-aware layout**:
   LTR and RTL are fully supported, with mirrored animations and visual alignment for Hebrew/English.
