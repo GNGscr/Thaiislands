@@ -131,7 +131,7 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 - 🃏 **Hotel cards with flip animations**:
   - Tapping a hotel card reveals a back-side with booking with a link button options
-  - Tapping outside flips it back smoothly
+  - Tapping on it again (not on button) flips it back smoothly
 
 - 🎯 **Hotel filtering by region**:
   Filter buttons allow users to explore hotels by area (e.g. West Coast, North, East), improving discoverability.
