@@ -1964,6 +1964,9 @@ a {
   .vacation-gallery-wrapper {
     margin-right: 1.25rem;
   }
+  .dots {
+    margin-bottom: 2rem;
+  }
   .vacation-gallery {
     padding-top: 3rem;
     padding-bottom: 0rem;
