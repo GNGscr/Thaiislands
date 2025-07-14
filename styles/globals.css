@@ -1953,7 +1953,6 @@ a {
   }
   .dots {
     margin-top: -1rem;
-    margin-bottom: 2rem;
   }
   .vacation-gallery {
     padding-top: 3rem;
@@ -1992,12 +1991,12 @@ a {
     height: 90vh;
   }
   .map-section {
-    height: 65vh !important;
+    height: 70vh !important;
   }
   .button-lightning {
     font-size: 1.75rem;
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 1.5rem;
   }
   html[lang="en-US"] .button-lightning,
   html[lang="he-IL"] .button-lightning {
