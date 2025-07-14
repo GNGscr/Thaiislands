@@ -214,6 +214,7 @@ Thaiislands/
 - Supports **Hebrew** and **English** with `dir="rtl"`/`ltr` rendering
 - Text, layouts, and animations adapt to language choice
 - Toggle available in top-right menu
+    - also displays animation to reflect the change
 
 ---
 
