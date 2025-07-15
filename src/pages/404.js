@@ -4,18 +4,8 @@ import DolphinAnimation from "../components/common/DolphinAnimation";
 import { motion } from "framer-motion";
 
 export default function Custom404() {
-    const spacingIndex = {
-        The: 4,
-        page: 8,
-        "you're": 16,
-        looking: 24,
-        for: 28,
-        "doesn't": 36,
-        "exist.": 42,
-      };
-      const spacingIndices = Object.values(spacingIndex);
-      const sentence = "The page you're looking for doesn't exist.";
-const letters = sentence.split("");
+  const sentence = "The page you're looking for doesn't exist.";
+  const letters = sentence.split("");
   return (
     <>
       <Head>
