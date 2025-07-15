@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 export default function Custom404() {
   const sentence = "The page you're looking for doesn't exist.";
   const letters = sentence.split("");
+  const charSpace = <span className="inline-block w-[0.4rem]"></span>;
   return (
     <>
       <Head>
@@ -30,7 +31,7 @@ export default function Custom404() {
                     delay: i * 0.025,
                   }}
                 >
-                  {char === " " ? "\u00A0" : char}
+                  {char === " " ? charSpace : char}
                 </motion.div>
               );
             })}
