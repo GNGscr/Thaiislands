@@ -18,7 +18,7 @@ export default function Custom404() {
           <DolphinAnimation menuIsActive={true} media={"mobile"} />
         </div>
         <div className="text-2xl mb-6">
-          <div className="w-full flex align-center justify-center text-[1.5rem] mb-[5px]">
+          <div className="sentence w-full flex align-center justify-center text-[1.5rem] mb-[5px]">
             {letters.map((char, i) => {
               return (
                 <motion.div
@@ -50,7 +50,7 @@ export default function Custom404() {
         >
           <Link
             href="/about"
-            className="text-2xl text-blue-300 hover:text-blue-200"
+            className="back-home text-2xl text-blue-300 hover:text-blue-200"
           >
             ← Back to Home
           </Link>

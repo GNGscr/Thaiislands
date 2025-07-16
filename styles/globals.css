@@ -2152,6 +2152,13 @@ a {
   .slide-in-rive>div>div {
     width: 80vw;
   }
+  .sentence {
+    display: none;
+  }
+  .back-home {
+    position: relative;
+    top: 5rem;
+  }
 }
 
 @media (max-width: 420px) {
