@@ -1672,8 +1672,8 @@ a {
 .slide-in-rive>div>img {
   aspect-ratio: 4/3;
 }
-.not-found-dolphin-animation > div.slide-in {
-  background: none !important;
+.not-found-dolphin-animation > div > div {
+  background: white !important;
 }
 
 
