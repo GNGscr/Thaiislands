@@ -1676,6 +1676,9 @@ a {
 .not-found-dolphin-animation > div > div {
   background: white !important;
 }
+.slide-in-rive {
+  background-color: none;
+}
 
 
 @media (max-width: 1080px) {
