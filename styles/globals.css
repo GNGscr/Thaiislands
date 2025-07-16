@@ -2152,6 +2152,9 @@ a {
   .slide-in-rive>div>div {
     width: 80vw;
   }
+  .not-found-header {
+    margin-top: -5rem;
+  }
   .sentence {
     display: none;
   }

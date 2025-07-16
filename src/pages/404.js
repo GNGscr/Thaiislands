@@ -13,7 +13,7 @@ export default function Custom404() {
         <title>404 – Page Not Found</title>
       </Head>
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#121212] text-white px-4 text-center">
-        <h1 className="text-6xl font-bold mb-4">404</h1>
+        <h1 className="not-found-header text-6xl font-bold mb-4">404</h1>
         <div className="404-dolphin-animation">
           <DolphinAnimation menuIsActive={true} media={"mobile"} />
         </div>
