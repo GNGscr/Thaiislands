@@ -1673,6 +1673,11 @@ a {
   aspect-ratio: 4/3;
 }
 
+.not-found-dolphin-animation > div > div {
+  background: none !important;
+}
+
+
 @media (max-width: 1080px) {
 
   .shuffle-grid-wrapper {
