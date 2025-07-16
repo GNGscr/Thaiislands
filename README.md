@@ -5,9 +5,9 @@ ThaiIslands is a **full-stack**, multi-language web app showcasing Thailand’s 
 
 ---
 
-## 📸 Preview
+## 🎥 Preview - Click image to view user flow
 
-![ThaiIslands Preview](./public/images/screenshot.png)
+[![ThaiIslands Preview](./public/images/screenshot.png)](https://drive.google.com/file/d/17YnRiAfAXaKeGAVbot6ym4BNRcCVEUFT/view?usp=sharing)
 
 
 **Live site:** [https://thaiislands.vercel.app](https://thaiislands.vercel.app)  
