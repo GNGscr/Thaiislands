@@ -1,7 +1,11 @@
 "use client";
-import Noise from '../common/Noise';
+import dynamic from 'next/dynamic';
+const Noise = dynamic(() => import('../common/Noise'), { 
+    ssr: false,
+    loading: () => <div className="h-[300px] w-screen bg-gray-200 animate-pulse"></div>
+ });
 import React, { useRef, useEffect } from "react";
-import { m, motion, steps, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function StickyFooter({ data, lang }) {
     const container = useRef();

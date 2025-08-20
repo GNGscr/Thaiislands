@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SelectInput from "../interactive/SelectInput";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import filterIcon from "../../public/images/filter-icon.svg";
 import AffiliatesRegion from "../hotels/AffiliatesRegion.jsx";
 import HotelsTitle from "../hotels/HotelsTitle";
@@ -21,6 +21,17 @@ export default function HotelsSection({ data, lang, media }) {
   
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const { FILTER_BY_REGION } = LANG;
+
+  const regionsList = useMemo(() => {
+    return displayedRegions?.map((region, i) => (
+      <AffiliatesRegion
+        key={i}
+        region={region}
+        lang={lang}
+        media={media}
+      />
+    ));
+  }, [displayedRegions, lang, media]);
 
   if (!data) return <NotFoundMessage message={"No Hotels"} />;
 
@@ -63,14 +74,7 @@ export default function HotelsSection({ data, lang, media }) {
         </div>
       </div>
       <div className="flex flex-col">
-      {displayedRegions?.map((region, i) => (
-        <AffiliatesRegion
-          key={i}
-          region={region}
-          lang={lang}
-          media={media}
-        />
-      ))}
+        {regionsList}
       </div>
     </div>
   );

@@ -1,14 +1,15 @@
 'use client';
 import { useState } from "react";
+import dynamic from "next/dynamic";
 // hooks
 import { useLanguage } from "../hooks/useLanguage";
 // layout components
 import Navbar from "../components/layout/navbar/Navbar";
 import Main from "../components/island/Main";
 import SocialsSection from "../components/interactive/SocialsSection";
-import StickyFooter from "../components/island/StickyFooter";
 import SectionAnimation from "../components/common/SectionAnimation";
 import NotFoundMessage from "../components/not-found/NotFound";
+const StickyFooter = dynamic(() => import("../components/island/StickyFooter"));
 
 export default function IslandPageLayout({ data, media, mapImage }) {
     const { language, toggleLanguage } = useLanguage();

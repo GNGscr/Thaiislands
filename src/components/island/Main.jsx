@@ -1,7 +1,8 @@
 "use client";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import SwipeCarousel from "./SwipeCarousel";
-import HotelsSection from "./HotelsSection";
+const HotelsSection = dynamic(() => import("./HotelsSection"), { ssr: false });
 import { usePathname } from 'next/navigation';
 import emojiLocation  from '../../public/data/emoji-location.json';
 import TextParallaxSection from "./TextParallaxSection";
@@ -10,6 +11,7 @@ import NotFoundMessage from "../not-found/NotFound";
 import styles from '../styles/Main.module.css';
 import emojiStyles from '../styles/BlinkEmoji.module.css';
 import declerationVariants from '../styles/animations/declerationVariants.json';
+import ErrorBoundary from "@/src/errors/ErrorBoundary";
 
 export default function Main({
   data,
@@ -91,7 +93,9 @@ export default function Main({
 
       <div className={`relative ${media === 'desktop' ? 'h-[120vh]' : 'h-[40lvh]'}`}>
         <div className="sticky top-0">
-          <SwipeCarousel data={data} lang={lang} media={media} />
+          <ErrorBoundary>
+            <SwipeCarousel data={data} lang={lang} media={media} />
+          </ErrorBoundary>
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import RegionsTitleAnimationJson from "../../public/data/regionalTitleAnimation.json";
 import RowCardsAnimation from "../../public/data/rowCardsAnimation.json";
@@ -6,7 +7,7 @@ import MobileOneRowCardsAnimationJson from "../../public/data/mobileOneRowCardsA
 import splitAffiliatesByMedia from "../../utils/splitAffiliatesByMedia";
 import AffiliateCard from "./AffiliateCard.jsx";
 
-export default function AffiliatesRegion({ region, lang, media }) {
+export default React.memo(function AffiliatesRegion({ region, lang, media }) {
   const { regionAffiliates, regionName } = region;
   const currentRegionName = regionName?.[lang] || "";
   const rowedAffiliates = splitAffiliatesByMedia(regionAffiliates, media);
@@ -40,4 +41,4 @@ export default function AffiliatesRegion({ region, lang, media }) {
       </div>
     </div>
   );
-}
+});
