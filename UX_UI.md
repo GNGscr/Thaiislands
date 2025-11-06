@@ -1,10 +1,10 @@
-# 🎨 UX/UI Principles – ThaiIslands
+# UX/UI Principles – ThaiIslands
 
 This document outlines the key **design**, **user experience**, and **interaction** principles applied in the development of [ThaiIslands](https://thaiislands.vercel.app).
 
 ---
 
-## ✨ Visual Design
+## Visual Design
 
 - **Minimalist layout**, with high contrast and clear typography.
 - Use of **island-specific imagery** to create emotional engagement.
@@ -13,7 +13,7 @@ This document outlines the key **design**, **user experience**, and **interactio
 
 ---
 
-## 📱 Mobile First
+## Mobile First
 
 - Layout adapts fluidly to mobile screens.
 - Side navigation responds to **tap gestures** rather than hover.
@@ -21,7 +21,7 @@ This document outlines the key **design**, **user experience**, and **interactio
 
 ---
 
-## 🌍 Language and Directionality
+## Language and Directionality
 
 - Full support for **Hebrew (RTL)** and **English (LTR)**.
 - All UI elements (menus, alignment, transitions) switch direction accordingly.
@@ -29,7 +29,7 @@ This document outlines the key **design**, **user experience**, and **interactio
 
 ---
 
-## 🧭 Navigation
+## Navigation
 
 - **Sticky side navigation**, visible on hover (desktop) or tap (mobile).
 - **Scroll-aware icon colors** (Instagram/Facebook) for optimal visibility.
@@ -37,7 +37,7 @@ This document outlines the key **design**, **user experience**, and **interactio
 
 ---
 
-## 🏨 Hotels Section
+## Hotels Section
 
 - Each hotel card includes:
   - **Flip animation** for more information
@@ -50,7 +50,7 @@ This document outlines the key **design**, **user experience**, and **interactio
 
 ---
 
-## 🎞️ Animations & Motion
+## Animations & Motion
 
 - Powered by **Framer Motion**
 - Animations include:
@@ -61,7 +61,7 @@ This document outlines the key **design**, **user experience**, and **interactio
 
 ---
 
-## 🧩 Component Design
+## Component Design
 
 - UI built with **reusable modular components**
   - `TextParallaxSection`
@@ -81,7 +81,7 @@ This document outlines the key **design**, **user experience**, and **interactio
 
 ---
 
-## 🧠 State and Behavior
+## State and Behavior
 
 - No Redux / Zustand — relies on:
   - **React Context API**

@@ -1,22 +1,22 @@
-# 🧭 UX Flow – ThaiIslands
+# UX Flow – ThaiIslands
 
 This document outlines the **typical user journey** through the site, and how the design supports usability.
 
 ---
 
-## 🚪 Landing Page (`/`)
+## Landing Page (`/`)
 
 - User is introduced to the site with a clean header and motion-based entrance.
 - Top-right corner: language toggle (HE/EN)
 - A central CTA leads to the island selector
 
-- 💻 **Only on desktop:** 
+- **Only on desktop:** 
   Clicking on each of the shuffling square (on the right), will lead user to blind selection.
   (Added for user's fun experience and engagement)
 
 ---
 
-## 🏝️ Island Pages (`/koh-phangan`, `/koh-samui`, `/koh-tao`)
+## Island Pages (`/koh-phangan`, `/koh-samui`, `/koh-tao`)
 
 Each island page features:
 
@@ -35,7 +35,7 @@ Each island page features:
 
 ---
 
-## 🏨 Hotel Interaction Flow
+## Hotel Interaction Flow
 
 1. User clicks on a hotel card
 2. Card flips with smooth animation
@@ -50,7 +50,7 @@ Each island page features:
 
 ---
 
-## 🎛️ Filter Interaction Flow
+## Filter Interaction Flow
 
 1. User opens filter dropdown
 2. Selects a region
@@ -60,7 +60,7 @@ Each island page features:
 
 ---
 
-## 🌍 Language Toggle Flow
+## Language Toggle Flow
 
 1. User toggles language via navbar icon
 2. Entire layout shifts (LTR ↔ RTL)
@@ -68,7 +68,7 @@ Each island page features:
 
 ---
 
-## 🔁 Scroll Behavior
+## Scroll Behavior
 
 - Scroll triggers:
   - Color transition in nav icons (white ↔ black)
@@ -77,7 +77,7 @@ Each island page features:
 
 ---
 
-## 📱 Mobile Flow
+## Mobile Flow
 
 - Tap-based side nav
 - Large, easy-to-use buttons

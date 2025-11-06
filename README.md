@@ -1,11 +1,11 @@
-# 🌴 ThaiIslands – UX-Oriented Project
+# ThaiIslands – UX-Oriented Project
 
 
 ThaiIslands is a **full-stack**, multi-language web app showcasing Thailand’s top islands. Built from scratch with **React**, **Next.js**, **MongoDB**, **and a design-first approach.**
 
 ---
 
-## 🎥 Preview - Click image to view user flow
+## Preview - Click image to view user flow
 
 [![ThaiIslands Preview](./public/images/screenshot.png)](https://drive.google.com/file/d/17YnRiAfAXaKeGAVbot6ym4BNRcCVEUFT/view?usp=sharing)
 
@@ -15,14 +15,14 @@ ThaiIslands is a **full-stack**, multi-language web app showcasing Thailand’s 
 
 ---
 
-## 🧑‍💻 Author
+## Author
 
 Created by **Daniel Ehrlich**, a **Full Stack Developer** (≈70% Frontend / 30% Backend) with a strong focus on user experience, visual consistency, and architectural clarity.  
 Responsible for **ideation, design, UX planning, interface design, backend API, development, and frontend deployment** — fully end-to-end.
 
 ---
 
-## 🔍 UX/UI Documentation
+## UX/UI Documentation
 
  **1. UX/UI Overview:**
 A `UX_UI.md` file summarizing all the UX and UI principles of the project — including design decisions, user flow, animations, accessibility focus, filtering, bilingual language support, and more.
@@ -34,7 +34,7 @@ An additional file, `UX_FLOW.md`, describing the user journey — what happens o
 
 ---
 
-## 📐 UX Approach & Design Process
+## UX Approach & Design Process
 
 This project was planned and designed with a **UX-first mindset** — focusing on content hierarchy, clarity, and flow before starting development.
 
@@ -45,13 +45,13 @@ A `WIREFRAMES.md` file displaying all the wireframes for the project - **Desktop
 
 ---
 
-# 🚀 Feature Overview
+# Feature Overview
 
 A fully responsive, UX-driven travel experience built with **Next.js**, **MongoDB**, and **Framer Motion**, focusing on performance, accessibility, and engaging microinteractions.
 
 ---
 
-## 🧭 Navigation & Structure
+## Navigation & Structure
 
 - **Multi-page SPA experience** using `slug`-based routing:
   - `/koh-phangan`, `/koh-samui`, `/koh-tao`, etc.
@@ -62,15 +62,15 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 ---
 
-## 🌐 Language & Direction Support
+## Language & Direction Support
 
-- **Bilingual UI**: Hebrew 🇮🇱 & English 🇬🇧.
+- **Bilingual UI**: Hebrew & English.
 - **Dynamic LTR/RTL direction** depending on selected language.
 - Language toggle managed via **Context API** with persistent global state.
 
 ---
 
-## 🔍 Content & Data
+## Content & Data
 
 - **Live data from MongoDB**:
   - Pulled via `Mongoose` inside Next.js API routes.
@@ -82,7 +82,7 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 ---
 
-## 🎨 UI/UX & Animation
+## UI/UX & Animation
 
 - **UX-focused layout**:
   - Clean typography and layout hierarchy.
@@ -95,12 +95,12 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 ---
 
-## 📱 Responsiveness
+## Responsiveness
 
 - Responsive across:
-  - Desktop 💻
-  - Tablet 📱 (in progress)
-  - Mobile 📲
+  - Desktop 
+  - Tablet (in progress)
+  - Mobile 
 - Elements reflow and resize based on screen size and orientation.
 
 ---
@@ -113,7 +113,7 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 ---
 
-## 🧠 State & Logic
+## State & Logic
 
 - **Global state management** via `Context API`:
   - Language toggle
@@ -125,35 +125,35 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 ---
 
-## ✨ UX & Interactive Design Highlights
+## UX & Interactive Design Highlights
 
-- 🔁 **Scroll-based color transitions**:
+- **Scroll-based color transitions**:
   Navbar icons (Instagram, Facebook) change color dynamically based on scroll position, ensuring visibility across content sections.
 
-- 🃏 **Hotel cards with flip animations**:
+- **Hotel cards with flip animations**:
   - Tapping a hotel card reveals a back-side with booking with a link button options
   - Tapping on it again (not on button) flips it back smoothly
 
-- 📌 **Sticky region title**:
+- **Sticky region title**:
   Region name will stick to the top (under title) - until the next region name that will replace it.
 
-- 🎯 **Hotel filtering by region**:
+- **Hotel filtering by region**:
   Filter buttons allow users to explore hotels by area (e.g. Baan tai, Haadrin, Thongsala), improving discoverability.
 
-- 🌐 **Language-aware layout**:
+- **Language-aware layout**:
   LTR and RTL are fully supported, with mirrored animations and visual alignment for Hebrew/English.
 
-- 🧭 **Mobile side nav toggle**:
+- **Mobile side nav toggle**:
   Responsive sidebar with click behavior for mobile users (tap to expand/collapse).
 
-- 🖱️ **Hover interactions**:
+- **Hover interactions**:
   Interactive elements across the app respond visually to hover and tap, with smooth Framer Motion transitions.
 
 
 ---
 
 
-## 📊 Pages Overview
+## Pages Overview
 
 | Route         | Description                                |
 |---------------|--------------------------------------------|
@@ -167,7 +167,7 @@ Each page pulls data **live from MongoDB**, rendered dynamically via SSR/ISR.
 
 ---
 
-## 🛠️ Stack & Technologies
+## Stack & Technologies
 
 | Layer       | Technology                         |
 |------------|-------------------------------------|
@@ -182,7 +182,7 @@ Each page pulls data **live from MongoDB**, rendered dynamically via SSR/ISR.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 Thaiislands/
@@ -201,7 +201,7 @@ Thaiislands/
 ---
 
 
-## 🧠 Key Architectural Choices
+## Key Architectural Choices
 
 - **No Redux or Zustand**: All state management is handled via URL params + Context API to minimize overhead and encourage stateless behavior.
 - **Accessible-first**: All interactive elements are progressively enhanced and aim to support keyboard use (some work remains).
@@ -210,7 +210,7 @@ Thaiislands/
 
 ---
 
-## 🌍 Languages & Directionality
+## Languages & Directionality
 
 - Supports **Hebrew** and **English** with `dir="rtl"`/`ltr` rendering
 - Text, layouts, and animations adapt to language choice
@@ -220,7 +220,7 @@ Thaiislands/
 ---
 
 
-## 🚀 Deployment
+## Deployment
 
 - Hosted live on **[Vercel](https://vercel.com/)** with:
   - Image optimization
@@ -231,7 +231,7 @@ Thaiislands/
 ---
 
 
-## 🛠️ Installation & Running Locally
+## Installation & Running Locally
 
 > Requires: Node.js 18+, npm or yarn, and a MongoDB Atlas connection
 
@@ -266,7 +266,7 @@ The app will run on `http://localhost:3000`.
 
 ---
 
-## 💡 Possible Improvements (Not included in current version)
+## Possible Improvements (Not included in current version)
 
 - Lighthouse score optimization (accessibility, performance)
 - Tests with Jest or Cypress
@@ -275,13 +275,13 @@ The app will run on `http://localhost:3000`.
 
 ---
 
-## 📜 License
+## License
 
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-📬 For contact, feedback, suggestions or collaboration: 
+For contact, feedback, suggestions or collaboration: 
   - [LinkedIn](https://linkedin.com/in/daniel-ehrlich-36a389136) 
   - [Emails]: 
     - [Private Email][ehrlichdaniel1@gmail.com]
