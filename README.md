@@ -105,7 +105,7 @@ A fully responsive, UX-driven travel experience built with **Next.js**, **MongoD
 
 ---
 
-## ♿ Accessibility (A11y)
+## Accessibility (A11y)
 
 - **Semantic HTML** with structured headings and ARIA attributes (in progress).
 - **Keyboard-accessible** interactive elements (focus states, skip links planned).
