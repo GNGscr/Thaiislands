@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Discover Koh Phangan – the perfect island for beaches, parties, and culture in Thailand. Everything you need to know for your trip." />
         <meta charSet="UTF-8" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/de-logo.ico" />
       </Head>
       {NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
         <>
